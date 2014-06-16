@@ -21,7 +21,7 @@ The source code will appear in a directory called `M2`, which you may rename if 
 
 Start by "forking" the Macaulay2 repository, by following the following steps in a browser.
 
-* Create a github account at https://github.com/
+* Create a github account at https://github.com/ and log in to it.
   * We'll assume below that your user name is `JohnDoe`.
 * Add your ssh key at https://github.com/settings/ssh
 * Fork M2 at https://github.com/Macaulay2/M2/fork
