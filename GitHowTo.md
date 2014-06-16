@@ -1,8 +1,8 @@
 # How to use git with *Macaulay2*
 
-Begin by reading the basic instructions at:
+Install git, if necessary, by getting it here:
 
-* https://help.github.com/articles/set-up-git
+* http://git-scm.com/
 
 The follow the instructions in one of the following two sections.
 
@@ -45,3 +45,19 @@ Edit and test your code.  Whenever you want to send your changes to your local c
 Repeat at will.  Whenever you want to send your changes to the central Macaulay2 repository, do this in a browser:
 
 * Issue a pull request at https://github.com/JohnDoe/M2/pull/new/master, or find the pull request button on the page of your fork at https://github.com/JohnDoe/M2.
+
+To import the latest changes from the Macaulay2 repository into your repository and try to merge your code with them, use:
+
+* `git pull https://github.com/Macaulay2/M2 master`
+
+To import the latest changes from the Macaulay2 repository into your repository without trying to merge your code with them, use:
+
+* `git fetch https://github.com/DanGrayson/checker`
+
+To display the history of your changes graphically, use this command:
+
+* `gitk`
+
+To show the history of all of your branches and any branches imported from the Macaulay2 repository, use:
+
+* `gitk --all`
