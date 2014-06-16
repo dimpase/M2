@@ -59,7 +59,7 @@ To import the latest changes from the Macaulay2 repository into your repository 
 
 To import the latest changes from the Macaulay2 repository into your repository without trying to merge your code with them, use:
 
-* `git fetch https://github.com/DanGrayson/checker`
+* `git fetch https://github.com/Macaulay2/M2`
 
 To display the history of your changes graphically, use this command:
 
