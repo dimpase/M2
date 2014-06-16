@@ -38,4 +38,4 @@ Edit and test your code.  Whenever you want to send your changes to your local c
 
 Repeat at will.  Whenever you want to send your changes to the central Macaulay2 repository, do this in a browser:
 
-* Issue a pull request at https://github.com/JohnDoe/M2/pull/new/linalg, or find the pull request button on the page of your fork at https://github.com/JohnDoe/M2.
+* Issue a pull request at https://github.com/JohnDoe/M2/pull/new/master, or find the pull request button on the page of your fork at https://github.com/JohnDoe/M2.
