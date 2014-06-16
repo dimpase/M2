@@ -17,7 +17,7 @@ The source code will appear in a directory called `M2`, which you may rename if 
 Start by "forking" the Macaulay2 repository, by following the following steps in a browser.
 
 * Create a github account at https://github.com/
-  * We'll assume here that your user name is `JohnDoe`.
+  * We'll assume below that your user name is `JohnDoe`.
 * Add your ssh key at https://github.com/settings/ssh
 * Fork M2 at https://github.com/Macaulay2/M2/fork
 
@@ -25,3 +25,17 @@ Then use one of the following shell commands to get a copy of your copy of the s
 
 * `git clone git@github.com:JohnDoe/M2`
 * `git clone https://github.com/JohnDoe/M2`
+
+Edit and test your code.  Whenever you want to send your changes to your local copy of M2, issue the following shell commands:
+
+* Add the files with changes to be committed: `git add FILENAME ...`
+* Commit the files to your local copy of the repository: `git commit`.  An editor window will pop up in which you should type a message describing the changes, with
+  this format:
+    * First line is 50 characters or less
+    * Then a blank line
+    * Remaining text should be wrapped at 72 characters
+* Push the commited changes to your fork of M2 at github: `git push`
+
+Repeat at will.  Whenever you want to send your changes to the central Macaulay2 repository, do this in a browser:
+
+* Issue a pull request at https://github.com/JohnDoe/M2/pull/new/linalg, or find the pull request button on the page of your fork at https://github.com/JohnDoe/M2.
