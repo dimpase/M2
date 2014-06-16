@@ -10,7 +10,6 @@ The follow the instructions in one of the following two sections.
 
 To get the source code of Macaulay2 if you are not a package developer, one "clones" our git repository with one of the following shell commands:
 
-* `git clone git@github.com:Macaulay2/M2`
 * `git clone https://github.com/Macaulay2/M2`
 
 The source code will appear in a directory called `M2`, which you may rename if you wish.  In that directory you can find the following items of interest:
@@ -27,10 +26,9 @@ Start by "forking" the Macaulay2 repository, by following the following steps in
 * Add your ssh key at https://github.com/settings/ssh
 * Fork M2 at https://github.com/Macaulay2/M2/fork
 
-Then use one of the following shell commands to get a copy of your copy of the source code of *Macaulay2*:
+Then use one the following shell command to get a copy of your copy of the source code of *Macaulay2*:
 
 * `git clone git@github.com:JohnDoe/M2`
-* `git clone https://github.com/JohnDoe/M2`
 
 Edit and test your code.  Whenever you want to send your changes to your local copy of M2, issue the following shell commands:
 
