@@ -68,3 +68,9 @@ To display the history of your changes graphically, use this command:
 To show the history of all of your branches and any branches imported from the Macaulay2 repository, use:
 
 * `gitk --all`
+
+Other links:
+
+* Learn all about how to use git by reading the book at http://git-scm.com/book.
+* Magit, a useful emacs mode for performing many of the operations above: https://github.com/magit/magit.
+* Learn git by trying it out on someone else's machine: https://try.github.io
