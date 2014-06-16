@@ -35,14 +35,21 @@ Then use the following shell command to get a copy of your copy of the source co
 
 * `git clone git@github.com:JohnDoe/M2`
 
-Edit and test your code.  Whenever you want to send your changes to your local copy of M2, issue the following shell commands:
-
-* Add the files with changes to be committed: `git add FILENAME ...`
-* Commit the files to your local copy of the repository: `git commit`.  An editor window will pop up in which you should type a message describing the changes, with
-  this format:
+Edit and test your code.  Whenever you want to send your changes to your local copy of M2, proceed as follows:
+* Review the status of your files with
+  * `git status`
+* Review your changes, if necessary, with
+  * `git diff`
+* Add the files whose changes are to be committed with:
+  * `git add FILENAME ...`
+* Commit the files to your local copy of the repository: 
+  * Issue the command `git commit`
+  * An editor window will pop up in which you should type a message describing the changes, with this format:
     * First line is 50 characters or less
     * Then a blank line
     * Remaining text should be wrapped at 72 characters
+* An alternative to the two steps above, if you are ready to commit all the files that you have changed, is:
+  * `git commit -a`
 * Push the commited changes to your fork of M2 at github: `git push`
 
 Repeat at will.  Whenever you want to send your changes to the central Macaulay2 repository, do this in a browser:
