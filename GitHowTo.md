@@ -25,7 +25,9 @@ Start by "forking" the Macaulay2 repository, by following the following steps in
   * We'll assume below that your user name is `JohnDoe`.
 * Add your ssh key at https://github.com/settings/ssh
 * Fork M2 at https://github.com/Macaulay2/M2/fork
-* Tell git what your name and email address are with commands like:
+
+Tell git what your name and email address are, for correct labelling of your updates, with commands like:
+
   * `git config --global user.name "John Doe"`
   * `git config --global user.email johndoe@example.com`
 
