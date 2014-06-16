@@ -1,5 +1,11 @@
 # How to use git with *Macaulay2*
 
+Begin by reading the basic instructions at:
+
+* https://help.github.com/articles/set-up-git
+
+The follow the instructions in one of the following two sections.
+
 ## For non-package-developers
 
 To get the source code of Macaulay2 if you are not a package developer, one "clones" our git repository with one of the following shell commands:
