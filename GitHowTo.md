@@ -26,7 +26,8 @@ Start by "forking" the Macaulay2 repository, by following the following steps in
 * Add your ssh key at https://github.com/settings/ssh
 * Fork M2 at https://github.com/Macaulay2/M2/fork
 
-Tell git what your name and email address are, for correct labelling of your updates, with commands like:
+Tell git what your name and email address are, for correct labelling of your updates, with shell commands like the following, except
+that the name and email address are replaced by yours.
 
   * `git config --global user.name "John Doe"`
   * `git config --global user.email johndoe@example.com`
@@ -34,6 +35,8 @@ Tell git what your name and email address are, for correct labelling of your upd
 Then use the following shell command to get a copy of your copy of the source code of *Macaulay2*:
 
 * `git clone git@github.com:JohnDoe/M2`
+
+Now build Macaulay2 according to the instructions in `M2/INSTALL` and use the result in the following steps.
 
 Edit and test your code.  Whenever you want to send your changes to your local copy of M2, proceed as follows:
 * Review the status of your files with
