@@ -20,8 +20,14 @@ libatomic-ops-dev
 libglpk-dev
 libntl-dev
 libpari-dev
+libgtest-dev
+libnauty-dev
 pari-gp
 (lrslib)
 (gfan)
 (mpack)
+(libgivaro-dev)
+(liblinbox-dev)
+(liblapack-dev)
+
 ```
