@@ -11,4 +11,17 @@ zlib1g-dev
 byacc 
 flex
 libboost-all-dev
+libmpc-dev
+libqd-dev
+libfplll-dev
+libreadline-dev
+libflint-dev
+libatomic-ops-dev
+libglpk-dev
+libntl-dev
+libpari-dev
+pari-gp
+(lrslib)
+(gfan)
+(mpack)
 ```
