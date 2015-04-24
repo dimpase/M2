@@ -10,4 +10,5 @@ g++
 zlib1g-dev
 byacc 
 flex
+libboost-all-dev
 ```
