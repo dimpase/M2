@@ -8,7 +8,7 @@ libxml2-dev
 build-essentials
 g++
 zlib1g-dev
-byacc 
+bison 
 flex
 libboost-all-dev
 libmpc-dev
