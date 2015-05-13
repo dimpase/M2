@@ -1,6 +1,7 @@
 At least
 ```
 automake 
+liblzma-dev
 libtool
 autoconf
 ncurses-dev
