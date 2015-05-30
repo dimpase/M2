@@ -10,6 +10,8 @@
     * Names representing methods must be verbs and written in mixed case starting with lower case.
     * The prefix "is" should be used for Boolean variables and methods.
     * Abbreviations in names should be avoided.
+    * Naming of optional arguments:
+        * ```Verify``` : whether to check that a result is correct or well defined
 
 * Order of arguments:
     * Functions should take arguments in increasing order of complexity.  For example, if the 
