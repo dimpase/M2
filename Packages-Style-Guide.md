@@ -16,6 +16,7 @@
 * Order of arguments:
     * Functions should take arguments in increasing order of complexity.  For example, if the 
       arguments are an integer and a module, put the integer first.
+    * The argument upon which the function mainly acts should go last.
 
 * Solutions to puzzles:
     * To get a user symbol, such as "x", use getSymbol "x".  To get n user variables starting with
