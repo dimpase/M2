@@ -43,7 +43,6 @@
         * TODO : Discuss when to overload names.
 
 * Layout :
-    * File content must be kept within 80 columns.
     * The incompleteness of split lines must be made obvious: break after a comma, break after an
       operator.
     * Lazy evaluation :
