@@ -19,8 +19,8 @@
     * The argument upon which the function mainly acts should go last.
 
 * Solutions to puzzles:
-    * To get a user symbol, such as "x", use getSymbol "x".  To get n user variables starting with
-      "a", use vars(0 ..< n).
+    * To get a user symbol, such as "x", use ```getSymbol "x"```.  To get n user variables starting with
+      "a", use ```vars(0 ..< n)```.
     * To control the order of loading of imported packages ("PackageImports" option) and exported
       packages ("PackageExports" option) while the current package is being loaded, mention the exported
       packages in the list of imported packages, and juggle the sequence of imported packages.
@@ -30,10 +30,10 @@
       the user.
         * The function "use" should never be used in a package.
         * To avoid setting user variables when creating a polynomial ring, use something like
-          QQ(monoid[getSymbol "a"]) instead of QQ[getSymbol "a"]
+          ```QQ(monoid[getSymbol "a"])``` instead of ```QQ[getSymbol "a"]```
     * Any names of variables in rings created by the package that get exposed to the user through
       returned values, directly or indirectly, should be accessible to the user.
-      So use QQ(monoid[getSymbol "a"]) or QQ(monoid[vars 0]) instead of QQ[a].
+      So use ```QQ(monoid[getSymbol "a"])``` or ```QQ(monoid[vars 0])``` instead of ```QQ[a]```.
 
 * Miscellaneous :
     * The use of magic numbers in code should be avoided.
@@ -53,9 +53,9 @@
     * Contents of regions delimited by parentheses, braces, or brackets that consist of multiple lines
       should be indented more than the surrounding lines, with the same indentation for every line.
     * Operators should be surrounded by a space character.
-        * But "n = n+1;" doesn't look so bad, so maybe this should apply just to loose operators.
+        * But ```n = n+1;``` doesn't look so bad, so maybe this should apply just to loose operators.
     * Commas should be followed by a white space.
-        * But "QQ[x,y,z]" looks fine...
+        * But ```QQ[x,y,z]``` looks fine...
     * Semicolons should be followed by a space character.
     * Logical units within a block should be separated by one blank line.
     * Statements should be aligned.
