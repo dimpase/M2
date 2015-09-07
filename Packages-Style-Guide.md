@@ -50,7 +50,8 @@
       So use ```QQ(monoid[getSymbol "a"])``` or ```QQ(monoid[vars 0])``` instead of ```QQ[a]```.
 
 * Example code
-    * Do not use the function ```loadPackage``` in example code.
+    * Do not reload the current package in example code, because its source code might
+      not be on the path of the user installing it.
 
 * Miscellaneous :
     * The use of magic numbers in code should be avoided.
