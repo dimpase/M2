@@ -20,6 +20,10 @@
            clearer to factor it into a composite of two functions.  If necessary, introduce
            a new type to serve as the type of the intermediate result.
 
+* Algorithms
+    * Do not convert an order n algorithm into an order n^2 algorithm by repeated
+         concatenation of lists or of matrices.
+
 * Order of arguments:
     * Functions should take arguments in increasing order of complexity.  For example, if the 
       arguments are an integer and a module, put the integer first.
