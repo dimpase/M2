@@ -6,6 +6,7 @@
 
 * Naming conventions :
     * Names representing types must be nouns and written in mixed case starting with upper case.
+    * Names representing optional arguments should be capitalized.
     * Variable names must be in mixed case starting with lower case.
     * Names representing methods must be verbs and written in mixed case starting with lower case.
     * The prefix "is" should be used for Boolean variables and methods.
