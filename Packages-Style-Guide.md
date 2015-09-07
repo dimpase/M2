@@ -13,6 +13,13 @@
     * Naming of optional arguments:
         * ```Verify``` : whether to check that a result is correct or well defined
 
+* Use of types
+    * Do not use an object of one type to "represent" an object of another.
+         * Example: don't use a matrix to represent the submodule spanned by its columns.
+    * Do not introduce a function that performs two consecutive operations, when it would be 
+           clearer to factor it into a composite of two functions.  If necessary, introduce
+           a new type to serve as the type of the intermediate result.
+
 * Order of arguments:
     * Functions should take arguments in increasing order of complexity.  For example, if the 
       arguments are an integer and a module, put the integer first.
