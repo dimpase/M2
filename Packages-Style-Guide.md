@@ -42,6 +42,9 @@
       returned values, directly or indirectly, should be accessible to the user.
       So use ```QQ(monoid[getSymbol "a"])``` or ```QQ(monoid[vars 0])``` instead of ```QQ[a]```.
 
+* Example code
+    * Do not use the function ```loadPackage``` in example code.
+
 * Miscellaneous :
     * The use of magic numbers in code should be avoided.
     * Packages should never export or protect single characters.
