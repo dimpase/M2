@@ -78,6 +78,8 @@
 * Documentation:
     * Each exported data type, method, and function must have a documentation page.  
     * Each documentation page must have an example.
+    * Document the return value of method functions.
+         * Example: ```resolution Module := ChainComplex => o -> (M) -> (...)```
 
 * Comments :
     * Rewrite confusing code instead of adding comments.
