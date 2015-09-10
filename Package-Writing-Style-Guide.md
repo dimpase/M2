@@ -1,5 +1,3 @@
-**Please use this page to post style (and find out and use) conventions for writing packages in Macaulay 2.**
-
 * General recommendations :
     * Any violation of the guide is allowed if it enhances readability.
     * The rules can be violated if there are strong personal objections against them.
