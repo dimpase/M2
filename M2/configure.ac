@@ -773,7 +773,8 @@ AC_SUBST(BUILTLIBS,)
 #    Henry Duong is experimenting with mpack, a multi-precision version of blas+lapack based on mpfr
 #    mpack depends on gmp mpfr mpc qd
 #    flint depends on gmp and mpfr
-AC_SUBST(PROGLIST, "4ti2 gfan normaliz nauty cddplus lrslib gftables")
+AC_SUBST(PROGLIST, "cddplus gftables")
+#AC_SUBST(PROGLIST, "4ti2 gfan normaliz nauty cddplus lrslib gftables")
 AC_SUBST(LIBLIST, " atomic_ops gc gdbm mpir mpfr pari readline ntl flint factory lapack frobby glpk cddlib fplll givaro fflas_ffpack linbox boost mpc qd mpack gtest ")
 AC_SUBST(SUBLIST, " memtailor mathic mathicgb ")
 
@@ -792,8 +793,10 @@ dnl make some programs optional:
 BUILD_lrslib=no
 BUILD_cddplus=no
 
-BUILD_mpfr=yes
-BUILD_ALWAYS="mpfr $BUILD_ALWAYS"
+# Sage builds mpfr with --disable-thread-safe, thus:
+BUILD_mpfr=no
+# BUILD_mpfr=yes
+# BUILD_ALWAYS="mpfr $BUILD_ALWAYS"
 # We always build mpfr because we tell gmp to use libgc for its
 # memory allocation.  But mpfr puts pointers to gmp numbers in thread local variables, unless
 # specially configured, which libgc can't find, so libgc regards them as garbage and ultimately
