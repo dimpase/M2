@@ -20,7 +20,7 @@ newPackage select((
                  Email => "dcook8@nd.edu",
                  HomePage => "http://www.nd.edu/~dcook8"}},
     Headline => "Interface to nauty (Graphs fork)",
-    Configuration => {"path" => ""},
+	Configuration => { "path" => "/home/dima/software/sage/local/bin/"},
     PackageExports => {"Graphs"},
     DebuggingMode => false,
 ), x -> x =!= null)

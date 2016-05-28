@@ -168,7 +168,8 @@ getNmzExec=()->
         nmzExec="normaliz";
     );
 --    return nmzExec;
-    return prefixDirectory | currentLayout#"programs" | nmzExec;
+--    return prefixDirectory | currentLayout#"programs" | nmzExec;
+    return "/home/dima/software/sage/local/bin/" | nmzExec;
 );
 
 

@@ -14,7 +14,7 @@ newPackage select((
                  Email => "dwcook@eiu.edu",
                  HomePage => "http://ux1.eiu.edu/~dwcook/"}},
     Headline => "Interface to nauty",
-    Configuration => {"path" => ""},
+	Configuration => { "path" => "/home/dima/software/sage/local/bin/"},
     PackageExports => {"EdgeIdeals"},
     DebuggingMode => false,
     Certification => {

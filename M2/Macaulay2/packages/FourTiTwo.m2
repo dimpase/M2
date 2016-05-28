@@ -24,7 +24,7 @@ newPackage(
 	     {Name => "Sonja Petrovic", Email => "petrovic@psu.edu"}
 	     },
     	Headline => "Interface to 4ti2",
-	Configuration => { "path" => "",
+	Configuration => { "path" => "/home/dima/software/sage/local/bin/",
 	     "keep files" => true
 	      },
     	DebuggingMode => false
