@@ -41,4 +41,7 @@ automake autoconf ncurses-dev gfortran libxml2-dev build-essential g++ zlib1g-de
 
 ln -s /usr/lib/x86_64-linux-gnu/liblzma.so.5 /usr/lib/x86_64-linux-gnu/liblzma.so
 
+install newer gcc on ubuntu 12.04 : see 
+http://askubuntu.com/questions/271388/how-to-install-gcc-4-8
+ 
 hint for vm: start 'xsettings' and enable error messages to allow bigger resolution than 640x480
