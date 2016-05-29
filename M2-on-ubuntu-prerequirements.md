@@ -3,6 +3,7 @@ At least
 automake 
 liblzma-dev
 lzma-dev
+lzma
 libtool
 autoconf
 ncurses-dev
