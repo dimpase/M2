@@ -35,7 +35,7 @@
 
 * Package configuration options
     * Package configuration options should be restricted to options that can sensibly be set
-      to a single value for the whole session.
+      to a single value for the user's whole session.
 
 * Solutions to puzzles:
     * To get a user symbol, such as "x", use ```getSymbol "x"```.  To get n user variables starting with
