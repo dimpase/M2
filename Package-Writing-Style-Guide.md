@@ -7,6 +7,9 @@
     * Names representing optional arguments should be capitalized.
     * Variable names must be in mixed case starting with lower case.
     * Names representing methods must be verbs and written in mixed case starting with lower case.
+      They should not include the name of the type of object expected as argument, since the idea
+      of such methods is that they are mathematical abstractions that act on a variety of types of
+      mathematical object.
     * The prefix "is" should be used for Boolean variables and methods.
     * Abbreviations in names should be avoided.
     * Naming of optional arguments:
