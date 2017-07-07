@@ -33,6 +33,10 @@
       arguments are an integer and a module, put the integer first.
     * The argument upon which the function mainly acts should go last.
 
+* Package configuration options
+    * Package configuration options should be restricted to options that can sensibly be set
+      to a single value for the whole session.
+
 * Solutions to puzzles:
     * To get a user symbol, such as "x", use ```getSymbol "x"```.  To get n user variables starting with
       "a", use ```vars(0 ..< n)```.
