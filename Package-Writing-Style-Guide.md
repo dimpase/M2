@@ -50,7 +50,7 @@
 * Behavior of code:
     * A package should set no variables in the User dictionary without an explicit request from
       the user.
-        * The function "use" should never be used in a package.
+        * The function `use` should never be used in a package.
         * To avoid setting user variables when creating a polynomial ring, use something like
           ```QQ(monoid[getSymbol "a"])``` instead of ```QQ[getSymbol "a"]```
     * Any names of variables in rings created by the package that get exposed to the user through
