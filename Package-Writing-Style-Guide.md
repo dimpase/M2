@@ -1,6 +1,5 @@
 * General recommendations :
     * Any violation of the guide is allowed if it enhances readability.
-    * The rules can be violated if there are strong personal objections against them.
 
 * Naming conventions :
     * Names representing types must be nouns and written in mixed case starting with upper case.
