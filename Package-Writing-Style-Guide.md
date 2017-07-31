@@ -65,13 +65,10 @@
     * Packages should never export or protect single characters.
     * Variables must never have dual meaning.
     * Use of global variables should be minimized.
-        * TODO : Discuss when to overload names.
 
 * Layout :
     * The incompleteness of split lines must be made obvious: break after a comma, break after an
       operator.
-    * Lazy evaluation :
-    * TODO : Discuss error checking.
 
 * White space :
     * Contents of regions delimited by parentheses, braces, or brackets that consist of multiple lines
