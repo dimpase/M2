@@ -20,12 +20,12 @@ version 25.3 with Macaulay2 1.11.
 First you should learn how to use emacs.  Start emacs and you will probably get a window
 that looks like this:
 
-![emacs starting in a window](https://faculty.math.illinois.edu/Macaulay2/Screenshots/emacs-starting-in-window.png)
+<img src="https://faculty.math.illinois.edu/Macaulay2/Screenshots/emacs-starting-in-window.png" width="400">
 
 (It will not be satisfactory to run emacs within a terminal -- you really want a windows-aware
 version of emacs, so try hard to get one.  Here is what it will look like running in a terminal:
 
-![emacs starting in a terminal](https://faculty.math.illinois.edu/Macaulay2/Screenshots/emacs-starting-in-terminal.png)
+<img src="https://faculty.math.illinois.edu/Macaulay2/Screenshots/emacs-starting-in-terminal.png" width="400">
 )​
 
 Click on "Emacs Tutorial" to learn the basic emacs commands and how to type
@@ -39,11 +39,12 @@ holding down the meta key while the desired character key is pressed.
 
 One might prefer to make
 that easy by configuring the keyboard in advance so the useless CAPS LOCK key to
-the left of the A key can serve as a second CONTROL key, and so the key to the
+the left of the "A" key can serve as a second CONTROL key, and so the key to the
 left of the space bar serves as the META key.  On the Mac, this is done in
-System Preferences/Keyboard/Modifier Keys.  If you prefer to keep the Mac's
-Command key where it is, then an alternative is to make the Command key
-serve as a meta key just in emacs by putting the following code in your file `~/.emacs`:
+System Preferences/Keyboard/Modifier Keys -- the Mac name for META is OPTION.
+If you prefer to keep the Mac's
+COMMAND key in its position to the left of the space bar, then an alternative is to make the COMMAND key
+serve as a META key just in emacs by putting the following code in your file `~/.emacs`:
 
     (setq mac-command-modifier 'meta)
 
@@ -52,9 +53,8 @@ input umlauts using option-U) with this command>
 
     (setq mac-option-modifier nil)
 
-Advice about using Macaulay2 in shells and within emacs is available here:
-
-[https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2-1.11/share/doc/Macaulay2/Macaulay2Doc/html/_getting_spstarted.html](https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2-1.11/share/doc/Macaulay2/Macaulay2Doc/html/_getting_spstarted.html)
+Advice about using Macaulay2 in shells and within emacs is available at the [getting started documentation page
+](https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2-1.11/share/doc/Macaulay2/Macaulay2Doc/html/_getting_spstarted.html).
 
 If you follow the instructions there, you will succeed in arranging it so that
 typing simply
