@@ -29,15 +29,28 @@ version of emacs, so try hard to get one.  Here is what it will look like runnin
 )​
 
 Click on "Emacs Tutorial" to learn the basic emacs commands and how to type
-them.  (Another way to start the tutorial is with C-h t .)  You will be asked
-to type many control characters as well as "meta characters".  I prefer to make
-that easy by configuring my keyboard in advance so the useless CAPS LOCK key to
-the left of the A key can serve as a second CONTROL key, and so the key to the
-left of the space bar serves as the META key.  On the Mac, this is done in
-System Preferences/Keyboard/Modifier Keys.  Typing a control key is done by
+them.  (Another way to start the tutorial is with C-h t .)  
+
+You will be asked
+to type many control characters as well as "meta characters".  Typing a control key is done by
 holding down the control key while the desired character key is pressed
 (briefly, to avoid repetition).  Similarly, typing a meta key is done by
 holding down the meta key while the desired character key is pressed.
+
+One might prefer to make
+that easy by configuring the keyboard in advance so the useless CAPS LOCK key to
+the left of the A key can serve as a second CONTROL key, and so the key to the
+left of the space bar serves as the META key.  On the Mac, this is done in
+System Preferences/Keyboard/Modifier Keys.  If you prefer to keep the Mac's
+Command key where it is, then an alternative is to make the Command key
+serve as a meta key just in emacs by putting the following code in your file `~/.emacs`:
+
+    (setq mac-command-modifier 'meta)
+
+One may also liberate the option key to do what it does in MacOS (e.g., to
+input umlauts using option-U) with this command>
+
+    (setq mac-option-modifier nil)
 
 Advice about using Macaulay2 in shells and within emacs is available here:
 
