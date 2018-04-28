@@ -37,8 +37,7 @@ holding down the control key while the desired character key is pressed
 (briefly, to avoid repetition).  Similarly, typing a meta key is done by
 holding down the meta key while the desired character key is pressed.
 
-One might prefer to make
-that easy by configuring the keyboard in advance so the useless CAPS LOCK key to
+One might prefer to make that easy by configuring the keyboard in advance so the useless CAPS LOCK key to
 the left of the "A" key can serve as a second CONTROL key, and so the key to the
 left of the space bar serves as the META key.  On the Mac, this is done in
 System Preferences/Keyboard/Modifier Keys -- the Mac name for META is OPTION.
@@ -49,7 +48,7 @@ serve as a META key just in emacs by putting the following code in your file `~/
     (setq mac-command-modifier 'meta)
 
 One may also liberate the option key to do what it does in MacOS (e.g., to
-input umlauts using option-U) with this command>
+input umlauts using option-U) with this command
 
     (setq mac-option-modifier nil)
 
@@ -59,7 +58,7 @@ Advice about using Macaulay2 in shells and within emacs is available at the [get
 If you follow the instructions there, you will succeed in arranging it so that
 typing simply
 
-   M2
+    M2
 
 on a command line in a shell window starts up Macaulay2.  This is also the way
 you will want to run M2 from within emacs.
