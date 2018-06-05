@@ -8,7 +8,7 @@ code of *Macaulay2*, such as the interpreter written in the D language, or the e
 in C++.  We distinguish those two cases below.
 
 You may also wish to download the files in a workshop repository and modify them.  Eventually we'll
-write a third section to cover that case.
+write a third section to cover that case, but for now, please refer to [Git-Info](https://github.com/Macaulay2/Workshop-2018-Madison/wiki/Git-Info).
 
 The source code of *Macaulay2* is stored in a *git repository*, hosted on the web site *GitHub*, and downloaded
 with the aid of the command line program *git*.  Install git, if necessary, by getting it here:
