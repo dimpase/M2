@@ -1,12 +1,23 @@
 # How to use git with *Macaulay2*
 
-Install git, if necessary, by getting it here:
+There are two reasons you may wish to download the source code of *Macaulay2*: you may
+have a machine for which we have not distributed a recently compiled version of *Macaulay2*,
+and thus you want to compile it yourself; you may want to propose a change to *Macaulay2*, such
+as adding a new package, modifying an existing package, or modifying some other part of the source
+code of *Macaulay2*, such as the interpreter written in the D language, or the engine, written
+in C++.  We distinguish those two cases below.
+
+You may also wish to download the files in a workshop repository and modify them.  Eventually we'll
+write a third section to cover that case.
+
+The source code of *Macaulay2* is stored in a *git repository*, hosted on the web site *GitHub*, and downloaded
+with the aid of the command line program *git*.  Install git, if necessary, by getting it here:
 
 * http://git-scm.com/
 
-The follow the instructions in one of the following two sections.
+Then follow the instructions in one of the following two sections.
 
-## For non-package-developers
+## For those who want the source code but don't intend to propose changes
 
 To get the source code of Macaulay2 if you are not a package developer, one "clones" our git repository with the following shell command:
 
@@ -17,7 +28,7 @@ The source code will appear in a directory called `M2`, which you may rename if 
 * The source code for the package Foo: the file `M2/Macaulay2/packages/Foo.m2` and possibly the directory `M2/Macaulay2/packages/Foo/` and its contents.
 * The instructions for building *Macaulay2*: `M2/INSTALL`
 
-## For package developers
+## For those who want the source code and intend to propose changes
 
 Start by "forking" the Macaulay2 repository, by following the following steps in a browser.
 
