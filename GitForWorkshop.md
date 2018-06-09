@@ -78,7 +78,9 @@ the merge you will be able to push.
 - When you want to push and there are remote changes that don't
   conflict with your changes, you can use
 
+```
     git pull --rebase
+```
 
   to pull those changes and make the history linear with the remote
   changes coming first and yours on top of them.  This will avoid the
@@ -87,7 +89,9 @@ the merge you will be able to push.
 - You can pass the commit message on the command line and skip the
   editor pop-up using the `-m` option:
 
+```
     git commit -m 'This is the commit message'
+```
 
 - At the workshop the main repository will be very busy.  That's why
   we plan to work on separate branches.  Please see:
