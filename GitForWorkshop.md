@@ -8,10 +8,10 @@ it already.
 ## Interacting with the Workshop respository
 
 As a workshop participant, you are part of a github team and this
-means you can directly interact with the workshop repository.
+means you can directly interact with the workshop repository (forking the workshop repository is not necessary).
 
 You can clone (i.e. get a local copy of) the workshop repository like
-this.
+this (for Leipzig 2018 -- adjust as needed).
 
     git clone https://github.com/Macaulay2/Workshop-2018-Leipzig.git
 
@@ -47,7 +47,7 @@ or adding a file to the directory you cloned.  You use
 to tell git that you want to include the changes to FILE in your next
 commit.  Do this for all new files or changed files you want to
 include in the next commit.  As a rule of thumb, one commit should
-include all changes the belong to one logical change (i.e. fixing one
+include all changes that belong to one logical change (i.e. fixing one
 bug).  Commits should be as small as possible, but not smaller.
 
 Once you are done adding changes you run
@@ -67,6 +67,8 @@ pop up again and ask you to write/confirm a new merge commit.  After
 the merge you will be able to push.
 
 ## Slightly more advanced topics
+
+- Some people found [Github Desktop](https://desktop.github.com/) useful.
 
 - If you are just making changes to files that are already tracked,
   you can skip the adding phase and run `git commit -a` which
