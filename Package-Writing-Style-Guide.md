@@ -62,10 +62,6 @@
       returned values, directly or indirectly, should be accessible to the user.
       So use ```QQ(monoid[getSymbol "a"])``` or ```QQ(monoid[vars 0])``` instead of ```QQ[a]```.
 
-* Example code
-    * Do not reload the current package in example code, because its source code might
-      not be on the path of the user installing it.
-
 * Miscellaneous :
     * Avoid redundant parentheses.  Write `f x` instead of `f(x)`.
     * Don't test a Boolean value for equality with `true` or `false`.
@@ -103,6 +99,8 @@
       text between them.
     * The "usage" forms for functions don't need to be in the form of assignment statements.
     * Document output values in-line.
+    * Do not reload the current package in example code, because its source code might
+      not be on the path of the user installing it.
 
 * Comments :
     * Delete commented-out code.
