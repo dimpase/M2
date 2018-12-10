@@ -28,7 +28,10 @@
 
 * Algorithms
     * Do not convert an order n algorithm into an order n^2 algorithm by repeated
-         concatenation of lists or of matrices.
+      concatenation of lists or of matrices.  Similarly, do not repeatedly append or prepend
+      something to a list, and do not repeatedly remove single items from a list.
+      Hash tables are your friend here. 
+      Notice also that the `for ... list ...` command offers a convenient way to make a list.
 
 * Order of arguments:
     * Functions should take arguments in increasing order of complexity.  For example, if the 
@@ -64,10 +67,17 @@
       not be on the path of the user installing it.
 
 * Miscellaneous :
+    * Avoid redundant parentheses.  Write `f x` instead of `f(x)`.
+    * Don't test a Boolean value for equality with `true` or `false`.
+    * Avoid the use of `return`, especially on the last line of a function.
     * The use of magic numbers in code should be avoided.
     * Packages should never export or protect single characters.
     * Variables must never have dual meaning.
     * Use of global variables should be minimized.
+    * Many things you'll be tempted to type more than once have abbreviations.  For example,
+      when R is a ring, then `first entries vars R` can be shortened to `gens R`.
+    * Don't use braces `{ ... ; ... ; ... }` for blocks of code where you don't intend to make a list.
+      Instead, write `( ... ; ... ; ... )`.
 
 * Layout :
     * The incompleteness of split lines must be made obvious: break after a comma, break after an
@@ -80,17 +90,21 @@
         * But ```n = n+1;``` doesn't look so bad, so maybe this should apply just to loose operators.
     * Commas should be followed by a white space.
         * But ```QQ[x,y,z]``` looks fine...
-    * Semicolons should be followed by a space character.
-    * Logical units within a block should be separated by one blank line.
-    * Statements should be aligned.
+    * Semicolons should be followed by a space character, but not at the end of a line.
+    * Blank lines are not needed.
 
 * Documentation:
     * Each exported data type, method, and function must have a documentation page.  
-    * Each documentation page must have an example.
+    * Each documentation page should have an example.
     * Document the type of the return value of method functions, so the documentation generator
       can include those methods in the documentation of the type of the return value.
          * Example: ```resolution Module := ChainComplex => o -> (M) -> (...)```
+    * Don't put blocks of example code adjacent to each other.  Merge them, or add some 
+      text between them.
+    * The "usage" forms for functions don't need to be in the form of assignment statements.
+    * Document output values in-line.
 
 * Comments :
+    * Delete commented-out code.
     * Rewrite confusing code instead of adding comments.
     * There should be a space after a comment start sequence.
