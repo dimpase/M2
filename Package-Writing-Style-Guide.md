@@ -101,6 +101,8 @@
     * Document output values in-line.
     * Do not reload the current package in example code, because its source code might
       not be on the path of the user installing it.
+    * Don't use Macaulay2 identifiers as English words.  In particular, start each sentence
+      with an English word, not an identifier or a symbol.
 
 * Comments :
     * Delete commented-out code.
