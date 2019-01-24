@@ -103,6 +103,8 @@
       not be on the path of the user installing it.
     * Don't use Macaulay2 identifiers as English words.  In particular, start each sentence
       with an English word, not an identifier or a symbol.
+    * Don't capitalize words such as "list" or "tally", even though there are classes in
+      Macaulay2 whose names are "List" and "Tally".
 
 * Comments :
     * Delete commented-out code.
