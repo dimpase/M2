@@ -9,7 +9,8 @@
       They should not include the name of the type of object expected as argument, since the idea
       of such methods is that they are mathematical abstractions that act on a variety of types of
       mathematical object.
-    * The prefix "is" should be used for Boolean variables and methods.
+    * The prefix "is" should be used for Boolean variables and methods.  Examples:
+         * `isPolynomialRing`, `isPrimary`, `isPrime`, `isPrimitive`
     * Abbreviations in names should be avoided.
     * Naming of keys in hash tables:
         * Use existing symbols, when possible.  Examples:
