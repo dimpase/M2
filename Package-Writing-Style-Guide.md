@@ -1,5 +1,5 @@
 * General recommendations :
-    * Any violation of the guide is allowed if it enhances readability.
+    * Strive for readability.
 
 * Naming conventions :
     * Names representing types must be nouns and written in mixed case starting with upper case.
