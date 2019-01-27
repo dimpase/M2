@@ -11,10 +11,13 @@
       mathematical object.
     * The prefix "is" should be used for Boolean variables and methods.
     * Abbreviations in names should be avoided.
+    * Naming of keys in hash tables:
+        * Use existing symbols, when possible:
+             * `source` and `target`, as keys for the source and target of a map
     * Naming of optional arguments:
         * Names of optional arguments should be capitalized
         * Use existing names, when possible:
-            * ```Verify``` : whether to check that a result is correct or well defined
+            * `Verify` : whether to check that a result is correct or well defined
 
 * Use of types
     * Do not use an object of one type to "represent" an object of another.
