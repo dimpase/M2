@@ -12,12 +12,13 @@
     * The prefix "is" should be used for Boolean variables and methods.
     * Abbreviations in names should be avoided.
     * Naming of keys in hash tables:
-        * Use existing symbols, when possible:
+        * Use existing symbols, when possible.  Examples:
              * `source` and `target`, as keys for the source and target of a map
     * Naming of optional arguments:
         * Names of optional arguments should be capitalized
-        * Use existing names, when possible:
+        * Use existing names, when possible.  Examples:
             * `Verify` : whether to check that a result is correct or well defined
+            * `Verbose` : whether to print extra information
 
 * Use of types
     * Do not use an object of one type to "represent" an object of another.
