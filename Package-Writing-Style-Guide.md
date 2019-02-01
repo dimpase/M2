@@ -31,6 +31,11 @@
        because that disables inheritance.  In other words, instead of writing something like
        `class x === T`, write `instance(x,T)`.
 
+* Use of optional arguments
+    * A multiplicity of method functions that are simple variations of each other may
+      indicate that simplification is possible if named optional arguments are used
+      appropriately.
+
 * Algorithms
     * Do not convert an order n algorithm into an order n^2 algorithm by repeated
       concatenation of lists or of matrices.  Similarly, do not repeatedly append or prepend
