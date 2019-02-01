@@ -74,6 +74,9 @@
 
 * Miscellaneous :
     * Avoid redundant parentheses.  Write `f x` instead of `f(x)`.
+    * When a function should return more than one thing, package the several things
+      in a sequence rather than in a list, because then the results can be assigned directly
+      to several variables with something like `(a,b,c) = f(x,y,z)`.
     * Don't test a Boolean value for equality with `true` or `false`.
     * Avoid the use of `return`, especially on the last line of a function.
     * The use of magic numbers in code should be avoided.
