@@ -2,7 +2,9 @@
     * Strive for readability.
 
 * Naming conventions :
-    * Names representing types must be nouns and written in mixed case starting with upper case.
+    * Avoid acronyms in identifier names.
+    * Prefer unabbreviated English words in identifier names.
+    * Names representing types should be nouns and written in mixed case starting with upper case.
     * Names representing optional arguments should be capitalized.
     * Variable names must be in mixed case starting with lower case.
     * Names representing methods must be verbs and written in mixed case starting with lower case.
