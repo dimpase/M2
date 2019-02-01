@@ -103,7 +103,11 @@
     * Don't put blocks of example code adjacent to each other.  Merge them, or add some 
       text between them.
     * The "usage" forms for functions don't need to be in the form of assignment statements.
-    * Document output values in-line.
+    * The "headline" of a documentation should be brief and thus can be vague.  It should not
+      refer to variables by name, because it can appear in a menu, without the accompanying
+      body of the documentation node.
+    * In the "Outputs" section, state, for each output value, not only its type, but what it is.
+      For example, say that "resolution M" returns a free resolution of M.
     * Do not reload the current package in example code, because its source code might
       not be on the path of the user installing it.
     * Start each sentence with an English word, not an identifier or a symbol.
