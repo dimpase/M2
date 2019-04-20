@@ -1,5 +1,6 @@
 * General recommendations :
     * Strive for readability.
+    * Use Unicode where appropriate, as in names of authors.
 
 * Naming conventions :
     * Avoid acronyms in identifier names.
@@ -72,7 +73,7 @@
           ```QQ(monoid[getSymbol "a"])``` instead of ```QQ[getSymbol "a"]```
     * Any names of variables in rings created by the package that get exposed to the user through
       returned values, directly or indirectly, should be accessible to the user.
-      So use ```QQ(monoid[getSymbol "a"])``` or ```QQ(monoid[vars 0])``` instead of ```QQ[a]```.
+      So use ```QQ(monoid[getSymbol "a"])``` or ```QQ(monoid[vars 0])``` instead of ```a := local a; QQ[a]```.
 
 * Miscellaneous :
     * Avoid redundant parentheses.  Write `f x` instead of `f(x)`.
@@ -117,16 +118,33 @@
     * The "headline" of a documentation should be brief and thus can be vague.  It should not
       refer to variables by name, because it can appear in a menu, without the accompanying
       body of the documentation node.
-    * In the "Outputs" section, state, for each output value, not only its type, but what it is.
-      For example, say that "resolution M" returns a free resolution of M.
+    * In the "Outputs" section, state, for each output value, not only its
+      type, but what it is.  For example, say that "resolution M" returns a
+      free resolution of M.  Here you should give a mathematical description of
+      the returned object.  It could be vague, clarified in the subsequent
+      description, but it should be complete.
+    * In the "Outputs" and "Usage" sections, there is no reason to assign the value returned by
+      the sample code to a variable -- when there is just one output, there is no ambiguity.
     * Do not reload the current package in example code, because its source code might
       not be on the path of the user installing it.
     * Start each sentence with an English word, not an identifier or a symbol.
-    * Don't use Macaulay2 identifiers as English words.
+    * Don't use Macaulay2 identifiers as English words.  Learn how to use "ofClass" in this connection,
+      so the English word and a hyperlink can be generated from the identifier.
     * Don't capitalize English words such as "list" or "tally", even though there are classes in
       Macaulay2 whose names are "List" and "Tally", unless you intend to refer to those classes.
+    * Check the spelling of English words.
+    * Read the documentation in a browser (see "viewHelp") to make sure it looks elegant.
+    * All sentences should have verbs and subjects.
+    * Don't use "different" gratuitously.  For example, "different matrices" is no more informative than "matrices".
+    * Don't use "different" when you mean "various" or "diverse".
+    * Don't use the construction "different than".  Use "different from" instead.
+    * Don't use the construction "different X than Y".
+    * Add a comma when starting a sentence with an adverb such as "Finally".
 
 * Comments :
     * Delete commented-out code.
     * Rewrite confusing code instead of adding comments.
     * There should be a space after a comment start sequence.
+
+* When submitting for publication :
+    * Remove any option "DebuggingMode => true" to "newPackage".
