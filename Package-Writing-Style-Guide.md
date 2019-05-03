@@ -143,6 +143,8 @@
     * Don't use the construction "different than".  Use "different from" instead.
     * Don't use the construction "different X than Y".
     * Add a comma when starting a sentence with an adverb such as "Finally".
+    * Use "if" as a prelude to "then", but use "whether" to introduce a
+      proposition.  Example: prefer "determine whether R is reduced" to "determine if R is reduced".
 
 * Comments :
     * Delete commented-out code.
