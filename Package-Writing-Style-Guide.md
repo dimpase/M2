@@ -128,6 +128,8 @@
     * Do not reload the current package in example code, because its source code might
       not be on the path of the user installing it.
     * Start each sentence with an English word, not an identifier or a symbol.
+    * End each sentence with a period or question mark, not with a colon.  To indicate that
+      example code just below is relevant, use English words, not a colon.
     * Don't use Macaulay2 identifiers as English words.  Learn how to use "ofClass" in this connection,
       so the English word and a hyperlink can be generated from the identifier.
     * Don't capitalize English words such as "list" or "tally", even though there are classes in
@@ -135,7 +137,8 @@
     * Check the spelling of English words.
     * Read the documentation in a browser (see "viewHelp") to make sure it looks elegant.
     * All sentences should have verbs and subjects.
-    * Don't use "different" gratuitously.  For example, "different matrices" is no more informative than "matrices".
+    * Don't use "different" gratuitously.  For example, "different matrices" is 
+      no more informative than "matrices".
     * Don't use "different" when you mean "various" or "diverse".
     * Don't use the construction "different than".  Use "different from" instead.
     * Don't use the construction "different X than Y".
