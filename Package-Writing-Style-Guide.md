@@ -23,7 +23,7 @@
         * Use existing names, when possible.  Examples:
             * `Verify` : whether to check that a result is correct or well defined
             * `Verbose` : whether to print extra information
-    * Distinguish between file names, such as `Foo.m2`, and package names, such as _Foo_.
+    * Preserve the distinction between file names, such as `Foo.m2`, and package names, such as _Foo_.
       A package is an academic work, consisting possibly of multiple files.
 
 * Use of types
