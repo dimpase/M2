@@ -154,4 +154,4 @@
     * There should be a space after a comment start sequence.
 
 * When submitting for publication :
-    * Remove any option "DebuggingMode => true" to "newPackage".
+    * Remove any option `DebuggingMode => true` or `Reload => true` to "newPackage".
