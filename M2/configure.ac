@@ -802,11 +802,11 @@ then BUILTLIBS="-lgdbm $BUILTLIBS"
 fi
 
 AC_MSG_CHECKING(whether package bdw-gc is provided)
-dnl Note: we don't include -lgccpp below, because linking with that library is what replaces ::new and friends with GC_MALLOC_UNCOLLECTABLE and friends:
+dnl Note:  -lgccpp is needed below for GC_throw_bad_alloc, cf. https://github.com/ivmai/bdwgc/issues/268
 if [ pkg-config --exists bdw-gc ]
 then AC_MSG_RESULT(yes)
      CPPFLAGS="`pkg-config --cflags-only-I bdw-gc | sed -e 's=^-I/=-isystem /=g' -e 's= -I/= -isystem /=g'` $CPPFLAGS"
-     LIBS="-lgc $LIBS"
+     LIBS="-lgc -lgccpp $LIBS"
      FOUND_gc=yes
 else AC_MSG_RESULT(no)
      BUILD_gc=yes
