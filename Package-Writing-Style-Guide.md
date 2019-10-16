@@ -152,6 +152,8 @@
     * Add a comma when starting a sentence with an adverb such as "Finally".
     * Use "if" as a prelude to "then", but use "whether" to introduce a
       proposition.  Example: prefer "determine whether R is reduced" to "determine if R is reduced".
+    * Use standard English punctuation.  In particular, each use of "e.g.", "i.e.", or "resp." should
+      be followed by a comma.
 
 * Comments :
     * Delete commented-out code.
