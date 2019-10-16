@@ -99,6 +99,9 @@
 * Layout :
     * The incompleteness of split lines must be made obvious: break after a comma, break after an
       operator.
+    * If you use a text editor where TAB stops are set to something other than every 8th location on
+      the line, then don't use TABs at all for indentation, as your users will see odd-looking
+      indentation.
 
 * White space :
     * Contents of regions delimited by parentheses, braces, or brackets that consist of multiple lines
