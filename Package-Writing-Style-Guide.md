@@ -88,7 +88,7 @@
       to `x` and `x===false` is equivalent to `not x`.
     * Avoid the use of `return`, especially on the last line of a function.
     * The use of magic numbers in code should be avoided.
-    * Packages should never export or protect single characters.
+    * Packages should never export or protect identifiers whose names consist of a single character.
     * Variables must never have dual meaning.
     * Use of global variables should be minimized.
     * Many things you'll be tempted to type more than once have abbreviations.  For example,
