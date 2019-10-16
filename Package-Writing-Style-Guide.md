@@ -141,6 +141,8 @@
       so the English word and a hyperlink can be generated from the identifier.
     * Don't capitalize English words such as "list" or "tally", even though there are classes in
       Macaulay2 whose names are "List" and "Tally", unless you intend to refer to those classes.
+      Examples of correct usage: "The function returns a list."  "The function returns an object
+      of class List."  An example of incorrect usage: "The function returns a List."
     * Check the spelling of English words.
     * Read the documentation in a browser (see "viewHelp") to make sure it looks elegant.
     * All sentences should have verbs and subjects.
