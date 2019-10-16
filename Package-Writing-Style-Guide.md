@@ -69,6 +69,8 @@
     * Errors should be indicated by calling the function `error`.
     * A package should set no variables in the User dictionary without an explicit request from
       the user.
+        * To determine whether your package sets User variables, use `listUserSymbols` after running some
+          of the code in your package.
         * The function `use` should never be used in a package, unless the ring contains no user variables.
         * The function `vars` should not be used in a package.
         * To avoid setting user variables when creating a polynomial ring, use something like
