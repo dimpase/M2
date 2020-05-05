@@ -1,3 +1,5 @@
+(This page will be edited during the "M2 internals" meeting on May 8-10, 2020.)
+
 ##  Topics:
 * setting up your machine for Macaulay2 development
 * cmake build system 
