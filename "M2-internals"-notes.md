@@ -3,7 +3,7 @@
 ##  Topics:
 
 * [[setting up your machine for Macaulay2 development]]
-* cmake build system 
+* [[CMake build system]] 
 * the interpreter and how it is implemented
 * D language
 * adding functions to the engine and interfacing them to the front end
