@@ -43,7 +43,7 @@ cd BUILD/cleveland
 make
 ```
 Tips
-* make -j4 _could_ make speed things up?
+* make -j4 _could_ speed things up?
 * there are OS-specific additional instructions
   * for instance, set FC = gfortran for Debian systems
 * configure options options
