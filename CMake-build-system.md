@@ -30,4 +30,10 @@ CC=/path/to/gcc CXX=/path/to/g++ cmake -GNinja -S../.. -B. -DCMAKE_INSTALL_PREFI
 
 4. Run `ninja M2-binary M2-core` to build the M2 executable and the core package
 
-5. Run `ninja install-packages` to install all packages.
+5. Run `ninja install-packages` to install all packages, and `ninja install` to install Macaulay2.
+
+Other flags and build targets are available, see [INSTALL-CMake.md](https://github.com/mahrud/M2/blob/feature/cmake/M2/INSTALL-CMake.md) for details.
+
+## Additional info
+[Slides](https://www-users.math.umn.edu/~mahrud/journal/meeting/cmake/#/)
+[INSTALL-CMake.md](https://github.com/mahrud/M2/blob/feature/cmake/M2/INSTALL-CMake.md)
