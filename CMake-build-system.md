@@ -15,6 +15,7 @@ git remote add mahrud https://github.com/mahrud/M2.git
 git fetch mahrud
 git checkout feature/cmake
 ```
+
 2. Move to the build directory and run cmake
 ```
 cd M2/M2/build/build
@@ -24,3 +25,9 @@ _Note_ If you're on a Mac, you might have to use
 ```
 CC=/path/to/gcc CXX=/path/to/g++ cmake -GNinja -S../.. -B. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
 ```
+
+3. Run `ninja build-libraries`. **This has to come first!**
+
+4. Run `ninja M2-binary M2-core` to build the M2 executable and the core package
+
+5. Run `ninja install-packages` to install all packages.
