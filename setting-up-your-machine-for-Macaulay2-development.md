@@ -1,6 +1,4 @@
-Quick links: [INSTALL](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL) [Downloads](http://www2.macaulay2.com/Macaulay2/Downloads/) [["M2-internals"-notes]]
-
-(in progress)
+Work in progress. Contributors: Tim Duff, (your-name-here)
 
 ## Minimal setup 
 
@@ -34,22 +32,35 @@ trees."
 * submodules
   * like "libraries", but obtained from git
 # building from source
-**Q** what is a build directory?
-* configure script
-  -- for starters, do ./configure -help (in Macaulay2)
-  -- GNU paradigm: configure, then make
-  -- options
-    -- some standard (like --help)
-    -- some less standard (--disable-gfan)
-  -- output: version, environment variables, OS, checks
-  -- things it does:
-    -- checks for libraries (eg. mpir) and builds if not there / not right version. tricky. cMake improvements?
-    -- starts to create files needed for make
-    -- transformation: eg. foo.in -> foo. replaces identifiers (@PACKAGE_NAME) with their system-specific values
-  -- defining macros w/ autoconf
-    -- AC_DEFUN. arguments need square brackets
-    -- some other way?
+GNU paradigm: configure, then make. In this example, build directory is M2/M2/BUILD/cleveland
+```
+cd M2/M2/
+make
+./configure -h
+mkdir BUILD/cleveland
+cd BUILD/cleveland
+../../configure --enable-download
+make
+```
+Tips
+* make -j4 _could_ make speed things up?
+* there are OS-specific additional instructions
+  * for instance, set FC = gfortran for Debian systems
+* configure options options
+  * some standard (like --help)
+  * some less standard (--disable-gfan)
+
+Things configure does:
+* output: version, environment variables, OS, many checks
+* checks for libraries (eg. mpir) and builds if not there / not right version. tricky. cMake improvements?
+* starts to create files needed for make
+* transformation: eg. foo.in -> foo. replaces identifiers (@PACKAGE_NAME) with their system-specific values
+* can define macros w/ autoconf
+  * AC_DEFUN. some other way?
+  * arguments need square brackets
   -- final part created by AC_OUTPUT
 ## didn't cover
-1. how to use make
-2. anything else?
+* how to use make
+* anything else?
+
+Quick links: [INSTALL](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL) [Downloads](http://www2.macaulay2.com/Macaulay2/Downloads/) [["M2-internals"-notes]]
