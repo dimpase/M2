@@ -1,5 +1,1 @@
-Quick links:
-
-[INSTALL](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL)
-
-[Downloads](http://www2.macaulay2.com/Macaulay2/Downloads/)
+Quick links: [INSTALL](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL) [Downloads](http://www2.macaulay2.com/Macaulay2/Downloads/) [["M2-internals"-notes]]
