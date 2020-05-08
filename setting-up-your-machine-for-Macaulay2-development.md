@@ -16,7 +16,7 @@ trees."
 * Macaulay2 directory: contains most of Macaulay2 itself, w/ important subdirectories
   * [e](https://github.com/Macaulay2/M2/tree/master/M2/Macaulay2/e): the engine (C++ language)
   * [d](https://github.com/Macaulay2/M2/tree/master/M2/Macaulay2/d): the interpreter (D language)
-  * [m2](https://github.com/Macaulay2/M2/tree/master/M2/Macaulay2/packages): the top level core (Macaulay2 language)
+  * [m2](https://github.com/Macaulay2/M2/tree/master/M2/Macaulay2/m2): the top level core (Macaulay2 language)
   * [packages](https://github.com/Macaulay2/M2/tree/master/M2/Macaulay2/packages): where most users' code goes
   * also [c](https://github.com/Macaulay2/M2/tree/master/M2/Macaulay2/c) directory: I missed what this is for
 * [configure.ac](https://github.com/Macaulay2/M2/blob/master/M2/configure.ac): autoconf script that generates actual configure file
