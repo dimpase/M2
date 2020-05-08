@@ -36,4 +36,5 @@ Other flags and build targets are available, see [INSTALL-CMake.md](https://gith
 
 ## Additional info
 [Slides](https://www-users.math.umn.edu/~mahrud/journal/meeting/cmake/#/)
+
 [INSTALL-CMake.md](https://github.com/mahrud/M2/blob/feature/cmake/M2/INSTALL-CMake.md)
