@@ -18,7 +18,7 @@ git checkout feature/cmake
 
 2. Move to the build directory and run cmake
 ```
-cd M2/M2/build/build
+cd M2/M2/BUILD/build
 cmake -GNinja -S../.. -B. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
 ```
 _Note_ If you're on a Mac, you might have to use
