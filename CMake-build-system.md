@@ -35,9 +35,15 @@ CC=/path/to/gcc CXX=/path/to/g++ cmake -GNinja -S../.. -B. -DCMAKE_INSTALL_PREFI
 Other flags and build targets are available, see [INSTALL-CMake.md](https://github.com/mahrud/M2/blob/feature/cmake/M2/INSTALL-CMake.md) for details.
 
 ## Issues and solutions
+### `fatal error: givaro/modular-double.h: No such file or directory`
+Issue: `ninja` fails with an error `fatal error: givaro/modular-double.h: No such file or directory` even though the `givaro` package is installed
+Solution: run `ninja build-givaro` to force building `givaro`.
+
+
 ### `gmp_CCmutable`
 
 
 ## Additional info
 * [Slides](https://www-users.math.umn.edu/~mahrud/journal/meeting/cmake/#/)
 * [INSTALL-CMake.md](https://github.com/mahrud/M2/blob/feature/cmake/M2/INSTALL-CMake.md)
+
