@@ -46,7 +46,7 @@ Tips
 * make -j4 _could_ speed things up?
 * there are OS-specific additional instructions
   * for instance, set FC = gfortran for Debian systems
-* configure options options
+* configure options
   * some standard (like --help)
   * some less standard (--disable-gfan)
 
