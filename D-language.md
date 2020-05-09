@@ -30,3 +30,11 @@ Be sure that `scc1` is on your path for running the exercises. Run `make` in the
     * `if` y is of type Y, then it returns (via `do`) y.a
     * `if` z is of type Z, then it returns (via `do`) z.d
   * This definition of U is turned into a switch statement based on type with cases in the C code.
+
+## Tags File and Its Use
+
+The exercises go through using `tags-search` in emacs. Returns answers in logical order (rather than, say, alphabetical.)
+
+### Going through actors3.d file
+
+Using `tags-search`, finding details on `sin` function. Note the `when`, `if`, `do`, `else` syntax based on type, returning appropriate answers based on type (complex, real, integer, rational).
