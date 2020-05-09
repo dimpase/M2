@@ -8,7 +8,7 @@ A sample Makefile for illustrating syntax is [here](https://github.com/DanGrayso
 
 ### Comparing Translation of D Language into a C Code File
 
-* Do not have to declare variable names ahead of time. Have both an "=" and a ":=".
+* Do not have to declare variable names ahead of time. Have both an "=" and ":=", along with "::=" for definition of macros.
 * foo-tmp.c is translated into foo.d by the compiler
 * In the translated C file, b is declared (static means it is not exported) near the top, and b:=1 later in the file (e.g. b:=true).
 * The variable c is exported (so not declared static), and "foo_c" indicates that it taken from foo.d
