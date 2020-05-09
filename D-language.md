@@ -2,7 +2,7 @@ Work in progress. Contributors: Gwyn Whieldon, (your-name-here)
 
 ## D Language
 
-Files for internals workshop are available at [Internals](https://github.com/DanGrayson/Internals). First exercise of the day is available [here](https://github.com/DanGrayson/Internals/blob/master/dan/lecture%202%20exercises.txt). A walkthrough of the syntax in the Makefile reference by the exercise is given below.
+Files for internals workshop are available at [Internals](https://github.com/DanGrayson/Internals). First exercise of the day is available [here](https://github.com/DanGrayson/Internals/blob/master/dan/lecture%202%20exercises.txt). A walkthrough of the syntax in the Makefile referenced by the exercise is given below.
 
 **Note that a successfully built version of M2 is a prerequisite for today's exercises.**
 
