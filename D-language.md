@@ -18,6 +18,7 @@ A sample Makefile for illustrating syntax is [here](https://github.com/DanGrayso
 * The variable X is defining a struct with two variables (both integers). This variable doesn't appear in foo-tmp.c. What happened? Let's go look in foo-exports.h to see what happened.
   * Looking at the "typedefs" section, we can see the variable X_struct.
   * Looking down into the "struct types" though, we see that X_struct doesn't have a type code assigned.
+  * As X is never used/called/assigned again, it never receives a type declaration and is not exported.
 * Variables Y and Z are also both structs, where Y has two ints and a char as inputs, and Z just has two ints.
   * U is defined to be Y or Z (these are different types, can create functions that pass arguments into different functions based on type.
   * Three keywords here worth noting:
