@@ -21,7 +21,8 @@ A sample Makefile for illustrating syntax is [here](https://github.com/DanGrayso
   * As X is never used/called/assigned again, it never receives a type declaration and is not exported.
 * Variables Y and Z are also both structs, where Y has two ints and a char as inputs, and Z just has two ints.
   * U is defined to be Y or Z (these are different types, can create functions that pass arguments into different functions based on type), declared to be a tagged union.
-  * Three keywords here worth noting:
+  * Three keywords here worth noting in D language:
     * "when" takes variable u, and checks:
     * "if" y is of type Y, then it returns (via "do") y.a
     * "if" z is of type Z, then it returns (via "do") z.d
+  * This definition of U is turned into a switch statement based on type with cases in the C code.
