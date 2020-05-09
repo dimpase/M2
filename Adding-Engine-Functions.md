@@ -4,7 +4,7 @@ Work in progress. Contributors: Michael Burr, (your-name-here)
 
 ### Overview
 
-History: Engine is based on (very) old version of C++ (One of Mike's goal is to modernize)
+History: Engine is based on (very) old version of C++ (One of Mike's goal is to modernize).  Designed to be fast.  Originally designed to just have the most important things there, but it has been growing in size to include more.
 
 Structure: Three parts: 
 
@@ -22,8 +22,8 @@ Provides C/C++ functions that the top level Macaulay2 code can call.  Most of th
 
 ### interface.dd
 
-Add the function to connect the Macaulay2 to the raw function.  export <rawFunctionName>(e:Expr):Expr := (...);  when e is of the right type of object, check length and properties of e.  toExpr(...) is the actual call.  Exceptions are WrongArg{Error Type}(...).  toExpr(Ccode({return type},"raw{FunctionName}(",{arguments separated by commas and ","'s, ")"}.  sefupfun("M2 language name",new function name); can be the same name.  parse.d has Expr definition.
+Add the function to connect the Macaulay2 to the raw function.  export <rawFunctionName>(e:Expr):Expr := (...);  when e is of the right type of object, check length and properties of e.  toExpr(...) is the actual call.  Exceptions are WrongArg{Error Type}(...).  toExpr(Ccode({return type},"raw{FunctionName}(",{arguments separated by commas and ","'s, ")"}.  sefupfun("M2 language name",new function name); can be the same name.  parse.d has Expr definition.  Need export so that you can use in another d file, otherwise, no export is needed.
 
 
 ### Macaulay2 
-     Calls the M2 language name.  This function can be used within M2 functions (to hide and use the underlying code).  Start with debug Core or raw{function name} = value Core#"private dictionary"#"Function name" to access the function.
+     Calls the M2 language name.  This function can be used within M2 functions (to hide and use the underlying code).  Start with debug Core or raw{function name} = value Core#"private dictionary"#"Function name" to access the function.  There are also raw versions of data types which can be explored (with debug Core).  Could export function directly or name it directly, but want to have more data, if possible.
