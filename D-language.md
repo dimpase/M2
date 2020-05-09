@@ -80,4 +80,3 @@ The exercises go through using `tags-search` in emacs. Returns answers in logica
 * Exercises show how to run the version of M2 that you're building in emacs.
   * Using meta-x compile in emacs, we recompile the file (in d directory) but didn't produce a new version of the program.
   * Have to go back to the [build-directory]/Macaulay2/bin and recompile the program with `make`.
-* If you add a new type, add it to `Expr` in `parse.d`.
