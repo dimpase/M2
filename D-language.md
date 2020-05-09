@@ -6,7 +6,7 @@ Files for internals workshop are available at [Internals](https://github.com/Dan
 
 A sample Makefile for illustrating syntax is [here](https://github.com/DanGrayson/Internals/blob/master/dan/D%20language/Makefile)
 
-### Features of D Language
+### Comparing Translation of D Language into a C Code File
 
 * Do not have to declare variable names ahead of time. Have both an "=" and a ":=".
 * foo-tmp.c is translated into foo.d by the compiler
