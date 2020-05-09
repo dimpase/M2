@@ -10,7 +10,7 @@ Files for internals workshop are available at [Internals](https://github.com/Dan
 
 A sample Makefile for illustrating syntax is [here](https://github.com/DanGrayson/Internals/blob/master/dan/D%20language/Makefile)
 
-Be sure that `scc1` is on your path for running the exercises. Run `make` in the D language directory and examine the resulting files.
+Be sure that `scc1` is on your path for running the exercises. Run `make` in the D language directory and examine the resulting files from translating foo.d into foo-tmp.c via the Makefile above.
 
 * Do not have to declare variable names ahead of time. Have both an `=` (assignment) and `:=` (assignment and creation), along with `::=` for definition of macros.
 * foo-tmp.c is translated into foo.d by the compiler
