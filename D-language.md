@@ -10,6 +10,7 @@ A sample Makefile for illustrating syntax is [here](https://github.com/DanGrayso
 
 * Do not have to declare variable names ahead of time. Have both an "=" and ":=", along with "::=" for definition of macros.
 * foo-tmp.c is translated into foo.d by the compiler
-* In the translated C file, b is declared (static means it is not exported) near the top, and b:=1 later in the file (e.g. b:=true).
+* In the translated C file, b is declared ("static" means it is not exported) near the top, and b:=1 later in the file (e.g. b:=true).
 * The variable c is exported (so not declared static), and "foo_c" indicates that it taken from foo.d
 * Ccode keyword gives a macro that literally translates the arguments into C code. In this case, we have defined the meaning of "+" via this macro.
+* "if __ then __ else" is an expression, rather than a statement. The 
