@@ -14,3 +14,4 @@ A sample Makefile for illustrating syntax is [here](https://github.com/DanGrayso
 * The variable c is exported (so not declared static), and "foo_c" indicates that it taken from foo.d
 * Ccode keyword gives a macro that literally translates the arguments into C code. In this case, we have defined the meaning of "+" via this macro.
 * "if __ then __ else" is an expression, rather than a statement. The line "i := if b then 11 else 22" was translated into a control statement that assigns a temporary variable _tmp, which is then assigned to i.
+  * This has no impact on performance/speed.
