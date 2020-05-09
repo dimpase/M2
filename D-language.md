@@ -10,6 +10,8 @@ Files for internals workshop are available at [Internals](https://github.com/Dan
 
 A sample Makefile for illustrating syntax is [here](https://github.com/DanGrayson/Internals/blob/master/dan/D%20language/Makefile)
 
+Be sure that `scc1` is on your path for running the exercises. Run `make` in the D language directory and examine the resulting files.
+
 * Do not have to declare variable names ahead of time. Have both an "=" and ":=", along with "::=" for definition of macros.
 * foo-tmp.c is translated into foo.d by the compiler
 * In the translated C file, b is declared ("static" means it is not exported) near the top, and b:=1 later in the file (e.g. b:=true).
