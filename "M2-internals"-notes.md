@@ -5,7 +5,7 @@
 * [[setting up your machine for Macaulay2 development]]
 * [[CMake build system]] 
 * the interpreter and how it is implemented
-* D language
+* [[D language]]
 * adding functions to the engine and interfacing them to the front end
 * the engine: the class structure (rings, module, gbs, resolutions, computations), engine.h
 
