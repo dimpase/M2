@@ -18,4 +18,8 @@ Parts 1. and 2. compile to executable.
 
 ### engine.h
 
-Provides C/C++ functions that the top level Macaulay2 code can call.  Most of the code is contained in files x-* files.  Functions should be named raw<FunctionName> (not within a namespace).  Place the raw<FunctionName> and arguments in the header and the source code in an x-* file.
+Provides C/C++ functions that the top level Macaulay2 code can call.  Most of the code is contained in files x-* files.  Functions should be named raw<FunctionName> (not within a namespace).  Place the raw<FunctionName> and arguments in the header and the source code in an x-* file.  Recompile after adding changes.
+
+#### interface.dd
+
+Add the function to connect the Macaulay2 to the raw function.  export <rawFunctionName>(e:Expr):Expr := (...).  when e is of the right type of object, check length and properties of e.  toExpr(...) is the actual call.  Exceptions are WrongArg<Error Type>(...)
