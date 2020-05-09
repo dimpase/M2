@@ -26,4 +26,5 @@ Add the function to connect the Macaulay2 to the raw function.  export <rawFunct
 
 
 ### Macaulay2 
-     Calls the M2 language name.  This function can be used within M2 functions (to hide and use the underlying code).  Start with debug Core or raw{function name} = value Core#"private dictionary"#"Function name" to access the function.  There are also raw versions of data types which can be explored (with debug Core).  Could export function directly or name it directly, but want to have more data, if possible.
+     
+Calls the M2 language name.  This function can be used within M2 functions (to hide and use the underlying code).  Start with debug Core or raw{function name} = value Core#"private dictionary"#"Function name" to access the function.  There are also raw versions of data types which can be explored (with debug Core).  Could export function directly or name it directly, but want to have more data, if possible.
