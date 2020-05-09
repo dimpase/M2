@@ -8,7 +8,7 @@ Work in progress. Contributors: Tim Duff, (your-name-here)
 
 Step 1 is perhaps optional if you don't intend to submit a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request). 
 
-## Contents of [M2/M2/](https://github.com/Macaulay2/M2/tree/master/M2)
+## Contents of source directory [M2/M2/](https://github.com/Macaulay2/M2/tree/master/M2)
 * [README](https://github.com/Macaulay2/M2/blob/master/M2/README): generally a good place to start
 * [BUILD](https://github.com/Macaulay2/M2/tree/master/M2/BUILD) directory: "This directory may be used as a convenient location for the build directory
 trees."
@@ -31,7 +31,7 @@ trees."
   * each directory contains instructions for how to build
 * submodules
   * like "libraries", but obtained from git
-# building from source
+# building from source w/ autotools
 GNU paradigm: configure, then make. In this example, build directory is M2/M2/BUILD/cleveland
 ```
 cd M2/M2/
@@ -43,7 +43,9 @@ cd BUILD/cleveland
 make
 ```
 Tips
-* make -j4 _could_ speed things up?
+* potentially helpful make flags 
+  * -jn : use n threads
+  * -C dir : recompile only in dir
 * there are OS-specific additional instructions
   * for instance, set FC = gfortran for Debian systems
 * configure options
