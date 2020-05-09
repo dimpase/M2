@@ -20,13 +20,13 @@ Be sure that `scc1` is on your path for running the exercises. Run `make` in the
 * "if __ then __ else" is an expression, rather than a statement. The line "i := if b then 11 else 22" was translated into a control statement that assigns a temporary variable _tmp, which is then assigned to i.
   * This has no impact on performance/speed.
 * The variable X is defining a struct with two variables (both integers). This variable doesn't appear in foo-tmp.c. What happened? Let's go look in foo-exports.h to see what happened.
-  * Looking at the "typedefs" section, we can see the variable X_struct.
-  * Looking down into the "struct types" though, we see that X_struct doesn't have a type code assigned.
-  * The "+" sign included in the struct is what adds the type code assignment.
+  * Looking at the `\* typedefs *\` section, we can see the variable `X_struct`.
+  * Looking down into the `\* struct types *\` though, we see that `X_struct` doesn't have a type code assigned.
+  * The `+` sign included in the struct is what adds the type code assignment.
 * Variables Y and Z are also both structs, where Y has two ints and a char as inputs, and Z just has two ints.
   * U is defined to be Y or Z (these are different types, can create functions that pass arguments into different functions based on type), declared to be a tagged union.
-  * Three keywords here worth noting in D language:
-    * "when" takes variable u, and checks:
-    * "if" y is of type Y, then it returns (via "do") y.a
-    * "if" z is of type Z, then it returns (via "do") z.d
+  * Three keywords (`when`, `if`, `do`) here worth noting in D language:
+    * `when` takes variable u, and checks:
+    * `if` y is of type Y, then it returns (via `do`) y.a
+    * `if` z is of type Z, then it returns (via `do`) z.d
   * This definition of U is turned into a switch statement based on type with cases in the C code.
