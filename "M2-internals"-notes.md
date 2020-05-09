@@ -6,7 +6,7 @@
 * [[CMake build system]] 
 * [[the interpreter and how it is implemented]]
 * [[D language]]
-* adding functions to the engine and interfacing them to the front end
+* [[adding functions to the engine and interfacing them to the front end|Adding Engine Functions]]
 * the engine: the class structure (rings, module, gbs, resolutions, computations), engine.h
 
 ## Further topics:
