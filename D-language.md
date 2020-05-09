@@ -76,4 +76,7 @@ The exercises go through using `tags-search` in emacs. Returns answers in logica
 
 ### Going through actors3.d file
 
-Using `tags-search`, finding details on `sin` function. Note the `when`, `if`, `do`, `else` syntax based on type, returning appropriate answers based on type (complex, real, integer, rational).
+* Using `tags-search`, finding details on `sin` function. Note the `when`, `if`, `do`, `else` syntax based on type, returning appropriate answers based on type (complex, real, integer, rational).
+* Exercises show how to run the version of M2 that you're building in emacs.
+  * Using meta-x compile in emacs, we recompile the file (in d directory) but didn't produce a new version of the program.
+  * Have to go back to the [build-directory]/Macaulay2/bin and recompile the program with `make`.
