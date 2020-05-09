@@ -14,4 +14,4 @@ Differences between different branches of M2 include garbage collection.
 
 ## Unit tests
 
-"ctest -R unit" does the tests labeled unit.  Alternately, gmake check (different format).  These are fast tests to check easy things.
+"ctest -R unit" does the tests labeled unit.  Alternately, gmake check (different format).  These are fast tests to check easy things.  Add a unit test by going into build directory e/unit-tests directory.  Write as a function with EXPECT_EQ(Expected,function call).  There are other checks, but this should be enough for most purposes.  TEST(Test suite name, specific test name).  Uses Google tests.
