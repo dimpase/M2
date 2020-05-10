@@ -6,6 +6,7 @@ The Macaulay2 interpreter is implemented in the `d` directory. The files in this
 
 This code has remained static for many years, and no major changes are planned. Here are all the files, in logical order (meaning later files depend on earlier files), with line counts:
 
+```
      152 arithmetic.d *				     149 basic.d		
       61 atomic.d				     417 convertr.d *
      156 M2.d					     303 common.d		
@@ -39,6 +40,7 @@ This code has remained static for many years, and no major changes are planned. 
 
 
    26439 total
+```
 
 (source: https://github.com/DanGrayson/Internals/tree/master/dan/D%20language)
 
