@@ -58,30 +58,30 @@ The main parts of the interpreter are in `parse.d`, `tokens.d`, `parser.d`, `con
 ### `parse.d`
 has declarations of tokens and keywords.
 
-### `parser.d`
+#### `parser.d`
 is where here parsing actually happens. Has functions to parse tokens.
 Prefix of n on function (e.g., unaryop / nunaryop) means whether the function can take arguments or not.
 
-### binding.d
+#### binding.d
 binds variables descending down the parse tree. A new dictionary is created in a function definition for the local variables. Must bind correct values to symbols.
 Also sets up all keywords and operators with precedence strength.
 
 In top-level M2, one may type
 
-help "operators"
-help "precedence of operators"
+> help "operators"
+> help "precedence of operators"
 
 to learn more about Macaulay2 operators and their precedence.
 
-converter.d
-Converts parse tree into code that can be run. Code is pseudo-compiled code the interpreter generates (analogous to bytecode).
-'Code' is defined in parse.d.
+#### `converter.d`
+converts parse tree into code that can be run. Code is pseudo-compiled code the interpreter generates (analogous to bytecode).
+`Code` is defined in parse.d.
 
-evaluate.d
-Evaluate the code in `eval`. This is the interpreter.
+#### `evaluate.d`
+evaluates the code in `eval`. 
 
-interp.dd
-Top-level loop.
+#### `interp.dd`
+is the top-level read-eval-print-loop.
 
 Exercise: Modify the interpreter to add a new binary operator. Make sure you can use it in methods.
 Project: Rearrange code to be more readable or consistently organized in named files.
