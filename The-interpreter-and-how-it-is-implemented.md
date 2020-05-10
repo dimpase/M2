@@ -46,7 +46,7 @@ This code has remained static for many years, and no major changes are planned. 
 
 Many of these files implement various aspects of the Macaulay2 language. For example:
 
-arithmetic.d - basic arithmetic operations and types
+`arithmetic.d` - basic arithmetic operations and types
 strings.d - strings
 varstrin.d - variable length strings
 nets.d - implements nets (2D strings, used for example in printing polynomials so that exponents are on separate lines)
