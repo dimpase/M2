@@ -12,7 +12,7 @@ Structure: The engine consists of three parts:
 
 1. The engine (C++ code).  This is contained in the e directory.
 
-2. The interface (d/dd).  This is contained in the d directory.  The file interface.dd connects actual functions to the m2 interpreter functions.  (Here, d is used for C code while dd is for C++ code).
+2. The interface (d/dd).  This is contained in the d directory.  The file interface.dd connects actual functions to the m2 interpreter functions.  (Here, d connects to C code while dd connects to C++ code).
 
 3. The M2 code.
 
