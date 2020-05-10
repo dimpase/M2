@@ -1,11 +1,17 @@
 ## Doxygen
 
-It isn't complete, but it has some useful information.  Especially the class structure and inheritance.
+This documentation isn't complete, but it does contain some useful information.  In particular, the class structure and inheritance is described here.
 
 ## Branches
 
-Differences between several current branches of M2 include memory allocation schemes (related to garbage collection issues).
+The differences between current branches of M2 include memory allocation schemes (related to garbage collection issues) and build methods.
 
 ## Unit tests
 
-"ctest -R unit" does the tests labeled unit.  Alternately, gmake check (different format).  These are fast tests to check easy things.  Add a unit test by going into build directory e/unit-tests directory.  Write as a function with EXPECT_EQ(Expected,function call).  There are other checks, but this should be enough for most purposes.  TEST(Test suite name, specific test name).  Uses Google tests.
+The unit tests are fast tests that check easy things.  These tests use the Google test suite.  A new unit test can be created by going into the build directory e/unit-tests directory and writing a function with the command TEST(&lt;Test suite name&gt;,&lt;specific test name&gt;).  Within these tests, use EXPECT_EQ(&lt;Expected&gt;,&lt;function call&gt;) to check the value.  There are other tests, but this function should be enough for most purposes.
+
+Run unit tests: Depending on the build method, there are different ways to run the tests depending on how M2 has been built.
+
+1. Using the configure approach, run "make check".
+
+2. Using the cmake approach, run "ctest -R unit"
