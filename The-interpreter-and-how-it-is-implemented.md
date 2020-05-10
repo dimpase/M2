@@ -2,7 +2,7 @@ Work in progress. Contributors: Gwyn Whieldon, (your-name-here)
 
 The Macaulay2 interpreter is implemented in the `d` directory. The files in this directory are written in the D language, which is a type-safe intermediate language developed by Dan Grayson specifically for the purpose of implementing the interpreter. This language is translated to C by the `ssc1` translator in the `c` directory, before being compiled to produce the M2 binary.
 
- Note that there is another language known as the D language (https://dlang.org/), which is an entirely different project unrelated to Macaulay2.
+ Note that there is another language known as the (D language)[https://dlang.org/], which is an entirely different project unrelated to Macaulay2.
 
 This code has remained static for many years, and no major changes are planned. Here are all the files, in logical order (meaning later files depend on earlier files), with line counts:
 
