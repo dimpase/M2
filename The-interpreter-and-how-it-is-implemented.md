@@ -9,7 +9,7 @@ This code has remained static for many years, and no major changes are planned. 
 
 >      152 arithmetic.d *			     149 basic.d		
 >       61 atomic.d				     417 convertr.d *
->      156 M2.d					     303 common.d		
+>      156 M2.d					     	303 common.d		
 >      231 system.d				     298 util.d			
 >       72 strings.d				     118 struct.d		
 >       90 varstrin.d				     188 classes.dd		
