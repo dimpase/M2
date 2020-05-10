@@ -59,7 +59,7 @@ The main parts of the interpreter are in `parse.d`, `tokens.d`, `parser.d`, `con
 has declarations of tokens and keywords.
 
 #### `parser.d`
-is where here parsing actually happens. Has functions to parse tokens.
+is where here parsing actually happens. It has functions to parse tokens.
 Prefix of n on function (e.g., unaryop / nunaryop) means whether the function can take arguments or not.
 
 #### binding.d
@@ -68,8 +68,8 @@ Also sets up all keywords and operators with precedence strength.
 
 In top-level M2, one may type
 
->     `help "operators"`
->     `help "precedence of operators"`
+     help "operators"
+     help "precedence of operators"
 
 to learn more about Macaulay2 operators and their precedence.
 
@@ -83,6 +83,6 @@ evaluates the code in `eval`.
 #### `interp.dd`
 is the top-level read-eval-print-loop.
 
-Exercise: Modify the interpreter to add a new binary operator. Make sure you can use it in methods.
-Project: Rearrange code to be more readable or consistently organized in named files.
-Project: Add code coverage and profiling features to the M2 language.
+**Exercise:** Modify the interpreter to add a new binary operator. Make sure you can use it in methods.
+**Project:** Rearrange code to be more readable or consistently organized in named files.
+**Project:** Add code coverage and profiling features to the M2 language.
