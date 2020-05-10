@@ -55,7 +55,7 @@ Many of these files implement various aspects of the Macaulay2 language. For exa
 
 The main parts of the interpreter are in `parse.d`, `tokens.d`, `parser.d`, `converter.d`, `binding.d`, `evaluate.d`, and `interp.dd`. These files cover the process of tokenizing and parsing input from the user, compiling to interpreter runnable code, and then running the code.
 
-### `parse.d`
+#### `parse.d`
 has declarations of tokens and keywords.
 
 #### `parser.d`
@@ -68,8 +68,8 @@ Also sets up all keywords and operators with precedence strength.
 
 In top-level M2, one may type
 
-> help "operators"
-> help "precedence of operators"
+>     `help "operators"`
+>     `help "precedence of operators"`
 
 to learn more about Macaulay2 operators and their precedence.
 
