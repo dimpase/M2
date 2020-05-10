@@ -8,6 +8,7 @@
 * [[D language]]
 * [[adding functions to the engine and interfacing them to the front end|Adding Engine Functions]]
 * [[the engine: the class structure (rings, module, gbs, resolutions, computations), engine.h|Class Structure]]
+* [[M2 engine examples|M2-engine-examples]]
 
 [[Other internal topics]] (put other bits here for now)
 
