@@ -42,29 +42,27 @@ This code has remained static for many years, and no major changes are planned. 
    26439 total
 ```
 
-(source: https://github.com/DanGrayson/Internals/tree/master/dan/D%20language)
-
 Many of these files implement various aspects of the Macaulay2 language. For example:
 
-`arithmetic.d` - basic arithmetic operations and types
-strings.d - strings
-varstrin.d - variable length strings
-nets.d - implements nets (2D strings, used for example in printing polynomials so that exponents are on separate lines)
-varnets.d - variable size nets
-gmp.d - interface with multiprecision arithmetic
-hashtables.dd - implementation of top level hash tables
-interface.dd - interface to functions in the engine
+* `arithmetic.d` - basic arithmetic operations and types
+* `strings.d` - strings
+* `varstrin.d` - variable length strings
+* `nets.d` - implements nets (2D strings, used for example in printing polynomials so that exponents are on separate lines)
+* `varnets.d` - variable size nets
+* `gmp.d` - interface with multiprecision arithmetic
+* `hashtables.dd` - implementation of top level hash tables
+* `interface.dd` - interface to functions in the engine
 
 The main parts of the interpreter are in `parse.d`, `tokens.d`, `parser.d`, `converter.d`, `binding.d`, `evaluate.d`, and `interp.dd`. These files cover the process of tokenizing and parsing input from the user, compiling to interpreter runnable code, and then running the code.
 
-parse.d
-Has declarations of tokens and keywords.
+### `parse.d`
+has declarations of tokens and keywords.
 
-parser.d
+### `parser.d`
 is where here parsing actually happens. Has functions to parse tokens.
 Prefix of n on function (e.g., unaryop / nunaryop) means whether the function can take arguments or not.
 
-binding.d
+### binding.d
 binds variables descending down the parse tree. A new dictionary is created in a function definition for the local variables. Must bind correct values to symbols.
 Also sets up all keywords and operators with precedence strength.
 
