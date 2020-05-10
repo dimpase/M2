@@ -62,7 +62,7 @@ has declarations of tokens and keywords.
 is where here parsing actually happens. It has functions to parse tokens.
 Prefix of n on function (e.g., unaryop / nunaryop) means whether the function can take arguments or not.
 
-#### binding.d
+#### `binding.d`
 binds variables descending down the parse tree. A new dictionary is created in a function definition for the local variables. Must bind correct values to symbols.
 Also sets up all keywords and operators with precedence strength.
 
@@ -84,5 +84,7 @@ evaluates the code in `eval`.
 is the top-level read-eval-print-loop.
 
 **Exercise:** Modify the interpreter to add a new binary operator. Make sure you can use it in methods.
+
 **Project:** Rearrange code to be more readable or consistently organized in named files.
+
 **Project:** Add code coverage and profiling features to the M2 language.
