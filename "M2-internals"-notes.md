@@ -10,11 +10,7 @@
 * [[M2 engine examples|M2-engine-examples]]
 * [[Unit tests]]
 * [[Other internal topics]] (put other bits here for now)
-
-## Further topics:
-* documentation system
-* testing and debugging
-* `tryM2` and `jupyter`
+* "[[Road map]]" (ongoing and future "internals" tasks/projects/ideas)
 
 ## Next Internal Events
 - Virtual meetings are great 👍
