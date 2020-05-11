@@ -15,4 +15,9 @@
 ## Next Internal Events
 - Virtual meetings are great 👍
   - Reduced cost of participation and is good for climate change!
-- More frequent, but smaller meetings 👍
+- Ways to continue (Anton: a subject of a future poll) 
+  - (?) 3-day meetings once in a while 
+  - (?) More frequent, but smaller meetings (e.g. 3 hours every month)  
+- Keep `slack` as our messaging platform
+  - continue using it for organizational purposes
+  - create channels for particular internal projects (private or public)
