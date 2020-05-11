@@ -16,4 +16,4 @@
 - automate interfacing with external libraries
   - use Polymake as a library
   - Arb for ball arithmetic
-- `jupyter` interface (Radoslav)
+- `jupyter` interface ( [Radoslav](github.com/radoslavraynov/Macaulay2-Jupyter-Kernel) )
