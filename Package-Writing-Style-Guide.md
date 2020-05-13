@@ -116,10 +116,10 @@
 * Documentation:
     * Each exported data type, method, and function must have a documentation page.  
     * Each documentation page should have an example.
-    * Choice of examples: choose examples that illustrate usage sufficiently, without
+    * **Choice of examples:** choose examples that illustrate usage sufficiently, without
       consuming excessive CPU time.  Assertions about the speed of your package can
       simply be written, and will be believed.
-    * Choice of tests: package functionality should be adequately tested, without consuming excessive CPU time
+    * **Choice of tests:** package functionality should be adequately tested, without consuming excessive CPU time
       and memory.  (Limits are imposed, but under Mac OS X, they aren't enforced.)
     * Document the type of the return value of method functions, so the documentation generator
       can include those methods in the documentation of the type of the return value.
