@@ -4,3 +4,4 @@ Welcome to the *Macaulay2* wiki!
 * [[Frequently asked questions, answered]]
 * [[Introduction to emacs for Macaulay2 workshop participants]]
 * [Introduction to git for Macaulay2 workshop participants](GitForWorkshop)
+* [[Interfaces to Macaulay2]]
