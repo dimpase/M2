@@ -24,18 +24,20 @@ git clone https://github.com/haerski/st3.git
 Restart Sublime Text, and the Macaulay2 syntax should be installed and loaded automatically when a `.m2` file is opened. Alternatively, you can force the use of the M2 syntax by running "Set Syntax: Macaulay2" in the command palette. If you open a `Terminus` buffer and run M2 on it, you should be able to send lines of M2 code to the interpreter.
 
 ### Wide terminal window
-In the Emacs interface to Macaulay2, the program is run in a seemingly infinitely wide terminal buffer, and wide output can be viewed by scrolling right. By default, terminal buffers opened by `Terminus` are only as wide as the window, and long output will be wrapped.
+In the Emacs interface, the Macaulay2 interpreter is run in a seemingly infinitely wide terminal buffer, and wide output can be viewed by scrolling horizontally. By default, `Terminus` buffers in Sublime Text are only as wide as the window, and long output will be wrapped. Because of this, very wide Nets look particularly bad.
 
-If you want to have a wider terminal with horizontal scroll, you can install a custom version of Terminus. First, uninstall the old Terminus from Package Control using `Package Control: Remove Package` in the command palette, and then choose `Terminus`. Then clone [this fork of `Terminus`](https://github.com/haerski/Terminus)
+If you want to have a wider terminal with horizontal scroll, you can install a custom version of Terminus. First, uninstall the old Terminus from Package Control by running `Package Control: Remove Package` in the command palette, and then choose `Terminus`. Then clone [this fork of `Terminus`](https://github.com/haerski/Terminus)
 ```bash
 cd ~/.config/sublime-text-3/Packages
 git clone https://github.com/haerski/Terminus.git
 ```
-Restart Sublime Text. After the restart, Package Control may complain about missing dependencies. If this is the case, restart again and Pacakge Control will take care of everything in the next restart. The command `Terminus: Open default shell in tab (view)` should now create a very wide buffer.
+Restart Sublime Text. After the restart, Package Control may complain about missing dependencies. If this is the case, restart again and Package Control will take care of everything in the next restart. The command `Terminus: Open default shell in tab (view)` should now create a very wide buffer.
 
 ### Other useful packages
 * `Origami`: create custom window layouts
 * `SnippetMaker`: quickly create Tab-completable snippets
+
+### Issues
 
 
 ## Links
