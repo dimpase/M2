@@ -16,7 +16,7 @@ To be able to write code on one buffer and send it to another terminal buffer, w
 If you are in a buffer containing source code, the keys `Ctrl+Enter` should now send the line below the cursor to the `Terminus` buffer. Sublime Text will try to guess whether or not you are looking at source code from the file name. You can change this by running one of the `Set Syntax: ...` commands in the command palette.
 
 ### Adding the Macaulay2 syntax to Sublime
-The Macaulay2 syntax files are not available yet on package manager. To install it, go to Sublime Text's package directory and clone the [this repository.](https://github.com/haerski/st3)
+The Macaulay2 syntax files are not available yet on the official package manager. To install them manually, go to Sublime Text's package directory and clone the [this repository.](https://github.com/haerski/st3)
 ```bash
 cd ~/.config/sublime-text-3/Packages
 git clone https://github.com/haerski/st3.git
