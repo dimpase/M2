@@ -23,7 +23,7 @@ g = (opts, i) -> (
   )
 )
 ```
-The hooks can be added using `addHook`. Now the function foo should work with inputs 1 and 10
+The hooks can be added using `addHook`.
 ```macaulay2
 addHook(ZZ,symbol foo, f)
 addHook(ZZ,symbol foo, g)
