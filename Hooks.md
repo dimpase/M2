@@ -1,5 +1,5 @@
 ## What are hooks?
-Hooks are a way for functions and methods to use different algorithms for different purposes. For example, algorithm run by `minimalPresentation M` will be different if `M` is a homogeneous module over an affine ring, or if `M` is a module over the ring of integers. If the user wants to implement a new algorithm for computing minimal presentations for a specific type of module, they can add it as a hook to the existing method `minimalPresentation Module`. 
+Hooks are a way for functions and methods to use different algorithms for different purposes. For example, the algorithm run by `minimalPresentation M` will be different if `M` is a homogeneous module over an affine ring, or if `M` is a module over the ring of integers. If the user wants to implement a new algorithm for computing minimal presentations for a specific type of module, they can add it as a hook, which could be run using the existing function `minimalPresentation M`. 
 
 ## A minimal example
 We will create a function `foo` that takes an integer as input, and print different messages based on the input. To use hooks, the function has to run `runHooks`
