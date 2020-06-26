@@ -2,14 +2,14 @@ Building the engine documentation is [Step 1 here.](https://github.com/DanGrayso
 
 Documenting an entity such as a class can be done in a [variety of ways](https://www.doxygen.nl/manual/docblocks.html#docstructure). For example, we have the excerpt.
 
-``
+```
 /** 
 @ingroup gb
     @brief base class for Groebner basis computations.
 */
-
 class GBComputation : public Computation
-``
+...
+```
  
 The @brief description can then be read on the documentation page of the documentation page for GBComputation in the browser. 
 
