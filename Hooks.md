@@ -34,7 +34,7 @@ Hooks are run in order from the most recent to the oldest. To demonstrate this, 
 ```macaulay2
 addHook(ZZ, symbol foo, (opts,i) -> if i <= 0 then break 999)
 ```
-foo 0 will now return 999.
+`foo 0` will now return 999.
 
 ## Notes
 * Only functions that call `runHooks` can use hooks.
