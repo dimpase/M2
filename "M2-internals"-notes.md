@@ -1,6 +1,7 @@
 (This page will is edited during the "**M2 internals**" meetings.)
 
 ##  Topics:
+M2 internals #1 (May 2020)
 * [[setting up your machine for Macaulay2 development]]
 * [[CMake build system]] 
 * [[the interpreter and how it is implemented]]
@@ -9,10 +10,14 @@
 * [[the engine: the class structure (rings, module, gbs, resolutions, computations), engine.h|Class Structure]]
 * [[M2 engine examples|M2-engine-examples]]
 * [[Unit tests]]
+
+M2internals #2 (June 2020)
 * [[Hooks]]
 * [[Documenting the engine with doxygen]]
 * [[M2 in Linux distributions|M2-in-Linux-distributions]]
 * [[GitHub actions]]
+
+Other
 * [[Other internal topics]] (put other bits here for now)
 
 ## Future
