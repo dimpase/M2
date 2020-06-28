@@ -1,6 +1,5 @@
 ## Projects in the Pipeline & Roadmap (5/10/2020)
 
-- eigen branch (Mike and Anton)
 - non-commutative Groebner Bases (Mike and Frank)
 - benchmark with other garbage collectors
   - look into Julia's [GC](https://github.com/JuliaLang/julia/blob/master/src/gc.h)
