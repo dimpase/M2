@@ -11,7 +11,7 @@
 * [[Unit tests]]
 * [[Hooks]]
 * [[Documenting the engine with doxygen]]
-* [[M2 in Linux distributions]]
+* [[M2 in Linux distributions|M2-in-Linux-distributions]]
 * [[GitHub actions]]
 * [[Other internal topics]] (put other bits here for now)
 
