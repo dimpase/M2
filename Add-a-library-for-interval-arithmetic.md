@@ -27,3 +27,6 @@ Before starting, check the license compatibility: some version of GPL is usually
 * Look at `aring-glue.hpp` (no need to make changes here --- just be aware that this is a place where `ARing`s get used).
   * `ring_elem` operations are handled here (at the moment, `ring_elem` is GC-ed).
    
+### cmake ###
+Detailed instructions are [here](https://github.com/DanGrayson/Internals/blob/master/cmake-14-8-2020/GUIDE.md).
+* `ExternalProject_Add` is what we need to add `mpfi` (modify the corresponding block in `cmake/build-libraries.cmake` for `mpfr`).
