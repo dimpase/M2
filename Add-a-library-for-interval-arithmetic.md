@@ -36,4 +36,5 @@ Detailed instructions are [here](https://github.com/DanGrayson/Internals/blob/ma
   * `_ADD_COMPONENT_DEPENDENCY` to declare `mpfi` dependencies.
 * Modify `cmake/check-libraries.cmake` and `cmake/FindMPFI.cmake` accordingly.
 
-  
+### Front end ###
+* `classes.dd`,`expr.d`,`actors2.dd`: introduce `RRi`, `RRiClass`
