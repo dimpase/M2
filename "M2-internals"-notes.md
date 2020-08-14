@@ -12,6 +12,7 @@ M2internals #1 (May 2020)
 * [[the engine: the class structure (rings, module, gbs, resolutions, computations), engine.h|Class Structure]]
 * [[M2 engine examples|M2-engine-examples]]
 * [[Unit tests]]
+* Case study: [[Add a library for interval arithmetic]]
 
 M2internals #2 (June 2020)
 * [[Hooks]]
