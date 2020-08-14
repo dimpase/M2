@@ -14,3 +14,12 @@ Before starting, check the license compatibility: some version of GPL is usually
   * e.g. `d/version.dd` has  `"mpfr version" => Ccode(constcharstar,"mpfr_version")`
 * dichotomy in memory allocation (native vs. garbage collected): see `d/gmp.d` for comment starting with `--We introduce to types...`
 * Create something analogous to `RRcell` (see `parse.d`)
+
+## What makes `RR_100` tick? (This may make `RRi` tick.) ##
+* Compare `raw RR_100` and `raw RR_53` (53=standard precision)
+* `rawRR` in `interface.dd` wraps `IM2_Ring_RRR` --- make something like that: e.g. create `rawRRi` that wraps `rawRRi`
+* `IM2_Ring_RRR` is in `engine.h` and `x-relem.cpp`. Inspect the code in the latter. 
+* Look at `aring-RRR.hpp`
+  * Engine's `ARing`s are fast implementations of "coefficient rings". (A polynomial ring is not an ARing. See `aring.hpp` for `DummyRing` --- all methods mentioned there need to be implemented.)
+  * Create `aring-RRi.hpp` --- this will house `ARingRRi`. 
+  * No worries about memory allocation --- assume all memory is getting allocated without `gc`, unless `gmp_RR` gets involved . 
