@@ -30,6 +30,8 @@ Before starting, check the license compatibility: some version of GPL is usually
 ### cmake ###
 Detailed instructions are [here](https://github.com/DanGrayson/Internals/blob/master/cmake-14-8-2020/GUIDE.md).
 * `ExternalProject_Add` is what we need to add `mpfi` (modify the corresponding block in `cmake/build-libraries.cmake` for `mpfr`).
-* There are several steps in setting up an external project: e.g. `CONFIGURE_COMMAND` controls the "configure" step, `BUILD_COMMAND` the building, etc.
-* `_ADD_COMPONENT_DEPENDENCY` to declare `mpfi` dependencies.
+  * There are several steps in setting up an external project: e.g. `CONFIGURE_COMMAND` controls the "configure" step, `BUILD_COMMAND` the building, etc.
+  * `_ADD_COMPONENT_DEPENDENCY` to declare `mpfi` dependencies.
+* Modify `cmake/check-libraries.cmake` and `cmake/FindMPFI.cmake` accordingly.
+
   
