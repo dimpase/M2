@@ -18,14 +18,16 @@ Before starting, check the license compatibility: some version of GPL is usually
 ### What makes `RR_100` tick? (This may make `RRi` tick.) ###
 
 * Compare `raw RR_100` and `raw RR_53` (53=standard precision)
-* `rawRR` in `interface.dd` wraps `IM2_Ring_RRR` --- make something like that: e.g. create `rawRRi` that wraps `rawRRi`
+* `rawRR` in `interface.dd` wraps `IM2_Ring_RRR` --- make something like that: e.g. create `rawRRi` that wraps `rawRingRRi`
 * `IM2_Ring_RRR` is in `engine.h` and `x-relem.cpp`. Inspect the code in the latter. 
 * Look at `aring-RRR.hpp`
   * Engine's `ARing`s are fast implementations of "coefficient rings". (A polynomial ring is not an ARing. See `aring.hpp` for `DummyRing` --- all methods mentioned there need to be implemented.)
   * Create `aring-RRi.hpp` --- this will house `ARingRRi`. 
+  * In `aring.hpp`, add `ring_RRi` and set `ring_top = 17`
   * No worries about memory allocation --- assume all memory is getting allocated without GC, unless `gmp_RR` gets involved.
 * Look at `aring-glue.hpp` (no need to make changes here --- just be aware that this is a place where `ARing`s get used).
   * `ring_elem` operations are handled here (at the moment, `ring_elem` is GC-ed).
+
    
 ### cmake ###
 Detailed instructions are [here](https://github.com/DanGrayson/Internals/blob/master/cmake-14-8-2020/GUIDE.md).
