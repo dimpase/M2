@@ -1,0 +1,1 @@
+This documents a way to add `mpfi` to the arsenal of M2.
