@@ -8,3 +8,6 @@ Before starting, check the license compatibility: some version of GPL is usually
 * `M2/configure.ac` 
   * Get `mpfi` on `LIBLIST` (the libraries appear in order of dependency).
   * Check that `mpfi.h` is in order: search for `AC_CHECK_HEADER` and `mpfr` to see an example.
+* Create `M2/libraries/mpfi/Makefile.in` (modify a copy of `M2/libraries/mpfr/Makefile.in`)
+* Make sure you **run `make`** in `M2/` after modifying `configure.ac` and any of the `Makefile.in` files 
+    
