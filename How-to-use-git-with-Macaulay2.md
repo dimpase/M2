@@ -1,5 +1,3 @@
-# How to use git with *Macaulay2*
-
 There are two reasons you may wish to download the source code of *Macaulay2*: you may
 have a machine for which we have not distributed a recently compiled version of *Macaulay2*,
 and thus you want to compile it yourself; you may want to propose a change to *Macaulay2*, such
