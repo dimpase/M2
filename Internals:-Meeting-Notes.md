@@ -4,26 +4,31 @@ Should you be interested in joining **M2internals**, a group that works on and m
 
 ##  Topics:
 M2internals #1 (May 2020)
-* [[Internals: setting up your machine for Macaulay2 development]]
-* [[Internals: CMake build system]] 
-* [[Internals: the interpreter and how it is implemented]]
-* [[Internals: the D language]]
-* [[adding functions to the engine and interfacing them to the front end|Internals: Adding Engine Functions]]
-* [[Internals: engine class hierarchy (rings, module, gbs, resolutions, computations), engine.h|Class Structure]]
-* [[Internals: M2 engine examples]]
-* [[Internals: Unit tests]]
-
-M2internals #2 (June 2020)
-* [[Internals: Hooks]]
-* [[Internals: Documenting the engine with doxygen]]
-* [[Internals: M2 in Linux distributions]]
-* [[Internals: GitHub actions]]
-
-M2internals #3 (August 2020)
-* [[Internals: Adding a library for interval arithmetic]] (Case Study)
+- Building Macaulay2 from source
+  - [[Internals: Autotools Build System]]
+  - [[Internals: CMake Build System]] 
+- Components of Macaulay2
+  - [[Safe-C Compiler]]
+  - [[Internals: the Interpreter]]
+    - [[Internals: the D language]]
+  - [[Internals: the Engine]]
+    - [[adding functions to the engine and interfacing them to the front end|Internals: Adding Engine Functions]]
+    - [[Internals: Class Hierarchy in the Engine]] (rings, module, gbs, resolutions, computations)
+    - [[Internals: Engine Unit tests]]
+    - [[Internals: Documenting the engine with doxygen]]
+  - [[Internals: Core]]
+    - [[Internals: Hooks]]
+  - [[Internals: Packages]]
+    - [[Internals: the Macaulay2Doc Package]]
+    - [[Internals: the SimpleDoc Package]]
+    - [[Internals: the Text Package]]
+    - [[Internals: the Style Package]]
 
 Other
-* [[Other internal topics]] (put other bits here for now)
+* [[Internals: M2 in Linux distributions]]
+* [[Internals: GitHub actions]]
+* [[Internals: Adding a library for interval arithmetic]] (Case Study)
+* [[Internals: Miscellaneous Topics]] (put other bits here for now)
 
 ## Future
 - "[[Road map]]" (ongoing and future "internals" tasks/projects/ideas)
