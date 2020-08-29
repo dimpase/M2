@@ -1,12 +1,12 @@
 Welcome to the *Macaulay2* wiki!
-- Using Macaulay2
-  - [[Interfaces to Macaulay2]]
+- Introduction
+  - [[Using Macaulay2 with Emacs]] (recommended)
+  - [[Using Macaulay2 with Sublime]]
 - Macaulay2 Contribution Guides
   - [[Git for Macaulay2 Contributors]]
   - [[Package Writing Style Guide]]
 - Macaulay2 Workshop Guides
   - [[Git for Workshop Participants]]
-  - [[Emacs for Workshop Participants]]
-- [[Frequently Asked Questions]]
 - Macaulay2 Internals
-  - [[Internal Meeting Notes]]
+  - [[Internals: Meeting Notes]]
+- [[Frequently Asked Questions]]
