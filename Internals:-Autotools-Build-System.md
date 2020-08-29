@@ -68,4 +68,4 @@ Things configure does:
 Quick links:
 - [INSTALL](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL)
 - [Downloads](http://www2.macaulay2.com/Macaulay2/Downloads/)
-- [[Internals: Meeting Nodes]]
+- [[Internals: Meeting Notes]]
