@@ -1,7 +1,12 @@
 Welcome to the *Macaulay2* wiki!
-* [[How to use git with Macaulay2]]
-* [[Package Writing Style Guide]]
-* [[Frequently asked questions, answered]]
-* [[Introduction to emacs for Macaulay2 workshop participants]]
-* [Introduction to git for Macaulay2 workshop participants](GitForWorkshop)
-* [[Interfaces to Macaulay2]]
+- Using Macaulay2
+  - [[Interfaces to Macaulay2]]
+- Macaulay2 Contribution Guides
+  - [[Git for Macaulay2 Contributors]]
+  - [[Package Writing Style Guide]]
+- Macaulay2 Workshop Guides
+  - [[Git for Workshop Participants]]
+  - [[Emacs for Workshop Participants]]
+- [[Frequently Asked Questions]]
+- Macaulay2 Internals
+  - [[Internal Meeting Notes]]
