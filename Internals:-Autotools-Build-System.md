@@ -65,4 +65,4 @@ Things configure does:
 * how to use make
 * anything else?
 
-Quick links: [INSTALL](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL) [Downloads](http://www2.macaulay2.com/Macaulay2/Downloads/) [["M2-internals"-notes]]
+Quick links: [INSTALL](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL) [Downloads](http://www2.macaulay2.com/Macaulay2/Downloads/) [[Internals: Meeting Nodes]]
