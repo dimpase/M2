@@ -22,6 +22,7 @@ This page contains notes from the **M2internals** meetings. Should you be intere
   - [[Internals: Macaulay2 Distributions]]
   - [[Internals: GitHub Actions]]
   - [[Internals: Miscellaneous Topics]] (put other bits here for now)
+  - [M2 Profiler](https://math.umn.edu/~mahrud/journal/profiler/)
 
 ## Future
 - "[[Road map]]" (ongoing and future "internals" tasks/projects/ideas)
