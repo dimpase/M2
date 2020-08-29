@@ -2,6 +2,7 @@ Welcome to the *Macaulay2* wiki!
 - Introduction
   - [[Using Macaulay2 with Emacs]] (recommended)
   - [[Using Macaulay2 with Sublime]]
+  - [Using Macaulay2 with Atom](https://github.com/Macaulay2/atom-macaulay2)
 - Macaulay2 Contribution Guides
   - [[Git for Macaulay2 Contributors]]
   - [[Package Writing Style Guide]]
