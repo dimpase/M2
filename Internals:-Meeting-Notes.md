@@ -8,7 +8,7 @@ This page contains notes from the **M2internals** meetings. Should you be intere
   - [[Internals: the Interpreter]]
     - [[Internals: the D language]]
   - [[Internals: the Engine]]
-    - [[Internals: Class Hierarchy in the Engine]] (rings, module, gbs, resolutions, computations)
+    - [[Internals: Class Hierarchy in the Engine]]
     - [[Internals: Engine Unit tests]]
     - [[Internals: Engine Documentation (Doxygen)]]
   - [[Internals: Core]]
