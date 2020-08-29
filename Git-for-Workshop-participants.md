@@ -1,22 +1,14 @@
-# Git for Workshop participants
-
-Each Workshop has a dedicated git repository here on github. The best way to interact with the git repository of the workshop is to
-make local copy and to interact with that copy.  You will need the
-program git.  See here https://git-scm.com/downloads if you don't have
-it already.
+Each Workshop has a dedicated git repository here on GitHub. The best way to interact with the git repository of the workshop is to clone it and to interact with .  You will need the program git.  See here https://git-scm.com/downloads if you don't have it already.
 
 ## Interacting with the Workshop respository
 
-As a workshop participant, you are part of a github team and this
-means you can directly interact with the workshop repository (forking the workshop repository is not necessary).
+As a workshop participant, you are part of a github team and this means you can directly interact with the workshop repository (forking the workshop repository is not necessary).
 
-You can clone (i.e. get a local copy of) the workshop repository like
-this (for Leipzig 2018 -- adjust as needed).
+You can clone (i.e. get a local copy of) the workshop repository like this (for Leipzig 2018 -- adjust as needed).
 
     git clone https://github.com/Macaulay2/Workshop-2018-Leipzig.git
 
-This is done only once.  From now on, you can update your local copy
-with whatever is new on the github side using
+This is done only once.  From now on, you can update your local copy with whatever is new on the github side using
 
     git pull
 
