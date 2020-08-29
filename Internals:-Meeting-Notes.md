@@ -22,7 +22,7 @@ This page contains notes from the **M2internals** meetings. Should you be intere
   - [[Internals: Adding a Function in Engine, Interpreter, and Core]]
   - [[Internals: Adding a Library for Interval Arithmetic]]
 - [[Internals: Macaulay2 Distributions]]
-- [[Internals: GitHub actions]]
+- [[Internals: GitHub Actions]]
 - [[Internals: Miscellaneous Topics]] (put other bits here for now)
 
 ## Future
