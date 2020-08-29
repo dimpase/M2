@@ -7,18 +7,18 @@ M2internals #1 (May 2020)
 * [[setting up your machine for Macaulay2 development]]
 * [[CMake build system]] 
 * [[the interpreter and how it is implemented]]
-* [[D language]]
+* [[Internals: D language]]
 * [[adding functions to the engine and interfacing them to the front end|Adding Engine Functions]]
-* [[the engine: the class structure (rings, module, gbs, resolutions, computations), engine.h|Class Structure]]
-* [[M2 engine examples|M2-engine-examples]]
-* [[Unit tests]]
-* Case study: [[Add a library for interval arithmetic]]
+* [[Internals: engine class hierarchy (rings, module, gbs, resolutions, computations), engine.h|Class Structure]]
+* [[Internals: M2 engine examples]]
+* [[Internals: Unit tests]]
+* Case study: [[Internals: Add a library for interval arithmetic]]
 
 M2internals #2 (June 2020)
-* [[Hooks]]
-* [[Documenting the engine with doxygen]]
-* [[M2 in Linux distributions|M2-in-Linux-distributions]]
-* [[GitHub actions]]
+* [[Internals: Hooks]]
+* [[Internals: Documenting the engine with doxygen]]
+* [[Internals: M2 in Linux distributions]]
+* [[Internals: GitHub actions]]
 
 Other
 * [[Other internal topics]] (put other bits here for now)
