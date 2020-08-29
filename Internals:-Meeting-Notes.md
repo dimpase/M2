@@ -13,17 +13,15 @@ This page contains notes from the **M2internals** meetings. Should you be intere
     - [[Internals: Engine Documentation (Doxygen)]]
   - [[Internals: Core]]
     - [[Internals: Hooks]]
-  - [[Internals: Packages]]
-    - [[Internals: the Macaulay2Doc Package]]
-    - [[Internals: the SimpleDoc Package]]
-    - [[Internals: the Text Package]]
-    - [[Internals: the Style Package]]
+
 - Case Studies
   - [[Internals: Adding a Function in Engine, Interpreter, and Core]]
   - [[Internals: Adding a Library for Interval Arithmetic]]
-- [[Internals: Macaulay2 Distributions]]
-- [[Internals: GitHub Actions]]
-- [[Internals: Miscellaneous Topics]] (put other bits here for now)
+
+- Other
+  - [[Internals: Macaulay2 Distributions]]
+  - [[Internals: GitHub Actions]]
+  - [[Internals: Miscellaneous Topics]] (put other bits here for now)
 
 ## Future
 - "[[Road map]]" (ongoing and future "internals" tasks/projects/ideas)
