@@ -142,10 +142,10 @@
     * Start each sentence with an English word, not an identifier or a symbol.
     * End each sentence with a period or question mark, not with a colon.  To indicate that
       example code just below is relevant, use English words, not a colon.
-    * Don't use Macaulay2 identifiers as English words.  Learn how to use "ofClass" in this connection,
+    * Don't use _Macaulay2_ identifiers as English words.  Learn how to use "ofClass" in this connection,
       so the English word and a hyperlink can be generated from the identifier.
     * Don't capitalize English words such as "list" or "tally", even though there are classes in
-      Macaulay2 whose names are "List" and "Tally", unless you intend to refer to those classes.
+      _Macaulay2_ whose names are "List" and "Tally", unless you intend to refer to those classes.
       Examples of correct usage: "The function returns a list."  "The function returns an object
       of class List."  An example of incorrect usage: "The function returns a List."
     * Check the spelling of English words.
@@ -162,6 +162,7 @@
       proposition.  Example: prefer "determine whether R is reduced" to "determine if R is reduced".
     * Use standard English punctuation.  In particular, each use of "e.g.", "i.e.", or "resp." should
       be followed by a comma.
+    * Set names of software packages, such as _Macaulay2_, in italic.
 
 * Comments :
     * Delete commented-out code.
