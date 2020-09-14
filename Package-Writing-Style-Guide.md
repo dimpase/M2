@@ -164,6 +164,8 @@
     * Use standard English punctuation.  In particular, each use of "e.g.", "i.e.", or "resp." should
       be followed by a comma.
     * Set names of software packages, such as _Macaulay2_, in italic.
+    * Don't misplace the word "only".  Correct: "Fly only in the absence of fog."  Incorrect: "Only fly 
+      in the absence of fog," for it implies not _driving_ in the absence of fog.
 
 * Comments :
     * Delete commented-out code.
