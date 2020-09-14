@@ -155,10 +155,10 @@
       * Don't use "different" gratuitously.  For example, "different matrices" is 
         no more informative than "matrices".
       * Don't use "different" when you mean "various" or "diverse".
-      * Don't use the construction "different than".  Use "different from" instead.
+      * Don't use the construction "different than" or "different to".  Use "different from" instead.
       * Don't use the construction "a different X than Y".  Say "an X different from Y".
     * Add a comma when starting a sentence with an adverb such as "Finally".
-    * Use "if" as a prelude to "then", but use "whether" to introduce a
+    * Use "if" as a prelude to "then", but use "whether" (and not "whether or not") to introduce a
       proposition.  Example: prefer "determine whether R is reduced" to "determine if R is reduced".
     * Use standard English punctuation.  In particular, each use of "e.g.", "i.e.", or "resp." should
       be followed by a comma.
