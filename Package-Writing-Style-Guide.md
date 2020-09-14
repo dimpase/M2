@@ -14,7 +14,7 @@
       mathematical object.
     * The prefix "is" should be used for Boolean variables and methods.  Examples:
          * `isPolynomialRing`, `isPrimary`, `isPrime`, `isPrimitive`
-    * Abbreviations in names should be avoided.
+    * Abbreviations in exported names should be avoided.  Correct: "formalDepth".  Incorrect: "fD".
     * Naming of keys in hash tables:
         * Use existing symbols, when possible.  Examples:
              * `source` and `target`, as keys for the source and target of a map
