@@ -131,6 +131,8 @@
     * The "headline" of a documentation should be brief and thus can be vague.  It should not
       refer to variables by name, because it can appear in a menu, without the accompanying
       body of the documentation node.
+    * In the "Outputs" section, provide multiple entries only if the function returns a sequence with
+      several entries in it.
     * In the "Outputs" section, state, for each output value, not only its
       type, but what it is.  For example, say that "resolution M" returns a
       free resolution of M.  Here you should give a mathematical description of
