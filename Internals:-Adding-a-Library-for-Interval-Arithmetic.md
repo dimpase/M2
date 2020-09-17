@@ -2,6 +2,7 @@ This documents a way to add [mpfi](https://gforge.inria.fr/projects/mpfi/) to th
 
 ## mpfi ## 
 
+### Dan Grayson's talk summary ### 
 We can work by analogy with `mpfr`.
 Before starting, check the license compatibility: some version of GPL is usually OK.
 * Modify `M2/INSTALL`.
@@ -37,4 +38,8 @@ Detailed instructions are [here](https://github.com/DanGrayson/Internals/blob/ma
 * Modify `cmake/check-libraries.cmake` and `cmake/FindMPFI.cmake` accordingly.
 
 ### Front end ###
-* `classes.dd`,`expr.d`,`actors2.dd`: introduce `RRi`, `RRiClass`
+(Michael Burr and Anton Leykin)
+* changes in `d/` involve `classes.dd`,`expr.d`,`actors2.dd`, `equality.dd`, `parse.d`, `gmp.d`, `gmp_aux.[h,c]` 
+  * introduce `RRi`, `RRimutable`, `RRiClass`
+  * copy-paste `RR` versions of methods (with minimal edits) whenever errors pop up during a build. 
+ 
