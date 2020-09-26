@@ -21,3 +21,9 @@ npm start
 
 
 By default, the interface should be accessible on any web browser at `localhost:8002`.
+
+## What should be modified if I want to run this in a machine in my department?
+- Modifications should only be necessary in the vagrantfile (e.g. `setup/basic/Vagrantfile`)
+- The lines containing `nodejsip` (and/or `dockerip`) specify the addresses of the virtual machines and may need to be modified.
+- The lines containing `v.cpus` and `v.memory` specify the number of cpus and amount of memory allocated to the virtual machines
+- The line containing `nodejs.vm.network` can be modified to change the forwarded port
