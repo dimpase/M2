@@ -4,7 +4,7 @@ The site should display a prompt to the right of the "Home" page when you first 
 
 The "Editor" tab on the website allows you to edit longer scripts or upload Macaulay2 code you have locally.
 
-The website has several tutorials, including a [tutorial](https://www.unimelb-macaulay2.cloud.edu.au/#tutorial-5) aimed at the 26 Sep 2020 internals meeting with many more details and exercises.
+The website has several tutorials, including a [tutorial](https://www.unimelb-macaulay2.cloud.edu.au/#tutorial-5) aimed at the 26 Sep 2020 internals meeting with many more details, a discussion of Expressions, several exercises, and some suggestions for future work.
 
 
 
