@@ -18,6 +18,10 @@ This page contains notes from the **M2internals** meetings. Should you be intere
   - [[Internals: Adding a Function in Engine, Interpreter, and Core]]
   - [[Internals: Adding a Library for Interval Arithmetic]]
 
+- Web servers
+  - [[Internals: InteractiveShell]]
+  - [[Internals: Macaulay2Web]]
+
 - Other
   - [[Internals: Macaulay2 Distributions]]
   - [[Internals: GitHub Actions]]
