@@ -42,4 +42,24 @@ Detailed instructions are [here](https://github.com/DanGrayson/Internals/blob/ma
 * changes in `d/` involve `classes.dd`,`expr.d`,`actors2.dd`, `equality.dd`, `parse.d`, `gmp.d`, `gmp_aux.[h,c]` 
   * introduce `RRi`, `RRimutable`, `RRiClass`
   * copy-paste `RR` versions of methods (with minimal edits) whenever errors pop up during a build. 
+* `gmp.d` handling `RRi`, `RRimutable`:
+  * `leftRR` and `rightRR` get the left/right ends of the interval
+  * input methods
+  * arithmetic operations
+* `util.d`
+  * `toExpr`
+* `gmp1.d`
+  * `tostringRRi`
+* `interface.dd`
+  * `rawToRRi` (is it used anywhere? see. `toRRi`)
+* `actors.d`
+  * arithmetic on the level of `Expr`
+* `actors3.d`
+  * `round0(e:Expr):Expr`
+* `actors4.d`
+  * `interval` (constructor)
+  * `toRRi`, `toRR`, `toCC`, etc. (for `Expr`)
+* `real.m2` handles the `InexactField` called `RRi` 
+* `exports.m2` exports `RRi`, `RRi'`, `toRRi`, `interval`
+ 
  
