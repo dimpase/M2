@@ -128,7 +128,7 @@
     * Don't put blocks of example code adjacent to each other.  Merge them, or add some 
       text between them.
     * The "usage" forms for functions don't need to be in the form of assignment statements.
-    * The "headline" of a documentation should be brief and thus can be vague.  It should not
+    * The "headline" of a documentation node should be a single brief phrase (not a complete sentence) and thus can be vague.  It should not
       refer to variables by name, because it can appear in a menu, without the accompanying
       body of the documentation node.
     * In the "Outputs" section, provide multiple entries only if the function returns a sequence with
@@ -174,6 +174,9 @@
     * Rewrite confusing code instead of adding comments.
     * There should be a space after a comment start sequence.
 
-* When submitting for publication :
+* When submitting for publication or for inclusion in _Macaulay2_:
+    * The `Headline` option to "newPackage" should be a brief phrase stating the topic of the package.  For example,
+      the headline for the package "Tropical" is the phrase "tropical geometry".  It would be redundant to say something
+      such as "a package for tropical geometry", "computations in tropical geometry", or "a package for computations in tropical geometry".
     * Remove any option `DebuggingMode => true` or `Reload => true` to "newPackage".  Your users
       aren't prepared to debug your package.
