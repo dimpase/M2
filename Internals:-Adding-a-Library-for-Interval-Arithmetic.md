@@ -46,6 +46,7 @@ Detailed instructions are [here](https://github.com/DanGrayson/Internals/blob/ma
   * `leftRR` and `rightRR` get the left/right ends of the interval
   * input methods
   * arithmetic operations
+  * comparison operations
 * `util.d`
   * `toExpr`
 * `gmp1.d`
