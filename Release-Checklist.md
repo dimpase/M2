@@ -1,4 +1,4 @@
-efore every release:
+Before every release:
 - [ ] uncategorized packages should get a keyword:
 ```m2
 i23 : select(separate_" " version#"packages", p -> (readPackage p)#Keywords === {"Uncategorized"})
