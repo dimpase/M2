@@ -63,7 +63,9 @@ Edit and test your code.  Whenever you want to send your changes to your local c
 
 Repeat at will.  Whenever you want to send your changes to the central Macaulay2 repository, do this in a browser:
 
-* Issue a pull request at https://github.com/JohnDoe/M2/pull/new/master, or find the pull request button on the page of your fork at https://github.com/JohnDoe/M2.  The pull request should be directed toward our branch named "development".  It's a day or two behind "master", and is used for overnight testing of pull requests.  Once code on the development branch passes a complete overnight test, it is merged into the master branch.  (Don't worry if you directed your pull request to the master branch -- we can redirect it when pulling.)
+* If you are submitting a new package, remember to add its name to the end of the list in the file `M2/Macaulay2/packages/=distributed-packages`.
+* Submit a pull request at https://github.com/USERNAME/M2/pull/new/BRANCHNAME, or find the pull request button on the page of your fork at https://github.com/USERNAME/M2.  The pull request should be directed toward our branch named "master" or "development".
+* After submitting your pull request, push no further commits to your branch, so we can have a chance to review your submission.  Once the review is done, comments about your code will be posted on github, and requested changes are easily submitted by committing them to your branch.  Once you finish addressing our comments, let us know by adding a comment, and we'll repeat the process until your code is accepted and "pulled".
 
 To import the latest changes from the Macaulay2 repository into your repository and try to merge your code with them, use:
 
