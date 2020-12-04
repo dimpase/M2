@@ -31,7 +31,7 @@ The source code will appear in a directory called `M2`, which you may rename if 
 Start by "forking" the Macaulay2 repository, by following the following steps in a browser.
 
 * Create a github account at https://github.com/ and log in to it.
-  * We'll assume below that your user name is `JohnDoe`.
+  * We'll assume below that your user name is `USERNAME`.
 * Add your ssh key at https://github.com/settings/ssh
 * Fork M2 at https://github.com/Macaulay2/M2/fork
 
@@ -43,7 +43,7 @@ that the name and email address are replaced by yours.
 
 Then use the following shell command to get a copy of your copy of the source code of *Macaulay2*:
 
-* `git clone git@github.com:JohnDoe/M2`
+* `git clone git@github.com:USERNAME/M2`
 
 Now build Macaulay2 according to the instructions in `M2/INSTALL` and use the result in the following steps.
 
@@ -59,13 +59,7 @@ Edit and test your code.  Whenever you want to send your changes to your local c
     * Then a blank line
     * Remaining text should be wrapped at 72 characters
 * An alternative to the two steps above, if you are ready to commit all the files that you have changed, is `git commit -a`
-* Push the commited changes to your fork of M2 at github: `git push`
-
-Repeat at will.  Whenever you want to send your changes to the central Macaulay2 repository, do this in a browser:
-
-* If you are submitting a new package, remember to add its name to the end of the list in the file `M2/Macaulay2/packages/=distributed-packages`.
-* Submit a pull request at https://github.com/USERNAME/M2/pull/new/BRANCHNAME, or find the pull request button on the page of your fork at https://github.com/USERNAME/M2.  The pull request should be directed toward our branch named "master" or "development".
-* After submitting your pull request, push no further commits to your branch, so we can have a chance to review your submission.  Once the review is done, comments about your code will be posted on github, and requested changes are easily submitted by committing them to your branch.  Once you finish addressing our comments, let us know by adding a comment, and we'll repeat the process until your code is accepted and "pulled".
+* Push the committed changes to your fork of M2 at github: `git push`
 
 To import the latest changes from the Macaulay2 repository into your repository and try to merge your code with them, use:
 
@@ -82,6 +76,12 @@ To display the history of your changes graphically, use this command:
 To show the history of all of your branches and any branches imported from the Macaulay2 repository, use:
 
 * `gitk --all`
+
+When you want to send your changes to the central Macaulay2 repository, do this in a browser:
+
+* If you are submitting a new package, remember to add its name to the end of the list in the file `M2/Macaulay2/packages/=distributed-packages`.
+* Submit a pull request at https://github.com/USERNAME/M2/pull/new/BRANCHNAME, or find the pull request button on the page of your fork at https://github.com/USERNAME/M2.  The pull request should be directed toward our branch named "master" or "development".
+* After submitting your pull request, push no further commits to your branch, so we can have a chance to review your submission.  Once the review is done, comments about your code will be posted on github, and requested changes are easily submitted by committing them to your branch.  Once you finish addressing our comments, let us know by adding a comment, and we'll repeat the process until your code is accepted and "pulled".
 
 Other links:
 
