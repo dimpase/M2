@@ -24,6 +24,7 @@ This page contains notes from the **M2internals** meetings. Should you be intere
 
 - Other
   - [[Internals: Macaulay2 Distributions]]
+  - [[Internals: Release Checklist]]
   - [[Internals: GitHub Actions]]
   - [[Internals: Miscellaneous Topics]] (put other bits here for now)
   - [M2 Syntax Highlighting](https://github.com/Macaulay2/language-macaulay2)
