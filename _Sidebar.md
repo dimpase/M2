@@ -1,1 +1,14 @@
-[Macaulay2 web site](http://macaulay2.com/)
+* [Home](Home)
+  - Introduction
+    - [[Using Macaulay2 with Emacs]] (recommended)
+    - [[Using Macaulay2 with Sublime]]
+    - [Using Macaulay2 with Atom](https://github.com/mahrud/atom-macaulay2)
+    - [Using Macaulay2 with Docker](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
+  - Macaulay2 Contribution Guides
+    - [[Git for Macaulay2 Contributors]]
+    - [[Package Writing Style Guide]]
+  - Macaulay2 Workshop Guides
+    - [[Git for Workshop Participants]]
+  - Macaulay2 Internals
+    - [[Internals: Meeting Notes]]
+  - [[Frequently Asked Questions]]
