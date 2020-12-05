@@ -1,6 +1,6 @@
 * [Home](Home)
   - Introduction
-    - [[Using Macaulay2 with Emacs]] (recommended)
+    - [[Using Macaulay2 with Emacs]]
     - [[Using Macaulay2 with Sublime]]
     - [Using Macaulay2 with Atom](https://github.com/mahrud/atom-macaulay2)
     - [Using Macaulay2 with Docker](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
@@ -9,7 +9,7 @@
     - [[Package Writing Style Guide]]
   - Macaulay2 Workshop Guides
     - [[Git for Workshop Participants]]
-  - [Macaulay2 Internals](Internals: Meeting Notes)
+  - [Macaulay2 Internals](Internals%3A-Meeting-Notes)
     - Building Macaulay2 from source
       - [[Internals: Autotools Build System]]
       - [[Internals: CMake Build System]] 
