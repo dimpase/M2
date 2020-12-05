@@ -1,4 +1,7 @@
 Welcome to the *[Macaulay2](http://macaulay2.com/)* wiki!
+
+For beginners to this wiki, the following list is a good place to start.
+You can also find your way around using the table of contents on the sidebar.
 - Introduction
   - [[Using Macaulay2 with Emacs]] (recommended)
   - [[Using Macaulay2 with Sublime]]
@@ -12,3 +15,4 @@ Welcome to the *[Macaulay2](http://macaulay2.com/)* wiki!
 - Macaulay2 Internals
   - [[Internals: Meeting Notes]]
 - [[Frequently Asked Questions]]
+- [[Road map]]
