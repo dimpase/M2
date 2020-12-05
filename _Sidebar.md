@@ -36,3 +36,4 @@
       - [M2 Syntax Highlighting](https://github.com/Macaulay2/language-macaulay2)
       - [M2 Profiler](https://math.umn.edu/~mahrud/journal/profiler/)
   - [[Frequently Asked Questions]]
+  - [[Road map]]
