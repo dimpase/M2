@@ -1,4 +1,4 @@
-Welcome to the *Macaulay2* wiki!
+Welcome to the *[Macaulay2](http://macaulay2.com/)* wiki!
 - Introduction
   - [[Using Macaulay2 with Emacs]] (recommended)
   - [[Using Macaulay2 with Sublime]]
