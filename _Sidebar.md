@@ -9,6 +9,30 @@
     - [[Package Writing Style Guide]]
   - Macaulay2 Workshop Guides
     - [[Git for Workshop Participants]]
-  - Macaulay2 Internals
-    - [[Internals: Meeting Notes]]
+  - [Macaulay2 Internals](Internals: Meeting Notes)
+    - Building Macaulay2 from source
+      - [[Internals: Autotools Build System]]
+      - [[Internals: CMake Build System]] 
+    - Components of Macaulay2
+      - [[Internals: Safe-C Compiler]]
+      - [[Internals: the Interpreter]]
+        - [[Internals: the D language]]
+      - [[Internals: the Engine]]
+        - [[Internals: Class Hierarchy in the Engine]]
+        - [[Internals: Engine Unit tests]]
+        - [[Internals: Engine Documentation (Doxygen)]]
+      - [[Internals: Core]]
+        - [[Internals: Hooks]]
+    - Case Studies
+      - [[Internals: Adding a Function in Engine, Interpreter, and Core]]
+      - [[Internals: Adding a Library for Interval Arithmetic]]
+    - Web servers
+      - [[Internals: InteractiveShell]]
+      - [[Internals: Macaulay2Web]]
+    - Other
+      - [[Internals: Macaulay2 Distributions]]
+      - [[Internals: GitHub Actions]]
+      - [[Internals: Miscellaneous Topics]] (put other bits here for now)
+      - [M2 Syntax Highlighting](https://github.com/Macaulay2/language-macaulay2)
+      - [M2 Profiler](https://math.umn.edu/~mahrud/journal/profiler/)
   - [[Frequently Asked Questions]]
