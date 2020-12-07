@@ -68,4 +68,12 @@ Detailed instructions are [here](https://github.com/DanGrayson/Internals/blob/ma
 * `real.m2` handles the `InexactField` called `RRi` 
 * `exports.m2` exports `RRi`, `RRi'`, `toRRi`, `interval`
  
- 
+### Promote and lift ### 
+  - raw rings/elements (general): `m2/engine.m2`
+  - single (raw/front) ring elements: `m2/reals.m2`
+  - matrices/lists (general): `m2/modules.m2`, uses `rawPromote` 
+  
+General questions:
+- How should `promote` and `lift` work for intervals? 
+  - What is the philosophy for `RR_*`? 
+- What is the expected behavior of `new ... from ...` ?
