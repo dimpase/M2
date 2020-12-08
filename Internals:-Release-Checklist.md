@@ -11,4 +11,12 @@ i24 : select(separate_" " version#"packages", p -> (readPackage p)#DebuggingMode
 
 o24 = {RationalMaps, RelativeCanonicalResolution, SlackIdeals, PencilsOfQuadrics}
 ```
+- [ ] packages should have a top level node:
+```m2
+i10 : select(separate_" " version#"packages", p -> try (fetchRawDocumentation makeDocumentTag p).Description === {} else false)
+
+o10 = {Browse, SchurFunctors, ChainComplexExtras, OpenMath, SCSCP, Graphs,
+      --------------------------------------------------------------------------
+      RandomPlaneCurves, RandomCurves, SectionRing, Hadamard}
+```
 - [ ] M2-emacs and other syntax highlighting files should be updated
