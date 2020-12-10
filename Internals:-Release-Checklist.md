@@ -60,3 +60,5 @@ o10 = {Browse, SchurFunctors, ChainComplexExtras, OpenMath, SCSCP, Graphs,
       RandomPlaneCurves, RandomCurves, SectionRing, Hadamard}
 ```
 - [x] M2-emacs and other syntax highlighting files should be updated
+
+- [ ] refer to the section "Preparing new releases" of the file "INSTALL" for other things to do
