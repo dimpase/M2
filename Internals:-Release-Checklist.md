@@ -5,7 +5,7 @@ i23 : select(separate_" " version#"packages", p -> (readPackage p)#Keywords === 
 
 o23 = {SpecialFanoFourfolds, GKMVarieties}
 ```
-- [ ] check existing keywords for sensibility and near duplicates
+- [x] check existing keywords for sensibility and near duplicates
 ```m2
 i11 : stack sort unique flatten apply(separate_" " version#"packages", p -> (readPackage p)#Keywords)
 
@@ -45,7 +45,7 @@ o11 = Algebraic Geometry
       Uncategorized
 ```
 
-- [ ] DebuggingMode should be turned off in packages:
+- [x] DebuggingMode should be turned off in packages:
 ```m2
 i24 : select(separate_" " version#"packages", p -> (readPackage p)#DebuggingMode)
 
