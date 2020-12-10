@@ -5,6 +5,46 @@ i23 : select(separate_" " version#"packages", p -> (readPackage p)#Keywords === 
 
 o23 = {SpecialFanoFourfolds, GKMVarieties}
 ```
+- [ ] check existing keywords for sensibility and near duplicates
+```m2
+i11 : stack sort unique flatten apply(separate_" " version#"packages", p -> (readPackage p)#Keywords)
+
+o11 = Algebraic Geometry
+      Algebraic Number Theory
+      Algebraic Statistics
+      Applied Algebraic Geometry
+      Combinatorial Commutative Algebra
+      Combinatorics
+      Commutative Algebra
+      CommutativeAlgebra
+      Convex Geometry
+      D-modules
+      Deformation Theory
+      Edge Ideals
+      Equivariant Cohomology
+      Examples and Random Objects
+      Flag Varieties
+      Graph Theory
+      Groebner Basis Algorithms
+      Group Theory
+      Homological Algebra
+      Interfaces
+      Intersection Theory
+      Lie Groups and Lie Algebras
+      Linear Algebra
+      Matroids
+      Miscellaneous
+      Noncommutative Algebra
+      Numerical Algebraic Geometry
+      Numerical Linear Algebra
+      Real Algebraic Geometry
+      Representation Theory
+      Statistics
+      Toric Geometry
+      Tropical Geometry
+      Uncategorized
+```
+
 - [ ] DebuggingMode should be turned off in packages:
 ```m2
 i24 : select(separate_" " version#"packages", p -> (readPackage p)#DebuggingMode)
