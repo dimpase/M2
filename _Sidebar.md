@@ -11,28 +11,29 @@
     - [[Git for Workshop Participants]]
   - [Macaulay2 Internals](Internals%3A-Meeting-Notes)
     - Building Macaulay2 from source
-      - [[Internals: Autotools Build System]]
-      - [[Internals: CMake Build System]] 
+      - [Autotools Build System](Internals%3A-Autotools-Build-System)
+      - [CMake Build System](Internals%3A-CMake-Build-System)
     - Components of Macaulay2
-      - [[Internals: Safe-C Compiler]]
-      - [[Internals: the Interpreter]]
-        - [[Internals: the D language]]
-      - [[Internals: the Engine]]
-        - [[Internals: Class Hierarchy in the Engine]]
-        - [[Internals: Engine Unit tests]]
-        - [[Internals: Engine Documentation (Doxygen)]]
-      - [[Internals: Core]]
-        - [[Internals: Hooks]]
+      - [Safe-C Compiler](Internals%3A-Safe-C-Compiler)
+      - [the Interpreter](Internals%3A-the-Interpreter)
+        - [the D language](Internals%3A-the-D-language)
+      - [the Engine](Internals%3A-the-Engine)
+        - [Class Hierarchy in the Engine](Internals%3A-Class-Hierarchy-in-the-Engine)
+        - [Engine Unit tests](Internals%3A-Engine-Unit-tests)
+        - [Engine Documentation (Doxygen)](Internals%3A-Engine-Documentation-(Doxygen))
+      - [Core](Internals%3A-Core)
+        - [Hooks](Internals%3A-Hooks)
     - Case Studies
-      - [[Internals: Adding a Function in Engine, Interpreter, and Core]]
-      - [[Internals: Adding a Library for Interval Arithmetic]]
+      - [Adding a Function in Engine, Interpreter, and Core](Internals%3A-Adding-a-Function-in-Engine,-Interpreter,-and-Core)
+      - [Adding a Library for Interval Arithmetic](Internals%3A-Adding-a-Library-for-Interval-Arithmetic)
     - Web servers
-      - [[Internals: InteractiveShell]]
-      - [[Internals: Macaulay2Web]]
+      - [InteractiveShell](Internals%3A-InteractiveShell)
+      - [Macaulay2Web](Internals%3A-Macaulay2Web)
     - Other
-      - [[Internals: Macaulay2 Distributions]]
-      - [[Internals: GitHub Actions]]
-      - [[Internals: Miscellaneous Topics]] (put other bits here for now)
+      - [Macaulay2 Distributions](Internals%3A-Macaulay2-Distributions)
+      - [Release Checklist](Internals%3A-Release-Checklist)
+      - [GitHub Actions](Internals%3A-GitHub-Actions)
+      - [Miscellaneous Topics](Internals%3A-Miscellaneous-Topics)
       - [M2 Syntax Highlighting](https://github.com/Macaulay2/language-macaulay2)
       - [M2 Profiler](https://math.umn.edu/~mahrud/journal/profiler/)
   - [[Frequently Asked Questions]]
