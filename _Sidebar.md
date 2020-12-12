@@ -15,10 +15,9 @@
       - [CMake Build System](Internals%3A-CMake-Build-System)
     - Components of Macaulay2
       - [Safe-C Compiler](Internals%3A-Safe-C-Compiler)
-      - [the Interpreter](Internals%3A-the-Interpreter)
-      - [the Engine](Internals%3A-the-Engine)
+      - [Interpreter](Internals%3A-the-Interpreter)
+      - [Engine](Internals%3A-the-Engine)
       - [Core](Internals%3A-Core)
-        - [Hooks](Internals%3A-Hooks)
     - Case Studies
       - [Adding a Function in Engine, Interpreter, and Core](Internals%3A-Adding-a-Function-in-Engine,-Interpreter,-and-Core)
       - [Adding a Library for Interval Arithmetic](Internals%3A-Adding-a-Library-for-Interval-Arithmetic)
