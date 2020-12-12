@@ -1,5 +1,10 @@
 Mike gave an overview of various parts of the engine (located in `M2/Macaulay2/e/`), through specific examples and files below.
 
+Subsections:
+- [Class Hierarchy in the Engine](Internals%3A-Class-Hierarchy-in-the-Engine)
+- [Engine Unit tests](Internals%3A-Engine-Unit-tests)
+- [Engine Documentation (Doxygen)](Internals%3A-Engine-Documentation-(Doxygen))
+
 ## Engine code
 
 * `debug.hpp`: Useful for debugging without going into debugger. All objects have a buffer, and `text_out()` method. One can look up the types of top-level M2-objects which can be displayed this way, and then add print statements (using `std::cout`) in a source file, e.g. `matrix.cpp`, to debug methods.
