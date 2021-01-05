@@ -32,6 +32,7 @@ x=1e-16
 y=1+x -- not representable w/ default 53 bits of precision
 lift(y, ZZ) -- works
 lift(x, ZZ) -- error
+lift(1e-50,QQ) -- not what you might expect
 ```
 
 ## Engine
