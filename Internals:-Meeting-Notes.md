@@ -14,7 +14,10 @@ This page contains notes from the **M2internals** meetings. Should you be intere
   - [[Internals: Core]]
     - [[Internals: Hooks]]
 
-- Case Studies
+- Topics that involve several components
+  - [[Internals: inheritance (of M2 types)]] 
+  - [[Internals: promote and lift]]
+- Case studies
   - [[Internals: Adding a Function in Engine, Interpreter, and Core]]
   - [[Internals: Adding a Library for Interval Arithmetic]]
 
