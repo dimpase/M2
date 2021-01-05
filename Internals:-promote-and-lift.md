@@ -36,4 +36,4 @@ lift(x, ZZ) -- error
 
 ## Engine
 
-Complicated due to lack of multiple dispatch in C++. Roughly speaking, the target ring controls the implementation. The meat is in [aring-glue.hpp](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/e/aring-glue.hpp) and [aring-translate.hpp](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/e/aring-translate.hpp).
+Complicated due to lack of multiple dispatch in C++. Roughly speaking, the target ring controls the implementation. The meat is in [aring-glue.hpp](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/e/aring-glue.hpp) (`RingPromoter` namespace) and [aring-translate.hpp](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/e/aring-translate.hpp).
