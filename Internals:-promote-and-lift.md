@@ -21,7 +21,7 @@ Examples of natural ring maps (from [aring-glue.hpp](https://github.com/Macaulay
   *  QQ --> RR --> CC
   *  ZZ --> ZZ/p
   *  ZZ/p --> GF(p^n)
-  *  GF(p^m) --> GF(p^n), where m|n
+  *  GF(p^m) --> GF(p^n), where m divides n
   *  A --> A[vars]/I
   *  A[vars]/J --> A[vars]/I  (assumption: I contains J).
 
