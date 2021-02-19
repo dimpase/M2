@@ -15,4 +15,5 @@ You can also find your way around using the table of contents on the sidebar.
 - Macaulay2 Internals
   - [[Internals: Meeting Notes]]
 - [[Frequently Asked Questions]]
+  - [CMake Build Problems](FAQ%3A-CMake-Build-Problems)
 - [[Road map]]
