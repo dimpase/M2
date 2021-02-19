@@ -25,21 +25,6 @@ Same as above.
 </details>
 
 <details>
-<summary><code>collect2: error: ld returned 1 exit status</code> on WSL2</summary>
-
-This issue is likely due to a memory exhaustion bug in WSL2. Try cleaning the build artifacts and building with parallelization disabled:
-```
-ninja clean
-ninja M2-core -j1
-```
-</details>
-
-<details>
-<summary><code>undefined reference to cblas_dgemm</code> on Arch Linux</summary>
-The default OpenBLAS package on Arch Linux does not include function declarations for LAPACK and CBLAS, causing issues with some libraries and parts of Macaulay2. Try installing the community package [OpenBLAS-LAPACK](https://aur.archlinux.org/packages/openblas-lapack/) instead.
-</details>
-
-<details>
 <summary>CMake is not using the local version of MPIR, Flint, etc.</summary>
 
 Currently, when CMake is set to use the MPIR library, it compiles MPIR and a number of other libraries from source, including MPFR, NTL, Flint, Factory, Frobby, and Givaro. This is done to avoid linking conflicts caused by the libraries linking instead with the GMP library. Therefore, in order to link with system libraries the `-DUSING_MPIR=OFF` option is required. See this [comment](https://github.com/Macaulay2/M2/issues/1275#issuecomment-644217756) for more details on the reasoning behind this.
@@ -147,6 +132,32 @@ Use the following command to tell CMake to build NTL:
 ```
 cmake -DBUILD_LIBRARIES=NTL .
 ```
+</details>
+
+### Windows Subsystem for Linux
+
+<details>
+<summary><code>collect2: error: ld returned 1 exit status</code> on WSL2</summary>
+
+This issue is likely due to a memory exhaustion bug in WSL2. Try cleaning the build artifacts and building with parallelization disabled:
+```
+ninja clean
+ninja M2-core -j1
+```
+</details>
+
+<details>
+<summary><code>sh: 1: Syntax error: "(" unexpected</code></summary>
+
+See [#1503](https://github.com/Macaulay2/M2/issues/1503).
+</details>
+
+
+###  Linear Algebra Libraries
+
+<details>
+<summary><code>undefined reference to cblas_dgemm</code> on Arch Linux</summary>
+The default OpenBLAS package on Arch Linux does not include function declarations for LAPACK and CBLAS, causing issues with some libraries and parts of Macaulay2. Try installing the community package [OpenBLAS-LAPACK](https://aur.archlinux.org/packages/openblas-lapack/) instead.
 </details>
 
 
