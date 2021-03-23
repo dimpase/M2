@@ -77,3 +77,8 @@ General questions:
 - How should `promote` and `lift` work for intervals? 
   - What is the philosophy for `RR_*`? 
 - What is the expected behavior of `new ... from ...` ?
+
+### Testing ###
+- `Macaulay2/normal/RRi.m2`
+- Should there be any g-tests?
+- What tests get executed when building M2?
