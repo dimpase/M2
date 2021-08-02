@@ -38,7 +38,7 @@ This page contains notes from the **M2internals** meetings. Should you be intere
 - Virtual meetings are great 👍
   - Reduced cost of participation and is good for climate change!
 - Ways to continue 
-  - Current experiment: one-day meeting 4-5 hours long (every 1-2 months)
+  - Current mone: meeting every first Thursday of the month, 1.5 hours long
   - Other modes are up for discussion   
 - Keep `slack` as our messaging platform
   - continue using it for organizational purposes
