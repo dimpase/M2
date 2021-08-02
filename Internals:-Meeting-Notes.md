@@ -37,8 +37,9 @@ This page contains notes from the **M2internals** meetings. Should you be intere
 - "[[Road map]]" (ongoing and future "internals" tasks/projects/ideas)
 - Virtual meetings are great 👍
   - Reduced cost of participation and is good for climate change!
+  - Infrequent in-person meetings may happen eventually 
 - Ways to continue 
-  - Current mone: meeting every first Thursday of the month, 1.5 hours long
+  - Current mode: meeting every first Thursday of the month, 1.5 hours long
   - Other modes are up for discussion   
 - Keep `slack` as our messaging platform
   - continue using it for organizational purposes
