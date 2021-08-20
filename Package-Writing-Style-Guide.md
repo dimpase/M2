@@ -169,7 +169,7 @@
     * Don't misplace the word "only".  Correct: "Fly only in the absence of fog."  Incorrect: "Only fly 
       in the absence of fog," for it implies not _driving_ in the absence of fog.
 
-* Comments :
+* Comments:
     * Delete commented-out code.
     * Rewrite confusing code instead of adding comments.
     * There should be a space after a comment start sequence.
@@ -180,3 +180,54 @@
       such as "a package for tropical geometry", "computations in tropical geometry", or "a package for computations in tropical geometry".
     * Remove any option `DebuggingMode => true` or `Reload => true` to "newPackage".  Your users
       aren't prepared to debug your package.
+
+* Tips on writing an article for JSAG:
+    * Cite Macaulay2.
+    * Articles present mature software, so the package should have a version number at least as big as 1, and should
+      not be described as experimental.
+    * All authors should read the entire article.
+    * Always typeset _Macaulay2_ in italic.
+    * Start each sentence with an English word, not an identifier or a symbol.
+    * End each sentence with a period or question mark, not with a colon.  To indicate that
+      example code just below is relevant, use English words, not a colon.
+    * Don't use _Macaulay2_ identifiers as though they were English words.  (E.g.,
+      don't say "the coefficients are stored in a HashTable" or even "the coefficients are stored in a List".)
+    * Check the spelling of English words.
+    * Check for correct punctuations.
+    * Don't introduce acronyms -- generally speaking, there is space on the internet for a few extra words.
+    * All sentences should have verbs and subjects.
+    * Avoid using nouns (such as "input") as verbs.
+    * "different"
+      * Don't use "different" gratuitously.  For example, "different matrices" is 
+        no more informative than "matrices".
+      * Don't use "different" when you mean "various" or "diverse".
+      * Don't use the construction "different than" or "different to".  Use "different from" instead.
+      * Don't use the construction "a different X than Y".  Say "an X different from Y".
+    * Add a comma when starting a sentence with an adverb such as "Finally".
+    * Don't use a comma as a word.  (Incorrect: "Let x,y be integers."; correct: "Let x and y be integers.")
+    * Use "if" as a prelude to "then", but use "whether" (and not "whether or not") to introduce a
+      proposition.  Example: prefer "determine whether R is reduced" to "determine if R is reduced".
+    * Use standard English punctuation.  In particular, each use of "e.g.", "i.e.", or "resp." should
+      be followed by a comma.
+    * Don't misplace the word "only".  Correct: "Fly only in the absence of fog."  Incorrect: "Only fly 
+      in the absence of fog," for it implies not _driving_ in the absence of fog.
+    * Be clear about antecedents of pronouns.
+    * Don't use a comma to needlessly separate the subject of a sentence from the verb.
+    * Don't use a slash ( / ) as a synonym for an English word such as "or".  Use words instead.
+    * Eliminate redundant words.
+    * Choose correctly between "which" and "that".  (Examples of correct usage: "pick up the bowl
+      that is on the table"; "the bowl, which is sitting on the table, is broken".  Notice that "which"
+      is used with commas, but "that" is not.)
+    * Don't use item numbers as English words.  (Correct: "the ring satisfies Serre's property R2";
+      incorrect: "the ring is R2".)
+    * Example code used in the article should be correct and not elicit errors from _Macaulay2_.
+    * Don't let long lines intrude into the margin of the page.
+    * "Terms" are entries in a sum; "factors" are entries in a product.
+
+
+
+
+
+
+
+
