@@ -10,7 +10,7 @@
 * Project outcomes: Develop a package, publish a JSAG article
 * Project impact: Engineers and others could use Macaulay2 if it could solve equations.
 
-## Detailed Description
+## Project Description
 
 Solving equations can be done with Groebner bases, provided we choose a
 monomial ordering adapted to elimination of variables (not the default
@@ -62,6 +62,8 @@ in y, with 4 roots.  The second equation involves x and y, and as a polynomial
 in x with coefficients that are polynomials in y, it is monic (of degree 1 in
 x).  We conclude easily that the system has 4 solutions, which could be found
 numerically, if desired.
+
+### Details
 
 Not all gb's lead immediately to triangular systems, and the main problem with
 using gb's is that they easily suffer a combinatorial explosion that leads to
