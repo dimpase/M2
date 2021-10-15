@@ -14,6 +14,5 @@ You can also find your way around using the table of contents on the sidebar.
   - [[Git for Workshop Participants]]
 - Macaulay2 Internals
   - [[Internals: Meeting Notes]]
-  - [[Internals: Road Map]]
 - [[Frequently Asked Questions]]
   - [CMake Build Problems](FAQ%3A-CMake-Build-Problems)
