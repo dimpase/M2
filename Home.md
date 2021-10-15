@@ -17,4 +17,3 @@ You can also find your way around using the table of contents on the sidebar.
   - [[Internals: Road Map]]
 - [[Frequently Asked Questions]]
   - [CMake Build Problems](FAQ%3A-CMake-Build-Problems)
-- [[Road map]]
