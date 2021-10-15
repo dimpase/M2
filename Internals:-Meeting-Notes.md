@@ -43,5 +43,5 @@ This page contains notes from the **M2internals** meetings. Should you be intere
 - Keep `slack` as our messaging platform
   - continue using it for organizational purposes
   - create channels for particular internal projects (private or public)
-- "[[Road map]]" (ongoing and future "internals" tasks/projects/ideas, may be outdated)
+- "[[Internals: Road map]]" (ongoing and future "internals" tasks/projects/ideas, may be outdated)
 
