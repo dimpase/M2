@@ -1,21 +1,15 @@
-## Solving systems of polynomial equations
-
-* Proposed by: Dan Grayson
-* Potential advisor/consultant: Anton Leykin, Michael Burr
-* Description: Write a package to solve a system of equations
-* Project assigned to: Not yet assigned
-* Current status: Not yet begun
+* Potential advisor/consultant(s): Anton Leykin, Michael Burr (originally proposed by Dan Grayson)
+* Goal: Write a package to solve a system of polynomial equations via elimination
+* Current status: available!
 * Macaulay2 skill level: Beginner/intermediate
 * Mathematical experience: Advanced undergraduate 
-* Project outcomes: Develop a package, publish a JSAG article
-* Project impact: Engineers and others could use Macaulay2 if it could solve equations.
+* Potential outcomes: a package, an article in [JSAG](https://msp.org/jsag) 
 
 ## Project Description
 
 Solving equations can be done with Groebner bases, provided we choose a
 monomial ordering adapted to elimination of variables (not the default
-ordering).  Engineers and others could use Macaulay2 if it could solve
-equations.
+ordering).  Engineers and others use Macaulay2 to solve equations.
 
 ### Example
 
