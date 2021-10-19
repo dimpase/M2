@@ -1,9 +1,9 @@
 * Potential advisor/consultant(s): Anton Leykin, Michael Burr (originally proposed by Dan Grayson)
 * Goal: Write a package to solve a system of polynomial equations via elimination
 * Current status: available!
-* Macaulay2 skill level: Beginner/intermediate
-* Mathematical experience: Advanced undergraduate 
-* Potential outcomes: a package, an article in [JSAG](https://msp.org/jsag) 
+* Macaulay2 skill level: Intermediate+
+* Mathematical experience: Advanced undergraduate+ 
+* Reason(s) to participate: author a package, publish an article in [JSAG](https://msp.org/jsag) 
 
 ## Project Description
 
