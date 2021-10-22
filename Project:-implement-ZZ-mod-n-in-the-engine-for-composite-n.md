@@ -3,7 +3,7 @@
 * Current status: volunteers welcome!
 * Macaulay2 skill level: beginner with some Macaulay2 experience, knowledge of C++ is necessary 
 * Mathematical experience: advanced undergraduate 
-* Reason(s) to participate: learn Macaulay2 internals, provide a faster implementation of `ZZ/n` to yourself and/or to other researchers
+* Reason(s) to participate: learn Macaulay2 internals, provide a faster implementation of `ZZ/n` to yourself and to other researchers
 
 ## Project Description
 
