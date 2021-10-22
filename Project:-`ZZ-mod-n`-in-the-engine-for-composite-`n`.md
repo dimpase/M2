@@ -1,7 +1,7 @@
 * Potential advisor/consultant(s): Mike Stillman
 * Goal: Implement `ZZ/n` for composite `n` in the engine 
 * Current status: volunteers welcome!
-* Macaulay2 skill level: beginner+, knowledge of C++ is necessary 
+* Macaulay2 skill level: beginner with some experience, knowledge of C++ is necessary 
 * Mathematical experience: advanced undergraduate 
 * Reason(s) to participate: learn Macaulay2 internals, need faster `ZZ/n` in research  
 
