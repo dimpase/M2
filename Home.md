@@ -12,6 +12,10 @@ You can also find your way around using the table of contents on the sidebar.
   - [[Package Writing Style Guide]]
 - Macaulay2 Workshop Guides
   - [[Git for Workshop Participants]]
+- Project Proposals:
+  - [[Project: Faster determinants and minors]]
+  - [[Project: implement ZZ mod n in the engine for composite n]]
+  - [[Project: Solving systems of polynomial equations via elimination]]
 - Macaulay2 Internals
   - [[Internals: Meeting Notes]]
 - [[Frequently Asked Questions]]
