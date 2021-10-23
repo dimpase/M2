@@ -7,8 +7,7 @@
 
 ## Project Description
 
-Currently `ZZ/n` "works" only for prime `n`.   
-Implementing `ZZ/n` for composite `n` in the engine would allow fast operations (e.g., linear algebra) over `ZZ/n` for arbitrary `n`. 
+Currently `ZZ/n` "works" only for prime `n`.  Implementing `ZZ/n` for composite `n` in the engine would allow fast operations (e.g., linear algebra) over `ZZ/n` for arbitrary `n`.  It would be simpler if this ring were a base ring. This requires changes in the c++ engine and also requires implementation of linear algebra over such rings.
 
 ### Workaround
 
