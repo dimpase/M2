@@ -1,13 +1,15 @@
 * Potential advisor/consultant(s): Mike Stillman
 * Goal: Implement `ZZ/n` for composite `n` in the engine 
 * Current status: volunteers welcome!
-* Macaulay2 skill level: beginner with some Macaulay2 experience, knowledge of C++ is necessary 
+* Skill level: beginner with some Macaulay2 experience, knowledge of C++ is necessary 
 * Mathematical experience: advanced undergraduate 
 * Reason(s) to participate: learn Macaulay2 internals, provide a faster implementation of `ZZ/n` to yourself and to other researchers
 
 ## Project Description
 
 Currently `ZZ/n` "works" only for prime `n`.  Implementing `ZZ/n` for composite `n` in the engine would allow fast operations (e.g., linear algebra) over `ZZ/n` for arbitrary `n`.  It would be simpler if this ring were a base ring. This requires changes in the c++ engine and also requires implementation of linear algebra over such rings.
+
+This should possibly be implemented as two different engine rings: one for machine length integers, and one for larger integers.
 
 ### Workaround
 
