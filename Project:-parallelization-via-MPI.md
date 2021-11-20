@@ -1,9 +1,9 @@
 * Potential advisor/consultant(s): Anton Leykin
 * Goal: coarse parallelization using Message Passing Interface (MPI)
 * Current status: available! (some very basic functionality has been implemented already)
-* Macaulay2 skill level: intermediate (some C++ experience, if alterations of the core are necessary)
+* Macaulay2 skill level: intermediate (some C++ experience, if alterations of the core become necessary)
 * Mathematical experience: not important (undergraduate+, see "other info") 
-* Reason(s) to participate: develop a package that uses core routines (already deve  
+* Reason(s) to participate: develop a package that uses a handful of core routines (already in place)  
 * Other info: an ideal contributor would be someone who has an M2 program that (badly!) needs supercomputing power 
 
 ## Project Description
