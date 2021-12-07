@@ -7,6 +7,8 @@
 
 ## Project Description
 
+Here goes a description of your project
+
 ### Examples
 
 ### References (that describe the math and/or algorithms)
