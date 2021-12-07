@@ -4,6 +4,7 @@
   - Another source for projects is [github issues](https://github.com/Macaulay2/M2/issues) (pay attention to the labels).   
 ## List of available projects
 Labels: **(top-level)** = code in M2 language, **(engine)** = projects in M2 engine that may require other skills, most often C++  
+  - [[Project: Template]] (template to create a project description)
   - [[Project: Faster determinants and minors]] (engine)
   - [[Project: implement ZZ mod n in the engine for composite n]] (engine)
   - [[Project: parallelization via MPI]] (top-level) (engine)
