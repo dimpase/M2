@@ -12,6 +12,6 @@ You can also find your way around using the table of contents on the sidebar.
   - [[Package Writing Style Guide]]
 - Macaulay2 Workshop Guides
   - [[Git for Workshop Participants]]
-- [[Projects]]
-- [[Internals: Meeting Notes]]
-- [[Frequently Asked Questions]]
+- [[Projects]] -- look for a project you may contribute to (or propose a project)
+- [[Interfaces to Macaulay2]] from other software
+- [[Internals: Meeting Notes]] -- development of Macaulay2 core 
