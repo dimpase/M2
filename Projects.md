@@ -20,7 +20,8 @@ A typical outcome of joining a project would be writing a Macaulay2 package, pub
 ### Top-level projects
 The following projects require coding in the M2 language:
   - [[Project: Solving systems of polynomial equations via elimination]]
-  - [[Project: Improve polyhedral functionality (Polyhedra.m2, Polymake.m2)]]
+  - [[Project: Improve polyhedral functionality (Polyhedra.m2, Polymake.m2)]]  
+  - [[Project: Invariants]]
 ### Engine projects
 The following projects involve the Macaulay2 engine, which may require other skills, most often C++:
   - [[Project: Faster determinants and minors]]
