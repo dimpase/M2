@@ -28,3 +28,10 @@ The goal of the InvariantRing package is to allow computations of invariants of 
 ### Examples
 
 ### References (that describe the math and/or algorithms)
+
+* Kemper, Gregor Computing invariants of reductive groups in positive characteristic.  Transform. Groups 8 (2003), no. 2, 159-176.
+* Derksen, Harm; Kemper, Gregor. Computational invariant theory. Second edition. Encyclopaedia of Mathematical Sciences, 130. Invariant Theory and Algebraic Transformation Groups, VIII. Springer, Heidelberg, 2015. xxii+366 pp. ISBN: 978-3-662-48420-3; 978-3-662-48422-7
+* Kemper, G.; Steel, A. (1999): Some algorithms in invariant theory of finite groups.  In: P. Draexler et al (eds.), Computational methods for representations of groups and algebras. Proceedings of the Euroconference in Essen, Germany, April 1-5, 1997, 267-285. Birkhaeuser, Basel.
+* Chapter 8 in: Computing in Algebraic Geometry A Quick Start using SINGULAR Series: Algorithms and Computation in Mathematics, Vol. 16 Decker, Wolfram, Lossen, Christoph 2006, XVI, 327 p., Hardcover ISBN: 978-3-540-28992-0
+* Simon A. King. Fast Computation of Secondary Invariants. https://arxiv.org/abs/math/0701270
+* G. Kemper, An algorithm to calculate optimal homogeneous systems of parameters, J. Symbolic Comput. 27 (1999), no. 2, 171–184.
