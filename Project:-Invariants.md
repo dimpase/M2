@@ -10,7 +10,7 @@
 The goal of the InvariantRing package is to allow computations of invariants of linearly reductive groups in Macaulay2. Here is a brief version history:
 
 * **1.1.0**: the first version of this package was developed by Thomas Hawes. It focused on computing primary and secondary invariants of finite groups.
-* **2.0**: this version was developed by L. Ferraro, F. Galetto, F. Gandini, H. Huang, M. Mastroeni, and X. Ni at the virtual 2020 Cleveland workshop. It introduces types for different group actions as well as rings of invariants. It also contains new functionality for invariants of finite groups, diagonal actions (tori/abelian groups), and linearly reductive groups. The code from version 1.1.0 is preserved has been updated to work with the new types.
+* **2.0**: this version was developed by L. Ferraro, F. Galetto, F. Gandini, H. Huang, M. Mastroeni, and X. Ni at the virtual 2020 Cleveland workshop. It introduces types for different group actions as well as rings of invariants. It also contains new functionality for invariants of finite groups, diagonal actions (tori/abelian groups), and linearly reductive groups. The code from version 1.1.0 has been updated to work with the new types.
 
 ### To-do list
 
