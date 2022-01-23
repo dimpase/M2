@@ -23,7 +23,7 @@ The goal of the InvariantRing package is to allow computations of invariants of 
 > Wolfram Decker says: Please note that Simon King has worked very hard to
 > improve the Singular version of the project (originally written by one of my
 > students).  So the reference to his ideas should be there.
-
+* **Positive characteristic.** Some of the currently implemented methods are limited to characteristic zero. It would be look for additional methods for positive characteristic wherever possible.
 
 ### Examples
 
