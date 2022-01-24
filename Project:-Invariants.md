@@ -24,6 +24,7 @@ The goal of the InvariantRing package is to allow computations of invariants of 
 > improve the Singular version of the project (originally written by one of my
 > students).  So the reference to his ideas should be there.
 * **Positive characteristic.** Some of the currently implemented methods are limited to characteristic zero. It would be good to look for additional methods for positive characteristic wherever possible.
+* **Specialized algorithms for abelian groups.** A group led by Francesca Gandini has been working on algorithms for invariants of groups such as (Z/p)^k (see https://github.com/lrizzolo/m2invariants). Once this project is complete, the code could be merged into InvariantRing.
 
 ### Examples
 
