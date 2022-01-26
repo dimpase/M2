@@ -1,4 +1,5 @@
-* **Potential advisor/consultant(s)**: [Federico Galetto](https://math.galetto.org)
+* **Potential advisor(s)**: [Federico Galetto](https://math.galetto.org)
+* **Potential consultant(s)**: [Harm Derksen](https://cos.northeastern.edu/people/harm-derksen/)
 * **Goal**: improve the functionality and performance of the InvariantRing package
 * **Current status**: available
 * **Macaulay2 skill level**: Intermediate
