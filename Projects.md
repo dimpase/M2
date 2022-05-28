@@ -15,7 +15,8 @@ A typical outcome of joining a project would be writing a Macaulay2 package, pub
     [seeking a volunteer](https://github.com/Macaulay2/M2/labels/seeking%20a%20volunteer).
   - Also see the [GitHub projects](https://github.com/orgs/Macaulay2/projects) page for on-going work and outstanding tasks.
 
-## List of available projects
+## List of available projects 
+These are projects in need of contributors.
 
 ### Top-level projects
 The following projects require coding in the M2 language:
@@ -27,3 +28,8 @@ The following projects involve the Macaulay2 engine, which may require other ski
   - [[Project: Faster determinants and minors]]
   - [[Project: implement ZZ mod n in the engine for composite n]]
   - [[Project: parallelization via MPI]] (also top-level)
+
+## List of ongoing projects
+These are projects in varying states of completion. While they don't actively need contributors, you may suggest ideas, request features, or (e.g., if you already implemented something related) propose to join forces.
+  - [[Project: Template]]
+
