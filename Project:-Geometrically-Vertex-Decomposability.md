@@ -5,8 +5,8 @@
 
 ## Project Description
 
-A geometric vertex decomposition of an ideal is a generalization of the properties of a Stanley-Reisner ideal of a vertex decomposable simplicial complex. First introduced by Klein and Rajchgot [2], geometric vertex decomposability provides a new tool to show that an ideal is in the Gorenstein liaison class of a complete intersection (glicci).   Klein and Rajchgot's definition is relies on the geometric
-vertex decomposition of an ideal first defined by Knutson, Miller, Yong [1].
+A geometric vertex decomposition of an ideal is a generalization of the properties of a Stanley-Reisner ideal of a vertex decomposable simplicial complex. First introduced by Klein and Rajchgot [2], geometric vertex decomposability provides a new tool to show that an ideal is in the Gorenstein liaison class of a complete intersection (glicci).   Klein and Rajchgot's definition relies on the geometric
+vertex decomposition of an ideal first defined by Knutson, Miller, Yong [3].
 
 The purpose of this package is to create code to test if a given homogeneous ideal is geometrically vertex decomposable.
 
