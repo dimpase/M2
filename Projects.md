@@ -23,7 +23,7 @@ The following projects require coding in the M2 language:
   - [[Project: Solving systems of polynomial equations via elimination]]
   - [[Project: Improve polyhedral functionality (Polyhedra.m2, Polymake.m2)]]  
   - [[Project: Invariants]]
-  - Project: Geometrically Vertex Decomposable
+  - [[Project: Geometrically Vertex Decomposability]]
 
 ### Engine projects
 The following projects involve the Macaulay2 engine, which may require other skills, most often C++:
