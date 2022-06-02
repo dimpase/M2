@@ -1,4 +1,4 @@
-* **Potential advisor/consultant(s)**: [Adam Van Tuyl](https://ms.mcmaster.ca/~vantuyl/) (McMaster), Mike Cummings (McMaster)
+* **Potential advisor/consultant(s)**: Mike Cummings (McMaster), [Adam Van Tuyl](https://ms.mcmaster.ca/~vantuyl/) (McMaster)
 * **Goal**: Create a package for functions related to the geometrically vertex decomposability of an ideal
 * **Current status**: In development (expected completion August 2022)
 
