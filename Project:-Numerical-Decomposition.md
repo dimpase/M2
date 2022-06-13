@@ -13,7 +13,7 @@ The current plan is to
  
 ### Examples
 The old implementation of the numerical decomposition of an affine variety:
-```
+```m2
 i1 : needsPackage "NumericalAlgebraicGeometry";
 ...
 ...
