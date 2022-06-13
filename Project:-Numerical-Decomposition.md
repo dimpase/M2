@@ -4,11 +4,11 @@
 
 ## Project Description
 
-Give a variety embedded in a product of projective spaces that is given by a system of multihomogeneous polynomial equations, we would like to decribe it using (collections) of _witness sets_. (A _witness set_ is a cornerstone concept of _numerical algebraic geometry_.)
+Give a variety embedded in a product of projective spaces that is given by a system of multihomogeneous polynomial equations, we would like to describe it using (collections) of _witness sets_. (A _witness set_ is a cornerstone concept of _numerical algebraic geometry_.)
 
 The current plan is to 
 * implement most of the tools described in [1], 
-* revamp the current implementation (in `NumericalAlgebraicGeometry` package) of decomposition the case of ambient affine/projective space (a single factor case) using _u_-generation in [2], 
+* revamp the current implementation (in `NumericalAlgebraicGeometry` package) of decomposition in the case of ambient affine/projective space (a single factor case) using _u_-generation in [2], 
 * work on multiprojective _u_-generation in [2].
  
 ### Examples
