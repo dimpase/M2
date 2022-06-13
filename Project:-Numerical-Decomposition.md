@@ -31,10 +31,10 @@ o8 : NumericalVariety
 
 ### References (that describe the math and/or algorithms)
 
-[[1]] [A numerical toolkit for multiprojective varieties](https://arxiv.org/abs/1908.00899)  
+[\[1\]](https://arxiv.org/abs/1908.00899) A numerical toolkit for multiprojective varieties  
 
 Authors: [Jonathan D. Hauenstein](https://arxiv.org/search/?searchtype=author&query=Hauenstein%2C+J+D), [Anton Leykin](https://arxiv.org/search/?searchtype=author&query=Leykin%2C+A), [Jose Israel Rodriguez](https://arxiv.org/search/?searchtype=author&query=Rodriguez%2C+J+I), [Frank Sottile](https://arxiv.org/search/?searchtype=author&query=Sottile%2C+F)
 
-[[2]] [_u_-generation: solving systems of polynomials equation-by-equation](https://arxiv.org/abs/2206.02869)
+[\[2\]](https://arxiv.org/abs/2206.02869) _u_-generation: solving systems of polynomials equation-by-equation
 
 Authors: [Timothy Duff](https://arxiv.org/search/?searchtype=author&query=Duff%2C+T), [Anton Leykin](https://arxiv.org/search/?searchtype=author&query=Leykin%2C+A), [Jose Israel Rodriguez](https://arxiv.org/search/?searchtype=author&query=Rodriguez%2C+J+I)
