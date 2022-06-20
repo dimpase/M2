@@ -1,6 +1,6 @@
 # RingElement/Ring refactor proposal #
 
-Work in progress, current document written by Jay Yang building on a discussion with Michael Stillman. Comments and contributions welcome
+Work in progress, current document written by [Jay Yang](https://github.com/jkyang92) building on a discussion with Michael Stillman. Comments and contributions welcome
 
 Broadly speaking I have the following goals in this proposal in approximate order of priority:
 
