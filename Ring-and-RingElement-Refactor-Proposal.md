@@ -43,7 +43,7 @@ public:
 };
 ```
 
-The instances of ring might need to be public
+The instances of ring might need to be public.
 On the otherhand, we might be able to get away with factory functions.
 So either we have classes like this as part of the public interface
 
@@ -187,7 +187,7 @@ A question is whether they should be made to be RingElements.
 
 Current multiplication process
 
-if we have two RawRingElement a,b at the d level, assume then are of some ConcreteRing<RT> instance
+if we have two `RawRingElement` a,b at the d level, assume then are of some `ConcreteRing<RT>` instance
 
 - `a*b` 
 - `RingElement::operator*` (in relem.cpp)
