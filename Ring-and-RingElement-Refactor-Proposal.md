@@ -5,7 +5,7 @@ Work in progress, current document written by Jay Yang building on a discussion 
 Broadly speaking I have the following goals in this proposal in approximate order of priority:
 
 - Make the code more exception safe
-- No performance losses, possibly small gains
+- No performance losses
 - Document the actual Ring/RingElement/ARing interface
 - Make the code easier to use correctly (fewer memory leaks)
 - Make the code more like C++ code and less like C code
