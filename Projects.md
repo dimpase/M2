@@ -32,6 +32,6 @@ The following projects involve the Macaulay2 engine, which may require other ski
 
 ## List of ongoing projects
 These are projects in varying states of completion. While they don't actively need contributors, you may suggest ideas, request features, or (e.g., if you already implemented something related) propose to join forces.
-  - [[Project: Geometrically Vertex Decomposability]]
+  - [[Project: Geometric Vertex Decomposability]]
   - [[Project: Numerical Decomposition]]
 
