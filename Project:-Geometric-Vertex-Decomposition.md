@@ -1,6 +1,6 @@
-* **Potential advisor/consultant(s)**: Mike Cummings (McMaster), [Adam Van Tuyl](https://ms.mcmaster.ca/~vantuyl/) (McMaster)
+* **People involved**: Mike Cummings (McMaster), [Adam Van Tuyl](https://ms.mcmaster.ca/~vantuyl/) (McMaster)
 * **Goal**: Create a package for functions related to the geometrically vertex decomposability of an ideal
-* **Current status**: In development (expected completion August 2022)
+* **Current status**: In development (expected completion Fall 2022)
 
 
 ## Project Description
@@ -14,7 +14,7 @@ Geometric vertex decomposability generalizes vertex decomposability for simplici
 
 ### Examples
 
-The following is an example of what we can currently do.  The ideal i in the example below is the example of a toric ideal of a bipartite graph.   In ongoing work, Cummings, Da Silva, Rajchgot, and Van Tuyl [1] have shown that these ideals are geometrically vertex decomposable.  Our package verifies this.  Note that the completed version will not show all the information we have presented here.
+The following is an example of what we can currently do.  The ideal i in the example below is the example of a toric ideal of a bipartite graph.   In recent work, Cummings, Da Silva, Rajchgot, and Van Tuyl [1] have shown that these ideals are geometrically vertex decomposable.  Our package verifies this.  Note that the completed version will not show all the information we have presented here.
 
 ```m2
 i1 : loadPackage "GeometricDecomposability"
@@ -108,8 +108,8 @@ o4 = true
 
 The majority of our package is built around the results in the following papers:
 
-1. M. Cummings, S. Da Silva, J. Rajchgot, A. Van Tuyl, Geometric vertex decomposition and liaison of toric ideals of graphs.  In preparation (2022).
+1. M. Cummings, S. Da Silva, J. Rajchgot, A. Van Tuyl, Geometric vertex decomposition and liaison of toric ideals of graphs.  Preprint (2022).
 
 2.  P. Klein, J. Rajchgot, Geometric vertex decomposition and liaison. Forum of Mathematics, Sigma 9 (2021) Paper No. e70, 23 pp.
 
-3. A. Knutson, E. Miller, A. Yong, Grobner geometry of vertex decompositions and of flagged tableaux. Journal fur die Reine und Angewandte Mathematik 630 (2009) 1–31
+3. A. Knutson, E. Miller, A. Yong, Grobner geometry of vertex decompositions and of flagged tableaux. Journal fur die Reine und Angewandte Mathematik 630 (2009) 1–31.
