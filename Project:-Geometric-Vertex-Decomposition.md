@@ -108,8 +108,8 @@ o4 = true
 
 The majority of our package is built around the results in the following papers:
 
-1. M. Cummings, S. Da Silva, J. Rajchgot, A. Van Tuyl, Geometric vertex decomposition and liaison of toric ideals of graphs.  Preprint (2022).
+1. M. Cummings, S. Da Silva, J. Rajchgot, A. Van Tuyl, Geometric vertex decomposition and liaison for toric ideals of graphs.  Preprint (2022).
 
 2.  P. Klein, J. Rajchgot, Geometric vertex decomposition and liaison. Forum of Mathematics, Sigma 9 (2021) Paper No. e70, 23 pp.
 
-3. A. Knutson, E. Miller, A. Yong, Grobner geometry of vertex decompositions and of flagged tableaux. Journal fur die Reine und Angewandte Mathematik 630 (2009) 1–31.
+3. A. Knutson, E. Miller, A. Yong, Gröbner geometry of vertex decompositions and of flagged tableaux. Journal fur die Reine und Angewandte Mathematik 630 (2009) 1–31.
