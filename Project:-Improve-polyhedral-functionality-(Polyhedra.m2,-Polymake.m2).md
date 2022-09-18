@@ -11,7 +11,7 @@ Polymake.m2 interfaces polymake via writing and reading files. It writes a polyh
 - Independently of whether polymake is installed, it makes sense for Polyhedra.m2 to rely on Polymake.m2 for storing its objects as JSON.
 - Update Polymake.m2 to most recent polymake version.
 - Add some kind of switch for the user in Polyhedra.m2 to use polymake as a backend, if it is installed. What should the default be?
-- Should there be a separate JSON package? (Is there already?) This could be useful for many other data types as well.
+- ~~Should there be a separate JSON package? (Is there already?) This could be useful for many other data types as well.~~  _Finished -- see [#2589](https://github.com/Macaulay2/M2/pull/2589)_
 
 # C++ interface to polymake
 polymake can also be interfaced on the C++ level, via libpolymake. The api of libpolymake has stabilized and big changes are not to be expected for the near future. Hence it makes sense to also interface polymake on the engine level, especially since this will be faster than writing and reading files, and also more stable.
