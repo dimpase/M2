@@ -1,4 +1,4 @@
-This page contains notes from the **M2internals** meetings. Should you be interested in joining our [Slack workspace](https://m2internals.slack.com), where we discuss M2 development topics like the ones below, please email [Anton Leykin](http://people.math.gatech.edu/~aleykin3/).
+This page contains notes from the **M2internals** meetings. Should you be interested in joining our [Zilip workspace](https://m2internals.zulipchat.com), where we discuss M2 development topics like the ones below, please email [Anton Leykin](http://people.math.gatech.edu/~aleykin3/).
 
 - Building Macaulay2 from source
   - [[Internals: Autotools Build System]]
@@ -34,13 +34,10 @@ This page contains notes from the **M2internals** meetings. Should you be intere
   - [M2 Profiler](https://math.umn.edu/~mahrud/journal/profiler/)
 
 ## Future
-- Virtual meetings are great 👍
-  - Reduced cost of participation and is good for climate change!
-  - Infrequent in-person meetings may happen eventually 
-- Ways to continue 
-  - Current mode: meeting every first Thursday of the month, 1.5 hours long
-  - Other modes are up for discussion   
-- Keep `slack` as our messaging platform
+- Meetings 
+  - Zoom meeting every month, 1.5 hours long
+  - In-person meetings (usually attached to another meeting, e.g., a general M2 workshop)    
+- Keep `M2internals.zulipchat.com` as our messaging platform
   - continue using it for organizational purposes
   - create channels for particular internal projects (private or public)
 - "[[Internals: Road map]]" (ongoing and future "internals" tasks/projects/ideas, may be outdated)
