@@ -83,6 +83,8 @@ When you want to send your changes to the central Macaulay2 repository, do this 
 * Submit a pull request at https://github.com/USERNAME/M2/pull/new/BRANCHNAME, or find the pull request button on the page of your fork at https://github.com/USERNAME/M2.  The pull request should be directed toward our branch named "master" or "development".
 * After submitting your pull request, push no further commits to your branch, so we can have a chance to review your submission.  Once the review is done, comments about your code will be posted on github, and requested changes are easily submitted by committing them to your branch.  Once you finish addressing our comments, let us know by adding a comment, and we'll repeat the process until your code is accepted and "pulled".
 
+Once your pull request is submitted on github, some automatic checks will be performed (continuous integration). One of these checks is using `codespell` to verify the orthograph. It will report in which lines of which files there are possibly wrong words, and suggest how to replace them. If you think that you must use this precise word nevertheless, consider adding it as another exception to the file `.codespell_ignore`.
+
 Other links:
 
 * Learn all about how to use git by reading the book at http://git-scm.com/book.
