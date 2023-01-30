@@ -1,6 +1,6 @@
 # RingElement/Ring refactor proposal #
 
-Work in progress, current document written by [Jay Yang](https://github.com/jkyang92) building on a discussion with Michael Stillman. Comments and contributions welcome
+Work in progress, current document written by [Jay Yang](https://github.com/jkyang92) building on a discussion with Michael Stillman. Comments and contributions welcome.
 
 Broadly speaking I have the following goals in this proposal in approximate order of priority:
 
@@ -14,6 +14,10 @@ Broadly speaking I have the following goals in this proposal in approximate orde
 ## C++ interface structure ##
 
 ### Public Interface ###
+
+Everything on the public side is garbage collected.
+
+Both `RingElement` and `Ring` classes are (and must be) pure virtual
 
 Note we don't directly inherit from EngineObject
 RingElement is pure virtual, we can have implementations inherit from
@@ -49,7 +53,7 @@ So either we have classes like this as part of the public interface
 
 ```c++
 template<class R>
-class ConcreteRing<R> : Ring{
+class ConcreteRing<R> : public Ring, public MutableEngineObject{
     ...
 };
 ```
@@ -71,7 +75,7 @@ But we don't expect/need an default implementation.
 
 ```c++
 template<class R>
-class RingElementImpl<R> : RingElement{
+class RingElementImpl<R> : public RingElement, public EngineObject{
 //no default implementation
 }
 ```
@@ -81,7 +85,7 @@ as follows
 
 ```c++
 template<class RT>
-class RingElementImpl<ConcreteRing<RT> > : RingElement{
+class RingElementImpl<ConcreteRing<RT> > : public RingElement, public EngineObject{
 private:
     const ConcreteRing<R> &ring;
     R::ElementType val;
@@ -90,33 +94,32 @@ public:
 };
 ```
 
-A RingInterface or ARing class should implement at least the following types and functions.
-
 ```c++
 class RingInterface{
 public:
+    //substitute whatever appropriate type for long
+    typedef long ElementType;
     //This is a intended to be a zero cost wrapper around the C type.
     //Importantly, by having an initializer, it follows
     //RAII principles and is more exception safe.
     //Note that in general a default constructor is not possible, so for arrays
     //placement new will be needed.
-    struct ElementType{
+    struct Element{
     public:
-        using ValueType = ...;
-        //this allows using ElementType transparently for C code that expects ValueType
-        operator const ValueType&() const;
+        //this allows using Element (nearly) transparently for C code that expects ElementType
+        operator const ElementType&() const;
         operator ValueType&();
-        ElementType(const RingInterface& ri);//initialize as appropriate
+        explicit Element(const RingInterface& ri);//initialize as appropriate
         //Be careful about adding copy constructors, it's not usually useful
-        ElementType(ElementType&& v);//allow moves (otherwise returning from functions is hard)
-        ~ElementType();//this should infact cleanup the type
+        Element(ElementType&& v);//allow moves (otherwise returning from functions is hard)
+        ~Element();//this should infact cleanup the type
     private:
         ValueType value;
-    }
-    //Modern compilers should always be able to optimized the copy/move in the
-    //return away. but I'm not 100% certain how reliable it is
-    //the alternative signature is void add(ElementType& out, const ElementType& a, const ElementType& b) const;
-    ElementType add(const ElementType & a, const ElementType& b) const;
+    };
+    //I would have liked to have the following simpler signature, but it's
+    //not possible to do with zero extra cost
+    //Element add(const Element & a, const Element& b) const;
+    void add(ElementType& out, const ElementType& a, const ElementType& b) const;
     //all the other arithmetic operations
 
     //TODO think about conversion/initialization functions
@@ -125,18 +128,43 @@ public:
 
 Unless there's a good reason to, RingInterface instances should NOT be garbage collected, preferably, they will be direct members of the appropriate ConcreteRing class.
 
-The justification for having `RingInterface` and `Ring` separate is so that code that does not need to use the frontend `RingElement` can directly manipulate `RingInterface::ElementType` instances.
+The justification for having `RingInterface` and `Ring` separate is so that code that does not need to use the frontend `RingElement` can directly manipulate `RingInterface::Element` instances.
 
-Note that `RI::ElementType` replaces `ARingElement<RI>` for most operations, but if the element needs to remember what ring it belongs to `RingElementImpl<RI>` should be used instead.
+Note that `RingInterface::Element` replaces `ARingElement<RI>` for most operations, but if the element needs to remember what ring it belongs to `RingElementImpl<RI>` should be used instead.
 
+### Types and other details ###
+
+There are 3 types that represent some sort of element of a ring
+
+- RingElement
+- ElementType
+- Element
+
+Each of these has a different role
+
+- ElementType is the raw object understood by the underlying library or other code
+- Element is a wrapper that makes ElementType exception safe
+- RingElement is the object visible to the D code
+
+In general, we should avoid direct uses of ElementType. However, references are allowed.
+
+And the following inter-conversions are "free":
+
+- RingElement& -> const ElementType&
+- Element& -> ElementType&
+
+Conversions to RingElement for more complex types requires a deep copy into GC memory:
+
+- Element -> RingElement
+- ElementType -> RingElement
 
 ## C interface structure ##
 
-Its not clear to me how much we actually need a C interface, but for that we have something like this. The templates are mostly not exposed, so the C interface is mostly straightforward
+Nothing major needs to change here, but for that we have something like this. The templates are not exposed, so the C interface is mostly straightforward
 
 ```c
-class Ring;
-class RingElement;
+struct Ring;
+struct RingElement;
 
 //function prototype examples
 Ring *makeRing(...);
@@ -176,6 +204,16 @@ It's annoying not to be able to default construct `RingInterface::ElementType` o
 
 It's not clear that everything can be written as a `ConcreteRing<R>`  without resorting to specialization. Polynomial rings in particular are non-obvious.
 
+There are 3 current "ARing" types which do not allow for a zero cost Element wrapper over ElementType, they are:
+
+- ARingTower
+- ARingGFFlint
+- ARingGFFlintBig
+
+For each of these, the problem lies in the destructor. Both of the ARingGF* types can theoretically be implemented, but it would require circumventing the public API of flint. For ARingTower it is impossible to create a zero cost wrapper as currently implemented. But ARingTower seems to have memory weirdness anyways.
+
+We need to be slightly careful with multiple inheritance, especially when passing objects into C code.
+
 ## Other Possible Goals ##
 
 Is it possible to move the ring element stuff into a separate namespace/directory? i.e. separate the concern of translating between M2 and C++ with the concern of actually doing math.
@@ -185,7 +223,11 @@ Is it possible to move the ring element stuff into a separate namespace/director
 Currently integers and other "numbers" work differently than RingElements,
 A question is whether they should be made to be RingElements.
 
-Current multiplication process
+Because there isn't this ring_elem intermediary, we can probably give RingElement a finalizer, but there is a serious question about cost. In particular, how expensive are finializers really?
+
+Finalizers are really expensive, but the disclaim system is much faster.
+
+### Current multiplication process ###
 
 if we have two `RawRingElement` a,b at the d level, assume then are of some `ConcreteRing<RT>` instance
 
@@ -202,8 +244,4 @@ if we have two `RawRingElement` a,b at the d level, assume then are of some `Con
 - `RingElementImpl<ConcreteRing<RT>>::operator*`
 - `RT::mult`
 
-In practice, this seems to be about the same number of indirections.
-
-Because there isn't this ring_elem intermediary, we can probably give RingElement a finalizer, but there is a serious question about cost. In particular, how expensive are finializers really?
-
-Finalizers are really expensive, but the disclaim system is much faster.
+This has the same number of virtual function calls, which are probably the main expensive step.
