@@ -1,6 +1,7 @@
 * [Home](Home)
   - Introduction
     - [[Using Macaulay2 with Emacs]]
+      - [[Using Macaulay2 with Org Mode]]
     - [[Using Macaulay2 with Sublime]]
     - [Using Macaulay2 with Atom](https://github.com/mahrud/atom-macaulay2)
     - [Using Macaulay2 with Docker](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
