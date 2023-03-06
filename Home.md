@@ -4,6 +4,7 @@ For beginners to this wiki, the following list is a good place to start.
 You can also find your way around using the table of contents on the sidebar.
 - Use Macaulay2 with
   + [[Emacs|Using Macaulay2 with Emacs]] (recommended)
+    - [[Org Mode|Using Macaulay2 with Org Mode]]
   + [[Sublime|Using Macaulay2 with Sublime]]
   + [Atom](https://github.com/mahrud/atom-macaulay2)
   + [Docker](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
