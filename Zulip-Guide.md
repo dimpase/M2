@@ -1,0 +1,2 @@
+- https://www.mediawiki.org/wiki/Outreach_programs/Zulip
+- https://chat.zulip.org/help/streams-and-topics
