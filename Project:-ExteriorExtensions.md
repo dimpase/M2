@@ -3,7 +3,7 @@
 * **Current status**: beta testing / looking for suggestions and feedback
 * **Macaulay2 skill level**: Intermediate+
 * **Mathematical experience**: Grad
-* **Reason(s) to participate**: I'm hoping to submit this package + writeup to JSAG sometime soon.
+* **Reason(s) to participate**: I'm hoping to submit this package + writeup to JSAG sometime soon. Contributions / comments welcome.
 
 ## Project Description
 
