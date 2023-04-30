@@ -10,6 +10,17 @@ cmake -DCMAKE_SYSTEM_PREFIX_PATH=`brew --prefix` .
 </details>
 
 <details>
+<summary><code>ffi.d:7:11: fatal error: 'ffi.h' file not found</code></summary>
+
+Macaulay2 is not currently compatible with the version of FFI that is included on macOS systems, but you can use the following command to install the Homebrew version and tell CMake to look under the right prefix:
+```
+brew install libffi
+cmake -U"*FFI*" -DCMAKE_SYSTEM_PREFIX_PATH="`brew --prefix`;`brew --prefix libffi`" .
+```
+You may need to run `cmake -U"*FFI*" .` to unset previously detected FFI library and header addresses.
+</details>
+
+<details>
 <summary><code>/usr/include/c++/10.1.0/bits/unique_ptr.h:594:9: error: no matching function for call to std::__uniq_ptr_data</code> when using GCC 10 or Clang 10</summary>
 
 This issue is due to an old version of FFLAS_FFPACK or Givaro libraries inserting an unnecessary `-fabi-version=6` flag to the compile command. Use the following command to tell CMake to build those libraries:
