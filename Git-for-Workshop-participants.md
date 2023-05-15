@@ -4,6 +4,8 @@ Each Workshop has a dedicated git repository here on GitHub. The best way to int
 
 Note: on macOS computers, `git` is installed as a part of Xcode with the command `xcode-select --install`.
 
+Tip: there are various git cheat sheets on the internet which you might find handy, for instance [this one](https://about.gitlab.com/images/press/git-cheat-sheet.pdf).
+
 ## Setting up GitHub credentials
 
 Check to see if you have SSH access to GitHub by running the following inside a terminal:
