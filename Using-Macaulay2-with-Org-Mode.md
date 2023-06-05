@@ -2,7 +2,7 @@
 
 To add Macaulay2 support to Org Mode, first install the Emacs package [ob-M2](https://github.com/d-torrance/ob-M2) and make sure that the cons cell `(M2 . t)` is an element of the list `org-babel-load-languages`.  See the [README](https://github.com/d-torrance/ob-M2/blob/master/README.org) for instructions.
 
-Then open a file in Emacs with the `.org` file extension and add a source code block:
+Then open a file in Emacs with the `.org` file extension and add a source code block (optionally using <kbd>C</kbd>-<kbd>c</kbd> <kbd>C</kbd>-<kbd>,</kbd> followed by <kbd>s</kbd>):
 
 ```m2
 #+BEGIN_SRC M2
