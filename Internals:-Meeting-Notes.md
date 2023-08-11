@@ -1,4 +1,4 @@
-This page contains notes from the **M2internals** meetings. Should you be interested in joining our [Zilip workspace](https://m2internals.zulipchat.com), where we discuss M2 development topics like the ones below, please email [Anton Leykin](http://people.math.gatech.edu/~aleykin3/).
+This page contains notes from the **M2internals** meetings. Should you be interested in joining the internals streams in our [Zulip workspace](https://macaulay2.zulipchat.com/), where we discuss M2 development topics like the ones below, please email [Anton Leykin](http://people.math.gatech.edu/~aleykin3/).
 
 - Building Macaulay2 from source
   - [[Internals: Autotools Build System]]
