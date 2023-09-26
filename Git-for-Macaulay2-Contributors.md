@@ -69,7 +69,7 @@ To import the latest changes from the Macaulay2 repository into your repository 
 
 * `git fetch https://github.com/Macaulay2/M2 master`
 
-To display the history of your changes graphically, use this command: (gitk doesn't work on my mac using zsh)
+To display the history of your changes graphically, use this command: (gitk doesn't work on my mac using zsh--D Eisenbud)
 
 * `gitk`
 
