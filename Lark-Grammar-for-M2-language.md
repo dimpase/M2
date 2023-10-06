@@ -8,3 +8,6 @@ https://lark-parser.readthedocs.io/en/stable/
 
 A basic tentative was started in #2893, stuck at a preliminary stage.
 
+This is remotely related to the question of highliting code, as allowed by
+
+https://github.com/mahrud/language-macaulay2
