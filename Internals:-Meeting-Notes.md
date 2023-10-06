@@ -32,6 +32,7 @@ This page contains notes from the **M2internals** meetings. Should you be intere
   - [[Internals: Miscellaneous Topics]] (put other bits here for now)
   - [M2 Syntax Highlighting](https://github.com/Macaulay2/language-macaulay2)
   - [M2 Profiler](https://math.umn.edu/~mahrud/journal/profiler/)
+  - [[Lark Grammar for M2 language]]
 
 ## Future
 - Meetings 
