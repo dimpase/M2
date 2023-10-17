@@ -25,7 +25,7 @@ In [27]: with open("macaulay2.lark") as f:
 
 In [28]: json_parser = Lark(w, start='start', debug=True)
 
-In [29]: json_parser.parse("M2/M2/Macaulay2/packages/DiffAlg.m2")
+In [29]: json_parser.parse(open("M2/M2/Macaulay2/packages/DiffAlg.m2").read())
 ```
 
 and here the tentative grammar:
