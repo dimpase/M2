@@ -74,8 +74,8 @@ function_call: (SYMBOL | FUNCTION) "(" expr ("," expr)* ")"
 function_def: function_call typing? "->" expr
 make_function: (lists_and_sequences|SYMBOL) typing? "->" expr
 
-command: "newPackage"
-       | "select"
+command: "newPackage" "(" string ("," mapping)* ")" -> new_package
+       | "select" "(" lists_and_sequences "," expr ")"
        | "position(" expr ("," expr) ")"
        | "needs" string -> needs_package
        | "method" "(" mapping? ")"
@@ -84,24 +84,34 @@ command: "newPackage"
 
 // operators
 
-unary_pre_op: "-"
-            | "+"
+unary_pre_op: "-" -> minus
+            | "+" -> plus
 	    | "#" -> cardinality
 
 unary_post_op: "(*)"
-             | "^*" | "^!"
-             | "_*" | "_!"
+             | "^*"
+	     | "^!"
+             | "_*"
+	     | "_!"
              | "~"
              | "!"
 
-binary_op: "+" | "-"
-         | "*" | "/" | "//"
-         | "**" | "++"
-         | "^" | "^^" | "^**"
+binary_op: "+" -> plus
+	 | "-" -> minus
+         | "*" -> times
+	 | "/" -> div
+	 | "//" -> floordiv
+         | "**" -> power
+	 | "++" -> doubleplus
+         | "^"
+	 | "^^"
+	 | "^**"
          | "<<" | ">>"
-         | "<==>"
-         | "<==" | "<==="
-         | "==>" | "===>"
+         | "<==>" -> equiv
+         | "<=="
+	 | "<==="
+         | "==>"
+	 | "===>"
          | "@" | "@@"
          | "&" | "%"
          | "|" | "|-" | "||"
@@ -114,24 +124,24 @@ operator_exp: unary_pre_op expr
 
 // boolean and comparison tests
 
-BOOLEAN: "true" | "false"
-
 comparison: expr "==" expr -> equal
           | expr "!=" expr -> unequal
           | expr "===" expr -> strict_equal
           | expr "=!=" expr -> strict_unequal
           | expr "<" expr -> less
           | expr "<=" expr -> less_or_equal
-          | expr ">" expr
-          | expr ">=" expr
+          | expr ">" expr -> greater
+          | expr ">=" expr -> greater_or_equal
 
-bool: bool "and" bool
-    | bool "or" bool
-    | bool "xor" bool
-    | "not" bool
+BOOLEAN: "true" | "false"
+
+bool: bool "and" bool -> and
+    | bool "or" bool -> or
+    | bool "xor" bool -> xor
+    | "not" bool -> not
     | BOOLEAN
     | comparison
-    | "all" "(" expr "," expr")"
+    | "all" "(" expr "," expr")" -> all
 
 // new and symbols
 
@@ -146,7 +156,7 @@ symbols: "global" SYMBOL
 // assignment
 
 assignment: expr "=" expr
-          | expr ":=" expr
+          | (expr|SYMBOL) ":=" expr
           | expr "<-" expr
 
 comparison_operator: "?"
@@ -191,16 +201,15 @@ timing: "alarm" NN
 
 // lists, sets, sequences, arrays
 
-set_core: "{" expr ("," expr)* "}" | "{" "}"
+bare_sequence: expr ("," expr)*
 
-lists_and_sequences: set_core
-                   | "(" expr ("," expr)* ")"
-                   | "[" expr ("," expr)* "]"
-                   | "<|" expr ("," expr)* "|>"
-		   | "set" set_core
+lists_and_sequences: ("{" bare_sequence "}" | "{" "}")
+                   | "(" bare_sequence ")"
+                   | "[" bare_sequence "]"
+                   | "<|" bare_sequence "|>"
+		   | "set" ("{" bare_sequence "}" | "{" "}")
 
 // mapping over hash tables
-
 
 hash_table: "{" mapping ("," mapping)* "}"
 
