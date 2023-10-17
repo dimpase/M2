@@ -12,6 +12,23 @@ This is remotely related to the question of highliting code, as allowed by
 
 https://github.com/mahrud/language-macaulay2
 
+How to use
+==========
+
+Here is a sample ipython session:
+
+```
+In [26]: from lark import Lark
+
+In [27]: with open("macaulay2.lark") as f:
+...:     w = f.read()
+
+In [28]: json_parser = Lark(w, start='start', debug=True)
+
+In [29]: json_parser.parse("M2/M2/Macaulay2/packages/DiffAlg.m2")
+```
+
+and here the tentative grammar:
 
 ```
 // this entry point is for a file input
