@@ -18,14 +18,12 @@ How to use
 Here is a sample ipython session:
 
 ```
-In [26]: from lark import Lark
-
-In [27]: with open("macaulay2.lark") as f:
-...:     w = f.read()
-
-In [28]: json_parser = Lark(w, start='start', debug=True)
-
-In [29]: json_parser.parse(open("M2/M2/Macaulay2/packages/DiffAlg.m2").read())
+from lark import Lark
+with open("macaulay2.lark") as f:
+    w = f.read()
+json_parser = Lark(w, start='start')
+tree = json_parser.parse(open("M2/M2/Macaulay2/packages/DiffAlg.m2").read())
+print(tree.pretty())
 ```
 
 and here the tentative grammar:
