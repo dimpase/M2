@@ -5,11 +5,11 @@ but have not used emacs much before.
 First of all, you should install both Macaulay2 and emacs on the computer that
 you will bring with you to the workshop.  The place to get Macaulay2 is here:
 
-[https://faculty.math.illinois.edu/Macaulay2/Downloads/](https://faculty.math.illinois.edu/Macaulay2/Downloads/)
+[https://macaulay2.com/Downloads/](https://macaulay2.com/Downloads/)
 
 For Mac OS, there is some additional advice about installing emacs here:
 
-[https://faculty.math.illinois.edu/Macaulay2/Downloads/MacOSX/](https://faculty.math.illinois.edu/Macaulay2/Downloads/MacOSX/)
+[https://macaulay2.com/Downloads/MacOSX/index.html](https://macaulay2.com/Downloads/MacOSX/index.html)
 
 For other systems, such as Linux, it is usually straightforward to install
 emacs.
@@ -20,12 +20,12 @@ version 25.3 with Macaulay2 1.11.
 First you should learn how to use emacs.  Start emacs and you will probably get a window
 that looks like this:
 
-<img src="https://faculty.math.illinois.edu/Macaulay2/Screenshots/emacs-starting-in-window.png" width="400">
+<img src="https://macaulay2.com/Screenshots/emacs-starting-in-window.png" width="400">
 
 (It will not be satisfactory to run emacs within a terminal -- you really want a windows-aware
 version of emacs, so try hard to get one.  Here is what it will look like running in a terminal:
 
-<img src="https://faculty.math.illinois.edu/Macaulay2/Screenshots/emacs-starting-in-terminal.png" width="400">
+<img src="https://macaulay2.com/Screenshots/emacs-starting-in-terminal.png" width="400">
 )​
 
 Click on "Emacs Tutorial" to learn the basic emacs commands and how to type
@@ -45,15 +45,19 @@ If you prefer to keep the Mac's
 COMMAND key in its position to the left of the space bar, then an alternative is to make the COMMAND key
 serve as a META key just in emacs by putting the following code in your file `~/.emacs`:
 
-    (setq mac-command-modifier 'meta)
+```elisp
+(setq mac-command-modifier 'meta)
+```
 
 One may also liberate the option key to do what it does in MacOS (e.g., to
 input umlauts using option-U) with this command
 
-    (setq mac-option-modifier nil)
+```elisp
+ (setq mac-option-modifier nil)
+```
 
 Advice about using Macaulay2 in shells and within emacs is available at the [getting started documentation page
-](https://faculty.math.illinois.edu/Macaulay2/doc/Macaulay2-1.11/share/doc/Macaulay2/Macaulay2Doc/html/_getting_spstarted.html).
+](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_getting_spstarted.html).
 
 If you follow the instructions there, you will succeed in arranging it so that
 typing simply
