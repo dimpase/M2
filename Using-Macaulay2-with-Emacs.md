@@ -77,3 +77,6 @@ them, line by line, to Macaulay2 for execution.
 You should also learn how to read emacs' documentation within emacs, using
 "info mode".  Start info mode with C-h i and become expert an navigating its
 menus and its info files.
+
+## More information about using Macaulay2 with Emacs
+* [[Using Macaulay2 with Org Mode]]
