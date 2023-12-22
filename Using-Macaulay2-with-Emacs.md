@@ -80,3 +80,4 @@ menus and its info files.
 
 ## More information about using Macaulay2 with Emacs
 * [[Using Macaulay2 with Org Mode]]
+* [[Previewing TeX in Macaulay2 Emacs buffers]]
