@@ -24,6 +24,6 @@ As an example, consider the following session:
 
 ![image](https://github.com/Macaulay2/M2/assets/1992248/419e2af9-6482-4331-86ce-ca6f324afc31)
 
-Now suppose we run <kbd>M</kbd>-<kbd>x</kbd> `preview-at-point` (or its keyboard binding, <kbd>C</kbd>-<kbd>c</kbd> <kbd>C</kbd>-<kbd>p</kbd> <kbd>C</kbd>-<kbd>p</kbd>).  Then we get the following:
+Now suppose we run <kbd>M</kbd>-<kbd>x</kbd> `preview-at-point` (or its key binding, <kbd>C</kbd>-<kbd>c</kbd> <kbd>C</kbd>-<kbd>p</kbd> <kbd>C</kbd>-<kbd>p</kbd>).  Then we get the following:
 
 ![image](https://github.com/Macaulay2/M2/assets/1992248/94ac87ff-53d2-46e9-8f9c-2096d864e0ef)
