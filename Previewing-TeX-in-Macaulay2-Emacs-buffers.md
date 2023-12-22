@@ -1,4 +1,4 @@
-Using the [texfraq](https://github.com/TobiasZawada/texfrag) Emacs package, it is possible to preview TeX code in Macaulay2 interaction buffers in a way similar to the `preview-latex` mode that comes with [AUCTeX](https://www.gnu.org/software/auctex/).
+Using the [texfrag](https://github.com/TobiasZawada/texfrag) Emacs package, it is possible to preview TeX code in Macaulay2 interaction buffers in a way similar to the `preview-latex` mode that comes with [AUCTeX](https://www.gnu.org/software/auctex/).
 
 After installing texfraq (which is available through [MELPA](https://melpa.org/)), add the following to your `.emacs` or `.init.el`:
 
