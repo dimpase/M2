@@ -43,6 +43,6 @@ So for example, `threadedSaturate(4, 5, 4)` will use 4 threads to saturate $(x_0
    R = QQ[x_1..x_6]
    I = intersect(ideal(x_1,x_2),ideal(x_3..x_6))
    ```
-2. `localCohom(2,I)
+2. `localCohom(2,I)`
     - Platform: ?
         - Time: 118s
