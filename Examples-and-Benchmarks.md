@@ -19,7 +19,7 @@ If you have trouble finding information about your hardware platform, or are mis
 
 # Benchmark Pages
 ## Parallel Processing
-Here is a benchmark from the parallelization group. Given a number of variables, an exponent, and a number of threads, it will saturate the maximal ideal raised to the given power with respect to each variable in a different thread, just like Karl's example that Mike demonstrated this morning:
+Given a number of variables, an exponent, and a number of threads, the following will saturate the maximal ideal raised to the given power with respect to each variable in a different thread:
 ```
 threadedSaturate = method();
 threadedSaturate(ZZ, ZZ, ZZ) := (numvars, exponent, numthreads) -> elapsedTime (
