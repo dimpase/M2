@@ -13,10 +13,28 @@ A benchmark ought to include information about the example and any relevant para
    - Running time...
 etc.
 
-Benchmarks for related tasks can be placed together within the same page.
+Benchmarks for related tasks can be placed together within the same section.
 
 If you have trouble finding information about your hardware platform, or are missing some other pieces of information don't worry about including all of it.  Some information is better than none, and we can fill out more info as a community.
 
 # Benchmark Pages
-- Parallel Processing
-- Local Cohomology
+## Parallel Processing
+Here is a benchmark from the parallelization group. Given a number of variables, an exponent, and a number of threads, it will saturate the maximal ideal raised to the given power with respect to each variable in a different thread, just like Karl's example that Mike demonstrated this morning:
+```
+threadedSaturate = method();
+threadedSaturate(ZZ, ZZ, ZZ) := (numvars, exponent, numthreads) -> elapsedTime (
+    x := symbol x;
+    R := ZZ/101[x_0..x_(numvars - 1)];
+    m := ideal vars R;
+    oldnumthreads := allowableThreads;
+    allowableThreads = numthreads;
+    tasks := apply(gens R, var -> createTask(
+        () -> elapsedTime saturate(m^exponent, var)));
+    schedule \ tasks;
+    while not all(tasks, isReady) do nanosleep 1000000;
+    allowableThreads = oldnumthreads;
+    taskResult \ tasks)
+```
+
+So for example, `threadedSaturate(4, 5, 4)` will use 4 threads to saturate $(x_0,\dots,x_3)^5$ with respect to $x_3$.
+## Local Cohomology
