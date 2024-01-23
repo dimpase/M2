@@ -20,7 +20,7 @@ If you have trouble finding information about your hardware platform, or are mis
 # Benchmark Pages
 ## Parallel Processing
 Given a number of variables, an exponent, and a number of threads, the following will saturate the maximal ideal raised to the given power with respect to each variable in a different thread:
-```
+```m2
 threadedSaturate = method();
 threadedSaturate(ZZ, ZZ, ZZ) := (numvars, exponent, numthreads) -> elapsedTime (
     x := symbol x;
@@ -36,10 +36,10 @@ threadedSaturate(ZZ, ZZ, ZZ) := (numvars, exponent, numthreads) -> elapsedTime (
     taskResult \ tasks)
 ```
 
-So for example, `threadedSaturate(4, 5, 4)` will use 4 threads to saturate $(x_0,\dots,x_3)^5$ with respect to $x_3$.
+So for example, `threadedSaturate(4, 5, 4)` will use 4 threads to saturate $(x_0,\dots,x_3)^5$ with respect to $x_0$ through $x_3$.
 ## Local Cohomology
 
-1. ```
+1. ```m2
    R = QQ[x_1..x_6]
    I = intersect(ideal(x_1,x_2),ideal(x_3..x_6))
    ```
