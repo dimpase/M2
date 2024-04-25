@@ -21,8 +21,8 @@ Here is a sample ipython session:
 from lark import Lark
 with open("macaulay2.lark") as f:
     w = f.read()
-json_parser = Lark(w, start='start')
-tree = json_parser.parse(open("M2/M2/Macaulay2/packages/DiffAlg.m2").read())
+m2parser = Lark(w, start='start')
+tree = m2parser.parse(open("M2/M2/Macaulay2/packages/DiffAlg.m2").read())
 print(tree.pretty())
 ```
 
