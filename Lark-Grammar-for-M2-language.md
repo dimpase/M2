@@ -32,6 +32,240 @@ and here the tentative grammar:
 // this entry point is for a file input
 start: (_NEWLINE | expr)*
 
+SYMBOL: WORD ("'" WORD?)?
+      | WORD "." WORD
+
+COMMENT: /--[^\n]*/
+       | /--.*\n/
+       | /-\*.*\*-/
+
+FUNCTION: "sin" | "cos" | "tan" | "abs" | "acos"
+        | "agm" | "asin" | "atan" | "atan2"
+        | "zeta" | "tanh" | "sqrt" | "sec" | "sech"
+        | "erf" | "erfc" | "coth" | "csc" | "eint"
+
+token: SYMBOL
+    | string
+    | SIGNED_NUMBER
+    | operator_exp
+    | command
+    | timing
+    | assignment
+    | lists_and_sequences
+    | hash_table
+    | matrix
+    | branching
+    | bool
+    | symbols
+    | make_function
+    | function_call
+    | function_def
+    | table_access
+    | mapping
+
+expr: token (";" token)* (";")?
+
+string: STRING
+      | "toString" expr
+      | (string "|")+ string
+
+mapping: expr "=>" expr
+
+// functions
+typing: ":=" mapping
+
+wrapped_symbol: "(" SYMBOL ")"
+
+function_call: (SYMBOL | FUNCTION | wrapped_symbol) "(" expr ("," expr)* ")"
+	     | SYMBOL expr
+function_def: function_call typing? "->" expr
+make_function: (lists_and_sequences|SYMBOL) typing? "->" expr
+
+command: "newPackage" "(" string ("," mapping)* ")" -> new_package
+       | "select" "(" lists_and_sequences "," expr ")"
+       | "position(" expr ("," expr) ")"
+       | "needs" string -> needs_package
+       | "method" "(" mapping? ")"
+       | "instance" "(" expr "," SYMBOL ")"
+       | "class" expr
+
+// operators
+
+unary_pre_op: "-" -> minus
+            | "+" -> plus
+	    | "#" -> cardinality
+
+unary_post_op: "(*)"
+             | "^*"
+	     | "^!"
+             | "_*"
+	     | "_!"
+             | "~"
+             | "!"
+
+binary_op: "+" -> plus
+	 | "-" -> minus
+         | "*" -> times
+	 | "/" -> div
+	 | "//" -> floordiv
+	 | "\\"  -> applied_to
+         | "**" -> power
+	 | "++" -> doubleplus
+         | "^"
+	 | "^^"
+	 | "^**"
+         | "<<" | ">>"
+         | "<==>" -> equiv
+         | "<=="
+	 | "<==="
+         | "==>"
+	 | "===>"
+         | "@" | "@@"
+         | "&" | "%"
+         | "|" | "|-" | "||"
+         | ".." | "..<" | ":" | "_"
+         | "."
+
+operator_exp: unary_pre_op expr
+            | expr unary_post_op
+            | expr binary_op expr
+
+// boolean and comparison tests
+
+comparison: expr "==" expr -> equal
+          | expr "!=" expr -> unequal
+          | expr "===" expr -> strict_equal
+          | expr "=!=" expr -> strict_unequal
+          | expr "<" expr -> less
+          | expr "<=" expr -> less_or_equal
+          | expr ">" expr -> greater
+          | expr ">=" expr -> greater_or_equal
+
+BOOLEAN: "true" | "false"
+
+bool: expr "and" expr -> and
+    | bool "or" bool -> or
+    | bool "xor" bool -> xor
+    | "not" bool -> not
+    | BOOLEAN
+    | comparison
+    | "all" "(" expr "," expr")" -> all
+
+// new and symbols
+
+// new: "new" hash_table ["of" hash_table] "from" hash_table ":=" (A,B,c) "->" expr
+
+symbols: "global" SYMBOL
+       | "local" SYMBOL
+       | "symbol" SYMBOL
+       | "protect" SYMBOL
+       | "threadVariable" SYMBOL
+
+// assignment
+
+assignment: expr "=" expr
+          | (expr|SYMBOL) ":=" expr
+          | expr "<-" expr
+
+comparison_operator: "?"
+
+
+// subscripting and object access
+
+accessing: "_" expr -> subscript
+         | "." expr -> access_via_key
+         | "#" expr? -> length_or_access
+         | ".?" expr -> check_for_key
+         | "#?" SYMBOL -> check_value
+	 | "[" bare_range "]" -> get_range
+ 
+table_access: expr accessing
+
+configuration: expr "'" expr
+
+// branching
+
+bare_for: "for" expr ["from" expr] ["to" expr] ["when" bool]
+
+branching: "if" expr "then" expr ["else" expr]
+         | "while" expr "do" expr
+         | bare_for "do" expr
+         | "break" expr?
+         | "continue" expr?
+         | "return" expr?
+
+// exceptions and errors
+
+exception: "error" string
+         | "try" expr ["then" expr] ["else" expr]
+         | "catch" expr
+         | "throw" expr
+         | "shield" expr
+
+// timing and alarms
+
+timing: "alarm" NN
+      | "time" expr
+      | "timing" expr
+      | "sleep" NN
+      | "nanosleep" NN
+      | "elapsedTime" expr
+      | "elapsedTiming" expr
+
+// lists, sets, sequences, arrays
+
+bare_sequence: expr ("," expr)* (",")?
+
+bare_range: expr (".."|"..<") expr
+
+lists_and_sequences: ("{" bare_sequence "}" | "{" "}")
+                   | "(" bare_sequence ")"
+                   | "[" bare_sequence "]"
+                   | "<|" bare_sequence "|>"
+		   | "set" ("{" bare_sequence "}" | "{" "}")
+		   | bare_for "list" expr
+		   | bare_range
+		   | "while" bool "list" expr
+
+matrix: "matrix" lists_and_sequences
+
+// mapping over hash tables
+
+hash_table: "{" mapping ("," mapping)* "}"
+
+hash_table_operation: "applyValues(" hash_table "," expr ")"
+        | "applyKeys(" hash_table "," expr ")"
+        | "applyPairs(" hash_table "," expr ")"
+        | "scanValues(" hash_table "," expr ")"
+        | "scanKeys(" hash_table "," expr ")"
+        | "scanPairs(" hash_table "," expr ")"
+        | "scan(" hash_table "," expr ")"
+
+// "merge(" A B C ")"
+// combine: "combine(" A B C D E")"
+
+_NEWLINE: ( /\r?\n[\t ]*/ | COMMENT )+
+
+%import common.ESCAPED_STRING -> STRING
+%import common.SIGNED_NUMBER
+%import common.WORD
+%import common.LETTER
+%import common.NEWLINE
+%import common.INT -> NN
+%import common.SIGNED_INT -> ZZ
+%import common.SIGNED_FLOAT -> RR
+%import common.WS
+%ignore WS
+%ignore COMMENT
+```
+
+Too bad that one cannot store that as a file in the wiki..
+
+OLD FILE:
+```
+// this entry point is for a file input
+start: (_NEWLINE | expr)*
+
 SYMBOL: WORD
 
 COMMENT: /--[^\n]*/
@@ -238,3 +472,4 @@ _NEWLINE: ( /\r?\n[\t ]*/ | COMMENT )+
 %ignore WS
 %ignore COMMENT
 ```
+
