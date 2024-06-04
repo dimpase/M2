@@ -10,6 +10,7 @@ You can also find your way around using the table of contents on the sidebar.
   + [Docker](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
 - Macaulay2 Contribution Guides
   - [[Git for Macaulay2 Contributors]]
+    - [[Pull requests]]
   - [[Package Writing Style Guide]]
 - Macaulay2 Workshop Guides
   - [[Git for Workshop Participants]]
