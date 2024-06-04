@@ -1,1 +1,1 @@
-![Macaulay2](https://faculty.math.illinois.edu/Macaulay2/Style/9planets.gif)
+![Macaulay2](https://macaulay2.com/Style/9planets.gif)
