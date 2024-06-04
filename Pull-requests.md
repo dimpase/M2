@@ -1,4 +1,4 @@
-Please change the base branch of this pull request to `development`.
+Please change the base branch of new pull requests to `development`.
 
 If you are adding a new package, then please also do the following:
 * Add the name of your package to the file [`M2/Macaulay2/packages/=distributed-packages`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/%3Ddistributed-packages).
