@@ -7,6 +7,7 @@
     - [Using Macaulay2 with Docker](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
   - Macaulay2 Contribution Guides
     - [[Git for Macaulay2 Contributors]]
+      - [[Pull requests]]
     - [[Package Writing Style Guide]]
   - Macaulay2 Workshop Guides
     - [[Git for Workshop Participants]]
