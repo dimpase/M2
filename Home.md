@@ -2,6 +2,12 @@ Welcome to the *[Macaulay2](http://macaulay2.com/)* wiki!
 
 For beginners to this wiki, the following list is a good place to start.
 You can also find your way around using the table of contents on the sidebar.
+- Installing Macaulay2
+  + [[Installing Macaulay2 in macOS]]
+  + [[Installing Macaulay2 in Windows]]
+  + [[Installing Macaulay2 in Linux]]
+  + [[Installing Macaulay2 from source (autotools)]]
+  + [[Installing Macaulay2 from source (CMake)]]
 - Use Macaulay2 with
   + [[Emacs|Using Macaulay2 with Emacs]] (recommended)
     - [[Org Mode|Using Macaulay2 with Org Mode]]
