@@ -56,3 +56,9 @@ Packages for RPM-based distributions are hosted on the Macaulay2 website.  You s
 * common package: https://macaulay2.com/Downloads/Common/Macaulay2-1.24.05-1.common.rpm
 * architecture dependent package (Fedora 40): https://macaulay2.com/Downloads/GNU-Linux/Fedora/Macaulay2-1.24.05-1.x86_64-Linux-fedora-40.rpm
 * architecture dependent package (Rocky Linux 9.4): https://macaulay2.com/Downloads/GNU-Linux/Red%20Hat%20Enterprise,%20CentOS,%20Scientific%20Linux/Macaulay2-1.24.05-1.x86_64-Linux-rocky-9.4.rpm
+
+Then, after downloading these two files, run the following:
+
+```
+sudo dnf install Macaulay2-*.rpm
+```
