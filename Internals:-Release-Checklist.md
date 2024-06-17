@@ -41,6 +41,8 @@ The convention for version numbers of Macaulay2 is this:
 
   - M2-emacs and other syntax highlighting files should be updated
 
+  - run `npm install` in `M2/Macaulay2/packages/Style` to make sure that our vendored copy of KaTeX is up to date.
+
   - update the file [`M2/Macaulay2/packages/Macaulay2Doc/changes.m2`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/Macaulay2Doc/changes.m2) to take the release into account
 
     - find out how the file [`Macaulay2/m2/exports.m2`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/m2/exports.m2) has changed since the previous release (using `git diff`), and make appropriate entries to document the new symbols and the deleted symbols.
