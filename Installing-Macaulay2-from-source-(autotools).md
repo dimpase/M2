@@ -111,6 +111,12 @@ Install packages with:
 sudo dnf -y install autoconf bison boost-devel boost-stacktrace cddlib-devel cohomCalg csdp csdp-tools eigen3-devel emacs factory-devel factory-gftables fflas-ffpack-devel flex flint-devel frobby gcc-c++ gc-devel gdbm-devel git givaro-devel glpk-devel gmp-devel gtest gtest-devel kernel-devel lapack-devel libgfortran-static libmpc-devel libtool libxml2-devel mpfi-devel mpfr-devel mpsolve nauty ncurses-devel ntl-devel patch pkgconf polymake qd readline-devel rpm-build rpmdevtools rpm-sign strace time which yasm rpmlint
 ```
 
+If configuring with `--with-system-X`, then also install the following packages for each value of X:
+  - gc:        gc-devel
+  - mathic:    mathic-devel
+  - mathicgb:  mathicgb-devel
+  - memtailor: memtailor-devel
+
 ## Red Hat Enterprise Linux 6.7
 
 We have found that git 1.7.1 is too old, but have succeeded with these modules:
