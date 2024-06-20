@@ -108,7 +108,7 @@ The Raspberry Pi comes with 512MB of RAM and a swapfile /var/swap of size 100MB.
 ## Fedora:
 Install packages with:
 ```
-sudo dnf -y install autoconf bison boost-devel boost-stacktrace cddlib-devel cohomCalg csdp csdp-tools eigen3-devel emacs factory-devel factory-gftables fflas-ffpack-devel flex flint-devel frobby gcc-c++ gc-devel gdbm-devel git givaro-devel glpk-devel gmp-devel gtest gtest-devel kernel-devel lapack-devel libgfortran-static libmpc-devel libtool libxml2-devel mpfr-devel mpir-devel mpsolve nauty ncurses-devel ntl-devel patch pkgconf polymake qd readline-devel rpm-build rpmdevtools rpm-sign strace time which yasm rpmlint
+sudo dnf -y install autoconf bison boost-devel boost-stacktrace cddlib-devel cohomCalg csdp csdp-tools eigen3-devel emacs factory-devel factory-gftables fflas-ffpack-devel flex flint-devel frobby gcc-c++ gc-devel gdbm-devel git givaro-devel glpk-devel gmp-devel gtest gtest-devel kernel-devel lapack-devel libgfortran-static libmpc-devel libtool libxml2-devel mpfi-devel mpfr-devel mpsolve nauty ncurses-devel ntl-devel patch pkgconf polymake qd readline-devel rpm-build rpmdevtools rpm-sign strace time which yasm rpmlint
 ```
 
 ## Red Hat Enterprise Linux 6.7
