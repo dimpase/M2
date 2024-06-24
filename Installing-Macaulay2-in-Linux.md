@@ -62,3 +62,11 @@ Then, after downloading these two files, run the following:
 ```
 sudo dnf install Macaulay2-*.rpm
 ```
+
+## Fedora
+
+Macaulay2 is also available in the official Fedora repositories.  The version may be slightly out of date.
+
+```
+sudo dnf install Macaulay2
+```
