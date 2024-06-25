@@ -32,6 +32,9 @@ gmake get-libtool
 gmake -f Makefile
 
 cd BUILD/build
-../../configure --enable-download --enable-build-libraries="readline" CC=/usr/bin/gcc CXX=/usr/bin/g++
+CC=/usr/bin/gcc CXX=/usr/bin/g++ ../../configure \
+    --enable-download \
+    --enable-build-libraries="readline"
+
 gmake IgnoreExampleErrors=false
 ```
