@@ -1,5 +1,3 @@
-![Build and Test Macaulay2](https://github.com/Macaulay2/M2/workflows/Build%20and%20Test%20Macaulay2/badge.svg?branch=master)
-
 ## Why CMake?
 CMake is a cross-platform system for generating build environments using native tools such as Makefiles and Ninja or IDEs such as Xcode and Visual Studio. See this article on [why the KDE project switched to CMake](https://lwn.net/Articles/188693/) and this list of [cool CMake features](https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/Really-Cool-CMake-Features).
 
