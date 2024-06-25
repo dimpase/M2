@@ -169,7 +169,7 @@ Note: Scientific Linux 7.1 has a modern version of gcc (version 4.8.3).  By cont
     Download yasm from http://yasm.tortall.net/Download.html and install it in /usr/local, the usual
         way (untar, configure, make, make install).
 
-  Suse Linux Leap 15.3:
+## Suse Linux Leap 15.3:
 
     sudo zypper -n install man man-pages emacs-x11 gcc git screen autoconf bison createrepo emacs flex gc-devel gcc gcc-c++ gcc-fortran gdbm-devel gmp-devel lapack-devel libxml2-devel make mpfr-devel ncurses-devel patch readline-devel subversion zlib-devel libtool libmpir-devel mpfr-devel ntl-devel flint-devel glpk-devel cddlib-devel givaro-devel boost-devel rpm-build mpc-devel yasm tbb-devel eigen3-devel
 
@@ -179,7 +179,7 @@ Note: Scientific Linux 7.1 has a modern version of gcc (version 4.8.3).  By cont
 
     to the configure command line, to make RPM files for distribution to generic hardware.
 
-  Arch Linux and Manjaro Linux:
+## Arch Linux and Manjaro Linux:
 
     To prepare for compiling it yourself:
 
@@ -192,7 +192,7 @@ Note: Scientific Linux 7.1 has a modern version of gcc (version 4.8.3).  By cont
       sudo pacman-key --refresh-keys
       sudo pacman --sync --refresh --sysupgrade
 
-  Gentoo Linux:
+## Gentoo Linux:
 
     To install generally needed packages, run this command as root:
 
@@ -212,7 +212,7 @@ Note: Scientific Linux 7.1 has a modern version of gcc (version 4.8.3).  By cont
 
        Note: various variables, licenses, and options will have to be set
 
-  Mac OS X:
+## Mac OS X:
     The steps described below are combined in the shell script INSTALL.mac, which you could
       simply run instead.
     Install the Xcode Command Line Tools using the following command.
@@ -272,9 +272,7 @@ Note: Scientific Linux 7.1 has a modern version of gcc (version 4.8.3).  By cont
       occur later in the value of the environment variable PATH than /usr/bin
       does.
 
-----------------------
-  Compiling the most recent GNU C compiler
-----------------------
+# Compiling the most recent GNU C compiler
 
   It may happen that you need a modern version of the GNU C compiler, but you
   have no way to download a binary distribution of it, or you have no way to
@@ -333,9 +331,7 @@ Note: Scientific Linux 7.1 has a modern version of gcc (version 4.8.3).  By cont
      solve that problem, use the program "epkg", available from
      https://github.com/DanGrayson/epkg.
 
-----------------------
-Choosing a place for the repository
-----------------------
+# Choosing a place for the repository
 
 A typical Macaulay2 build directory can use up 1.5GB of disk space, and in an
 institutional environment your home directory is probably backed up to tape.
@@ -345,9 +341,7 @@ at least the build directories) on a locally mounted scratch drive, where the
 files are not backed up.  For your changes to Macaulay2 source code, github.com
 will serve as your backup.
 
------------------------
-Building a fat source tarfile to avoid further downloads
------------------------
+# Building a fat source tarfile to avoid further downloads
 
 It may be desirable when building Macaulay2 on multiple systems to create a
 "fat" tarfile containing all of our source code as well as all of the source
@@ -368,9 +362,7 @@ following:
     Alternatively, tar up just this directory and not its parent directory.
     Everything needed to build Macaulay2 will be included.
 
------------------------
-Building with Python support
------------------------
+# Building with Python support
 
 The "Python" package embeds a Python interpreter inside Macaulay2.  For this
 to work, the Macaulay2 binary needs to be linked against the Python shared
@@ -386,9 +378,7 @@ to LDFLAGS.  For example, if Python has been installed using brew, then add
 the following to LDFLAGS, replacing X with the appropriate minor version:
 "-L`brew --prefix python`/Frameworks/Python.framework/Versions/3.X/lib".
 
--------------------------------
-Building without libffi support
--------------------------------
+# Building without libffi support
 
 Use of the "ForeignFunctions" package requires linking the Macaulay2 binary
 against libffi (https://sourceware.org/libffi/).  This has been known to
@@ -396,9 +386,7 @@ cause issues on Apple silicon machines, and so it is possible to opt out of
 this feature by adding the "--without-libffi" option to the "configure" command
 line below.
 
------------------------
-Compiling Macaulay2
------------------------
+# Compiling Macaulay2
 
 It seems now, for a 64 bit build in a virtual machine with no swap space, using
 gcc 7, that 1024MB of RAM is not enough, so try something like 1400MB.
@@ -521,9 +509,7 @@ our program, and how to initialize the dumped data file, if present:
         /foo/bar/Macaulay2-*/postinstall
         /foo/bar/Macaulay2-*/preremove
 
--------------------------------------------
-Compiling for multiple machine architectures
--------------------------------------------
+# Compiling for multiple machine architectures
 
 By default, Macaulay2 will compile in such a way that it is adapted to the
 architectural features of the CPU being used to do the compilation.  This is
@@ -553,9 +539,7 @@ To combine those two steps, run :
 
    ./configure --build=`config/config.guess`
 
-----------------------
-HTML validation
-----------------------
+# HTML validation
 
 To validate all our HTML files, run:
 
@@ -564,9 +548,7 @@ To validate all our HTML files, run:
 This depends on the installation of the validator (the Python utility
 html5validator, available using pip), so we don't run it automatically.
 
-----------------------
-Rerunning the package examples
-----------------------
+# Rerunning the package examples
 
 Some packages cache their example output in the source code tree, since they
 depend on the presence of external programs not included with Macaulay2.  Here
@@ -593,9 +575,7 @@ we briefly summarize them and the software they depend on:
     package documentation for hints about installing it.
     	    http://www.math.uwo.ca/~mfranz/convex/files/current/convex.m
 
-----------------------
-Warning messages
-----------------------
+# Warning messages
 
 	-  warning: -jN forced in submake: disabling jobserver mode
 
@@ -604,9 +584,7 @@ Warning messages
 	   anyway.  (We use -j1 as an option when compiling third party libraries
 	   whose makefiles are not known to support parallelism.)
 
-----------------------
-Autoconf, autoreconf, libtool, ...
-----------------------
+# Autoconf, autoreconf, libtool, ...
 
 If you get any mysterious error messages involving autoconf, autoreconf,
 libtool, etc., try running
@@ -616,9 +594,7 @@ libtool, etc., try running
 in the top level.  This command will install versions of those tools known to
 work with Macaulay2.
 
-----------------------
-Unexpected problems
-----------------------
+# Unexpected problems
 
 Suppose you encounter error messages like this one when compiling in libraries/mpir:
 
