@@ -10,6 +10,7 @@ You can also find your way around using the table of contents on the sidebar.
   + [[Using autotools|Building M2 from source using Autotools]]
   + [[Using CMake|Building M2 from source using CMake]]
     - [[FAQ: CMake Build Problems]]
+  + [[Building on macOS]]
 - Use M2 with
   + [[Emacs|Using Macaulay2 with Emacs]] (recommended)
   + [[Emacs via Org Mode|Using Macaulay2 with Org Mode]]
