@@ -1,1 +1,1 @@
-![Macaulay2](https://macaulay2.com/Style/9planets.gif)
+[Homepage](https://macaulay2.com/Macaulay2/) | [Packages](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_packages_spprovided_spwith_sp__Macaulay2.html) | [Documentation](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html) | [Events](https://macaulay2.com/Events/) | [Google Group](https://groups.google.com/group/macaulay2)
