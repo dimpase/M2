@@ -1,6 +1,3 @@
-Building Macaulay2 from Source using CMake
-==========================================
-
 ![Build and Test Macaulay2](https://github.com/Macaulay2/M2/workflows/Build%20and%20Test%20Macaulay2/badge.svg?branch=master)
 
 ## Why CMake?
