@@ -1,4 +1,4 @@
-### Using CMake
+### [[Using CMake|Building M2 from source using CMake]]
 
 You can reduce the compilation time by installing dependencies from Homebrew when compiling Macaulay2 from source. From the top directory of the git repository, run:
 ```bash
@@ -21,7 +21,7 @@ ninja
 ```
 Also see this [Wiki](https://github.com/Macaulay2/homebrew-tap/wiki).
 
-### Using Autotools
+### [[Using Autotools|Building M2 from source using Autotools]]
 
 From the top directory of the git repository, run:
 ```bash
