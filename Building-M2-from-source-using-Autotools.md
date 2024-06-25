@@ -213,8 +213,8 @@ Note: Scientific Linux 7.1 has a modern version of gcc (version 4.8.3).  By cont
        Note: various variables, licenses, and options will have to be set
 
 ## Mac OS X:
-    The steps described below are combined in the shell script INSTALL.mac, which you could
-      simply run instead.
+The steps described below are combined in the page [[Building M2 from source on macOS]], which you could follow instead.
+
     Install the Xcode Command Line Tools using the following command.
           xcode-select --install
        (Starting with Mac OS X version 10.15 (Catalina), /usr/include does not exist and cannot be
