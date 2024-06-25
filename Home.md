@@ -27,3 +27,4 @@ You can also find your way around using the table of contents on the sidebar.
 - Miscellaneous
   + [[Internals: Meeting Notes]] -- development of Macaulay2 core 
   + [[Interfaces to Macaulay2]] from other software
+  + [[Examples and Benchmarks]]
