@@ -10,9 +10,10 @@ You can also find your way around using the table of contents on the sidebar.
   + [Installing Macaulay2 from source (CMake)](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL-CMake.md)
 - Use Macaulay2 with
   + [[Emacs|Using Macaulay2 with Emacs]] (recommended)
-    - [[Org Mode|Using Macaulay2 with Org Mode]]
+  + [[Emacs via Org Mode|Using Macaulay2 with Org Mode]]
   + [[Sublime|Using Macaulay2 with Sublime]]
-  + [Docker](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
+  + [VSCode (discussion)](https://groups.google.com/g/macaulay2/c/FXhHePFYhuA/m/fqI3XGvuCQAJ)
+  + [Docker Images](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
 - Macaulay2 Contribution Guides
   - [[Git for Macaulay2 Contributors]]
     - [[Pull requests]]
