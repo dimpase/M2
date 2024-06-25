@@ -1,7 +1,7 @@
 ### Using CMake
 
 You can reduce the compilation time by installing dependencies from Homebrew when compiling Macaulay2 from source. From the top directory of the git repository, run:
-```
+```bash
 brew tap macaulay2/tap
 brew install ccache
 brew install $(brew deps --1 --include-build macaulay2/tap/M2)
@@ -24,7 +24,7 @@ Also see this [Wiki](https://github.com/Macaulay2/homebrew-tap/wiki).
 ### Using Autotools
 
 From the top directory of the git repository, run:
-```
+```bash
 brew install ccache ctags gnu-tar make wget yasm
 
 cd M2
