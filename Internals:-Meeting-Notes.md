@@ -38,7 +38,7 @@ This page contains notes from the **M2internals** meetings. Should you be intere
 - Meetings 
   - Zoom meeting every month, 1.5 hours long
   - In-person meetings (usually attached to another meeting, e.g., a general M2 workshop)    
-- Keep `M2internals.zulipchat.com` as our messaging platform
+- Keep [Zulip](https://macaulay2.zulipchat.com/#narrow/stream/351865-M2-Internals-Discussions) as our messaging platform
   - continue using it for organizational purposes
   - create channels for particular internal projects (private or public)
 - "[[Internals: Road map]]" (ongoing and future "internals" tasks/projects/ideas, may be outdated)
