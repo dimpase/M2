@@ -1,3 +1,21 @@
+# Quick start
+
+After downloading the dependencies for your system (see below), do the following:
+
+```
+git clone https://github.com/Macaulay2/M2
+cd M2/M2
+make
+cd BUILD
+../configure --enable-download
+make
+sudo make install
+```
+
+*Note*:  On macOS and BSD systems, use `gmake` instead of `make`.
+
+
+
 # Getting the source code
 
 The current development version of the source code can be obtained with this
