@@ -10,7 +10,6 @@ deps=$(brew deps --1 --include-optional macaulay2/tap/M2 | tr '\n' ';')
 paths=$HOMEBREW_PREFIX/opt/${deps//;/;$HOMEBREW_PREFIX/opt/}
 
 cd M2/BUILD/build
-git clone https://github.com/Macaulay2/M2.git
 cmake -GNinja -S ../.. -B . \
       -DBUILD_NATIVE=OFF \
       -DCMAKE_PREFIX_PATH=$paths \
