@@ -6,10 +6,10 @@ brew tap macaulay2/tap
 brew install ccache
 brew install $(brew deps --1 --include-build macaulay2/tap/M2)
 
+cd M2/BUILD/build
 deps=$(brew deps --1 --include-optional macaulay2/tap/M2 | tr '\n' ';')
 paths=$HOMEBREW_PREFIX/opt/${deps//;/;$HOMEBREW_PREFIX/opt/}
 
-cd M2/BUILD/build
 cmake -GNinja -S ../.. -B . \
       -DBUILD_NATIVE=OFF \
       -DCMAKE_PREFIX_PATH=$paths \
