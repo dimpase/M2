@@ -14,6 +14,16 @@ sudo make install
 
 *Note*:  On macOS and BSD systems, use `gmake` instead of `make`.
 
+# Dependencies
+
+Here are some dependencies you may have to install on your system to build Macaulay2. 
+
+## Debian/Ubuntu
+
+```
+sudo apt install git make autoconf libtool-bin pkgconf g++ libtbb-dev libeigen3-dev wget libncurses-dev libboost-dev libboost-stacktrace-dev libboost-regex-dev gfortran zlib1g-dev liblzma-dev libxml2-dev libffi-dev libgc-dev libgdbm-dev libgmp-dev libmpfr-dev libmpfi-dev libreadline-dev libntl-dev libflint-dev libsingular-dev singular-data libmps-dev libfrobby-dev googletest coinor-csdp lrslib cohomcalg libmemtailor-dev libmathic-dev libmathicgb-dev libpython3-dev
+```
+
 
 
 # Getting the source code
