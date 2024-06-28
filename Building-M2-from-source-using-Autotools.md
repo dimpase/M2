@@ -25,7 +25,7 @@ sudo pacman -S 4ti2 autoconf automake bison boost cddlib coin-or-csdp eigen ffla
 ```
 *Note:*
 - Add `--with-gtest-source-path=/usr/src/googletest` to the call to `configure` so that it can find GoogleTest.
-- cohomCalg, Frobby, Mathic, Mathicgb, Memtailor, MPSolve, and Frobby are not available as packages on Arch Linux and must be downloaded and built.
+- cohomCalg, Frobby, Mathic, Mathicgb, Memtailor, MPSolve, and Frobby are not available as packages on Arch Linux and will be downloaded and built.  Alternatively, Frobby is available in the [Arch User Repository](https://aur.archlinux.org/packages/frobby).
 
 ## Debian/Ubuntu
 
@@ -40,7 +40,7 @@ sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel co
 ```
 *Note:*
 - Add `CPPFLAGS=-I/usr/include/frobby` to the call to `configure` so that it can find Frobby.
-- Fedora's GoogleTest package does not include some necessary files, so it must be downloaded and built.
+- Fedora's GoogleTest package does not include some necessary files, so it will be downloaded and built.
 
 # Getting the source code
 
