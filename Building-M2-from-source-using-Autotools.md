@@ -24,7 +24,14 @@ Here are some dependencies you may have to install on your system to build Macau
 sudo apt install 4ti2 autoconf automake bison ca-certificates cohomcalg coinor-csdp fflas-ffpack g++ gfan gfortran git install-info libboost-dev libboost-regex-dev libboost-stacktrace-dev libcdd-dev libeigen3-dev libffi-dev libflint-dev libfrobby-dev libgc-dev libgdbm-dev libgivaro-dev libglpk-dev libgmp-dev libgtest-dev liblzma-dev libmathic-dev libmathicgb-dev libmemtailor-dev libmpfi-dev libmpfr-dev libmps-dev libncurses-dev libntl-dev libopenblas-dev libpython3-dev libreadline-dev libsingular-dev libtbb-dev libtool-bin libxml2-dev lrslib make nauty normaliz patch pkgconf python3 singular-data time topcom wget zlib1g-dev
 ```
 
+## Fedora
 
+```
+sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel cohomCalg csdp-tools eigen3-devel factory-devel fflas-ffpack-devel flint-devel g++ gc-devel gcc-gfortran gdbm-devel gfan git glpk-devel gmp-devel lapack-devel libffi-devel libfrobby-devel libtool libxml2-devel lrslib-utils make mathic-devel mathicgb-devel memtailor-devel mpfi-devel mpfr-devel mpsolve-devel nauty ncurses-devel normaliz ntl-devel patch python3-devel readline-devel tbb-devel xz-devel zlib-devel
+```
+*Note:*
+- Add `CPPFLAGS=-I/usr/include/frobby` after the call to `configure` so that it can find Frobby.
+- Fedora's GoogleTest package does not include some necessary files, so it must be downloaded and built.
 
 # Getting the source code
 
