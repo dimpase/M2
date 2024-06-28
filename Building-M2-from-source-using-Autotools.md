@@ -16,7 +16,16 @@ sudo make install
 
 # Dependencies
 
-Here are some dependencies you may have to install on your system to build Macaulay2. 
+Here are some dependencies you may have to install on your system to build Macaulay2:
+
+## Arch Linux
+
+```
+sudo pacman -S 4ti2 autoconf automake bison boost cddlib coin-or-csdp eigen fflas-ffpack flex flint gc gcc gcc-fortran gfan git givaro glpk gtest icu libtool libxml2 lrs make mpfi nauty normaliz ntl onetbb patch pkgconf python singular texinfo time topcom which
+```
+*Note:*
+- Add `--with-gtest-source-path=/usr/src/googletest` to the call to `configure` so that it can find GoogleTest.
+- cohomCalg, Frobby, Mathic, Mathicgb, Memtailor, MPSolve, and Frobby are not available as packages on Arch Linux and must be downloaded and built.
 
 ## Debian/Ubuntu
 
