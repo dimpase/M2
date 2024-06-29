@@ -12,22 +12,26 @@ This build system is tested on GCC 6+, Clang 6+, and Xcode 9+ compilers.
 **TIP**: install `ccache` for caching compiler artifacts and `ninja-build` (`ninja` on Brew) for optimized parallel builds.
 
 #### Requirements
-There are various tools needed to compile Macaulay2 dependencies.
-- On Debian/Ubuntu, install `autoconf build-essential bison libtool pkg-config yasm`.
-- On Fedora/CentOS, install `autoconf automake bison libtool pkg-config yasm`.
-- On Mac OS X, using Homebrew, install `autoconf automake bison libtool pkg-config yasm`.
-
-There are 10 libraries that must be found on the system.
-- On Debian/Ubuntu, install `libopenblas-dev libgmp3-dev libxml2-dev libreadline-dev libgdbm-dev libboost-regex-dev libboost-stacktrace-dev libomp-dev libtbb-dev libffi-dev`.
-- On Fedora/CentOS, install `openblas-devel gmp-devel libxml2-devel readline-devel gdbm-devel boost-devel libomp-devel tbb-devel libffi-devel`.
-- On Mac OS X, using Homebrew, install `gmp libxml2 readline gdbm boost libomp tbb libffi`.
+There are various tools needed to compile Macaulay2 dependencies, plus about a dozen or so libraries that must be found on the system.
+- On Debian/Ubuntu
+```
+sudo apt install autoconf build-essential bison libtool pkg-config yasm libopenblas-dev libgmp3-dev libxml2-dev libreadline-dev libgdbm-dev libboost-regex-dev libboost-stacktrace-dev libomp-dev libtbb-dev libffi-dev
+```
+- On Fedora/CentOS
+```
+sudo dnf install autoconf automake bison libtool pkg-config yasm openblas-devel gmp-devel libxml2-devel readline-devel gdbm-devel boost-devel libomp-devel tbb-devel libffi-devel
+```
+- On Mac OS X, using Homebrew
+```
+brew install autoconf automake bison libtool pkg-config yasm gmp libxml2 readline gdbm boost libomp tbb libffi
+```
 
 **TIP**: x86_64 and arm64 binary packages for all dependencies on Mac OS X 12+ and Linux distributions are available through the [Macaulay2 tap](https://github.com/Macaulay2/homebrew-tap/) for Homebrew. To download the dependencies this way run:
 ```
 brew tap Macaulay2/tap
 brew install --only-dependencies macaulay2/tap/M2
 ```
-and append `` -DCMAKE_PREFIX_PATH=`brew --prefix` `` to an invocation of CMake prior to starting the build so that CMake can find the dependencies installed through Homebrew. See [FAQ](#faq) for solutions to frequent issues.
+and append `` -DCMAKE_PREFIX_PATH=`brew --prefix` `` to an invocation of CMake prior to starting the build so that CMake can find the dependencies installed through Homebrew. See [[this page|Building M2 from source on macOS]] for a more fine-grained method of providing the prefix paths.
 
 #### Quick build
 A quick build involves the following steps:
