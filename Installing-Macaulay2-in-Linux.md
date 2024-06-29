@@ -1,4 +1,4 @@
-# APT-based distributions (Debian, Ubuntu, etc.)
+# APT-based distributions
 
 Debian and its derivatives use the `apt` package manager.  Macaulay2 has been available in the official Debian repositories since 2020, so you may install it using
 
@@ -71,3 +71,7 @@ Macaulay2 is also available in the official Fedora repositories.  The version ma
 ```
 sudo dnf install Macaulay2
 ```
+
+# Homebrew on Linux
+
+Macaulay2 bottles are available for x86_64 Linux systems through Homebrew. Follow the instructions on [this page](https://github.com/Macaulay2/homebrew-tap/blob/main/README.md) to install the Macaulay2 tap and bottle.
