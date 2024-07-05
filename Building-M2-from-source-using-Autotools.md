@@ -48,6 +48,13 @@ sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel co
 - Add `CPPFLAGS=-I/usr/include/frobby` to the call to `configure` so that it can find Frobby.
 - Fedora's GoogleTest package does not include some necessary files, so it will be downloaded and built.
 
+## Red Hat Enterprise Linux
+
+```
+sudo dnf install autoconf automake bison boost-devel diffutils eigen3 flex g++ gc-devel gcc-gfortran gdbm-devel git glpk-devel gmp-devel lapack-devel libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
+```
+*Note:* You must have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled in order to install several of these packages.
+
 # Getting the source code
 
 The current development version of the source code can be obtained with this
