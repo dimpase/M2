@@ -58,22 +58,21 @@ sudo dnf install autoconf automake bison boost-devel diffutils eigen3 flex gc-de
 # Getting the source code
 
 The current development version of the source code can be obtained with this
-command, assuming you have installed "git" on your machine:
+command, assuming you have installed `git` on your machine:
 
     git clone https://github.com/Macaulay2/M2
 
-A directory called M2, which you can move or rename, will be created, and this
-INSTALL file is in the subdirectory "M2" of it.  By default, the "master" branch
+A directory called `M2` which you can move or rename, will be created.  By default, the `master` branch
 of the M2 repository will be checked out.
 
-The "release" tags tend to be more stable, and if you compile from one of
+The `release` tags tend to be more stable, and if you compile from one of
 those, you'll have the same functionality as those who download our binary
-releases.  So, after cloning, you can switch to the tag containing version 1.6,
+releases.  So, after cloning, you can switch to the tag containing version 1.24.05,
 for example, with the following command:
 
-    git checkout release-1.6
+    git checkout release-1.24.05
 
-Instead of release-1.6 you should, of course, use the most recent one.
+Instead of `release-1.24.05` you should, of course, use the most recent one.
 
 The following command shows the list of release tags:
 
@@ -81,7 +80,7 @@ The following command shows the list of release tags:
 
 However, if some time has passed since the most recent release and your system
 has newer versions of some of Macaulay2's dependencies than were available at
-the time of the release, you may have more success building the "master" branch.
+the time of the release, you may have more success building the `master` branch.
 
 The following commands, run from the top level of this source tree (the parent
 of the directory this file is in) will download the latest changes to the
@@ -92,7 +91,7 @@ source code:
     git submodule update
 
 To obtain the latest, but potentially unstable, changes to the Macaulay2 source
-code, switch to the "development" branch:
+code, switch to the `development` branch:
 
     git checkout development
 
