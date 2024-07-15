@@ -35,6 +35,7 @@ sudo apt install 4ti2 autoconf automake bison ca-certificates cohomcalg coinor-c
 *Note:*  
 - On Ubuntu 18.04 (Bionic Beaver) and Ubuntu 20.04 (Focal Fossa) run the following first, as several of the above dependencies are missing from the official Ubuntu archives:
   ```
+  sudo apt install software-properties-common
   sudo add-apt-repository ppa:macaulay2/macaulay2
   ```
 
