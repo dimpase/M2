@@ -138,7 +138,7 @@ the following to `LDFLAGS`, replacing `X` with the appropriate minor version:
 
 ## Building without libffi support
 
-Use of the `ForeignFunctions" package requires linking the Macaulay2 binary
+Use of the `ForeignFunctions` package requires linking the Macaulay2 binary
 against [libffi](https://sourceware.org/libffi/).  This has been known to
 cause issues on some machines, and so it is possible to opt out of
 this feature by adding the `--without-libffi` option to `configure`.
