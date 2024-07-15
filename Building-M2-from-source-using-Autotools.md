@@ -104,27 +104,6 @@ code, switch to the `development` branch:
 
     git checkout development
 
-# Building a fat source tarfile to avoid further downloads
-
-It may be desirable when building Macaulay2 on multiple systems to create a
-"fat" tarfile containing all of our source code as well as all of the source
-code of the submodules and libraries that might later be used, to prevent later
-access to the internt to obtain that source code.  To achieve that, do the
-following:
-
-  - Add the option "--recurse-submodules" to the 'git clone' command above.
-    This populates the submodules' subdirectories with their source code.
-  - Run :
-       ./configure --enable-download
-       make -C libraries fetch-all
-       make distclean
-    This fetches tar files containing the source code of all the libraries and
-      deposits them in BUILD/tarfiles/.
-  - When satisfied with the result, remove our git source repository with
-      rm -rf ../.git
-    Alternatively, tar up just this directory and not its parent directory.
-    Everything needed to build Macaulay2 will be included.
-
 # Building with Python support
 
 The "Python" package embeds a Python interpreter inside Macaulay2.  For this
