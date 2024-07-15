@@ -104,34 +104,46 @@ code, switch to the `development` branch:
 
     git checkout development
 
-# Building with Python support
+# Configuring the build
 
-The "Python" package embeds a Python interpreter inside Macaulay2.  For this
+After downloading the dependencies and cloning the git repository, the next step is to generate and run the configuration script.
+
+First, change into the `M2` subdirectory of the repository (so `cd M2/M2` if you just cloned the repository) and run `make` (or `gmake` on macOS or BSD), which checks that a few programs are up-to-date, generates the `configure` script using [autoconf](https://www.gnu.org/software/autoconf/), and ensures that the [M2-emacs submodule](https://github.com/Macaulay2/M2-emacs) is updated.
+
+Now run the following:
+
+```
+cd BUILD
+../configure
+```
+
+You will likely need need to add one or more command-line options to `configure`.  For a complete list, run `../configure --help`.  We now outline several of the most important options.
+
+## Enabling downloads
+
+In most builds, several of the dependencies must be downloaded and built.  In order to download the source for these dependencies, add the option `--enable-download` to `configure`.
+
+## Building with Python support
+
+The `Python` package embeds a Python interpreter inside Macaulay2.  For this
 to work, the Macaulay2 binary needs to be linked against the Python shared
-library.  To do this, add the option "--with-python" to the "configure" command
-line below.  Optionally, you may specify the Python version, e.g.,
-"--with-python=3.10".  Otherwise, the system's default version is used.
+library.  To do this, add the option `--with-python` to `configure`.  Optionally, you may specify the Python version, e.g.,
+`--with-python=3.12`.  Otherwise, the system's default version is used.
 
 Make sure that Python header files and shared library are available on your
-system. On Debian/Ubuntu systems, do this by running "apt install python3-dev".
+system.  If the Python shared library is not in a standard location, then add its path
+to `LDFLAGS`.  For example, if Python has been installed using brew, then add
+the following to `LDFLAGS`, replacing `X` with the appropriate minor version:
+`-L$(brew --prefix python)/Frameworks/Python.framework/Versions/3.X/lib`.
 
-If the Python shared library is not in a standard location, then add its path
-to LDFLAGS.  For example, if Python has been installed using brew, then add
-the following to LDFLAGS, replacing X with the appropriate minor version:
-"-L`brew --prefix python`/Frameworks/Python.framework/Versions/3.X/lib".
+## Building without libffi support
 
-# Building without libffi support
-
-Use of the "ForeignFunctions" package requires linking the Macaulay2 binary
-against libffi (https://sourceware.org/libffi/).  This has been known to
-cause issues on Apple silicon machines, and so it is possible to opt out of
-this feature by adding the "--without-libffi" option to the "configure" command
-line below.
+Use of the `ForeignFunctions" package requires linking the Macaulay2 binary
+against [libffi](https://sourceware.org/libffi/).  This has been known to
+cause issues on some machines, and so it is possible to opt out of
+this feature by adding the `--without-libffi` option to `configure`.
 
 # Compiling Macaulay2
-
-It seems now, for a 64 bit build in a virtual machine with no swap space, using
-gcc 7, that 1024MB of RAM is not enough, so try something like 1400MB.
 
 Now the directory to be in is the one containing this file in the source
 distribution -- it is called "M2", and is a subdirectory of the top level
