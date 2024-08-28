@@ -21,6 +21,7 @@
 #### Misc.
    - [ ] `%` and `//` for non-integers ([#3340](https://github.com/Macaulay2/M2/issues/3340))
    - [ ] ??? startup.m2.in:37 ??? `disassemble ( () -> debug Core )`
+   - [ ] GSoC 2025 for Jupyter interface?
 #### Recently Merged Pull Requests
    - [ ] Pseudocode updates
    - [ ] Persistent history in terminal
