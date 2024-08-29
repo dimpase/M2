@@ -15,3 +15,10 @@
   * similarly, you can see issues you've been assigned (we have many open issues!)
 - Onboarding new people: there's a new overview of M2 repositories on the github home page, but no real info on how to join (e.g., how to join organization on GitHub, how to join Zulip, etc.)
   * **action item**: add info on how to join.
+- Complexes PR
+  * want to make it preloaded, merge old chain complexes code and tests into complexes, and make it work with all other packages
+  * first PR is just to get M2 ready to do all this 
+  * after this, many (easy) compatibility changes to packages - package maintainers will be assigned as reviewers
+  * a few packages (TateOnProducts and SpectralSequences) require more serious changes
+  * currently, tests are failing because change to nullhomotopy is incompatible with AInfinity package
+  * goal is to have it ready well before November release
