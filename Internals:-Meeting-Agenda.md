@@ -4,9 +4,9 @@
    - other M2 events
    - related conferences 
 #### M2 Repository
-   - [ ] Package Review Assignments
+   - [x] Package Review Assignments
    - [ ] New PR template
-   - [ ] New org profile
+   - [x] New org profile
 #### Interpreter
    - [ ] Hash codes are now 64-bits
    - [ ] Error printing
