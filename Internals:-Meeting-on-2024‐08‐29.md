@@ -23,9 +23,8 @@
   * goal is to have it ready well before November release
   * idea: "LegacyChainComplexes" package for short-term compatibility
 - Profiling M2 code
-  * currently a draft PR
   * a tool for understanding which exact lines in M2 were run, what percent of time it took, etc., when an M2 command is run
-  * also useful to find dead code via coverageSummary
+  * currently a draft PR (and not yet documented)
   * goal: use this to methodically go over core and highlight things that slow it down
-  * not yet documented
+  * how to find participants in this proces? google form circulated to google group? (workshop might not be ideal forum) 
   
