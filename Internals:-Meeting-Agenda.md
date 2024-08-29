@@ -10,8 +10,8 @@
 #### Interpreter
    - [ ] Hash codes are now 64-bits
    - [ ] Error printing
-   - [ ] **Profiling**
-   - [ ] **Code coverage**
+   - [x] Profiling
+   - [x] Code coverage
    - [ ] Unicode support, `cdot` and $\cdot$ ([#3434](https://github.com/Macaulay2/M2/issues/3434))
 #### Editors
    - [ ] TeX input?
