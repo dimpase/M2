@@ -23,9 +23,9 @@
    - [ ] ??? startup.m2.in:37 ??? `disassemble ( () -> debug Core )`
    - [ ] GSoC 2025 for Jupyter interface?
 #### Recently Merged Pull Requests
-   - [ ] Pseudocode updates
-   - [ ] Persistent history in terminal
-   - [ ] Error printing improvements (e.g. missing key errors)
+   - [x] Pseudocode updates
+   - [x] Persistent history in terminal
+   - [x] Error printing improvements (e.g. missing key errors)
    - [ ] New function `headlines` (+ combined `code methods` output)
    - [ ] New rawHilbertBasis via libnormaliz
    - [ ] Deprecation of `Matrix \\ Matrix` ([#3222](https://github.com/Macaulay2/M2/pull/3222))
