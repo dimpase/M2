@@ -34,3 +34,7 @@
   * changes in error location and descriptions, 
   * access to previous M2 session history 
   * M2 emacs: deferred for later
+
+- VSCode effort
+  * **action item** collect people interested in VSCode for next internals meeting 
+  * Jupyter efforts needed also, but many people using VSCode => priority to do VSCode
