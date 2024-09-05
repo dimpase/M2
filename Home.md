@@ -28,5 +28,6 @@ You can also find your way around using the table of contents on the sidebar.
 - Miscellaneous
   + [[Internals: Meeting Agenda]]
   + [[Internals: Meeting Notes]]
+  + [[Macaulay2: under the hood]]
   + [[Interfaces to Macaulay2]] from other software
   + [[Examples and Benchmarks]]
