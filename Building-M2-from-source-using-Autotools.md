@@ -47,6 +47,12 @@ sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel co
 *Note:*
 - Add `CPPFLAGS=-I/usr/include/frobby` to the call to `configure` so that it can find Frobby.
 - Fedora's GoogleTest package does not include some necessary files, so it will be downloaded and built.
+- In Fedora 41 and later, lrslib must be loaded as an environment module first:
+  ```
+  sudo dnf -y install environment-modules
+  source /etc/profile.d/modules.sh
+  module load lrslib-x86_64
+  ```
 
 ## Gentoo
 Coming soon
