@@ -353,16 +353,3 @@ libtool, etc., try running
 
 in the top level.  This command will install versions of those tools known to
 work with Macaulay2.
-
-# Unexpected problems
-
-Suppose you encounter error messages like this one when compiling in libraries/mpir:
-
-       tmp-mul_1.s:94: Error: no such instruction: `mulx (%rsi),%r9,%r8'
-
-Then try adding --build=`./config/config.guess` to the command line of the
-'configure' command.  This will tell mpir to build itself using just machine
-instructions common to all the architectures in the same class as the
-architecture of your machine, instead of optimizing itself for speed according
-to your system.	 Mpir seems overconfident that the assembler on the machine
-knows about all the machine instructions on the machine.
