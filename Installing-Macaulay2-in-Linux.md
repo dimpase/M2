@@ -33,6 +33,7 @@ deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://people.debian.org
 ```
 Then run:
 ```
+sudo apt install debian-keyring
 sudo apt update
 sudo apt install macaulay2
 ```
@@ -45,6 +46,7 @@ deb [signed-by=/usr/share/keyrings/debian-maintainers.gpg] https://people.debian
 ```
 Then run:
 ```
+sudo apt install debian-keyring
 sudo apt update
 sudo apt install macaulay2
 ```
