@@ -61,6 +61,8 @@ sudo dnf install autoconf automake bison boost-devel bzip2 diffutils eigen3 flex
 ```
 *Note:* You must have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled in order to install several of these packages.
 
+See a successful build report in [#3485](https://github.com/Macaulay2/M2/issues/3485), which involves building [oneTBB](https://github.com/oneapi-src/oneTBB/blob/master/INSTALL.md).
+
 ## SUSE
 Coming soon
 
