@@ -54,12 +54,6 @@ sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel co
   module load lrslib-x86_64
   ```
 
-## Gentoo
-Coming soon
-
-## macOS
-Coming soon
-
 ## Red Hat Enterprise Linux
 
 ```
@@ -68,6 +62,12 @@ sudo dnf install autoconf automake bison boost-devel bzip2 diffutils eigen3 flex
 *Note:* You must have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled in order to install several of these packages.
 
 ## SUSE
+Coming soon
+
+## Gentoo
+Coming soon
+
+## macOS
 Coming soon
 
 # Getting the source code
