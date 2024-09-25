@@ -7,6 +7,9 @@ Upcoming:
 1. September 25, 2024 at 9AM PDT, 10AM MDT, 11AM CDT, 12:00 PM EDT, 17:00 BST, 18:00 CEST
  Speaker: Mike Stillman. Title: Free resolution algorithms 
 
+2. November 13, 2024 at 9AM PDT, 10AM MST, 11AM CST, 12:00 PM EST, 17:00 GMT, 18:00 CET
+Speaker: Frank Moore.  Title: Grobner bases in Macaulay2
+
 Abstract: In this talk, we will describe the mathematics behind the implementations of free resolutions in Macaulay2. In particular, the Schreyer resolution and its variations will be explored, including examples. 
 
 Past events:
