@@ -355,3 +355,28 @@ libtool, etc., try running
 
 in the top level.  This command will install versions of those tools known to
 work with Macaulay2.
+
+# macOS Instructions
+
+Here's how I've installed M2 from a Macports install on an M1 chip. Some of these steps might be specific to my setup. These instructions are for v1.21, and there are possible differences in the most recent version.
+
+0) Download the M2 source from GitHub
+
+1) Install Macports and install the libraries needed for M2 (as found in install instructions/make file). I forget which ones I actually installed. Make sure to install gcc or clang through Macports since Mac's built-in clang doesn't interface with libomp. Some of these libraries have different names than expected so "port search" is sometimes helpful to find the libraries.
+
+2) Run gmake get-tools and then gmake . Sometimes the git command at this point needs to be run directly.
+
+3) From the build directory, I use the following configure command: ../../configure --enable-download --enable-build-libraries=readline CC=/opt/local/bin/clang CXX=/opt/local/bin/clang++ CPPFLAGS="-I/opt/local/include -I/opt/local/include/tbb -I/opt/local/include/libomp" LDFLAGS="-L/opt/local/lib". Then, gmake as normal.
+
+5) Csdp sometimes fails to compile. The problem is that -std=gnu17 (or similar) is missing from some of the compile commands. You need to add -std=gnu17 to the displayed compile command, something like "/opt/local/bin/clang -fopenmp -ansi -Wall -DUSEOPENMP -DSETNUMTHREADS -DUSESIGTERM -DUSEGETTIME -I../include -c -o op_o.o op_o.c -std=gnu17". The Csdp command may fail twice, then gmake should continue as normal.
+
+6) Givaro sometimes fails to install. It tries to get the wrong version (4.1.1 and not 4.2.0). Go to <build_directory>/libraries/givaro and change the make file to have version 4.2.0 and URL=https://github.com/linbox-team/givaro/releases/download/v4.2.0/. Then run gmake, then go to build/givaro-4.2.0 and gmake and gmake install. Now, gmake should continue as normal.
+
+7) For some reason, the files in the d directory are compiled out of order for me. Go to the <build_directory>/Macaulay2/d and run commands like ../c/scc1 -dep ../../../../Macaulay2/d/arithmetic.d and mv arithmetic.sig.tmp arithmetic.sig && mv arithmetic.dep.tmp arithmetic.dep
+The order should be arithmetic, atomic, M2, system, strings, varstrin, strings1, errio, vararray, ctype, nets, varnets, interrupts, pthread0, stdiop0, gmp, engine, xml, stdio0, parse, expr, stdio, stdiop, err, gmp1, tokens, getline, lex, parser, binding, basic, convertr, common, util, struct, classes, buckets, equality, hashtables, regex, evaluate, sets, mysqldummy, pthread, actors, actors2, actors3, actors4, xmlactors, actors5, actors6, threads, interface, interface2, texmacs, boostmath, ffi, interp, version
+
+8) The Bertini package sometimes fails to install. In the Bertini package, the bertiniRefineSols example is broken. Remove the bertiniRefineSols line in the example and replace it with S = sols.
+
+9) Sometimes other packages, such as foreign functions need to be removed from the =distributedpackages list in the source package directory
+
+10) In the development branch, make sure to disable Valgrind. Valgrind doesn't work on mac M1 chips and perhaps not the newest operating system. Remove functions in <top_directory>/Macaulay2/d/M2mem.c and M2mem.h that involve OrigFn.
