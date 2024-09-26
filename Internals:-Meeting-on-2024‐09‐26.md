@@ -1,7 +1,7 @@
 Suggested Topics:
 - VSCode and Emacs focused discussion
 
-*Topics Discussed:*
+**Topics Discussed:**
 - Everyone is zonked out from grant writing, etc.
 - Possible VSCode coding sprint in Ithaca or Atlanta.
 - Figure out dates for Vietnam conference.
