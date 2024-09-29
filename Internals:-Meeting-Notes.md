@@ -2,7 +2,7 @@ This page contains notes from the **M2internals** meetings. Should you be intere
 
 - Meeting minutes:
   - [[Internals: Meeting on 2024‐08‐29]]
-  - [[Internals: Meeting on 2024‐09‐26]]
+  - [[Internals: Meeting on 2024‐09-26]]
   - [[Internals: Meeting on 2024‐10-31]]
   - [[Internals: Meeting Agenda]] (for next meeting)
 - Building Macaulay2 from source
