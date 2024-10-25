@@ -1,4 +1,3 @@
-Under construction 25 Oct 2024:
 This section describes the steps that are needed to contribute a new package, packages, or changes to existing code.
 
 # If not done previously: create a fork of the Macaulay2 repo
