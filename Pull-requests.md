@@ -45,6 +45,11 @@ to change to it. If you do not see a development branch, you can get one with
 * initiate the pull pull request using the dropdown `Contribute` menu and selecting `Open Pull Request`. A new box will open.
 * Change the base branch of new pull requests to `development` if necessary.
 * Add a title and some comments about the package(s) or changes.
-* 
+* Click on the `Create Pull Request` button. 
+
+# Go to "github.com/Macaulay2/M2/pulls.
+* The system will check your spelling and run all the Documentation and the TESTs on various systems. If errors are found,
+fix them. Make the necessary changes to your files on your machine in `foo/M2/M2/Macaulay2/packages`.
+  * Do `git add`, `git commit`, and `git push` as above. The system will automatically restart the pull request and the tests.
 
 
