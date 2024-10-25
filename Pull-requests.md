@@ -41,10 +41,10 @@ to change to it. If you do not see a development branch, you can get one with
   * Use `git add [FILES]`, followed by `git commit -m "some comment about your changes"`), where `FILES` is the list of files you are adding or changing
   * Also, add a line to the file `foo/M2/M2/Macaulay2/packages/=distributed-packages` with the name of each new package on its own line, add newline character too at the end, and `git add M2/Macaulay2/packages/=distributed-packages`, `git commit -m "editing =distributed-packages"`
 
-# On the github website  `github.com/USERNAME/M2`
-* initiate the pull pull request using the dropdown `Contribute` menu and selecting `Open Pull Request`. 
+# Make the pull request (these steps are done at `github.com/USERNAME/M2`).
+* initiate the pull pull request using the dropdown `Contribute` menu and selecting `Open Pull Request`. A new box will open.
 * Change the base branch of new pull requests to `development` if necessary.
 * Add a title and some comments about the package(s) or changes.
-*
+* 
 
 
