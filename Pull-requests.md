@@ -1,5 +1,5 @@
 Under construction 25 Oct 2024:
-This section describes the steps that are needed to contribute code to Macaulay2, i.e. a new package or changes to existing code.
+This section describes the steps that are needed to contribute a new package, packages, or changes to existing code.
 
 # Create a fork of the Macaulay2 repo (if not done previously)
 * If you have never done so before, on github, you need to create your own copy ("fork") of the Macaulay2 repository on github:
@@ -8,14 +8,18 @@ This section describes the steps that are needed to contribute code to Macaulay2
 * Now on your computer:
   * clone this repository, e.g. `git clone git@git.com/USERNAME/M2.git`, where USERNAME is your git user name.
   * change directory into the new repository on your computer, and check out the development branch with
-    `git checkout development`
+    `git checkout development`. 
 
-# Once you have a development branch on your computer: 
+
+# On your computer: 
+* Suppose that the Macaulay 2 repo is called foo/M2. Change to that directory.
+* Type git branch to see your branches. If you see one called "development", but it is not starred, do "git switch development"
+to change to it. If you do not see a development branch, you can get one with "git switch development"
 * Make sure your development branch is up to date with Macaulay2', 
   * do this by going to `github.com/USERNAME/M2` (where USERNAME as above is your github name)
   * change to the development branch (drop-down menu with the branch name)
   * then use the drop down "Sync fork" button, to sync with Macaulay2's development branch.
-  * on your machine: `git pull` to get the latest version into your computer's local repository.
+  * on your machine, in the directory "foo/M2", do `git pull` to get the latest version into your computer's local repository.
 
 # Prepare the pull request (These steps are done in the M2 repo on your computer)
 * Add a "Keywords" option to the call to `newPackage`, e.g.,
