@@ -15,6 +15,7 @@ This section describes the steps that are needed to contribute a new package, pa
 
 # On your computer: 
 * Suppose that the Macaulay 2 repo is called foo/M2. Change to that directory.
+## Move to your own development branch and update it
 * Type git branch to see your branches. If you see one called "development", but it is not starred, do 
   * `git switch development`
 to change to it. If you do not see a development branch, you can get one with 
@@ -28,7 +29,6 @@ to change to it. If you do not see a development branch, you can get one with
 
 # Prepare the pull request (These steps are done in the M2 repo on your computer)
 * Add a "Keywords" option to the call to `newPackage`, e.g.,
-
   ```m2
     newPackage("MyPackage",
       ...
@@ -37,12 +37,9 @@ to change to it. If you do not see a development branch, you can get one with
   ```
   You can find a list of existing keywords at the [packages provided with Macaulay2](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_packages_spprovided_spwith_sp__Macaulay2.html) documentation page.
 * Make sure that the `DebuggingMode` option to `newPackage` is either removed or set to `false`.
-  * 
-  * push the changes to your forked M2 repository on github by `git push`
-
-  * Move your new package or changes to the directory `M2/Macaulay2/packages` in your M2 repository.
+* Move your new package or changes to the directory `M2/Macaulay2/packages` in your M2 repository.
   * Use `git add [FILES]`, followed by `git commit -m "some comment about your changes"`), where `FILES` is the list of files you are adding or changing
-  * Also, add a line to the file `M2/Macaulay2/packages/=distributed-packages` with the name of each new package on its own line, add newline character too at the end, and `git add M2/Macaulay2/packages/=distributed-packages`, `git commit -m "editing =distributed-packages"`
+  * Also, add a line to the file `foo/M2/Macaulay2/packages/=distributed-packages` with the name of each new package on its own line, add newline character too at the end, and `git add M2/Macaulay2/packages/=distributed-packages`, `git commit -m "editing =distributed-packages"`
 
 # On the github website  `github.com/USERNAME/M2`
 * initiate 
