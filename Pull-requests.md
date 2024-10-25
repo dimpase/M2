@@ -1,6 +1,6 @@
 This section describes the steps that are needed to contribute a new package, packages, or changes to existing code.
 
-# If not done previously: create a fork of the Macaulay2 repo
+## If not done previously: create a fork of the Macaulay2 repo
 * If you have never done so before, on github, you need to create your own copy ("fork") of the Macaulay2 repository on github:
   * go to `github.com/Macaulay2/M2`
   * Use the drop-down menu arrow button to the right of `Forks` at the top right side of the page
