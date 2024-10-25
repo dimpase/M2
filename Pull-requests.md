@@ -12,9 +12,9 @@ This section describes the steps that are needed to contribute a new package, pa
     `git checkout development`. 
 
 
-# On your computer: 
+## On your computer: 
 * Suppose that the Macaulay 2 repo is called foo/M2. Change to that directory.
-## Move to your own development branch and update it
+### Move to your own development branch and update it
 * Type git branch to see your branches. If you see one called "development", but it is not starred, do 
   * `git switch development`
 to change to it. If you do not see a development branch, you can get one with 
