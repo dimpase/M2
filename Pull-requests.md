@@ -37,41 +37,14 @@ to change to it. If you do not see a development branch, you can get one with
   ```
   You can find a list of existing keywords at the [packages provided with Macaulay2](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_packages_spprovided_spwith_sp__Macaulay2.html) documentation page.
 * Make sure that the `DebuggingMode` option to `newPackage` is either removed or set to `false`.
-* Move your new package or changes to the directory `M2/Macaulay2/packages` in your M2 repository.
+* Move your new package(s) or changes to the directory `foo/M2/M2/Macaulay2/packages` where `foo/M2` is the top level of your M2 repository.
   * Use `git add [FILES]`, followed by `git commit -m "some comment about your changes"`), where `FILES` is the list of files you are adding or changing
-  * Also, add a line to the file `foo/M2/Macaulay2/packages/=distributed-packages` with the name of each new package on its own line, add newline character too at the end, and `git add M2/Macaulay2/packages/=distributed-packages`, `git commit -m "editing =distributed-packages"`
+  * Also, add a line to the file `foo/M2/M2/Macaulay2/packages/=distributed-packages` with the name of each new package on its own line, add newline character too at the end, and `git add M2/Macaulay2/packages/=distributed-packages`, `git commit -m "editing =distributed-packages"`
 
 # On the github website  `github.com/USERNAME/M2`
-* initiate 
-    
+* initiate the pull pull request using the dropdown `Contribute` menu and selecting `Open Pull Request`. 
+* Change the base branch of new pull requests to `development` if necessary.
+* Add a title and some comments about the package(s) or changes.
+*
 
 
-  * now push to github: `git push`
-  * Now go to your repository on github
-    * click on `Contribute`, it should suggest making a pull request.
-    * FIll out the info
-  
-  
-* 
-* Push your changes on this branch to github (Use `git push`)
-* On the github website for your cloned M2 repository, do:
-  * Step 1
-  * Step 2.
-
-
-
-
-Please change the base branch of new pull requests to `development`.
-
-If you are adding a new package, then please also do the following:
-* Add the name of your package to the file [`M2/Macaulay2/packages/=distributed-packages`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/%3Ddistributed-packages).
-* Add a "Keywords" option to the call to `newPackage`, e.g.,
-
-  ```m2
-    newPackage("MyPackage",
-      ...
-      Keywords => {"Foo"},
-      ...)
-  ```
-  You can find a list of existing keywords at the [packages provided with Macaulay2](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_packages_spprovided_spwith_sp__Macaulay2.html) documentation page.
-* Make sure that the `DebuggingMode` option to `newPackage` is either removed or set to `false`.
