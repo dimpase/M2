@@ -1,4 +1,7 @@
 * [[Home]]
-* [[Projects]]
+* [[Git for Macaulay2 Contributors]]
+  - [[Pull Requests]]
+* [[Zulip Guide]]
+* [[Package Writing Style Guide]]
 * [[Internals: Meeting Agenda]]
 * [[Internals: Meeting Notes]]
