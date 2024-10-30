@@ -5,16 +5,20 @@
 * Naming conventions :
     * Avoid acronyms in identifier names.
     * Prefer unabbreviated English words in identifier names.
-    * Names representing types should be nouns and written in mixed case starting with upper case.
+    * Names representing types should be nouns and written in mixed case starting with upper case. Examples:
+        * `CoherentSheaf`, `NormalToricVariety`
     * Names representing optional arguments should be capitalized.
     * Variable names must be in mixed case starting with lower case.
-    * Names representing methods must be verbs and written in mixed case starting with lower case.
-      They should not include the name of the type of object expected as argument, since the idea
+    * Naming of method functions:
+        * Use existing symbols, when possible. Examples: `dim`, `length`, `map`, etc.
+        * Names should be written in mixed case starting with lower case. Example: `normalToricVariety`
+        * Method names should not include the name of the type of object expected as argument, since the idea
       of such methods is that they are mathematical abstractions that act on a variety of types of
       mathematical object.
     * The prefix "is" should be used for Boolean variables and methods.  Examples:
          * `isPolynomialRing`, `isPrimary`, `isPrime`, `isPrimitive`
-    * Abbreviations in exported names should be avoided.  Correct: "formalDepth".  Incorrect: "fD".
+    * Abbreviations in exported names should be avoided. Examples:
+        * Correct: "formalDepth".  Incorrect: "fD"
     * Naming of keys in hash tables:
         * Use existing symbols, when possible.  Examples:
              * `source` and `target`, as keys for the source and target of a map
