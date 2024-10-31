@@ -34,3 +34,5 @@
    - [ ] Modification of preloaded packages
    - [ ] FLINT ball arithmetic for special functions (future of ball arithmetic?)
    - [ ] Msolve package (input parser implemented in kernel)
+   - [ ] Python support (by default)
+
