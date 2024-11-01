@@ -4,10 +4,9 @@ After downloading the dependencies for your system (see below), do the following
 
 ```
 git clone https://github.com/Macaulay2/M2
-cd M2/M2
-./autogen.sh
-cd BUILD
-../configure --enable-download
+cd M2/M2/BUILD/build
+../../autogen.sh
+../../configure --enable-download
 make
 sudo make install
 ```
