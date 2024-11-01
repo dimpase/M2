@@ -5,7 +5,7 @@ After downloading the dependencies for your system (see below), do the following
 ```
 git clone https://github.com/Macaulay2/M2
 cd M2/M2
-make
+./autogen.sh
 cd BUILD
 ../configure --enable-download
 make
@@ -116,7 +116,7 @@ code, switch to the `development` branch:
 
 After downloading the dependencies and cloning the git repository, the next step is to generate and run the configuration script.
 
-First, change into the `M2` subdirectory of the repository (so `cd M2/M2` if you just cloned the repository) and run `make` (or `gmake` on macOS or BSD), which checks that a few programs are up-to-date, generates the `configure` script using [autoconf](https://www.gnu.org/software/autoconf/), and ensures that the [M2-emacs submodule](https://github.com/Macaulay2/M2-emacs) is updated.
+First, change into the `M2` subdirectory of the repository (so `cd M2/M2` if you just cloned the repository) and run `autogen.sh`, generates the `configure` script using [autoconf](https://www.gnu.org/software/autoconf/) and ensures that the [M2-emacs submodule](https://github.com/Macaulay2/M2-emacs) is updated.
 
 Now run the following:
 
