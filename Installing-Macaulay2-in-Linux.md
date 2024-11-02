@@ -55,7 +55,6 @@ sudo apt install macaulay2
 
 Packages for RPM-based distributions are hosted on the Macaulay2 website.  You should download and install two packages:  a "common" package containing the architecture-independent files (such as the Macaulay2 language code and documentation), and a package containing the architecture-dependent files like the M2 executable.
 
-For Red Hat Enterprise Linux and compatible distributions like Rocky Linux and AlmaLinux, you may have to enable the [EPEL repository](https://docs.fedoraproject.org/en-US/epel/) to obtain some dependencies.
 
 | Distribution | Package |
 | --- | --- |
@@ -68,6 +67,7 @@ Then, after downloading these two files, run the following:
 ```
 sudo dnf install Macaulay2-*.rpm
 ```
+For Red Hat Enterprise Linux and compatible distributions like Rocky Linux and AlmaLinux, you may have to enable the [EPEL repository](https://docs.fedoraproject.org/en-US/epel/) to obtain some dependencies.
 
 ## Fedora
 
