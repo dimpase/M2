@@ -55,10 +55,13 @@ sudo apt install macaulay2
 
 Packages for RPM-based distributions are hosted on the Macaulay2 website.  You should download and install two packages:  a "common" package containing the architecture-independent files (such as the Macaulay2 language code and documentation), and a package containing the architecture-dependent files like the M2 executable.
 
-* common package: https://macaulay2.com/Downloads/Common/Macaulay2-1.24.11-1.common.rpm
-* architecture dependent package:
-  - (Rocky Linux 8.9): https://macaulay2.com/Downloads/GNU-Linux/Red%20Hat%20Enterprise,%20CentOS,%20Scientific%20Linux/Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-8.9.rpm
-  - (Rocky Linux 9.3): https://macaulay2.com/Downloads/GNU-Linux/Red%20Hat%20Enterprise,%20CentOS,%20Scientific%20Linux/Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-9.3.rpm
+For Red Hat Enterprise Linux and compatible distributions like Rocky Linux and AlmaLinux, you may have to enable the [EPEL repository](https://docs.fedoraproject.org/en-US/epel/) to obtain some dependencies.
+
+| Distribution | Package |
+| --- | --- |
+| Common (required for all distributions) | [Macaulay2-1.24.11-1.common.rpm](https://macaulay2.com/Downloads/Common/Macaulay2-1.24.11-1.common.rpm) |
+| Rocky Linux 8.9 | [Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-8.9.rpm](https://macaulay2.com/Downloads/GNU-Linux/Red%20Hat%20Enterprise,%20CentOS,%20Scientific%20Linux/Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-8.9.rpm) |
+| Rocky Linux 9.3 | [Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-9.3.rpm](https://macaulay2.com/Downloads/GNU-Linux/Red%20Hat%20Enterprise,%20CentOS,%20Scientific%20Linux/Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-9.3.rpm) |
 
 Then, after downloading these two files, run the following:
 
