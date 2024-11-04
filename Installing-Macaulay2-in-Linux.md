@@ -9,7 +9,7 @@ sudo apt install macaulay2
 Unless you are running Debian unstable or testing, this will likely be a slightly out-of-date version.  The Macaulay2 developers host packages for the latest version of Macaulay2 in third-party repositories.
 
 ## Ubuntu
-Macaulay2 packages are available for all supported releases of Ubuntu (currently 18.04, 20.04, 22.04, 23.10, and 24.04).  Run the following:
+Macaulay2 packages are available for all supported releases of Ubuntu (currently 18.04, 20.04, 22.04, 24.04, and 24.10).  Run the following:
 
 ```
 sudo add-apt-repository ppa:macaulay2/macaulay2
