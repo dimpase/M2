@@ -15,9 +15,6 @@ may encounter when implementing these algorithms naively.  Some attention will a
 to discussing how one can use parallelism to decrease computation time.
 
 
-
-Abstract: In this talk, we will describe the mathematics behind the implementations of free resolutions in Macaulay2. In particular, the Schreyer resolution and its variations will be explored, including examples. 
-
 Past events:
 
 1. June 25, 2024 at 8:30 PDT, 10:30 CDT, 11:30 EDT, 16:30 BST, 17:30 CEST
