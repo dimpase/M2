@@ -67,10 +67,10 @@ brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
   ```
   --with-gtest-include-path="$(brew --prefix googletest)/include" \
   --with-gtest-source-path="$(brew --prefix googletest)/include/googletest/googletest"
-  LDFLAGS="-L$(brew --prefix)/lib -L$(brew --prefix libomp)/lib -L$(brew --prefix factory)/lib \
-      -L/Library/Frameworks/Python.framework/Versions/3.13/lib" \
-  CPPFLAGS="-I$(brew --prefix)/include -I$(brew --prefix libomp)/include -I$(brew --prefix factory)/include \
-      -I$(brew --prefix)/include/cddlib" \
+  LDFLAGS="-L$(brew --prefix)/lib -L$(brew --prefix factory)/lib -L$(brew --prefix libomp)/lib \
+      -L$(brew --prefix readline)/lib -L/Library/Frameworks/Python.framework/Versions/3.13/lib" \
+  CPPFLAGS="-I$(brew --prefix)/include -I$(brew --prefix)/include/cddlib -I$(brew --prefix factory)/include \
+      -I$(brew --prefix libomp)/include -I$(brew --prefix readline)/include" \
   F77="gfortran-14" \
   PKG_CONFIG_PATH="$(brew --prefix factory)/lib/pkgconfig"
   ```
