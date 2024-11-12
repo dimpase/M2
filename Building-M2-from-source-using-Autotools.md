@@ -52,6 +52,30 @@ sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel co
   module load lrslib-x86_64
   ```
 
+## macOS
+
+Most dependencies require first installing [Homebrew](https://brew.sh/).
+
+```
+brew install autoconf automake make texinfo libomp bdw-gc cddlib googletest
+brew install --only-dependencies Macaulay2/tap/M2
+brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
+```
+
+*Note:*
+- Add the following options to the call to `configure` so that it can find some of these dependencies:
+  ```
+  --with-gtest-include-path="$(brew --prefix googletest)/include" \
+  --with-gtest-source-path="$(brew --prefix googletest)/include/googletest/googletest"
+  LDFLAGS="-L$(brew --prefix)/lib -L$(brew --prefix libomp)/lib -L$(brew --prefix factory)/lib \
+      -L/Library/Frameworks/Python.framework/Versions/3.13/lib" \
+  CPPFLAGS="-I$(brew --prefix)/include -I$(brew --prefix libomp)/include -I$(brew --prefix factory)/include \
+      -I$(brew --prefix)/include/cddlib" \
+  F77="gfortran-14" \
+  PKG_CONFIG_PATH="$(brew --prefix factory)/lib/pkgconfig"
+  ```
+  Replace the Python and gfortran version numbers with the ones appropriate for your system.
+
 ## Red Hat Enterprise Linux
 
 ```
@@ -65,9 +89,6 @@ See a successful build report in [#3485](https://github.com/Macaulay2/M2/issues/
 Coming soon
 
 ## Gentoo
-Coming soon
-
-## macOS
 Coming soon
 
 # Getting the source code
