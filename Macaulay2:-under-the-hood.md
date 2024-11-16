@@ -4,7 +4,7 @@ To sign up for the mailing list for the seminar click here: https://forms.gle/MV
 
 Upcoming:
 
-1. Thursday January 30 at 9AM PDT, 10AM MST, 11AM CST, 12:00 PM EST, 17:00 GMT, 18:00 CET
+1. Thursday January 30, 2025 at 9AM PDT, 10AM MST, 11AM CST, 12:00 PM EST, 17:00 GMT, 18:00 CET
 Speaker: Frank Moore.  
 
 Past events:
