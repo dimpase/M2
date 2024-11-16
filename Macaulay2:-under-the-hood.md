@@ -4,16 +4,8 @@ To sign up for the mailing list for the seminar click here: https://forms.gle/MV
 
 Upcoming:
 
-1. November 13, 2024 at 9AM PDT, 10AM MST, 11AM CST, 12:00 PM EST, 17:00 GMT, 18:00 CET
-Speaker: Frank Moore.  Title: Computing Gröbner Bases
-
-Abstract: We will briefly recall the definition of Gröbner bases for ideals in a polynomial ring,
-and also mention extensions of this idea to several other instances.  We will then discuss
-the standard algorithm for computing Gröbner bases, a linear algebra-based technique
-for reduction, as well as some optimizations of each.  We will also address some pitfalls one
-may encounter when implementing these algorithms naively.  Some attention will also be paid
-to discussing how one can use parallelism to decrease computation time.
-
+1. Thursday January 30 at 9AM PDT, 10AM MST, 11AM CST, 12:00 PM EST, 17:00 GMT, 18:00 CET
+Speaker: Frank Moore.  
 
 Past events:
 
@@ -31,5 +23,15 @@ In this first talk, I will first describe the overall structure of the Macaulay2
 Abstract: In this talk, we will describe the mathematics behind the implementations of
 free resolutions in Macaulay2. In particular, the Schreyer resolution and its
 variations will be explored, including examples. 
+
+3. November 13, 2024 at 9AM PDT, 10AM MST, 11AM CST, 12:00 PM EST, 17:00 GMT, 18:00 CET
+Speaker: Frank Moore.  Title: Computing Gröbner Bases
+
+Abstract: We will briefly recall the definition of Gröbner bases for ideals in a polynomial ring,
+and also mention extensions of this idea to several other instances.  We will then discuss
+the standard algorithm for computing Gröbner bases, a linear algebra-based technique
+for reduction, as well as some optimizations of each.  We will also address some pitfalls one
+may encounter when implementing these algorithms naively.  Some attention will also be paid
+to discussing how one can use parallelism to decrease computation time.
 
 
