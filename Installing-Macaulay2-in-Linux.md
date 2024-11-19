@@ -81,4 +81,7 @@ sudo dnf install Macaulay2
 
 # Homebrew on Linux
 
-Macaulay2 bottles are available for x86_64 Linux systems through Homebrew. Follow the instructions on [this page](https://github.com/Macaulay2/homebrew-tap/blob/main/README.md) to install the Macaulay2 tap and bottle.
+Macaulay2 bottles are available for x86_64 Linux systems through Homebrew. Follow the instructions on [this page](https://github.com/Macaulay2/homebrew-tap/blob/main/README.md), or simply enter the following to install the Macaulay2 tap and bottle:
+```
+brew install Macaulay2/tap/M2
+```
