@@ -5,7 +5,7 @@ This section describes the steps for contributing a new package or changes to ex
 In order to open a "[pull request]" (PR) you need to:
 1. create your own "[fork]" of the Macaulay2 repository on GitHub by clicking [here](https://github.com/Macaulay2/M2/fork).
 2. create a local "[clone]" of the new repository on your computer by running:
-  - `git clone git@github.com:USERNAME/M2.git && cd M2`, where USERNAME is your git user name.
+  - `git clone git@github.com:USERNAME/M2.git && cd M2`, where USERNAME is your git user name. See [this page](https://github.com/Macaulay2/M2/wiki/Git-for-Workshop-participants) if you get authentication errors.
 3. add the original Macaulay2 repository as the remote "[upstream]" by running:
   - `git remote add -f -t development -m development upstream git@github.com:Macaulay2/M2.git`
 4. finally, "[checkout]" the development "[branch]" by running:
