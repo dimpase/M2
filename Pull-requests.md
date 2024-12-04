@@ -1,15 +1,15 @@
-This section describes the steps that are needed to contribute a new package, packages, or changes to existing code.
+This section describes the steps for contributing a new package or changes to existing code.
 
-## If not done previously: create a fork of the Macaulay2 repo
-* If you have never done so before, on github, you need to create your own copy ("fork") of the Macaulay2 repository on github:
-  * go to `github.com/Macaulay2/M2`
-  * Use the drop-down menu arrow button to the right of `Forks` at the top right side of the page
-* Now on your computer:
-  * clone this repository, e.g. `git clone git@git.com/USERNAME/M2.git`, where USERNAME is your git user name.
+## If not done previously: fork the Macaulay2 repository on GitHub
 
-
-  * change directory into the new repository on your computer, and check out the development branch with
-    `git checkout development`. 
+In order to open a "[pull request]" (PR) you need to:
+1. create your own "[fork]" of the Macaulay2 repository on GitHub by clicking [here](https://github.com/Macaulay2/M2/fork).
+2. create a local "[clone]" of the new repository on your computer by running:
+  - `git clone git@github.com:USERNAME/M2.git && cd M2`, where USERNAME is your git user name.
+3. add the original Macaulay2 repository as the remote "[upstream]" by running:
+  - `git remote add -f -t development -m development upstream git@github.com:Macaulay2/M2.git`
+4. finally, "[checkout]" the development "[branch]" by running:
+  - `git checkout development`
 
 
 ## On your computer: 
@@ -51,3 +51,10 @@ to change to it. If you do not see a development branch, you can get one with
 * The system will check your spelling and run all the Documentation and the TESTs on various systems. If errors are found,
 fix them. Make the necessary changes to your files on your machine in `foo/M2/M2/Macaulay2/packages`.
   * Do `git add`, `git commit`, and `git push` as above. The system will automatically restart the pull request and the tests.
+
+[fork]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#fork
+[pull request]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#pull-request
+[clone]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#clone
+[checkout]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#checkout
+[branch]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#branch
+[upstream]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#upstream
