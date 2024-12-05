@@ -35,4 +35,4 @@
    - [ ] FLINT ball arithmetic for special functions (future of ball arithmetic?)
    - [ ] Msolve package (input parser implemented in kernel)
    - [ ] Python support (by default)
-
+   - [ ] Add interpunct (·) as a keyword for dot product (also discuss "user-defined keywords" PR)
