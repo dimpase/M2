@@ -8,7 +8,7 @@
    - [ ] New PR template
    - [x] New org profile
 #### Interpreter
-   - [ ] Hash codes are now 64-bits
+   - [x] Hash codes are now 64-bits
    - [ ] Error printing
    - [x] Profiling
    - [x] Code coverage
