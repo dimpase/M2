@@ -17,7 +17,7 @@
    - [ ] TeX input?
    - [ ] Style guide and linter?
    - [ ] Static vs. dynamic autocompletion?
-   - [ ] VScode support?
+   - [x] VScode support (check for VSCode conversation on "M2Internals Projects" channel on Zulip)
 #### Misc.
    - [ ] `%` and `//` for non-integers ([#3340](https://github.com/Macaulay2/M2/issues/3340))
    - [ ] ??? startup.m2.in:37 ??? `disassemble ( () -> debug Core )`
@@ -32,7 +32,7 @@
    - [ ] M2-emacs updates
    - [ ] Number + Constant type changes
    - [ ] Modification of preloaded packages
-   - [ ] FLINT ball arithmetic for special functions (future of ball arithmetic?)
+   - [x] FLINT ball arithmetic for special functions (future of ball arithmetic?)
    - [ ] Msolve package (input parser implemented in kernel)
    - [ ] Python support (by default)
-   - [ ] Add interpunct (·) as a keyword for dot product (also discuss "user-defined keywords" PR)
+   - [x] Add interpunct (·) as a keyword for dot product (also discuss "user-defined keywords" PR)
