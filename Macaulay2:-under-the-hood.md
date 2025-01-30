@@ -5,7 +5,10 @@ To sign up for the mailing list for the seminar click here: https://forms.gle/MV
 Upcoming:
 
 1. Thursday January 30, 2025 at 9AM PDT, 10AM MST, 11AM CST, 12:00 PM EST, 17:00 GMT, 18:00 CET
-Speaker: Frank Moore.  
+Speaker: Frank Moore. Title:  Ring types in the Macaulay2 engine
+
+Abstract:  In this edition of Macaulay2:Under The Hood, we will discuss the different classes of rings in the Macaulay2 engine.  This hopefully will serve two purposes: help people understand better the current types of rings available at the front end in Macaulay2, as well as to enable developers to add their own rings to the engine in the future. Time permitting, this discussion will also involve a bit about the "plumbing" necessary to connect an engine ring to the front end.
+
 
 Past events:
 
