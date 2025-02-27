@@ -3,4 +3,4 @@
 * [[Package Writing Style Guide]]
 * [[Git for Macaulay2 Contributors]]
   - [[Pull Requests]]
-* [M2 Internals](Internals: Meeting Notes)
+* [[M2 Internals|Internals: Meeting Notes]]
