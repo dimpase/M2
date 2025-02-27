@@ -27,8 +27,7 @@ You can also find your way around using the table of contents on the sidebar.
   + [[Git for Workshop Participants]]
   + [[Zulip Guide]]
 - Miscellaneous
-  + [[Internals: Meeting Agenda]]
-  + [[Internals: Meeting Notes]]
+  + [[M2 Internals|Internals: Meeting Notes]] monthly meetings
   + [[Macaulay2: under the hood]]
   + [[Interfaces to Macaulay2]] from other software
   + [[Examples and Benchmarks]]
