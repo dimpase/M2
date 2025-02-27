@@ -1,38 +1,30 @@
-#### Events agenda (to revisit at every meeting as needed)
+### Structure/agenda of M2 Internals meetings
+* A focus topic is announced before the meeting.
+This usually has wither a presenter or (a) leader(s). 
+* Apart from that, the objective is to have 
+a free non-scripted discussion of ongoing projects, 
+issues, and anything else related to Macaulay2. 
+
+### Topics to revisit (as needed)
+#### Events agenda 
    - upcoming release
    - future M2internals meetings
    - other M2 events
    - related conferences 
-#### M2 Repository
-   - [x] Package Review Assignments
-   - [ ] New PR template
-   - [x] New org profile
-#### Interpreter
-   - [x] Hash codes are now 64-bits
-   - [ ] Error printing
-   - [x] Profiling
-   - [x] Code coverage
-   - [ ] Unicode support, `cdot` and $\cdot$ ([#3434](https://github.com/Macaulay2/M2/issues/3434))
-#### Editors
-   - [ ] TeX input?
-   - [ ] Style guide and linter?
-   - [ ] Static vs. dynamic autocompletion?
-   - [x] VScode support (check for VSCode conversation on "M2Internals Projects" channel on Zulip)
-#### Misc.
-   - [ ] `%` and `//` for non-integers ([#3340](https://github.com/Macaulay2/M2/issues/3340))
-   - [ ] ??? startup.m2.in:37 ??? `disassemble ( () -> debug Core )`
-   - [ ] GSoC 2025 for Jupyter interface?
-#### Recently Merged Pull Requests
-   - [x] Pseudocode updates
-   - [x] Persistent history in terminal
-   - [x] Error printing improvements (e.g. missing key errors)
-   - [ ] New function `headlines` (+ combined `code methods` output)
-   - [ ] New rawHilbertBasis via libnormaliz
-   - [ ] Deprecation of `Matrix \\ Matrix` ([#3222](https://github.com/Macaulay2/M2/pull/3222))
-   - [ ] M2-emacs updates
-   - [ ] Number + Constant type changes
-   - [ ] Modification of preloaded packages
-   - [x] FLINT ball arithmetic for special functions (future of ball arithmetic?)
-   - [ ] Msolve package (input parser implemented in kernel)
-   - [ ] Python support (by default)
-   - [x] Add interpunct (·) as a keyword for dot product (also discuss "user-defined keywords" PR)
+#### Recent discussions on Zulip channels
+   - M2 Internals Discussions
+   - M2 Internals Projects
+#### Recent codebase activity
+   - (hot) open Issues
+   - merged Pull Requests
+   - building (cmake and autotools)
+   - GitHub actions
+   - upcoming release
+#### Macaulay2 web presence
+   - GitHub org & repo
+   - GitHub wiki
+   - main website
+#### Interfaces
+   - emacs
+   - VS Code
+   - Jupyter
