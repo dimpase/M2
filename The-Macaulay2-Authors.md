@@ -1,5 +1,7 @@
 Macaulay2 has benefited from the contributions of many individuals. The following people have played a role in its development, maintenance, and improvement.
 
+<!-- note: for each name to appear on its own line, put two spaces afterwards, e.g., "John Doe  " -->
+
 Dan Grayson  
 Mike Stillman  
 David Eisenbud
