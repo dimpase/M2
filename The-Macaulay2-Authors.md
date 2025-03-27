@@ -6,7 +6,7 @@ David Eisenbud
 
 Dave Barton  
 Guillem Blanco  
-Charles Boyd
+Charles Boyd  
 Michael Burr  
 Edward Carter  
 Frédéric Chapoton  
