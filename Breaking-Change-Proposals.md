@@ -8,6 +8,7 @@ This is a list of previous, upcoming, and proposed breaking changes in the Core 
 - [#1978](https://github.com/Macaulay2/M2/issues/1978): `{1..5}` as syntax for `toList(1..5)`
 - [#3020](https://github.com/Macaulay2/M2/pull/3020) and [#3032](https://github.com/Macaulay2/M2/pull/3032): left ideals
 - [#1608](https://github.com/Macaulay2/M2/issues/1608) and [#1455](https://github.com/Macaulay2/M2/issues/1455#issuecomment-2669543078): operations on `MutableList` should be in-place
+- [#1238](https://github.com/Macaulay2/M2/issues/1238) `^` should be right-associative
 
 ### Upcoming Changes
 These changes are currently in effect in the `development` branch, to be evaluated until the next release.
