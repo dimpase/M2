@@ -3,8 +3,10 @@ This is a list of previous, upcoming, and proposed breaking changes in the Core 
 ### Proposed Changes
 
 - [#3596](https://github.com/Macaulay2/M2/issues/3596): `genericMatrix` should be row major
+- [#3340](https://github.com/Macaulay2/M2/issues/3340): correct quotient and modulus for non-integers
 - [#3194](https://github.com/Macaulay2/M2/issues/3194): operators for `S_+`, `<v,u>`, and `f^#`
 - [#1978](https://github.com/Macaulay2/M2/issues/1978): `{1..5}` as syntax for `toList(1..5)`
+- [#3020](https://github.com/Macaulay2/M2/pull/3020) and [#3032](https://github.com/Macaulay2/M2/pull/3032): left ideals
 - [#1608](https://github.com/Macaulay2/M2/issues/1608) and [#1455](https://github.com/Macaulay2/M2/issues/1455#issuecomment-2669543078): operations on `MutableList` should be in-place
 
 ### Upcoming Changes
@@ -17,6 +19,8 @@ These changes are currently in effect in the `development` branch, to be evaluat
 
 ### Previous Changes
 Eventually, the most important breaking changes should be listed here. For now, see [changes to Macaulay2, by version](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_changes_spto_sp__Macaulay2_cm_spby_spversion.html).
+
+In addition, the instances where a package was renamed `Polyhedra -> OldPolyhedra` should be listed.
 
 - v1.24.11:
   - [#3519](https://github.com/Macaulay2/M2/pull/3519): the behavior of `basis` over tower rings has changed. Previously basis was computed
