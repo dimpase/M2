@@ -8,6 +8,7 @@ This is a list of previous, upcoming, and proposed breaking changes in the Core 
 - [#1608](https://github.com/Macaulay2/M2/issues/1608) and [#1455](https://github.com/Macaulay2/M2/issues/1455#issuecomment-2669543078): operations on `MutableList` should be in-place
 
 ### Upcoming Changes
+These changes are currently in effect in the `development` branch, to be evaluated until the next release.
 
 - v1.25.05:
   - [#3550](https://github.com/Macaulay2/M2/pull/3550): `Matrix \\ Matrix` is now a shortcut for `quotient'(Matrix, Matrix)`.
@@ -15,7 +16,6 @@ This is a list of previous, upcoming, and proposed breaking changes in the Core 
     `quotient(Matrix, Matrix)`. Additionally, both methods now work for maps of non-free modules.
 
 ### Previous Changes
-
 Eventually, the most important breaking changes should be listed here. For now, see [changes to Macaulay2, by version](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_changes_spto_sp__Macaulay2_cm_spby_spversion.html).
 
 - v1.24.11:
