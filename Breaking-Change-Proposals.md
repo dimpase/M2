@@ -22,3 +22,9 @@ Eventually, the most important breaking changes should be listed here. For now, 
   - [#3519](https://github.com/Macaulay2/M2/pull/3519): the behavior of `basis` over tower rings has changed. Previously basis was computed
     over the most recent coefficient ring, but now it is computed over the first coefficient ring.
     Previous behavior can be mimicked by passing the option `basis(..., Variables => gens R)`.
+
+### Rejected Changes
+
+These are mainly listed for posterity.
+
+- [#2336](https://github.com/Macaulay2/M2/issues/2336): change precedence of `Ring Array`
