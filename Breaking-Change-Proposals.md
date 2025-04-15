@@ -1,4 +1,4 @@
-This is a list of previous, upcoming, and proposed breaking changes in the Core of Macaulay2, along with a reference to when and where the change occurred.
+This is a list of previous, upcoming, and proposed breaking changes in the Core of Macaulay2, along with a reference to when and where the change occurred. This is not intended to be an exhaustive list, but focus on the major changes.
 
 ### Proposed Changes
 
