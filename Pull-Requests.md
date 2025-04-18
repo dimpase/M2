@@ -1,4 +1,35 @@
-This section describes the steps for contributing a new package or changes to existing code.
+# Avoid these common mistakes
+
+Before diving into the full guide, here are the top things that trip up even experienced Macaulay2 contributors.  If you take a moment to check these out now, then you'll save everyone (including yourself!) time later.
+
+* Target the `development` branch
+
+  The default branch is `master`, which contains a snapshot of the most recent stable release of Macaulay2.  However, nearly all pull requests should target `development`, which is where code for the next release of Macaulay2 is maintained.  Since it's not the default branch, you will need to manually select it from a drop-down menu when creating a pull request.
+
+* Add your package to `=distributed-packages`
+
+  All packages should appear in the file [=distributed-files](https://github.com/Macaulay2/M2/blob/development/M2/Macaulay2/packages/%3Ddistributed-packages) in the `M2/Macaulay2/packages` directory.  When submitting a new package, ensure that it is added to the bottom of this file.
+
+* Add a `Keywords` option to `newPackage`
+
+  When submitting a new package, pick a keyword (or keywords) from one of the headings at the [packages provided with Macaulay2](https://www.macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_packages_spprovided_spwith_sp__Macaulay2.html) documentation page.  Keywords should appear as a list of strings as the value of the `Keywords` option to `newPackage` at the top of the main file, e.g.,:
+
+  ```m2
+  newPackage("MyCoolPackage",
+      ...
+      Keywords => {"Projective Algebraic Geometry"},
+      ...
+  ```
+
+* Turn off debugging mode
+  
+  Make sure that the `DebuggingMode` option to `newPackage` is `false`, or equivalently since `false` is the default, removed entirely.
+
+Keep reading for a step-by-step walkthrough of how to fork the repo, create a new branch, make changes, and open your first PR.
+
+# Making a Pull Request
+
+This section describes the steps for contributing a new package or changes to existing code.  See also [GitHub's official documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ## If not done previously: fork the Macaulay2 repository on GitHub
 
@@ -36,15 +67,6 @@ to change to it. If you do not see a development branch, you can get one with
   * on your machine, in the directory "foo/M2", do `git pull` to get the latest version into your computer's local repository.
 
 ### Prepare the pull request (These steps are done in the M2 repo on your computer)
-* Add a "Keywords" option to the call to `newPackage`, e.g.,
-  ```m2
-    newPackage("MyPackage",
-      ...
-      Keywords => {"Foo"},
-      ...)
-  ```
-  You can find a list of existing keywords at the [packages provided with Macaulay2](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_packages_spprovided_spwith_sp__Macaulay2.html) documentation page.
-* Make sure that the `DebuggingMode` option to `newPackage` is either removed or set to `false`.
 * Move your new package(s) or changes to the directory `foo/M2/M2/Macaulay2/packages` where `foo/M2` is the top level of your M2 repository.
   * Use `git add [FILES]`, followed by `git commit -m "some comment about your changes"`), where `FILES` is the list of files you are adding or changing
   * Also, add a line to the file `foo/M2/M2/Macaulay2/packages/=distributed-packages` with the name of each new package on its own line, add newline character too at the end, and `git add M2/Macaulay2/packages/=distributed-packages`, `git commit -m "editing =distributed-packages"`
