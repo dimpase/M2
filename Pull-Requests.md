@@ -6,6 +6,9 @@ Before diving into the full guide, here are the top things that trip up even exp
 
   The default branch is `master`, which contains a snapshot of the most recent stable release of Macaulay2.  However, nearly all pull requests should target `development`, which is where code for the next release of Macaulay2 is maintained.  Since it's not the default branch, you will need to manually select it from a drop-down menu when creating a pull request.
 
+  ![image](https://github.com/user-attachments/assets/82e5ab0d-d36a-4b8c-99a3-e88226aadece)
+
+
 * Add your package to `=distributed-packages`
 
   All packages should appear in the file [=distributed-files](https://github.com/Macaulay2/M2/blob/development/M2/Macaulay2/packages/%3Ddistributed-packages) in the `M2/Macaulay2/packages` directory.  When submitting a new package, ensure that it is added to the bottom of this file.
