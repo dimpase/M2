@@ -15,7 +15,7 @@ Before diving into the full guide, here are the top things that trip up even exp
 
 * Add a `Keywords` option to `newPackage`
 
-  When submitting a new package, pick a keyword (or keywords) from one of the headings at the [packages provided with Macaulay2](https://www.macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_packages_spprovided_spwith_sp__Macaulay2.html) documentation page.  Keywords should appear as a list of strings as the value of the `Keywords` option to `newPackage` at the top of the main file, e.g.,:
+  When submitting a new package, pick a keyword (or keywords) from the headings at the [packages provided with Macaulay2](https://www.macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_packages_spprovided_spwith_sp__Macaulay2.html) documentation page.  Keywords should appear as a list of strings as the value of the `Keywords` option to `newPackage` at the top of the main file, e.g.,:
 
   ```m2
   newPackage("MyCoolPackage",
