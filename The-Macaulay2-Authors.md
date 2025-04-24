@@ -32,7 +32,7 @@ Brian Pike
 Mahrud Sayrafi  
 Karl Schwede  
 Lily Silverstein  
-Greg Smith  
+Gregory G. Smith  
 Jieao Song  
 Zach Teitler  
 Doug Torrance  
