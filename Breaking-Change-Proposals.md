@@ -14,7 +14,7 @@ This is a list of previous, upcoming, and proposed breaking changes in the Core 
 These changes are currently in effect in the `development` branch, to be evaluated until the next release.
 
 - v1.25.11:
-  - The `Complexes` package will be preloaded by default, superseding `OldChainComplexes`.
+  - [#3774](https://github.com/Macaulay2/M2/pull/3774) + [future PR]: The `Complexes` package will be preloaded by default, superseding `OldChainComplexes`.
 - v1.25.05:
   - [#3761](https://github.com/Macaulay2/M2/pull/3761): `isIsomorphic` now only returns true or false, and the certificate is available via `isomorphism`.
   - [#3550](https://github.com/Macaulay2/M2/pull/3550): `Matrix \\ Matrix` is now a shortcut for `quotient'(Matrix, Matrix)`.
