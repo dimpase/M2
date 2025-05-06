@@ -33,3 +33,4 @@ You can also find your way around using the table of contents on the sidebar.
   + [[Interfaces to Macaulay2]] from other software
   + [[Examples and Benchmarks]]
   + [[The Macaulay2 Authors]]
+  + [[Breaking Change Proposals]]
