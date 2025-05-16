@@ -55,6 +55,17 @@ sudo apt install macaulay2
 
 Packages for RPM-based distributions are hosted on the Macaulay2 website.  You should download and install two packages:  a "common" package containing the architecture-independent files (such as the Macaulay2 language code and documentation), and a package containing the architecture-dependent files like the M2 executable.
 
+### Macaulay2 1.25.05
+
+| Distribution | Package |
+| --- | --- |
+| Common (required for all distributions) | [Macaulay2-1.25.05-1.common.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.common.rpm) |
+| Fedora 40 | [Macaulay2-1.25.05-1.x86_64-Linux-Fedora-40.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.x86_64-Linux-Fedora-40.rpm) |
+| Fedora 41 | [Macaulay2-1.25.05-1.x86_64-Linux-Fedora-41.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.x86_64-Linux-Fedora-41.rpm) |
+
+*Rocky Linux packages coming soon*
+
+### Macaulay2 1.24.11
 
 | Distribution | Package |
 | --- | --- |
