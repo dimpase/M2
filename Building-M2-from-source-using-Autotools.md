@@ -89,7 +89,7 @@ command, assuming you have installed `git` on your machine:
 
     git clone https://github.com/Macaulay2/M2
 
-A directory called `M2` which you can move or rename, will be created.  By default, the `master` branch
+A directory called `M2` which you can move or rename, will be created.  By default, the `stable` branch
 of the M2 repository will be checked out.
 
 The `release` tags tend to be more stable, and if you compile from one of
@@ -107,7 +107,7 @@ The following command shows the list of release tags:
 
 However, if some time has passed since the most recent release and your system
 has newer versions of some of Macaulay2's dependencies than were available at
-the time of the release, you may have more success building the `master` branch.
+the time of the release, you may have more success building the `stable` branch.
 
 The following commands, run from the top level of this source tree (the parent
 of the directory this file is in) will download the latest changes to the
