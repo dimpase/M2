@@ -64,4 +64,6 @@ Beginning with version 29, Emacs has been distributed with an LSP client, [EGLOT
 
 Then, inside a Macaulay2 code buffer, run <kbd>M-x eglot</kbd>.  You should be greeted with a "Connected!" message in the minibuffer.
 
+Currently, the only working feature is "signature help".  If you point your cursor on a word, you should see basic documentation (if available) for that word in the minibuffer.  This uses Emacs's built-in ElDoc minor mode.
+
 #### Working with VS Code
