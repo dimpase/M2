@@ -6,6 +6,8 @@ We can use this wiki page to record what we do, and to get ideas from others.
 ### Issues for us to consider (please add to this list) to improve the installation and usage of the vscode extension, and/or the jupyter M2 kernel/notebook server.
 
 ### Notes on installing jupyter
+
+See [gist](https://gist.github.com/agryman/4b652aab5b8c0ba2ead96c647ebbefc3) for notes about installing on MacOS (most of this is relevant for any system).
 ```
 ```
 
