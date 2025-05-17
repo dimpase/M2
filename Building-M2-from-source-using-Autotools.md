@@ -23,7 +23,6 @@ Here are some dependencies you may have to install on your system to build Macau
 sudo pacman -S 4ti2 autoconf automake bison boost cddlib coin-or-csdp eigen fflas-ffpack flex flint gc gcc gcc-fortran gfan git givaro glpk gtest icu libtool libxml2 lrs make mpfi nauty normaliz ntl onetbb openblas patch pkgconf python singular texinfo time topcom which
 ```
 *Note:*
-- Add `--with-gtest-source-path=/usr/src/googletest` to the call to `configure` so that it can find GoogleTest.
 - cohomCalg, Frobby, Mathic, Mathicgb, Memtailor, and MPSolve are not available as packages on Arch Linux and will be downloaded and built.  Alternatively, Frobby is available in the [Arch User Repository](https://aur.archlinux.org/packages/frobby).
 
 ## Debian/Ubuntu
@@ -31,20 +30,13 @@ sudo pacman -S 4ti2 autoconf automake bison boost cddlib coin-or-csdp eigen ffla
 ```
 sudo apt install 4ti2 autoconf automake bison ca-certificates cohomcalg coinor-csdp fflas-ffpack flex g++ gfan gfortran git install-info libboost-dev libboost-regex-dev libboost-stacktrace-dev libcdd-dev libeigen3-dev libffi-dev libflint-dev libfrobby-dev libgc-dev libgdbm-dev libgivaro-dev libglpk-dev libgmp-dev libgtest-dev liblzma-dev libmathic-dev libmathicgb-dev libmemtailor-dev libmpfi-dev libmpfr-dev libmps-dev libnauty-dev libncurses-dev libnormaliz-dev libntl-dev libopenblas-dev libpython3-dev libreadline-dev libsingular-dev libtbb-dev libtool-bin libxml2-dev lrslib make msolve nauty normaliz patch pkgconf python3 singular-data time topcom wget zlib1g-dev
 ```
-*Note:*  
-- On Ubuntu 18.04 (Bionic Beaver) and Ubuntu 20.04 (Focal Fossa) run the following first, as several of the above dependencies are missing from the official Ubuntu archives:
-  ```
-  sudo apt install software-properties-common
-  sudo add-apt-repository ppa:macaulay2/macaulay2
-  ```
 
 ## Fedora
 
 ```
-sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel cohomCalg csdp-tools diffutils eigen3-devel factory-devel fflas-ffpack-devel flex flint-devel g++ gc-devel gcc-gfortran gdbm-devel gfan git glpk-devel gmp-devel lapack-devel libffi-devel libfrobby-devel libnauty-devel libnormaliz-devel libtool libxml2-devel lrslib-utils make mathic-devel mathicgb-devel memtailor-devel mpfi-devel mpfr-devel mpsolve-devel nauty ncurses-devel normaliz ntl-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
+sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel cohomCalg csdp-tools diffutils eigen3-devel factory-devel fflas-ffpack-devel flex flint-devel g++ gc-devel gcc-gfortran gdbm-devel gfan git glpk-devel gmp-devel gtest-devel lapack-devel libffi-devel libfrobby-devel libnauty-devel libnormaliz-devel libtool libxml2-devel lrslib-utils make mathic-devel mathicgb-devel memtailor-devel mpfi-devel mpfr-devel mpsolve-devel nauty ncurses-devel normaliz ntl-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
 ```
 *Note:*
-- Fedora's GoogleTest package does not include some necessary files, so it will be downloaded and built.
 - In Fedora 41 and later, lrslib must be loaded as an environment module first:
   ```
   sudo dnf -y install environment-modules
@@ -65,8 +57,6 @@ brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
 *Note:*
 - Add the following options to the call to `configure` so that it can find some of these dependencies:
   ```
-  --with-gtest-include-path="$(brew --prefix googletest)/include" \
-  --with-gtest-source-path="$(brew --prefix googletest)/include/googletest/googletest"
   LDFLAGS="-L$(brew --prefix)/lib -L$(brew --prefix factory)/lib -L$(brew --prefix libomp)/lib \
       -L$(brew --prefix readline)/lib -L/Library/Frameworks/Python.framework/Versions/3.13/lib" \
   CPPFLAGS="-I$(brew --prefix)/include -I$(brew --prefix)/include/cddlib -I$(brew --prefix factory)/include \
@@ -79,7 +69,7 @@ brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
 ## Red Hat Enterprise Linux
 
 ```
-sudo dnf install autoconf automake bison boost-devel bzip2 diffutils eigen3 flex gc-devel gcc-c++ gcc-gfortran gdbm-devel git glpk-devel gmp-devel lapack-devel libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel openblas-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
+sudo dnf install autoconf automake bison boost-devel bzip2 diffutils eigen3 flex gc-devel gcc-c++ gcc-gfortran gdbm-devel git glpk-devel gmp-devel gtest-devel lapack-devel libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel openblas-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
 ```
 *Note:* You must have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled in order to install several of these packages.
 
