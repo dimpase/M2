@@ -31,3 +31,28 @@ jupyter kernelspec list
 
 
 ### Notes on working with the M2 LSP (Language server protocol), for use in any editor that supports the protocol, including vscode and emacs.
+
+#### Installation
+
+The current draft of the language server is available from the pull request [#3687](https://github.com/Macaulay2/M2/pull/3687).  One way to obtain it is to run the following from your clone of the Macaulay2 source repository:
+
+```
+git fetch https://github.com/d-torrance/M2 lsp
+git checkout lsp
+```
+
+Then, if `/path/to/M2` is the path to the top directory of your clone of the Macaulay2 source repository, run the following inside Macaulay2 to install the language server:
+
+```m2
+installPackage("JSONRPC", FileName => "/path/to/M2/M2/Macaulay2/packages/JSONRPC.m2")
+installPackage("LanguageServer", FileName => "/path/to/M2/M2/Macaulay2/packages/LanguageServer.m2")
+```
+Finally, copy the file `/path/to/M2/M2/Macaulay2/packages/LanguageServer/M2-language-server` to some directory in your PATH.  In the end, the following should work:
+
+```
+command -v M2-language-server
+```
+
+#### Working with Emacs
+
+#### Working with VS Code
