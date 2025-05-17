@@ -73,17 +73,11 @@ sudo dnf install autoconf automake bison boost-devel bzip2 diffutils eigen3 flex
 ```
 *Note:* You must have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled in order to install several of these packages.
 
-See a successful build report in [#3485](https://github.com/Macaulay2/M2/issues/3485), which involves building [oneTBB](https://github.com/oneapi-src/oneTBB/blob/master/INSTALL.md).
-
 ## SUSE
 
 ```
 sudo zypper install 4ti2 arb-devel autoconf automake bison boost-devel cddlib-devel cmake e-antic-devel eigen3-devel fflas-ffpack-devel flex flint-devel gc-devel gcc gcc-c++ gcc-fortran gdbm-devel gfan git givaro-devel glpk-devel gmp-devel gtest gzip libboost_regex-devel libboost_stacktrace-devel libfactory-devel libfactory-gftables libffi-devel libtool libxml2-devel lrslib make mpfi-devel mpfr-devel nauty ncurses-devel normaliz normaliz-devel ntl-devel openblas-devel patch pkg-config python3-devel tar tbb-devel xz-devel zlib-devel
 ```
-
-*Note:*
-
-* Add `--with-gtest-source-path=/usr/include/gtest` to the call to `configure` so that it can find GoogleTest.
 
 ## Gentoo
 Coming soon
