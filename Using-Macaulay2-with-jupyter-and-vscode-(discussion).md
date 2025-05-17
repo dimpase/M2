@@ -55,7 +55,7 @@ command -v M2-language-server
 
 #### Working with Emacs
 
-Beginning with version 29, Emacs has been distributed with an LSP client, EGLOT (Emacs polyGLOT).    To configure Emacs to work with the Macaulay2 language server, run the following:
+Beginning with version 29, Emacs has been distributed with an LSP client, [EGLOT](https://joaotavora.github.io/eglot/) (Emacs polyGLOT).    To configure Emacs to work with the Macaulay2 language server, run the following:
 
 ```elisp
 (require 'eglot)
