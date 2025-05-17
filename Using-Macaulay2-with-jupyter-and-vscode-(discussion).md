@@ -8,7 +8,23 @@ We can use this wiki page to record what we do, and to get ideas from others.
 ### Notes on installing jupyter
 
 See [gist](https://gist.github.com/agryman/4b652aab5b8c0ba2ead96c647ebbefc3) for notes about installing on MacOS (most of this is relevant for any system). (Note the section on "Disable Line output wrapping" is done automatically now).
+
+After installing homebrew, python in homebrew, M2, here is basically what is to be done.  *todo*: are there other useful packages in python to install into this venv too?
+
 ```
+mkdir ~/m2-venv
+cd ~/m2-venv
+python3 -m venv venv
+source venv/bin/activate
+# or
+source ~/m2-venv/venv/bin/activate
+# at this point, you can move to another directory
+python --version
+pip install jupyter jupyterlab
+pip install git+https://github.com/d-torrance/Macaulay2-Jupyter-Kernel.git@notebook-7
+jupyter kernelspec list
+python -m m2_kernel.install
+jupyter kernelspec list
 ```
 
 ### Notes on installing vscode Macaulay2 extension
