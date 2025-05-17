@@ -7,7 +7,7 @@ We can use this wiki page to record what we do, and to get ideas from others.
 
 ### Notes on installing jupyter
 
-See [gist](https://gist.github.com/agryman/4b652aab5b8c0ba2ead96c647ebbefc3) for notes about installing on MacOS (most of this is relevant for any system).
+See [gist](https://gist.github.com/agryman/4b652aab5b8c0ba2ead96c647ebbefc3) for notes about installing on MacOS (most of this is relevant for any system). (Note the section on "Disable Line output wrapping" is done automatically now).
 ```
 ```
 
