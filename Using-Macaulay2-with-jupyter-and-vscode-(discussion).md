@@ -55,4 +55,13 @@ command -v M2-language-server
 
 #### Working with Emacs
 
+Beginning with version 29, Emacs has been distributed with an LSP client, EGLOT (Emacs polyGLOT).    To configure Emacs to work with the Macaulay2 language server, run the following:
+
+```elisp
+(require 'eglot)
+(add-to-list 'eglot-server-programs '(M2-mode "M2-language-server"))
+```
+
+Then, inside a Macaulay2 code buffer, run <kbd>M-x eglot</kbd>.  You should be greeted with a "Connected!" message in the minibuffer.
+
 #### Working with VS Code
