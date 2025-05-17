@@ -38,19 +38,6 @@ sudo apt update
 sudo apt install macaulay2
 ```
 
-### Debian oldstable (Debian 11 "bullseye")
-As root, add the following to `/etc/apt/sources.list`:
-
-```
-deb [signed-by=/usr/share/keyrings/debian-maintainers.gpg] https://people.debian.org/~dtorrance/debian bullseye/
-```
-Then run:
-```
-sudo apt install debian-keyring
-sudo apt update
-sudo apt install macaulay2
-```
-
 # RPM-based distributions
 
 Packages for RPM-based distributions are hosted on the Macaulay2 website.  You should download and install two packages:  a "common" package containing the architecture-independent files (such as the Macaulay2 language code and documentation), and a package containing the architecture-dependent files like the M2 executable.
