@@ -67,3 +67,21 @@ Then, inside a Macaulay2 code buffer, run <kbd>M-x eglot</kbd>.  You should be g
 Currently, the only working feature is "signature help".  If you point your cursor on a word, you should see basic documentation (if available) for that word in the minibuffer.  This uses Emacs's built-in ElDoc minor mode.
 
 #### Working with VS Code
+
+To get basic support for the LSP server in VS Code, run the following from your clone of the `vscode-macaulay2` repository:
+
+```
+git fetch https://github.com/d-torrance/vscode-macaulay2 lsp
+git checkout lsp
+```
+
+Then fire up VS Code, open the `vscode-macaulay` folder.  In the terminal, run:
+```
+npm install
+```
+Then press <kbd>F5</kbd> to start debugging.  It should open up a second VS Code window that says `[Extension Development Host]` at the top.  VS Code should connect to the LSP server automatically upon opening an .m2 file.
+
+This is currently still buggy.  <kbd>Ctrl+Shift+Space</kbd>, which is supposed to trigger the signature help feature, results in an error ("Header must provide a Content-Length property", which doesn't make sense because it *does* provide this property!).
+
+
+
