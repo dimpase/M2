@@ -49,6 +49,7 @@ Packages for RPM-based distributions are hosted on the Macaulay2 website.  You s
 | Common (required for all distributions) | [Macaulay2-1.25.05-1.common.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.common.rpm) |
 | Fedora 40 | [Macaulay2-1.25.05-1.x86_64-Linux-Fedora-40.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.x86_64-Linux-Fedora-40.rpm) |
 | Fedora 41 | [Macaulay2-1.25.05-1.x86_64-Linux-Fedora-41.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.x86_64-Linux-Fedora-41.rpm) |
+| Fedora 42 | [Macaulay2-1.25.05-1.x86_64-Linux-Fedora-42.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.x86_64-Linux-Fedora-42.rpm)
 | Rocky Linux 9.3 | [Macaulay2-1.25.05-1.x86_64-Linux-RockyLinux-9.3.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.x86_64-Linux-RockyLinux-9.3.rpm)
 
 *Rocky Linux 8 packages coming soon*
