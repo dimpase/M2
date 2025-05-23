@@ -52,18 +52,6 @@ Packages for RPM-based distributions are hosted on the Macaulay2 website.  You s
 | Fedora 42 | [Macaulay2-1.25.05-1.x86_64-Linux-Fedora-42.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.x86_64-Linux-Fedora-42.rpm)
 | Rocky Linux 9.3 | [Macaulay2-1.25.05-1.x86_64-Linux-RockyLinux-9.3.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.05-1.x86_64-Linux-RockyLinux-9.3.rpm)
 
-*Rocky Linux 8 packages coming soon*
-
-### Macaulay2 1.24.11
-
-| Distribution | Package |
-| --- | --- |
-| Common (required for all distributions) | [Macaulay2-1.24.11-1.common.rpm](https://macaulay2.com/Downloads/Common/Macaulay2-1.24.11-1.common.rpm) |
-| Fedora 40 | [Macaulay2-1.24.11-1.x86_64-Linux-Fedora-40.rpm](https://macaulay2.com/Downloads/GNU-Linux/Fedora/Macaulay2-1.24.11-1.x86_64-Linux-Fedora-40.rpm) |
-| Fedora 41 | [Macaulay2-1.24.11-1.x86_64-Linux-Fedora-41.rpm](https://macaulay2.com/Downloads/GNU-Linux/Fedora/Macaulay2-1.24.11-1.x86_64-Linux-Fedora-41.rpm) |
-| Rocky Linux 8.9 | [Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-8.9.rpm](https://macaulay2.com/Downloads/GNU-Linux/Red%20Hat%20Enterprise,%20CentOS,%20Scientific%20Linux/Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-8.9.rpm) |
-| Rocky Linux 9.3 | [Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-9.3.rpm](https://macaulay2.com/Downloads/GNU-Linux/Red%20Hat%20Enterprise,%20CentOS,%20Scientific%20Linux/Macaulay2-1.24.11-1.x86_64-Linux-RockyLinux-9.3.rpm) |
-
 Then, after downloading these two files, run the following:
 
 ```
