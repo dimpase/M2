@@ -1,0 +1,2 @@
++ [Windows Subsystem for Linux (Emacs)](https://gist.github.com/eivan/cab0b0a29eebd91d767ea6ad7448368e)
++ [Windows Subsystem for Linux (VSCode)](https://github.com/fragandi/M2-codespace/blob/main/Macaulay2%20for%20Windows%20with%20VS%20Code.pdf)
