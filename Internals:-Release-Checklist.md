@@ -3,11 +3,9 @@
 We have two main branches on GitHub:
 
 * [`development`](https://github.com/Macaulay2/M2/tree/development) -- all pull requests are merged into this branch
-* [`master`](https://github.com/Macaulay2/M2/tree/master) -- most recent stable release
+* [`stable`](https://github.com/Macaulay2/M2/tree/stable) -- most recent stable release
 
-(*Note:*  These branch names are under discussion.  See [#1130](https://github.com/Macaulay2/M2/issues/1130).)
-
-The `development` branch will always be ahead of the `master` branch, so any merges are done by fast-fowarding.
+The `development` branch will always be ahead of the `stable` branch, so any merges are done by fast-fowarding.
 
 Near release time we have a release branch, with name of the form `release-X.Y-branch`, which is occasionally rebased onto `development`.
 
@@ -22,8 +20,8 @@ The convention for version numbers of Macaulay2 is this:
 # Release procedure
 
 * Things to do when incrementing the version number to X.Y.Z, say :
-   - increment the version number in the file [`VERSION`](https://github.com/Macaulay2/M2/blob/master/M2/VERSION)
-   - add an entry to [`distributions/deb/changelog`](https://github.com/Macaulay2/M2/blob/master/M2/distributions/deb/changelog) (*TODO:* Is this still useful?)
+   - increment the version number in the file [`VERSION`](https://github.com/Macaulay2/M2/blob/stable/M2/VERSION)
+   - add an entry to [`distributions/deb/changelog`](https://github.com/Macaulay2/M2/blob/stable/M2/distributions/deb/changelog) (*TODO:* Is this still useful?)
    - commit the two files and push upstream
 
 * Things to do when developing a binary release for version X.Y (or version X.Y.Z)
@@ -35,7 +33,7 @@ The convention for version numbers of Macaulay2 is this:
         git push -u origin release-X.Y-branch
 
   - open a draft pull request
-  - update the symbols in [`prism.js`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/Style/prism.js), which adds syntax highlighting to the html documentation:
+  - update the symbols in [`prism.js`](https://github.com/Macaulay2/M2/blob/stable/M2/Macaulay2/packages/Style/prism.js), which adds syntax highlighting to the html documentation:
 
          make -C Macaulay2/editors update-syntax-highlighting
 
@@ -43,13 +41,13 @@ The convention for version numbers of Macaulay2 is this:
 
   - run `npm install` in `M2/Macaulay2/packages/Style` to make sure that our vendored copy of KaTeX is up to date.
 
-  - update the file [`M2/Macaulay2/packages/Macaulay2Doc/changes.m2`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/Macaulay2Doc/changes.m2) to take the release into account
+  - update the file [`M2/Macaulay2/packages/Macaulay2Doc/changes.m2`](https://github.com/Macaulay2/M2/blob/stable/M2/Macaulay2/packages/Macaulay2Doc/changes.m2) to take the release into account
 
-    - find out how the file [`Macaulay2/m2/exports.m2`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/m2/exports.m2) has changed since the previous release (using `git diff`), and make appropriate entries to document the new symbols and the deleted symbols.
+    - find out how the file [`Macaulay2/m2/exports.m2`](https://github.com/Macaulay2/M2/blob/stable/M2/Macaulay2/m2/exports.m2) has changed since the previous release (using `git diff`), and make appropriate entries to document the new symbols and the deleted symbols.
 
-    - find out how the file [`Macaulay2/packages/=distributed-packages`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/=distributed-packages) has changed since the previous release, and make appropriate entries to document the new packages.  See [`Macaulay2/packages/Macaulay2Doc/README`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/Macaulay2Doc/README) for helper code.
+    - find out how the file [`Macaulay2/packages/=distributed-packages`](https://github.com/Macaulay2/M2/blob/stable/M2/Macaulay2/packages/=distributed-packages) has changed since the previous release, and make appropriate entries to document the new packages.  See [`Macaulay2/packages/Macaulay2Doc/README`](https://github.com/Macaulay2/M2/blob/stable/M2/Macaulay2/packages/Macaulay2Doc/README) for helper code.
 
-    - find out which packages have been featured in articles published by the *Journal of Software for Algebra and Geometry* at https://msp.org/jsag/ since the previous release, and add certification blocks to those packages, using the template in the file [`Macaulay2/packages/CertificationTemplate`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/CertificationTemplate).  The git commit number in the certification should point to a version of the package that is identical with the version provided by the journal.  (If necessary, add commits and merge them in to provide one.)  Also, make appropriate entries to document the newly published and certified packages.
+    - find out which packages have been featured in articles published by the *Journal of Software for Algebra and Geometry* at https://msp.org/jsag/ since the previous release, and add certification blocks to those packages, using the template in the file [`Macaulay2/packages/CertificationTemplate`](https://github.com/Macaulay2/M2/blob/stable/M2/Macaulay2/packages/CertificationTemplate).  The git commit number in the certification should point to a version of the package that is identical with the version provided by the journal.  (If necessary, add commits and merge them in to provide one.)  Also, make appropriate entries to document the newly published and certified packages.
   - periodically rebase the branch onto the `development` branch.  Continue accepting pull requests into the `development` branch.
 * When the release is ready, do:
   -  on the branch `release-X.Y-branch`, do:
@@ -58,16 +56,16 @@ The convention for version numbers of Macaulay2 is this:
          git push origin release-X.Y
 
   - mark the pull request as ready and merge it into `development`
-  - push the release tag to the `master` branch:
+  - push the release tag to the `stable` branch:
    
-         git push origin release-X.Y:master
+         git push origin release-X.Y:stable
 
   - on the web site, update the documentation and version number
   - add the new version number to the [`versions.json`](https://macaulay2.com/doc/versions.json) file on the website.  This is a file that should exist on the webserver in the same directory as the various `Macaulay2-X.Y` subdirectories containing the documentation.  It should contain a JSON object whose elements are key-value pairs corresponding to all of the Macaulay2 versions that have documentation available on the website in decreasing order.  The keys contain how each version will appear in the dropdown version selection menu, and the values contain the corresponding version numbers, e.g.,
     ```js
     {"latest release (1.22)": "1.22", "1.21": "1.21", "1.20": "1.20"}`
     ```
-     This is used by [`version-select.js`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/packages/Style/version-select.js) in the `Style` package to create the dropdown menu.
+     This is used by [`version-select.js`](https://github.com/Macaulay2/M2/blob/stable/M2/Macaulay2/packages/Style/version-select.js) in the `Style` package to create the dropdown menu.
 
 # Checking new releases and distributions
 
@@ -177,7 +175,7 @@ There are some things about a new distribution of Macaulay2 that should be check
 		   130				<-- right answer
    ```
 
-* see [`0-final-check-interactive-input-behaviour`](https://github.com/Macaulay2/M2/blob/master/bugs/dan/0-final-check-interactive-input-behaviour) if changes have been made to top level user interaction
+* see [`0-final-check-interactive-input-behaviour`](https://github.com/Macaulay2/M2/blob/stable/bugs/dan/0-final-check-interactive-input-behaviour) if changes have been made to top level user interaction
 
 * see whether you can interrupt the printing out the following commands, e.g., in emacs with <kbd>C</kbd>-<kbd>c> <kbd>C</kbd>-<kbd>c</kbd>:
   ```m2
@@ -218,7 +216,7 @@ There are some things about a new distribution of Macaulay2 that should be check
 
 * try `viewHelp res`, etc.
 
-* update [`Macaulay2/man/M2.1.in`](https://github.com/Macaulay2/M2/blob/master/M2/Macaulay2/man/M2.1.in)
+* update [`Macaulay2/man/M2.1.in`](https://github.com/Macaulay2/M2/blob/stable/M2/Macaulay2/man/M2.1.in)
 
 * check that alarm works or devise an automated test:
   ```m2
@@ -288,3 +286,14 @@ There are some things about a new distribution of Macaulay2 that should be check
 		   currentString:1:16:(3):[15]: error: before eval: --backtrace update-- 
     ```
 * Occasionally test all the packages that cache their example output.  This can be done on a machine where you have installed all the prerequisite external programs for those packages (see `../../M2/INSTALL`, "Rerunning the package examples"), with a fresh build tree, by adding the command line option RerunExamples=true to the `make` command.  If you forgot to do that the first time around, you can first clean the packages with `make clean-packages` in the `M2/Macaulay2/packages` directory of the build tree.
+
+# Post-Release Checklist
+
+- Update the [language-macaulay2](https://github.com/Macaulay2/language-macaulay2/) repository, which affects Macaulay2 syntax highlighting on GitHub and other places.
+- Update the [testbot container](https://github.com/Macaulay2/M2/tree/stable/M2/BUILD/docker/testbot), which is used in workshop repositories.
+- Binary distributions:
+  - [Homebrew](https://github.com/Macaulay2/homebrew-tap)
+  - [Debian PPA](https://people.debian.org/~dtorrance/)
+  - [Ubuntu PPA](https://launchpad.net/~macaulay2/+archive/ubuntu/macaulay2)
+  - [Fedora](https://packages.fedoraproject.org/pkgs/Macaulay2/Macaulay2/index.html)
+  - [Arch](https://aur.archlinux.org/packages/macaulay2)
