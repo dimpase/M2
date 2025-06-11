@@ -5,8 +5,7 @@ You can also find your way around using the table of contents on the sidebar.
 - Installing M2
   + [Apple macOS (via Homebrew)](https://github.com/Macaulay2/homebrew-tap/blob/main/README.md)
   + [[Linux distributions|Installing Macaulay2 in Linux]]
-  + [Windows Subsystem for Linux (Emacs)](https://gist.github.com/eivan/cab0b0a29eebd91d767ea6ad7448368e)
-  + [Windows Subsystem for Linux (VSCode)](https://github.com/fragandi/M2-codespace/blob/main/Macaulay2%20for%20Windows%20with%20VS%20Code.pdf)
+  + [[Windows Subsystem for Linux (WSL)|Installing Macaulay2 in WSL]]
   + [Docker Images](https://github.com/Macaulay2/M2/tree/master/M2/BUILD/docker)
 - Building M2 from source
   + [[Using autotools|Building M2 from source using Autotools]]
