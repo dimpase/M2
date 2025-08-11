@@ -24,7 +24,7 @@ The goal of the InvariantRing package is to allow computations of invariants of 
 > Wolfram Decker says: Please note that Simon King has worked very hard to
 > improve the Singular version of the project (originally written by one of my
 > students).  So the reference to his ideas should be there.
-* **Positive characteristic.** Some of the currently implemented methods are limited to characteristic zero. It would be good to look for additional methods for positive characteristic wherever possible.
+* **Positive characteristic.** Some of the currently implemented methods are limited to characteristic zero. It would be good to look for additional methods for positive characteristic wherever possible. **Update 2025/07/15:** for permutation representations, see [orbit sum method](https://github.com/Macaulay2/Workshop-2025-Madison/blob/InvariantRing/InvariantRingProjectsMadison2025.md#permutation-groups-and-sashas-functions) with preliminary implementation from the 2025 Madison workshop.
 * **Specialized algorithms for abelian groups.** A group led by Francesca Gandini has been working on algorithms for invariants of groups such as (Z/p)^k (see https://github.com/lrizzolo/m2invariants). Once this project is complete, the code could be merged into InvariantRing.
 
 ### Examples
