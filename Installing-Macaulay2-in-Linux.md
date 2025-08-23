@@ -23,17 +23,31 @@ sudo apt install macaulay2
 ```
 
 ## Debian
-The instructions are slightly different depending on which version of Debian you are using.
 
-### Debian stable (Debian 12 "bookworm")
-As root, add the following to `/etc/apt/sources.list`:
+First, run the following:
 
 ```
-deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://people.debian.org/~dtorrance/debian bookworm/
+sudo apt update
+sudo apt install ca-certificates debian-keyring
 ```
-Then run:
+
+Next, add a line (as root) to the file `/etc/apt/sources.list`.  The particular line is dependent on your version of Debian.
+
+* **stable (Debian 13 "trixie")**
+  ```
+  deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://people.debian.org/~dtorrance/debian trixie/
+  ```
+* **oldstable (Debian 12 "bookworm")**
+  ```
+  deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://people.debian.org/~dtorrance/debian bookworm/
+  ```
+* **oldoldstable (Debian 11 "bullseye")**
+  ```
+  deb [signed-by=/usr/share/keyrings/debian-maintainers.gpg] https://people.debian.org/~dtorrance/debian bullseye/
+  ```
+
+Finally, run:
 ```
-sudo apt install debian-keyring
 sudo apt update
 sudo apt install macaulay2
 ```
