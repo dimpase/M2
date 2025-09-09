@@ -102,15 +102,17 @@ code, switch to the `development` branch:
 
 # Configuring the build
 
-After downloading the dependencies and cloning the git repository, the next step is to generate and run the configuration script.
+After downloading the dependencies and cloning the git repository, the next step is to generate and run the configuration script.  The `autogen.sh` script generates the `configure` script using [autoconf](https://www.gnu.org/software/autoconf/) and ensures that the [M2-emacs submodule](https://github.com/Macaulay2/M2-emacs) is updated.
 
-First, change into the `M2` subdirectory of the repository (so `cd M2/M2` if you just cloned the repository) and run `autogen.sh`, generates the `configure` script using [autoconf](https://www.gnu.org/software/autoconf/) and ensures that the [M2-emacs submodule](https://github.com/Macaulay2/M2-emacs) is updated.
+```
+cd M2/M2/BUILD/build
+../../autogen.sh
+```
 
 Now run the following:
 
 ```
-cd BUILD
-../configure
+../../configure
 ```
 
 You will likely need need to add one or more command-line options to `configure`.  For a complete list, run `../configure --help`.  We now outline several of the most important options.
