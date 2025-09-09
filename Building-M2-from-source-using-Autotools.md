@@ -37,7 +37,7 @@ sudo apt install 4ti2 autoconf automake bison ca-certificates cohomcalg coinor-c
 sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel cohomCalg csdp-tools diffutils eigen3-devel factory-devel fflas-ffpack-devel flex flint-devel g++ gc-devel gcc-gfortran gdbm-devel gfan git glpk-devel gmp-devel gtest-devel lapack-devel libffi-devel libfrobby-devel libnauty-devel libnormaliz-devel libtool libxml2-devel lrslib-utils make mathic-devel mathicgb-devel memtailor-devel mpfi-devel mpfr-devel mpsolve-devel msolve nauty ncurses-devel normaliz ntl-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
 ```
 *Note:*
-- In Fedora 41 and later, lrslib must be loaded as an environment module first:
+- In Fedora 41 and later, lrslib should be loaded as an environment module:
   ```
   sudo dnf -y install environment-modules
   source /etc/profile.d/modules.sh
@@ -69,9 +69,12 @@ brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
 ## Red Hat Enterprise Linux
 
 ```
-sudo dnf install autoconf automake bison boost-devel bzip2 diffutils eigen3 flex gc-devel gcc-c++ gcc-gfortran gdbm-devel git glpk-devel gmp-devel gtest-devel lapack-devel libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel openblas-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
+sudo dnf install autoconf automake bison boost-devel bzip2 diffutils flex flexiblas-devel gcc-c++ gcc-gfortran git gmp-devel libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
 ```
-*Note:* You must have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled in order to install several of these packages.
+If you have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled, then also install the following:
+```
+sudo dnf install eigen3 gc-devel gdbm-devel glpk-devel gtest-devel
+```
 
 ## SUSE
 
