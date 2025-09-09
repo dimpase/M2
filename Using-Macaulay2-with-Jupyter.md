@@ -28,4 +28,4 @@ Try out one of the following to change to a "prettier" output mode:
 --%mode=texmacs
 ```
 
-See also [this demo notebook](https://nbviewer.org/urls/nbviewer.org/github/Macaulay2/Macaulay2-Jupyter-Kernel/blob/master/demo/demo.ipynb) and the [kernel git repository](https://github.com/Macaulay2/Macaulay2-Jupyter-Kernel).
+See also [this demo notebook](https://nbviewer.org/github/Macaulay2/Macaulay2-Jupyter-Kernel/blob/master/demo/demo.ipynb) and the [kernel git repository](https://github.com/Macaulay2/Macaulay2-Jupyter-Kernel).
