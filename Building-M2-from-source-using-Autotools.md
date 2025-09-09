@@ -115,7 +115,7 @@ Now run the following:
 ../../configure
 ```
 
-You will likely need need to add one or more command-line options to `configure`.  For a complete list, run `../configure --help`.  We now outline several of the most important options.
+You will likely need need to add one or more command-line options to `configure`.  For a complete list, run `../../configure --help`.  We now outline several of the most important options.
 
 ## Enabling downloads
 
