@@ -35,15 +35,15 @@ Next, add a line (as root) to the file `/etc/apt/sources.list`.  The particular 
 
 * **stable (Debian 13 "trixie")**
   ```
-  deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://people.debian.org/~dtorrance/debian trixie/
+  deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://macaulay2.com/Repositories/Debian trixie/
   ```
 * **oldstable (Debian 12 "bookworm")**
   ```
-  deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://people.debian.org/~dtorrance/debian bookworm/
+  deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://macaulay2.com/Repositories/Debian bookworm/
   ```
 * **oldoldstable (Debian 11 "bullseye")**
   ```
-  deb [signed-by=/usr/share/keyrings/debian-maintainers.gpg] https://people.debian.org/~dtorrance/debian bullseye/
+  deb [signed-by=/usr/share/keyrings/debian-maintainers.gpg] https://macaulay2.com/Repositories/Debian bullseye/
   ```
 
 Finally, run:
