@@ -54,33 +54,41 @@ sudo apt install macaulay2
 
 # RPM-based distributions
 
-Packages for RPM-based distributions are hosted on the Macaulay2 website.  You should download and install two packages:  a "common" package containing the architecture-independent files (such as the Macaulay2 language code and documentation), and a package containing the architecture-dependent files like the M2 executable.
-
-
-### Macaulay2 1.25.06
-
-| Distribution | Package |
-| --- | --- |
-| Common (required for all distributions) | [Macaulay2-1.25.06-1.common.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.06-1.common.rpm) |
-| Fedora 40 | [Macaulay2-1.25.06-1.x86_64-Linux-Fedora-40.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.06-1.x86_64-Linux-Fedora-40.rpm) |
-| Fedora 41 | [Macaulay2-1.25.06-1.x86_64-Linux-Fedora-41.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.06-1.x86_64-Linux-Fedora-41.rpm) |
-| Fedora 42 | [Macaulay2-1.25.06-1.x86_64-Linux-Fedora-42.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.06-1.x86_64-Linux-Fedora-42.rpm) |
-| Rocky Linux 9.6 | [Macaulay2-1.25.06-1.x86_64-Linux-RockyLinux-9.6.rpm](https://github.com/Macaulay2/M2/releases/download/release-1.25.05/Macaulay2-1.25.06-1.x86_64-Linux-RockyLinux-9.6.rpm)
-
-Then, after downloading these two files, run the following:
-
-```
-sudo dnf install Macaulay2-*.rpm
-```
-For Red Hat Enterprise Linux and compatible distributions like Rocky Linux and AlmaLinux, you may have to enable the [EPEL repository](https://docs.fedoraproject.org/en-US/epel/) to obtain some dependencies.
+Fedora, Red Hat Enterprise Linux, and RHEL-compatible distributions like Rocky Linux and AlmaLinux use the `dnf` package manager.
 
 ## Fedora
 
-Macaulay2 is also available in the official Fedora repositories.  The version may be slightly out of date.
+Macaulay2 is available in the official Fedora repositories, and may be installed using the following:
 
 ```
 sudo dnf install Macaulay2
 ```
+
+The version in the official repositories may be slightly out of date.  To obtain the latest version from the Macaulay2 website, save the following as the file `/etc/yum.repos.d/Macaulay2.repo` as root:
+
+```ini
+[Macaulay2]
+name=Macaulay2 Repository
+baseurl=https://macaulay2.com/Repositories/Fedora/$releasever
+gpgcheck=0
+enabled=1
+```
+
+Then run `sudo dnf install Macaulay2`.
+
+## Red Hat Enterprise Linux
+
+Macaulay2 is not available in the official repositories for RHEL and compatible distributions like Rocky Linux and AlmaLinux.  However, packages are hosted on the Macaulay2 website.  Save the following as the file `/etc/yum.repos.d/Macaulay2.repo` as root:
+
+```ini
+[Macaulay2]
+name=Macaulay2 Repository
+baseurl=https://macaulay2.com/Repositories/Scientific/$releasever
+gpgcheck=0
+enabled=1
+```
+
+Then run `sudo dnf install Macaulay2`.
 
 # Homebrew on Linux
 
