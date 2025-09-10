@@ -1,3 +1,11 @@
+- [APT-based distributions](#apt-based-distributions)
+  * [Ubuntu](#ubuntu)
+  * [Debian](#debian)
+- [RPM-based distributions](#rpm-based-distributions)
+  * [Fedora](#fedora)
+  * [Red Hat Enterprise Linux](#red-hat-enterprise-linux)
+- [Homebrew on Linux](#homebrew-on-linux)
+
 # APT-based distributions
 
 Debian and its derivatives use the `apt` package manager.  Macaulay2 has been available in the official Debian repositories since 2020, so you may install it using
