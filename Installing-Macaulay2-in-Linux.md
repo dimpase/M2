@@ -4,6 +4,7 @@
 - [RPM-based distributions](#rpm-based-distributions)
   * [Fedora](#fedora)
   * [Red Hat Enterprise Linux](#red-hat-enterprise-linux)
+- [Arch Linux](#arch-linux)
 - [Homebrew on Linux](#homebrew-on-linux)
 
 # APT-based distributions
@@ -97,6 +98,17 @@ enabled=1
 ```
 
 Then run `sudo dnf install Macaulay2`.
+
+# Arch Linux
+
+Macaulay2 is available in [AUR](https://aur.archlinux.org/packages/macaulay2), the Arch User Repository.  To build and install:
+
+```
+git clone https://aur.archlinux.org/macaulay2.git
+cd macaulay2
+makepkg -s
+sudo pacman -U macaulay2-*.pkg.tar.zst
+```
 
 # Homebrew on Linux
 
