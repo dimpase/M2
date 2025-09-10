@@ -69,12 +69,14 @@ brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
 ## Red Hat Enterprise Linux
 
 ```
-sudo dnf install autoconf automake bison boost-devel bzip2 diffutils flex flexiblas-devel gcc-c++ gcc-gfortran git gmp-devel libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
+sudo dnf install autoconf automake bison boost-devel bzip2 diffutils flex flexiblas-devel gcc-c++ gcc-gfortran git gmp-devel info libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
 ```
+
 If you have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled, then also install the following:
 ```
 sudo dnf install eigen3 gc-devel gdbm-devel glpk-devel gtest-devel
 ```
+
 
 ## SUSE
 
