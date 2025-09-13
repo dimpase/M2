@@ -73,31 +73,25 @@ Macaulay2 is available in the official Fedora repositories, and may be installed
 sudo dnf install Macaulay2
 ```
 
-The version in the official repositories may be slightly out of date.  To obtain the latest version from the Macaulay2 website, save the following as the file `/etc/yum.repos.d/Macaulay2.repo` as root:
+The version in the official repositories may be slightly out of date.  To obtain the latest version from the [Macaulay2 website](https://macaulay2.com/Repositories/Fedora/), Run the following:
 
-```ini
-[Macaulay2]
-name=Macaulay2 Repository
-baseurl=https://macaulay2.com/Repositories/Fedora/$releasever
-gpgcheck=0
-enabled=1
+```
+sudo dnf install wget
+sudo wget -P /etc/yum.repos.d/ https://macaulay2.com/Repositories/Fedora/Macaulay2.repo
+sudo dnf install Macaulay2
 ```
 
-Then run `sudo dnf install Macaulay2`.
+See also 
 
 ## Red Hat Enterprise Linux
 
-Macaulay2 is not available in the official repositories for RHEL and compatible distributions like Rocky Linux and AlmaLinux.  However, packages are hosted on the Macaulay2 website.  Save the following as the file `/etc/yum.repos.d/Macaulay2.repo` as root:
+Macaulay2 is not available in the official repositories for RHEL and compatible distributions like Rocky Linux and AlmaLinux.  However, packages are hosted on the [Macaulay2 website](https://macaulay2.com/Repositories/Scientific/).  Run the following:
 
-```ini
-[Macaulay2]
-name=Macaulay2 Repository
-baseurl=https://macaulay2.com/Repositories/Scientific/$releasever
-gpgcheck=0
-enabled=1
 ```
-
-Then run `sudo dnf install Macaulay2`.
+sudo dnf install wget
+sudo wget -P /etc/yum.repos.d/ https://macaulay2.com/Repositories/Scientific/Macaulay2.repo
+sudo dnf install Macaulay2
+```
 
 # Arch Linux
 
