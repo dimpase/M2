@@ -73,7 +73,7 @@ Macaulay2 is available in the official Fedora repositories, and may be installed
 sudo dnf install Macaulay2
 ```
 
-The version in the official repositories may be slightly out of date.  To obtain the latest version from the [Macaulay2 website](https://macaulay2.com/Repositories/Fedora/), Run the following:
+The version in the official repositories may be slightly out of date.  To obtain the latest version from the [Macaulay2 website](https://macaulay2.com/Repositories/Fedora/), run the following:
 
 ```
 sudo dnf install wget
