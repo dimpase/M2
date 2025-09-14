@@ -43,6 +43,8 @@ sudo apt update
 sudo apt install macaulay2
 ```
 
+This will also work in stable Debian distributions, but it will install an older version of Macaulay2.  It is better to install the packages hosted on the [Macaulay2 website](https://macaulay2.com/Repositories/Debian/index.html):
+
 ## stable (Debian 13 "trixie")
 ```
 sudo apt update
