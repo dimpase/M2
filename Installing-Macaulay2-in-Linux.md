@@ -33,30 +33,39 @@ sudo apt install macaulay2
 
 ## Debian
 
-First, run the following:
+The directions are slightly different based on your version of Debian.
+
+## unstable ("sid") or testing ("forky")
+The latest version of Macaulay2 should appear in the official package repositories for these distributions very shortly after release.
 
 ```
 sudo apt update
-sudo apt install ca-certificates debian-keyring
+sudo apt install macaulay2
 ```
 
-Next, add a line (as root) to the file `/etc/apt/sources.list`.  The particular line is dependent on your version of Debian.
-
-* **stable (Debian 13 "trixie")**
-  ```
-  deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://macaulay2.com/Repositories/Debian trixie/
-  ```
-* **oldstable (Debian 12 "bookworm")**
-  ```
-  deb [signed-by=/usr/share/keyrings/debian-keyring.gpg] https://macaulay2.com/Repositories/Debian bookworm/
-  ```
-* **oldoldstable (Debian 11 "bullseye")**
-  ```
-  deb [signed-by=/usr/share/keyrings/debian-maintainers.gpg] https://macaulay2.com/Repositories/Debian bullseye/
-  ```
-
-Finally, run:
+## stable (Debian 13 "trixie")
 ```
+sudo apt update
+sudo apt install ca-certificates debian-keyring wget
+sudo wget -P /etc/apt/sources.list.d https://macaulay2.com/Repositories/Debian/trixie/macaulay2.sources
+sudo apt update
+sudo apt install macaulay2
+```
+
+## oldstable (Debian 12 "bookworm")
+```
+sudo apt update
+sudo apt install ca-certificates debian-keyring wget
+sudo wget -P /etc/apt/sources.list.d https://macaulay2.com/Repositories/Debian/bookworm/macaulay2.sources
+sudo apt update
+sudo apt install macaulay2
+```
+
+## oldoldstable (Debian 11 "bullseye")
+```
+sudo apt update
+sudo apt install ca-certificates debian-keyring wget
+sudo wget -P /etc/apt/sources.list.d https://macaulay2.com/Repositories/Debian/bullseye/macaulay2.sources
 sudo apt update
 sudo apt install macaulay2
 ```
