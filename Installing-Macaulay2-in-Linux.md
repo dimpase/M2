@@ -49,7 +49,7 @@ This will also work in stable Debian distributions, but it will install an older
 ## stable (Debian 13 "trixie")
 ```
 sudo apt update
-sudo apt install ca-certificates debian-keyring wget
+sudo apt install ca-certificates wget
 sudo wget -O /etc/apt/sources.list.d/macaulay2.sources https://macaulay2.com/Repositories/Debian/trixie/macaulay2.sources
 sudo apt update
 sudo apt install macaulay2
@@ -58,7 +58,7 @@ sudo apt install macaulay2
 ## oldstable (Debian 12 "bookworm")
 ```
 sudo apt update
-sudo apt install ca-certificates debian-keyring wget
+sudo apt install ca-certificates wget
 sudo wget -O /etc/apt/sources.list.d/macaulay2.sources https://macaulay2.com/Repositories/Debian/bookworm/macaulay2.sources
 sudo apt update
 sudo apt install macaulay2
@@ -67,7 +67,8 @@ sudo apt install macaulay2
 ## oldoldstable (Debian 11 "bullseye")
 ```
 sudo apt update
-sudo apt install ca-certificates debian-keyring wget
+sudo apt install ca-certificates wget
+sudo wget -O /usr/share/keyrings/macaulay2-archive-key.asc https://macaulay2.com/Repositories/Debian/macaulay2-archive-key.asc
 sudo wget -O /etc/apt/sources.list.d/macaulay2.sources https://macaulay2.com/Repositories/Debian/bullseye/macaulay2.sources
 sudo apt update
 sudo apt install macaulay2
