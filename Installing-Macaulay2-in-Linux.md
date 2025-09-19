@@ -130,7 +130,7 @@ and use the Macaulay2 command
 setup()
 ```
 
-to record the location of M2 in your login startup files.
+to record the location of M2 in your login startup files.  Note that you may encounter error messages such as "cannot open shared object file" if certain system libraries are missing.
 
 # Arch Linux
 
