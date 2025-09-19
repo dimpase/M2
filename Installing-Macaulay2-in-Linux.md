@@ -1,9 +1,14 @@
 - [APT-based distributions](#apt-based-distributions)
-  * [Ubuntu](#ubuntu)
-  * [Debian](#debian)
+   * [Ubuntu](#ubuntu)
+   * [Debian](#debian)
+   * [unstable ("sid") or testing ("forky")](#unstable-sid-or-testing-forky)
+   * [stable (Debian 13 "trixie")](#stable-debian-13-trixie)
+   * [oldstable (Debian 12 "bookworm")](#oldstable-debian-12-bookworm)
+   * [oldoldstable (Debian 11 "bullseye")](#oldoldstable-debian-11-bullseye)
 - [RPM-based distributions](#rpm-based-distributions)
-  * [Fedora](#fedora)
-  * [Red Hat Enterprise Linux](#red-hat-enterprise-linux)
+   * [Fedora](#fedora)
+   * [Red Hat Enterprise Linux](#red-hat-enterprise-linux)
+   * [Installing .rpm files without root access](#installing-rpm-files-without-root-access)
 - [Arch Linux](#arch-linux)
 - [Homebrew on Linux](#homebrew-on-linux)
 
@@ -92,8 +97,6 @@ sudo mv Macaulay2.repo /etc/yum.repos.d/
 sudo dnf install Macaulay2
 ```
 
-See also 
-
 ## Red Hat Enterprise Linux
 
 Macaulay2 is not available in the official repositories for RHEL and compatible distributions like Rocky Linux and AlmaLinux.  However, packages are hosted on the [Macaulay2 website](https://macaulay2.com/Repositories/Scientific/).  Run the following:
@@ -103,6 +106,35 @@ curl -O https://macaulay2.com/Repositories/Scientific/Macaulay2.repo
 sudo mv Macaulay2.repo /etc/yum.repos.d/
 sudo dnf install Macaulay2
 ```
+
+## Installing .rpm files without root access
+
+If you do not have `sudo` privileges on your system, then you may install Macaulay2 by downloading an rpm from the website and running the following.
+
+In this example, we assume that you have downloaded the appropriate rpm from the [website](https://macaulay2.com/Repositories/) to `/tmp` and would like to install the files in `~/foo/bar`.  Adjust the filename of the downloaded rpm accordingly.
+
+```
+mkdir temp
+cd temp
+rpm2cpio /tmp/Macaulay2-1.25.06-0.1.m2.el9.x86_64.rpm  | cpio -idm --no-absolute-filenames
+mv usr ~/foo/bar/
+cd ..
+rmdir temp
+```
+
+Now start
+
+```
+~/foo/bar/bin/M2
+```
+
+and use the Macaulay2 command
+
+```m2
+setup()
+```
+
+to record the location of M2 in your login startup files.
 
 # Arch Linux
 
