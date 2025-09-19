@@ -105,9 +105,9 @@ sudo dnf install Macaulay2
 
 ## Installing .rpm files without root access
 
-If you do not have `sudo` privileges on your system, then you may install Macaulay2 by downloading an rpm from the website and running the following.
+If you do not have `sudo` privileges on your system, then you may install Macaulay2 by downloading an rpm from the [website](https://macaulay2.com/Repositories/) and installing it into your home directory.
 
-In this example, we assume that you have downloaded the appropriate rpm from the [website](https://macaulay2.com/Repositories/) to `/tmp` and would like to install the files in `~/foo/bar`.  Adjust the filename of the downloaded rpm accordingly.
+In this example, we assume that you have downloaded the appropriate rpm to `/tmp` and would like to install the files in `~/foo/bar`.  Adjust the filename of the downloaded rpm accordingly.
 
 ```
 mkdir temp
