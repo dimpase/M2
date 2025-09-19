@@ -50,7 +50,7 @@ This will also work in stable Debian distributions, but it will install an older
 ```
 sudo apt update
 sudo apt install ca-certificates debian-keyring wget
-sudo wget -P /etc/apt/sources.list.d -O macaulay2.sources https://macaulay2.com/Repositories/Debian/trixie/macaulay2.sources
+sudo wget -O /etc/apt/sources.list.d/macaulay2.sources https://macaulay2.com/Repositories/Debian/trixie/macaulay2.sources
 sudo apt update
 sudo apt install macaulay2
 ```
@@ -59,7 +59,7 @@ sudo apt install macaulay2
 ```
 sudo apt update
 sudo apt install ca-certificates debian-keyring wget
-sudo wget -P /etc/apt/sources.list.d -O macaulay2.sources https://macaulay2.com/Repositories/Debian/bookworm/macaulay2.sources
+sudo wget -O /etc/apt/sources.list.d/macaulay2.sources https://macaulay2.com/Repositories/Debian/bookworm/macaulay2.sources
 sudo apt update
 sudo apt install macaulay2
 ```
@@ -68,7 +68,7 @@ sudo apt install macaulay2
 ```
 sudo apt update
 sudo apt install ca-certificates debian-keyring wget
-sudo wget -P /etc/apt/sources.list.d -O macaulay2.sources https://macaulay2.com/Repositories/Debian/bullseye/macaulay2.sources
+sudo wget -O /etc/apt/sources.list.d/macaulay2.sources https://macaulay2.com/Repositories/Debian/bullseye/macaulay2.sources
 sudo apt update
 sudo apt install macaulay2
 ```
