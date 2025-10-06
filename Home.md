@@ -16,7 +16,7 @@ You can also find your way around using the table of contents on the sidebar.
   + [[Emacs|Using Macaulay2 with Emacs]] (recommended)
   + [[Emacs via Org Mode|Using Macaulay2 with Org Mode]]
   + [[Sublime|Using Macaulay2 with Sublime]]
-  + [VSCode (discussion)](https://groups.google.com/g/macaulay2/c/FXhHePFYhuA/m/fqI3XGvuCQAJ)
+  + [VSCode](https://github.com/Macaulay2/M2/wiki/Using-Macaulay2-with-VSCode)
   + [highlight.js and reveal.js](https://github.com/d-torrance/highlightjs-macaulay2)
   + [[Jupyter|Using Macaulay2 with Jupyter]]
 - Macaulay2 Contribution Guides
