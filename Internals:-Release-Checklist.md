@@ -21,7 +21,7 @@ The convention for version numbers of Macaulay2 is this:
 
 * Things to do when incrementing the version number to X.Y.Z, say :
    - increment the version number in the file [`VERSION`](https://github.com/Macaulay2/M2/blob/stable/M2/VERSION)
-   - add an entry to [`distributions/deb/changelog`](https://github.com/Macaulay2/M2/blob/stable/M2/distributions/deb/changelog) (*TODO:* Is this still useful?)
+   - increment the version number and add an entry to [`M2/BUILD/rpm/Macaulay2.spec`](https://github.com/Macaulay2/M2/blob/stable/M2/BUILD/rpm/Macaulay2.spec) (*TODO:* Is this still useful?)
    - commit the two files and push upstream
 
 * Things to do when developing a binary release for version X.Y (or version X.Y.Z)
