@@ -6,7 +6,7 @@ After downloading the dependencies for your system (see below), do the following
 git clone https://github.com/Macaulay2/M2
 cd M2/M2/BUILD/build
 ../../autogen.sh
-../../configure --enable-download
+../../configure
 make
 sudo make install
 ```
@@ -120,9 +120,9 @@ Now run the following:
 
 You will likely need need to add one or more command-line options to `configure`.  For a complete list, run `../../configure --help`.  We now outline several of the most important options.
 
-## Enabling downloads
+## Disabling downloads
 
-In most builds, several of the dependencies must be downloaded and built.  In order to download the source for these dependencies, add the option `--enable-download` to `configure`.
+In many builds, several of the dependencies must be downloaded and built.  To disable this feature, add the option `--disable-download` to `configure`.
 
 ## Building with Python support
 
@@ -164,7 +164,7 @@ make.
 
 Now continue building the program this way:
 
-        ./configure --enable-download --prefix=/foo/bar
+        ./configure --prefix=/foo/bar
         make
         make check                      # optional
         make install
