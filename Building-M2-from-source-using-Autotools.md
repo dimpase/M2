@@ -103,6 +103,12 @@ code, switch to the `development` branch:
 
     git checkout development
 
+Alternatively, you may download a source tarball from the Macaulay2 website: https://macaulay2.com/Downloads/SourceCode/.  After downloading, unpack it:
+
+    tar -xvf Macaulay2-1.25.11.tar.gz
+
+Replace the version number as appropriate.
+
 # Configuring the build
 
 After downloading the dependencies and cloning the git repository, the next step is to generate and run the configuration script.  The `autogen.sh` script generates the `configure` script using [autoconf](https://www.gnu.org/software/autoconf/) and ensures that the [M2-emacs submodule](https://github.com/Macaulay2/M2-emacs) is updated.
@@ -111,6 +117,8 @@ After downloading the dependencies and cloning the git repository, the next step
 cd M2/M2/BUILD/build
 ../../autogen.sh
 ```
+
+Note that this step is unnecessary when using a source tarball, as the `configure` script and Emacs files are included.
 
 Now run the following:
 
