@@ -128,6 +128,17 @@ Now run the following:
 
 You will likely need need to add one or more command-line options to `configure`.  For a complete list, run `../../configure --help`.  We now outline several of the most important options.
 
+## Configuring the documentation
+
+The longest step in building Macaulay2 is generating all of the examples for the documentation.  By default, documentation is generated in html format, info format, and in database files used by the Macaulay2 `help` command.  Optionally, pdf documentation may be generated.  You can configure this behavior using the `--enable-documentation` option.
+
+It can take a space-delimited list containing any of `html`, `info`, or `pdf`, e.g., `--enable-documentation="html pdf"` will generate the html and pdf documentation, but not the info documentation.
+
+The database files are always generated, expect in the following cases:
+
+* `--disable-documentation`: No examples are generated.  This is highly discouraged, as the `help` command will be slowed down considerably since documentation will be generated on the fly.
+* `--enable-documentation=download`:  No examples are generated, but html, info, and database documentation are downloaded from the Macaulay2 website.  This option will only work for stable releases.
+
 ## Disabling downloads
 
 In many builds, several of the dependencies must be downloaded and built.  To disable this feature, add the option `--disable-download` to `configure`.
