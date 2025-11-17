@@ -37,7 +37,7 @@ The convention for version numbers of Macaulay2 is this:
 
          make -C Macaulay2/editors update-syntax-highlighting
 
-  - M2-emacs and other syntax highlighting files should be updated
+  - M2-emacs and other syntax highlighting files (vim, prism) should be updated
 
   - run `npm install` in `M2/Macaulay2/packages/Style` to make sure that our vendored copy of KaTeX is up to date.
 
@@ -289,7 +289,11 @@ There are some things about a new distribution of Macaulay2 that should be check
 
 # Post-Release Checklist
 
-- Update the [language-macaulay2](https://github.com/Macaulay2/language-macaulay2/) repository, which affects Macaulay2 syntax highlighting on GitHub and other places.
+- Grammars:
+  - [language-macaulay2](https://github.com/Macaulay2/language-macaulay2/), which affects Macaulay2 syntax highlighting on GitHub and other places.
+  - [highlightjs-macaulay2](https://github.com/d-torrance/highlightjs-macaulay2), used by reveal.js
+  - [codemirror-lang-macaulay2](https://github.com/d-torrance/codemirror-lang-macaulay2), used by [jupyterlab-macaulay2](https://github.com/d-torrance/jupyterlab-macaulay2), which is used by the Jupyter kernel
+  - [pygments](https://github.com/pygments/pygments) (open a PR), used by the Jupyter kernel and minted
 - Update the [testbot container](https://github.com/Macaulay2/M2/tree/stable/M2/BUILD/docker/testbot), which is used in workshop repositories.
 - Binary distributions:
   - [Homebrew](https://github.com/Macaulay2/homebrew-tap)
