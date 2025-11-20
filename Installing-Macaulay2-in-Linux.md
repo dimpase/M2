@@ -7,6 +7,7 @@
    * [Installing .rpm files without root access](#installing-rpm-files-without-root-access)
 - [Arch Linux](#arch-linux)
 - [Homebrew on Linux](#homebrew-on-linux)
+- [Spack](#spack)
 
 # APT-based distributions
 
@@ -150,3 +151,7 @@ Macaulay2 bottles are available for x86_64 Linux systems through Homebrew. Follo
 ```
 brew install Macaulay2/tap/M2
 ```
+
+# Spack
+
+See https://github.com/d-torrance/macaulay2-spack-packages.
