@@ -163,58 +163,6 @@ against [libffi](https://sourceware.org/libffi/).  This has been known to
 cause issues on some machines, and so it is possible to opt out of
 this feature by adding the `--without-libffi` option to `configure`.
 
-# Compiling Macaulay2
-
-Now the directory to be in is the one containing this file in the source
-distribution -- it is called "M2", and is a subdirectory of the top level
-directory of the source tree.  If you are reading this file on the web, it may
-be more convenient to switch now to reading it in its location in the source
-tree.
-
-Begin with this command:
-
-        make
-
-The "make" command above runs the commands "autoconf" and "autoheader", which
-create the "configure" script and the "include/config.h.in" file, needed in the
-next steps.  Once those files are created, it is not necessary to make them
-again.  The "make" command on your system should be a recent version of GNU
-make.
-
-Now continue building the program this way:
-
-        ./configure --prefix=/foo/bar
-        make
-        make check                      # optional
-        make install
-
-Remember to add any options specified above, in the section for your particular
-operating system, to the "configure" command line.
-
-Files will then be installed in the following directories:
-
-        /foo/bar/bin
-        /foo/bar/share/Macaulay2
-        /foo/bar/share/doc/Macaulay2
-        /foo/bar/share/man/man1
-        /foo/bar/share/emacs/site-lisp
-        /foo/bar/lib/Macaulay2
-
-The Macaulay2 program itself will be located at /foo/bar/bin/M2.
-
-Choose an appropriate directory path, instead of /foo/bar, as the installation
-prefix, or omit the option entirely for installation in /usr/local.
-
-Note: the "make" program in the commands above should be at least version 4.
-Under Mac OS X, one encounters an old version of "make", so it is better to use
-the "gmake" program, as provided by "brew", and installed according to the
-instructions above.
-
-To take advantage of parallelism when running "make", append an option of
-the form "-jN" to the command line, where "N" is replaced by the number of
-processors you wish to devote to the task.  (Our makefiles are just beginning to
-take advantage of this.)
-
 To enable the running of the NTL "wizard", which conducts time consuming
 experiments to optimize the speed of its code, before compiling it, add the
 option --enable-ntl-wizard to the "configure" command line above.
@@ -248,40 +196,25 @@ The only one of these variables with a nonempty default value is
 CFLAGS, and its default value is "-g -O2".  That will be supplanted if
 you override it.
 
+# Compiling Macaulay2
+
+After configuring Macaulay2, the next step is to run `make` from the same directory that you ran `configure`.  This should be GNU make, so if you are on a macOS or *BSD system, then use `gmake` instead.
+
+```
+make
+sudo make install
+```
+
+To take advantage of parallelism when running "make", append an option of
+the form "-jN" to the command line, where "N" is replaced by the number of
+processors you wish to devote to the task.  (Our makefiles are just beginning to
+take advantage of this.)
+
+
 To specify a different installation location for the "make install" command you
 may add an option to the "make install" line, as follows:
 
         make install prefix=/foo/bar
-
-To make an encapsulated directory tree or distribution tarball suitable for use
-with the program "epkg" (see https://github.com/DanGrayson/epkg), add the option
-
-        --enable-encap
-
-to the "configure" command above.
-
-The effect is to insert one more component into the path names used at
-installation time, so that in response to 
-
-        make prefix=/foo/bar install
-
-files will be installed in the following directories:
-
-        /foo/bar/Macaulay2-*/bin
-        /foo/bar/Macaulay2-*/share/Macaulay2
-        /foo/bar/Macaulay2-*/share/doc/Macaulay2
-        /foo/bar/Macaulay2-*/share/man/man1
-        /foo/bar/Macaulay2-*/share/emacs/site-lisp
-        /foo/bar/Macaulay2-*/lib/Macaulay2
-
-Each * above is replaced by the current version number.  There will
-also be a few extra files placed in the directory /foo/bar/Macaulay2-*
-which instruct epkg how to make appropriate symbolic links to install
-our program, and how to initialize the dumped data file, if present:
-
-        /foo/bar/Macaulay2-*/encapinfo
-        /foo/bar/Macaulay2-*/postinstall
-        /foo/bar/Macaulay2-*/preremove
 
 # Compiling for multiple machine architectures
 
