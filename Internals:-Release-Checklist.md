@@ -293,6 +293,8 @@ There are some things about a new distribution of Macaulay2 that should be check
   - [language-macaulay2](https://github.com/Macaulay2/language-macaulay2/), which affects Macaulay2 syntax highlighting on GitHub and other places.
   - [highlightjs-macaulay2](https://github.com/d-torrance/highlightjs-macaulay2), used by reveal.js
   - [codemirror-lang-macaulay2](https://github.com/d-torrance/codemirror-lang-macaulay2), used by [jupyterlab-macaulay2](https://github.com/d-torrance/jupyterlab-macaulay2), which is used by the Jupyter kernel
+  - [vscode-macaulay2](https://github.com/Macaulay2/vscode-macaulay2)
+    - `npm run update` updates the the TextMate grammar used by the VS Code extension
   - [pygments](https://github.com/pygments/pygments) (open a PR), used by the Jupyter kernel and minted
 - Update the [testbot container](https://github.com/Macaulay2/M2/tree/stable/M2/BUILD/docker/testbot), which is used in workshop repositories.
 - Binary distributions:
