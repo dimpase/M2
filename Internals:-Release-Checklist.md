@@ -296,6 +296,8 @@ There are some things about a new distribution of Macaulay2 that should be check
   - [vscode-macaulay2](https://github.com/Macaulay2/vscode-macaulay2), the VS Code extension for Macaulay2
     - `npm run update` updates the the TextMate grammar
   - [pygments](https://github.com/pygments/pygments) (open a PR), used by the Jupyter kernel and minted
+  - [Macaulay2Web](https://github.com/pzinn/Macaulay2Web/pull/41)
+    - `npm run update-symbols` updates the autocompletion symbols
 - Update the [testbot container](https://github.com/Macaulay2/M2/tree/stable/M2/BUILD/docker/testbot), which is used in workshop repositories.
 - Binary distributions:
   - [Homebrew](https://github.com/Macaulay2/homebrew-tap)
