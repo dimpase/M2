@@ -1,6 +1,6 @@
 To install the Macaulay2 Jupyter kernel and start Jupyter, run the following.  Note that Macaulay2 should already be installed on your system.
 
-```
+```sh
 mkdir m2-jupyter
 python3 -m venv m2-jupyter
 source m2-jupyter/bin/activate
@@ -14,7 +14,7 @@ At this point, your web browser should open with an instance of JupyterLab.  Cli
 
 After it's installed, then further sessions only need the following:
 
-```
+```sh
 source m2-jupyter/bin/activate
 jupyter lab
 ```
