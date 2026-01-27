@@ -5,9 +5,9 @@ mkdir m2-jupyter
 python3 -m venv m2-jupyter
 source m2-jupyter/bin/activate
 pip install git+https://github.com/Macaulay2/Macaulay2-Jupyter-Kernel
-pip install jupyterlab
 python3 -m m2_kernel install --user
-jupyter lab
+pip install jupyterlab # or 'pip install notebook' for Jupyter Notebook
+jupyter lab # or 'jupyter notebook'
 ```
 
 At this point, your web browser should open with an instance of JupyterLab.  Click on the "M2" icon to open up to a new Macaulay2 notebook.
