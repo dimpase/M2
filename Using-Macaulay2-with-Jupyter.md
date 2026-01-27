@@ -6,7 +6,7 @@ python3 -m venv m2-jupyter
 source m2-jupyter/bin/activate
 pip install git+https://github.com/Macaulay2/Macaulay2-Jupyter-Kernel
 pip install jupyterlab
-python3 -m m2_kernel.install
+python3 -m m2_kernel install --user
 jupyter lab
 ```
 
