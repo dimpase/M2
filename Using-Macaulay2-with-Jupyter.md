@@ -19,4 +19,8 @@ source m2-jupyter/bin/activate
 jupyter lab
 ```
 
-See also [this demo notebook](https://nbviewer.org/github/Macaulay2/Macaulay2-Jupyter-Kernel/blob/master/demo/demo.ipynb) and the [kernel git repository](https://github.com/Macaulay2/Macaulay2-Jupyter-Kernel).
+See also:
+
+* [this demo notebook](https://nbviewer.org/github/Macaulay2/Macaulay2-Jupyter-Kernel/blob/master/demo/demo.ipynb)
+* the [kernel git repository](https://github.com/Macaulay2/Macaulay2-Jupyter-Kernel)
+* [Macaulay2 + JupyterLab in GitHub Codespaces](https://github.com/d-torrance/codespaces-jupyter-macaulay2)
