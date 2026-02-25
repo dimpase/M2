@@ -286,6 +286,16 @@ There are some things about a new distribution of Macaulay2 that should be check
 		   currentString:1:16:(3):[15]: error: before eval: --backtrace update-- 
     ```
 * Occasionally test all the packages that cache their example output.  This can be done on a machine where you have installed all the prerequisite external programs for those packages (see `../../M2/INSTALL`, "Rerunning the package examples"), with a fresh build tree, by adding the command line option RerunExamples=true to the `make` command.  If you forgot to do that the first time around, you can first clean the packages with `make clean-packages` in the `M2/Macaulay2/packages` directory of the build tree.
+* Ensure that aborting works (see [#1099](https://github.com/Macaulay2/M2/issues/1099), [#4145](https://github.com/Macaulay2/M2/pull/4145)):
+  ```m2
+  i1 : debug Core; spin 1000000
+   ^C^C
+   Exit (y=yes/n=no/a=abort/b=backtrace)? a
+   returning to top level
+
+   i3 : 
+   ```
+  
 
 # Post-Release Checklist
 
