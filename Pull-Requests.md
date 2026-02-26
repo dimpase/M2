@@ -4,7 +4,7 @@ Before diving into the full guide, here are the top things that trip up even exp
 
 * Target the `development` branch
 
-  The default branch is `master`, which contains a snapshot of the most recent stable release of Macaulay2.  However, nearly all pull requests should target `development`, which is where code for the next release of Macaulay2 is maintained.  Since it's not the default branch, you will need to manually select it from a drop-down menu when creating a pull request.
+  The default branch is `stable`, which contains a snapshot of the most recent stable release of Macaulay2.  However, nearly all pull requests should target `development`, which is where code for the next release of Macaulay2 is maintained.  Since it's not the default branch, you will need to manually select it from a drop-down menu when creating a pull request.
 
   ![image](https://github.com/user-attachments/assets/82e5ab0d-d36a-4b8c-99a3-e88226aadece)
 
@@ -39,31 +39,27 @@ This section describes the steps for contributing a new package or changes to ex
 In order to open a "[pull request]" (PR) you need to:
 
 0. confirm that you can access GitHub by running `ssh -T git@github.com`. See [this page](https://github.com/Macaulay2/M2/wiki/Git-for-Workshop-participants) if you get authentication errors.
-1. create your own "[fork]" of the Macaulay2 repository on GitHub by clicking [here](https://github.com/Macaulay2/M2/fork).
-2. create a local "[clone]" of the new repository on your computer by running:
+1. create your own "[fork]" of the Macaulay2 repository on GitHub by clicking [here](https://github.com/Macaulay2/M2/fork). At this step it is important that all branches (including `development`) are copied, so **uncheck** the option "Copy the `stable` branch only".
+2. create a local "[clone]" of the branch `development` of the new repository on your computer by running:
 ```
 # Replace <USERNAME> with your GitHub username
-git clone git@github.com:<USERNAME>/M2.git && cd M2
+git clone -b development git@github.com:<USERNAME>/M2.git && cd M2
 ```
-3. add the original Macaulay2 repository as the remote "[upstream]" by running:
+3. finally, check that indeed the `development` has been cloned
 ```
-git remote add -f -t development -m development upstream git@github.com:Macaulay2/M2.git
-```
-4. finally, "[checkout]" the development "[branch]" by running:
-```
-git checkout development
+git branch
 ```
 
 
-## On your computer: 
+## If the Macaulay2 repository has already been forked and the `development` branch cloned:
 * Suppose that the Macaulay 2 repo is called foo/M2. Change to that directory.
 ### Move to your own development branch and update it
-* Type git branch to see your branches. If you see one called "development", but it is not starred, do 
+* Type `git branch` to see your branches. If you see one called `development`, but it is not starred, do 
   * `git switch development`
-to change to it. If you do not see a development branch, you can get one with 
+to change to it. If you do not see a `development` branch, you can get one with 
   * `git fetch development`
   * `git switch development`
-* Make sure your development branch is up to date with Macaulay2', 
+* Make sure your development branch is up to date with Macaulay2's, 
   * do this by going to `github.com/USERNAME/M2` (where USERNAME as above is your github name)
   * change to the development branch (drop-down menu with the branch name)
   * then use the drop down "Sync fork" button, to sync with Macaulay2's development branch.
@@ -89,6 +85,4 @@ fix them. Make the necessary changes to your files on your machine in `foo/M2/M2
 [fork]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#fork
 [pull request]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#pull-request
 [clone]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#clone
-[checkout]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#checkout
 [branch]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#branch
-[upstream]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#upstream
