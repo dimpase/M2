@@ -4,7 +4,7 @@ To install the Macaulay2 Jupyter kernel and start Jupyter, run the following.  N
 mkdir m2-jupyter
 python3 -m venv m2-jupyter
 source m2-jupyter/bin/activate
-pip install git+https://github.com/Macaulay2/Macaulay2-Jupyter-Kernel
+pip install macaulay2-jupyter-kernel
 python3 -m m2_kernel install --user
 pip install jupyterlab # or 'pip install notebook' for Jupyter Notebook
 jupyter lab # or 'jupyter notebook'
