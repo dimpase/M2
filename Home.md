@@ -28,6 +28,7 @@ You can also find your way around using the table of contents on the sidebar.
 - Macaulay2 Workshop Guides
   + [[Git for Workshop Participants]]
   + [[Zulip Guide]]
+  + [[Guide for Workshop Organizers]]
 - Miscellaneous
   + [[M2 Internals|Internals: Meeting Notes]] monthly meetings
   + [[Macaulay2: under the hood]]
