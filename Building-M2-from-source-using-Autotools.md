@@ -20,7 +20,7 @@ Here are some dependencies you may have to install on your system to build Macau
 ## Arch Linux
 
 ```
-sudo pacman -S 4ti2 autoconf automake bison boost cddlib coin-or-csdp eigen fflas-ffpack flex flint gc gcc gcc-fortran gfan git givaro glpk gtest icu libtool libxml2 lrs make mpfi nauty normaliz ntl onetbb openblas patch pkgconf python singular texinfo time topcom which
+sudo pacman -S 4ti2 autoconf automake bison boost boost-libs cddlib coin-or-csdp eigen fflas-ffpack flex flint gc gcc gcc-fortran gfan git givaro glpk gtest icu libtool libxml2 lrs make mpfi nauty normaliz ntl onetbb openblas patch pkgconf python singular texinfo time topcom which
 ```
 *Note:*
 - cohomCalg, Frobby, Mathic, Mathicgb, Memtailor, and MPSolve are not available as packages on Arch Linux and will be downloaded and built.  Alternatively, Frobby is available in the [Arch User Repository](https://aur.archlinux.org/packages/frobby).
