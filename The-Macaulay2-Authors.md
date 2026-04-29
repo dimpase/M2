@@ -42,5 +42,4 @@ Paul Zinn-Justin
 Radoslav Zlatev
 
 
-See also the many [authors of Macaulay2 packages]
-(https://www.macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/___The_spauthors_spof_sp__Macaulay2_sppackages.html)
+See also the many [authors of Macaulay2 packages](https://www.macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/___The_spauthors_spof_sp__Macaulay2_sppackages.html)
