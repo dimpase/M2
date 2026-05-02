@@ -9,7 +9,7 @@ A typical outcome of joining a project would be writing a Macaulay2 package, pub
     - See [[Project: Template]] for a template of a project description. Pay particular attention to the information in the header.
   - To volunteer to work on a project (or ask questions), contact the potential advisors listed on the project.
   - Another source for projects is [GitHub issues](https://github.com/Macaulay2/M2/issues), in particular those with labels:
-    [enhancement](https://github.com/Macaulay2/M2/labels/enhancement), 
+    [feature](https://github.com/Macaulay2/M2/issues?q=state%3Aopen%20type%3AFeature), 
     [contributions welcome](https://github.com/Macaulay2/M2/labels/contributions%20welcome),
     [good beginners' project](https://github.com/Macaulay2/M2/labels/good%20beginners%27%20project), and
     [seeking a volunteer](https://github.com/Macaulay2/M2/labels/seeking%20a%20volunteer).
