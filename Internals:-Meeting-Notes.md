@@ -22,6 +22,8 @@ This page contains notes from the **M2internals** meetings. Feel free to join th
 - Case studies
   - [[Internals: Adding a Function in Engine, Interpreter, and Core]]
   - [[Internals: Adding a Library for Interval Arithmetic]]
+- Instructive Issues
+  - [#1567](/Macaulay2/M2/issues/1567): hashes and === for function closures
 - Web servers
   - [[Internals: InteractiveShell]]
   - [[Internals: Macaulay2Web]]
