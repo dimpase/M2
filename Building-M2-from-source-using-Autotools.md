@@ -20,7 +20,7 @@ Here are some dependencies you may have to install on your system to build Macau
 ## Arch Linux
 
 ```
-sudo pacman -S 4ti2 autoconf automake bison boost boost-libs cddlib coin-or-csdp eigen fflas-ffpack flex flint gc gcc gcc-fortran gfan git givaro glpk gtest icu libtool libxml2 lrs make mpfi nauty normaliz ntl onetbb openblas patch pkgconf python singular texinfo time topcom which
+sudo pacman -S 4ti2 autoconf automake bison boost boost-libs cddlib coin-or-csdp eigen fflas-ffpack flex flint gc gcc gcc-fortran gfan git givaro glpk gtest icu jansson libtool libxml2 lrs make mpfi nauty normaliz ntl onetbb openblas patch pkgconf python singular texinfo time topcom which
 ```
 *Note:*
 - cohomCalg, Frobby, Mathic, Mathicgb, Memtailor, and MPSolve are not available as packages on Arch Linux and will be downloaded and built.  Alternatively, Frobby is available in the [Arch User Repository](https://aur.archlinux.org/packages/frobby).
@@ -34,7 +34,7 @@ sudo apt install 4ti2 autoconf automake bison ca-certificates cohomcalg coinor-c
 ## Fedora
 
 ```
-sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel cohomCalg csdp-tools diffutils eigen3-devel factory-devel fflas-ffpack-devel flex flint-devel g++ gc-devel gcc-gfortran gdbm-devel gfan git glpk-devel gmp-devel gtest-devel lapack-devel libffi-devel libfrobby-devel libnauty-devel libnormaliz-devel libtool libxml2-devel lrslib-utils make mathic-devel mathicgb-devel memtailor-devel mpfi-devel mpfr-devel mpsolve-devel msolve nauty ncurses-devel normaliz ntl-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
+sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel cohomCalg csdp-tools diffutils eigen3-devel factory-devel fflas-ffpack-devel flex flint-devel g++ gc-devel gcc-gfortran gdbm-devel gfan git glpk-devel gmp-devel gtest-devel jansson-devel lapack-devel libffi-devel libfrobby-devel libnauty-devel libnormaliz-devel libtool libxml2-devel lrslib-utils make mathic-devel mathicgb-devel memtailor-devel mpfi-devel mpfr-devel mpsolve-devel msolve nauty ncurses-devel normaliz ntl-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
 ```
 *Note:*
 - In Fedora 41 and later, lrslib should be loaded as an environment module:
@@ -69,20 +69,22 @@ brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
 ## Red Hat Enterprise Linux
 
 ```
-sudo dnf install autoconf automake bison boost-devel bzip2 diffutils flex flexiblas-devel gcc-c++ gcc-gfortran git gmp-devel info libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
+sudo dnf install autoconf automake bison boost-devel bzip2 diffutils flex flexiblas-devel gcc-c++ gcc-gfortran git gmp-devel info jansson-devel libffi-devel libtool libxml2-devel make mpfr-devel ncurses-devel patch python3-devel readline-devel tbb-devel which xz-devel zlib-devel
 ```
 Remove `flexiblas-devel` if you are on RHEL 8.
 
 If you have the [EPEL](https://docs.fedoraproject.org/en-US/epel/) enabled, then also install the following:
 ```
-sudo dnf install eigen3 gc-devel gdbm-devel glpk-devel gtest-devel
+sudo dnf install eigen3 gc-devel gdbm-devel glpk-devel gtest-devel jansson-devel
 ```
+
+If you do not have EPEL enabled, then either install [Jansson](https://github.com/akheron/jansson) manually or build Macaulay2 without Jansson support by passing `--without-jansson` to `configure`.
 
 
 ## OpenSUSE Tumbleweed
 
 ```
-sudo zypper install 4ti2 autoconf automake bison boost-devel bzip2 cddlib-devel cmake diffutils e-antic-devel eigen3-devel fflas-ffpack-devel flex flint-devel gawk gc-devel gcc gcc-c++ gcc-fortran gdbm-devel gfan git givaro-devel glpk-devel gmp-devel gtest libboost_regex-devel libboost_stacktrace-devel libfactory-devel libfactory-gftables libffi-devel libtool libxml2-devel lrslib make mpfi-devel mpfr-devel nauty ncurses-devel normaliz normaliz-devel ntl-devel openblas-devel patch pkgconf python3-devel tbb-devel which xz-devel zlib-devel
+sudo zypper install 4ti2 autoconf automake bison boost-devel bzip2 cddlib-devel cmake diffutils e-antic-devel eigen3-devel fflas-ffpack-devel flex flint-devel gawk gc-devel gcc gcc-c++ gcc-fortran gdbm-devel gfan git givaro-devel glpk-devel gmp-devel gtest libboost_regex-devel libboost_stacktrace-devel libfactory-devel libfactory-gftables libffi-devel libjansson libtool libxml2-devel lrslib make mpfi-devel mpfr-devel nauty ncurses-devel normaliz normaliz-devel ntl-devel openblas-devel patch pkgconf python3-devel tbb-devel which xz-devel zlib-devel
 ```
 
 ## Gentoo
