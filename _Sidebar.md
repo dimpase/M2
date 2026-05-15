@@ -4,5 +4,3 @@
 * [[Git for Macaulay2 Contributors]]
   - [[Pull Requests]]
 * [[M2 Internals|Internals: Meeting Notes]]
-
-can I do this?
