@@ -49,7 +49,7 @@ sudo dnf install 4ti2 TOPCOM autoconf automake bison boost-devel cddlib-devel co
 Most dependencies require first installing [Homebrew](https://brew.sh/).
 
 ```
-brew install autoconf automake make texinfo libomp bdw-gc cddlib googletest
+brew install autoconf automake gnu-tar make texinfo libomp bdw-gc cddlib googletest
 brew install --only-dependencies Macaulay2/tap/M2
 brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
 ```
