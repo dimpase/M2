@@ -66,6 +66,20 @@ brew install Macaulay2/tap/memtailor Macaulay2/tap/mathic Macaulay2/tap/mathicgb
   ```
   Replace the Python and gfortran version numbers with the ones appropriate for your system.
 
+### OSX and `/usr/local` permissions issues and workaround
+Some versions of OSX restrict write operations to the `/usr/local` directory even when running with `sudo`. If you encounter permission errors when building from source -specifically in the final install step, then you can try going back to the configure step and running configure with a different prefix
+
+```
+../../configure --prefix=$HOME/my-m2
+```
+You will want to make sure that the install location is on your path by placing something like
+
+```
+PATH="$PATH:$HOME/my-m2/bin"
+```
+
+in your shells .rc file (.zshrc, etc).
+
 ## Red Hat Enterprise Linux
 
 ```
