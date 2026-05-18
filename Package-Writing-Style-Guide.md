@@ -7,8 +7,8 @@
     * The name string in `newPackage("MyPackage", ...)` must match the filename `MyPackage.m2`.
     * Avoid acronyms and prefer unabbreviated English words in identifier names such as names of packages, functions/methods, classes/types.
     * Names representing types should be nouns and written in PascalCase (mixed case starting with upper case). Examples: `CoherentSheaf`, `NormalToricVariety`
-    * Names representing optional arguments should be capitalized.  Examples: `RunExamples`.
-    * Variable names must be in camelCase (mixed case starting with lower case).
+    * Names representing optional arguments should be in PascalCase.  Example: `DebuggingMode =>`.
+    * Variable names must be in camelCase (mixed case starting with lower case). Example: `debuggingMode`.
     * Naming of method functions:
         * Use existing symbols, when possible. Examples: `dim`, `length`, `map`, etc.
         * Names should be written in mixed case starting with lower case. Example: `normalToricVariety`
