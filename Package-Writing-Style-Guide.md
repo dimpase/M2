@@ -20,9 +20,8 @@
     * Use the prefix "is" for Boolean variables and methods.  Examples:
          * `isPolynomialRing`, `isPrimary`, `isPrime`, `isPrimitive`
     * Avoid abbreviations in exported names. Example: use "formalDepth", not "fD"
-    * Naming of keys in hash tables:
-        * Use existing symbols, when possible.  Examples:
-             * `source` and `target`, as keys for the source and target of a map
+    * For keys in hash tables, use existing symbols, when possible.  Examples:
+              `source` and `target`, as keys for the source and target of a map
     * Optional arguments:
         * Use PascalCase.  Example: `DebuggingMode =>`.
         * Use existing names, when possible.  Examples:
