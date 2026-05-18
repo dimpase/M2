@@ -3,22 +3,23 @@
     * Use Unicode where appropriate, as in names of authors.
 
 * Naming conventions :
-    * Do not include spaces or special characters in identifier names.
-    * Do not start with a number.
+    * Valid names may be constructed using letters, digits, and the apostrophe, and should begin with a letter.
     * Avoid acronyms and prefer unabbreviated English words.
     * Package names
         * Capitalize package names using PascalCase.  When a package is named after a specific kind of mathematical object, and especially when it exports a type representing that object, the package name should use the plural form of the object’s name. For example, `NormalToricVarieties` is a package that defines and exports the `NormalToricVariety` type.  This convention helps users distinguish between the type (a single instance of the object) and the package (a collection of tools for working with such objects).
-        * Preserve the distinction between file names, such as `Foo.m2`, and package names, such as _Foo_. A package is an academic work, consisting possibly of multiple files.  Set package names in italic.
         * The name string in `newPackage("MyPackage", ...)` needs to match the filename `MyPackage.m2` for `loadPackage` to find the file.         
     * Types should be nouns and written in PascalCase. Examples: `CoherentSheaf`, `NormalToricVariety`
     * Method functions:
-        * Use existing symbols when possible. Examples: `dim`, `length`, `map`, etc.
-        * Use camelCase. Examples: `groebnerBasis`, 
-        * Method names should not include the name of the type of object expected as argument, since the idea
-      of such methods is that they are mathematical abstractions that act on a variety of types of
-      mathematical object.
-    * Use the prefix "is" for Boolean variables and methods.  Examples:
-         * `isPolynomialRing`, `isPrimary`, `isPrime`, `isPrimitive`
+        * Use existing method names when appropriate for new datatypes. Examples: for a type `MyIdeal`, you may define 
+        ```m2
+        dim MyIdeal := ... 
+        degree MyIdeal := ... 
+        MyIdeal : MyIdeal := ...
+        ```
+        etc.
+        * Use camelCase. Examples: `groebnerBasis`, `isPrime`, `normalToricVariety`.
+        * Method names should not include the name of the type of object expected as argument. Example: instead of `dimMyIdeal` use `dim`.
+    * Use the prefix "is" for Boolean variables and methods.  Examples: `isPolynomialRing`, `isPrimary`, `isPrime`, `isPrimitive`.
     * Avoid abbreviations in exported names. Example: use "formalDepth", not "fD"
     * For keys in hash tables, use existing symbols, when possible.  Examples:
               `source` and `target`, as keys for the source and target of a map
