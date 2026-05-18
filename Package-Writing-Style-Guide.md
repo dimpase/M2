@@ -6,7 +6,7 @@
     * Package names
         * Capitalize package names using PascalCase.  When a package is named after a specific kind of mathematical object, and especially when it exports a type representing that object, the package name should use the plural form of the object’s name. For example, `NormalToricVarieties` is a package that defines and exports the `NormalToricVariety` type.  This convention helps users distinguish between the type (a single instance of the object) and the package (a collection of tools for working with such objects).
         * Preserve the distinction between file names, such as `Foo.m2`, and package names, such as _Foo_. A package is an academic work, consisting possibly of multiple files.  Set package names in italic.
-    * The name string in `newPackage("MyPackage", ...)` needs to match the filename `MyPackage.m2` for `loadPackage` to find the file.
+        * The name string in `newPackage("MyPackage", ...)` needs to match the filename `MyPackage.m2` for `loadPackage` to find the file.
     * For identifier names such as names of packages, functions/methods, classes/types:
          * Do not use spaces or special characters.
          * Do not start with a number.
