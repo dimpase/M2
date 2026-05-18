@@ -3,36 +3,33 @@
     * Use Unicode where appropriate, as in names of authors.
 
 * Naming conventions :
-    * Package names should be capitalized.  When a package is named after a specific kind of mathematical object, and especially when it exports a type representing that object, the package name should use the plural form of the object’s name. For example, `NormalToricVarieties` is a package that defines and exports the `NormalToricVariety` type.  This convention helps users distinguish between the type (a single instance of the object) and the package (a collection of tools for working with such objects).
-    * The name string in `newPackage("MyPackage", ...)` must match the filename `MyPackage.m2`.
+    * Packages
+        * Package names should be capitalized.  When a package is named after a specific kind of mathematical object, and especially when it exports a type representing that object, the package name should use the plural form of the object’s name. For example, `NormalToricVarieties` is a package that defines and exports the `NormalToricVariety` type.  This convention helps users distinguish between the type (a single instance of the object) and the package (a collection of tools for working with such objects).
+        * Preserve the distinction between file names, such as `Foo.m2`, and package names, such as _Foo_. A package is an academic work, consisting possibly of multiple files.  Set package names in italic.
+    * The name string in `newPackage("MyPackage", ...)` needs to match the filename `MyPackage.m2` for `loadPackage` to find the file.
     * For identifier names such as names of packages, functions/methods, classes/types:
          * Do not use spaces or special characters.
          * Do not start with a number.
          * Avoid acronyms and prefer unabbreviated English words in identifier names.
-         * Names representing types should be nouns and written in PascalCase (mixed case starting with upper case). Examples: `CoherentSheaf`, `NormalToricVariety`
-         * Names representing optional arguments should be in PascalCase.  Example: `DebuggingMode =>`.
-         * Variable names should be in camelCase (mixed case starting with lower case). Example: `debuggingMode`.
-    * Naming of method functions:
-        * Use existing symbols, when possible. Examples: `dim`, `length`, `map`, etc.
-        * Names should be written in mixed case starting with lower case. Example: `normalToricVariety`
+    * Names representing types should be nouns and written in PascalCase. Examples: `CoherentSheaf`, `NormalToricVariety`
+    * Method functions:
+        * Use existing symbols when possible. Examples: `dim`, `length`, `map`, etc.
+        * Use camelCase. Examples: `groebnerBasis`, 
         * Method names should not include the name of the type of object expected as argument, since the idea
       of such methods is that they are mathematical abstractions that act on a variety of types of
       mathematical object.
-    * The prefix "is" should be used for Boolean variables and methods.  Examples:
+    * Use the prefix "is" for Boolean variables and methods.  Examples:
          * `isPolynomialRing`, `isPrimary`, `isPrime`, `isPrimitive`
-    * Abbreviations in exported names should be avoided. Examples:
-        * Correct: "formalDepth".  Incorrect: "fD"
+    * Avoid abbreviations in exported names. Example: use "formalDepth", not "fD"
     * Naming of keys in hash tables:
         * Use existing symbols, when possible.  Examples:
              * `source` and `target`, as keys for the source and target of a map
-    * Naming of optional arguments:
-        * Names of optional arguments should be capitalized
+    * Optional arguments:
+        * Use PascalCase.  Example: `DebuggingMode =>`.
         * Use existing names, when possible.  Examples:
             * `Verify` : whether to check that a result is correct or well defined
             * `Verbose` : whether to print extra information
-    * Preserve the distinction between file names, such as `Foo.m2`, and package names, such as _Foo_.
-      A package is an academic work, consisting possibly of multiple files.  Set package
-      names in italic.
+
 
 * Use of types
     * Do not use an object of one type to "represent" an object of another.
