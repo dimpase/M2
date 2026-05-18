@@ -4,7 +4,7 @@
 
 * Naming conventions :
     * Package names should be capitalized.  When a package is named after a specific kind of mathematical object, and especially when it exports a type representing that object, the package name should use the plural form of the object’s name. For example, `NormalToricVarieties` is a package that defines and exports the `NormalToricVariety` type.  This convention helps users distinguish between the type (a single instance of the object) and the package (a collection of tools for working with such objects).
-    * The name string in newPackage("MyPackage", ...) must match the filename MyPackage.m2
+    * The name string in `newPackage("MyPackage", ...)` must match the filename `MyPackage.m2`.
     * Avoid acronyms in identifier names such as names of packages, functions/methods, classes/types.
     * Prefer unabbreviated English words in identifier names.
     * Names representing types should be nouns and written in mixed case starting with upper case. Examples:
