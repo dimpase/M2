@@ -36,9 +36,7 @@
     * Do not introduce a function that performs two consecutive operations, when it would be 
            clearer to factor it into a composite of two functions.  If necessary, introduce
            a new type to serve as the type of the intermediate result.
-    * It is usually a mistake to test whether the class of an object is equal to a certain class,
-       because that disables inheritance.  In other words, instead of writing something like
-       `class x === T`, write `instance(x,T)`.
+    * The check whether an object is an instance of a certain class, use `instance(x,T)` and not `class x === T` as the latter disables inheritance.  
 
 * Use of optional arguments
     * A multiplicity of method functions that are simple variations of each other may
