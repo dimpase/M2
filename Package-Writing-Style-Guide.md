@@ -43,11 +43,8 @@
       be better to combine them into a single method with appropriately named optional arguments.
 
 * Algorithms
-    * Do not convert an order n algorithm into an order n^2 algorithm by repeated
-      concatenation of lists or of matrices.  Similarly, do not repeatedly append or prepend
-      something to a list, and do not repeatedly remove single items from a list.
-      Hash tables are your friend here. 
-      Notice also that the `for ... list ...` command offers a convenient way to make a list.
+    * Avoid appending pr prepending an element to list or a vector to a matrix, especially inside a loop. Since M2 lists and matrices are immutable, it is costly to do so.  Similarly, do not repeatedly remove single items from a list.  Instead, use `apply`, `for ... list ...` commands, or hash tables.
+
 
 * Order of arguments:
     * Functions should take arguments in increasing order of complexity.  For example, if the 
