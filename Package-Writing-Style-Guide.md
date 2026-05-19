@@ -39,9 +39,8 @@
     * The check whether an object is an instance of a certain class, use `instance(x,T)` and not `class x === T` as the latter disables inheritance.  
 
 * Use of optional arguments
-    * A multiplicity of method functions that are simple variations of each other may
-      indicate that simplification is possible if named optional arguments are used
-      appropriately.
+    * Instead of having multiple method functions that are simple variations of each other, it may
+      be better to combine them into a single method with appropriately named optional arguments.
 
 * Algorithms
     * Do not convert an order n algorithm into an order n^2 algorithm by repeated
