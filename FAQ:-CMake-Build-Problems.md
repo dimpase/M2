@@ -1,4 +1,4 @@
-Below are a list of common issues and errors related to the CMake build. See the [install guide](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL-CMake.md) for instructions on how to build Macaulay2 using CMake. If you run into a problem not listed below or among the list of issues labeled with [build system](https://github.com/Macaulay2/M2/labels/build%20system), please open a [new issue](https://github.com/Macaulay2/M2/issues/new).
+Below are a list of common issues and errors related to the CMake build. See the [install guide](https://github.com/Macaulay2/M2/blob/master/M2/INSTALL-CMake.md) (this is a dead link) for instructions on how to build Macaulay2 using CMake. If you run into a problem not listed below or among the list of issues labeled with [build system](https://github.com/Macaulay2/M2/labels/build%20system), please open a [new issue](https://github.com/Macaulay2/M2/issues/new).
 
 <details>
 <summary>Installing dependencies using Linuxbrew</summary>
