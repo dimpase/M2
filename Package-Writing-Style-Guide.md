@@ -43,7 +43,7 @@
       be better to combine them into a single method with appropriately named optional arguments.
 
 * Algorithms
-    * Avoid appending pr prepending an element to list or a vector to a matrix, especially inside a loop. Since M2 lists and matrices are immutable, it is costly to do so.  Similarly, do not repeatedly remove single items from a list.  Instead, use `apply`, `for ... list ...` commands, or hash tables.
+    * Avoid appending or prepending an element to list or a vector to a matrix, especially inside a loop. Since M2 lists and matrices are immutable, these operations are costly.  Similarly, do not repeatedly remove single items from a list.  Instead, use `apply`, `for ... list ...` commands, or hash tables.
 
 
 * Order of arguments:
@@ -55,10 +55,10 @@
     * Package configuration options should be restricted to options that can sensibly be set
       to a single value for the user's whole session.
 
-* Solutions to puzzles:
-    * To get a user symbol, such as "x", use ```getSymbol "x"```.  To get n user variables starting with
+* To get a user symbol, such as "x", use ```getSymbol "x"```.  To get n user variables starting with
       "a", use ```vars(0 ..< n)```.
-    * To control the order of loading of imported packages ("PackageImports" option) and exported
+    
+* To control the order of loading of imported packages ("PackageImports" option) and exported
       packages ("PackageExports" option) while the current package is being loaded, mention the exported
       packages in the list of imported packages, and juggle the sequence of imported packages.
  
