@@ -108,7 +108,7 @@
     * Commas should be followed by a white space.
         * But ```QQ[x,y,z]``` looks fine...
     * Semicolons should be followed by a space character, but not at the end of a line.
-    * Blank lines are not needed.
+   
 
 * Documentation:
     * Each exported data type, method, and function must have a documentation page.  
@@ -117,7 +117,7 @@
       consuming excessive CPU time.  Assertions about the speed of your package can
       simply be written, and will be believed.
     * **Choice of tests:** package functionality should be adequately tested, without consuming excessive CPU time
-      and memory.  (Limits are imposed, but under Mac OS X, they aren't enforced.)
+      and memory.  
     * Document the type of the return value of method functions, so the documentation generator
       can include those methods in the documentation of the type of the return value.
          * Example: ```resolution Module := ChainComplex => o -> (M) -> (...)```
