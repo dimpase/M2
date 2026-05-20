@@ -55,8 +55,7 @@
     * Package configuration options should be restricted to options that can sensibly be set
       to a single value for the user's whole session.
 
-* To get a user symbol, such as "x", use ```getSymbol "x"```.  To get n user variables starting with
-      "a", use ```vars(0 ..< n)```.
+* To get a user symbol, such as "x", use ```getSymbol "x"```.  
     
 * To control the order of loading of imported packages ("PackageImports" option) and exported
       packages ("PackageExports" option) while the current package is being loaded, mention the exported
@@ -151,21 +150,11 @@
     * Check the spelling of English words.
     * Read the documentation in a browser (see "viewHelp") to make sure it looks elegant.
     * All sentences should have verbs and subjects.
-    * "different"
-      * Don't use "different" gratuitously.  For example, "different matrices" is 
-        no more informative than "matrices".
-      * Don't use "different" when you mean "various" or "diverse".
-      * Don't use the construction "different than" or "different to".  Use "different from" instead.
-      * Don't use the construction "a different X than Y".  Say "an X different from Y".
     * Add a comma when starting a sentence with an adverb such as "Finally".
-    * Use "if" as a prelude to "then", but use "whether" (and not "whether or not") to introduce a
-      proposition.  Example: prefer "determine whether R is reduced" to "determine if R is reduced".
     * Use standard English punctuation.  In particular, each use of "e.g.", "i.e.", or "resp." should
       be followed by a comma.
     * Set names of software packages, such as _Macaulay2_, in italic.
-    * Don't misplace the word "only".  Correct: "Fly only in the absence of fog."  Incorrect: "Only fly 
-      in the absence of fog," for it implies not _driving_ in the absence of fog.
-
+   
 * Comments:
     * Delete commented-out code.
     * Rewrite confusing code instead of adding comments.
