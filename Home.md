@@ -21,7 +21,7 @@ You can also find your way around using the table of contents on the sidebar.
   + [highlight.js and reveal.js](https://github.com/d-torrance/highlightjs-macaulay2)
   + [[Jupyter|Using Macaulay2 with Jupyter]]
 - Macaulay2 Contribution Guides
-  + [[Projects looking for a volunteer|Projects]] (you can propose here, too)
+  <!-- + [[Projects looking for a volunteer|Projects]] (you can propose here, too) -->
   + [[Git for Macaulay2 Contributors]]
     - [[Pull requests]]
   + [[Package Writing Style Guide]]
