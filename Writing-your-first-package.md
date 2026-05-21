@@ -47,7 +47,7 @@ installPackage("YourPackageName", RemakeAllDocumentation => true)
 
 ### The tests of the package
 
-Edit the `Tests.m2` file to add tests to your package. Make sure that all major mathematical parts of your package are tested, including edge cases. More guidance on how to construct tests is available here. To check that the tests all run, type `check YourPackageName`.
+Edit the `Tests.m2` file to add tests to your package. Make sure that all major mathematical parts of your package are tested, including edge cases. More guidance on how to construct tests is available here[LINK]. To check that the tests all run, type `check YourPackageName`.
 
 ## Distributing your package
 
