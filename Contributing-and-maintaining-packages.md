@@ -39,4 +39,4 @@ Every Macaulay2 package has a listed maintainer who is the point of contact for 
 
 - **Volunteer:** Contact the Issue Editor to express interest in maintaining an orphaned package.
 - **Recruited:** The Issue Editor may reach out to active contributors to a package and invite them to become maintainer.
-- **Contribute and maintain:** Submit a Pull Request that resolves outstanding issues; upon acceptance, you may be offered the maintainer role.[text](url)
+- **Contribute and maintain:** Submit a Pull Request that resolves outstanding issues; upon acceptance, you may be offered the maintainer role.
