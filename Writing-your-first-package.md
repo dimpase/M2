@@ -5,7 +5,7 @@ Creating a package is the most common way of contributing to Macaulay2. Packages
 1. Download the "FirstPackage" package from [LINK]. This is a directory containing a test. Install it on your M2 system using the command `installPackage("FirstPackage")`. Look at the help using the command `viewHelp FirstPackage`.
 2. Do some sample edits to the package and see what happens.
 3. Have a look at the source code of some other M2 packages. You can find these on GitHub here. Click on any file ending in `.m2` to see the code.
-4. Download the package template from [LINK]. This is a directory containing a text file `PackageName.m2`, and a directory `PackageName`, which contains `Documentation.m2` and `Tests.m2`. These are all text files that you can edit in your favorite editor. Replace `PackageName` in both places by the name of your package (following the "title case" convention that every word starts with a capital letter). You are now ready to start writing your package!
+4. Download the package template from [LINK]. This is a directory containing a text file `PackageName.m2`, and a directory `PackageName`, which contains `Documentation.m2` and `Tests.m2`. These are all text files that you can edit in your favorite editor. Replace `PackageName` in both places by the name of your package (following the convention that every word starts with a capital letter). You are now ready to start writing your package!
 
 ## Writing your package
 
