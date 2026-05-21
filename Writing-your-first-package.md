@@ -30,13 +30,13 @@ export { "firstFunction", "secondFunction" }
 
 ### The main code of the package
 
-This is the core of your package! See the style guide for conventions when writing M2 code. Try to make your code easy to read by other people and self-documenting — for example, `spairCount` is a better name for the number of S-pairs in your Gröbner basis calculator than `s`! When you have written some code, type `installPackage "YourPackageName"` to install your package and try running the code.
+This is the core of your package! See the style guide for conventions when writing M2 code. Try to make your code easy to read by other people and self-documenting - for example, `spairCount` is a better name for the number of S-pairs in your Gröbner basis calculator than `s`! When you have written some code, type `installPackage "YourPackageName"` to install your package and try running the code.
 
 ### The documentation of the package
 
 Edit the `Documentation.m2` file to add documentation to your package. Documentation is written in a structured format called "SimpleDoc". The first line is `beginDocumentation()`, followed by a sequence of "documentation nodes" that start with the word `doc`. The first (and most important) one is the documentation for the package as a whole. Some advice on how to structure this page can be found here. It can be helpful to look again at some examples of real packages (see step 3 of the First Steps).
 
-More information about writing documentation is available here. The documentation for a documentation node is here.
+More information about writing documentation is available [here](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_writing_spdocumentation.html). The documentation for a documentation node is [here](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/SimpleDoc/html/_doc.html).
 
 Once you have written some documentation nodes, reinstall your package and type `viewHelp YourPackageName`. This will bring up a webpage with your documentation displayed in the Macaulay2 format. To reinstall the package, you may first need to run:
 
