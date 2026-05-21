@@ -20,11 +20,7 @@ Here, you can search the marketplace for various extensions that will make VSCod
 
 ## Getting a M2 Extension
 
-If you search "Macaulay2", you will see various options:
-
-<img width="286" height="372" alt="image" src="https://github.com/user-attachments/assets/44ea3450-7c37-4eef-a4f8-ad2a90d7e25a" />
-
-Download the VSCode extension called Macaulay2 put out with publisher name Macaulay2.
+Download the VSCode extension called Macaulay2 put out with publisher name Macaulay2:
 
 <img width="326" height="418" alt="image" src="https://github.com/user-attachments/assets/13807050-803a-4343-ab1d-c77a44a8320d" />
 
