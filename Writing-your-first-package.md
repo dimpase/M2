@@ -4,7 +4,7 @@ Creating a package is the most common way of contributing to Macaulay2. Packages
 
 1. Download the "FirstPackage" package from [LINK]. This is a directory containing a test. Install it on your M2 system using the command `installPackage("FirstPackage")`. Look at the help using the command `viewHelp FirstPackage`.
 2. Do some sample edits to the package and see what happens.
-3. Have a look at the source code of some other M2 packages. You can find these on GitHub [here](https://github.com/Macaulay2/M2/tree/development/M2/Macaulay2/packages.). Click on any file ending in `.m2` to see the code.
+3. Have a look at the source code of some other M2 packages. You can find these on GitHub [here](https://github.com/Macaulay2/M2/tree/development/M2/Macaulay2/packages). Click on any file ending in `.m2` to see the code.
 4. Download the package template from [LINK]. This is a directory containing a text file `PackageName.m2`, and a directory `PackageName`, which contains `Documentation.m2` and `Tests.m2`. These are all text files that you can edit in your favorite editor. Replace `PackageName` in both places by the name of your package (following the convention that every word starts with a capital letter). You are now ready to start writing your package!
 
 ## Writing your package
@@ -20,7 +20,7 @@ The package code has four parts:
 
 The preamble consists of two main commands: `newPackage()` and `export`.
 
-Fill in the fields in the version of `newPackage` provided in the template. Details about the fields can be found in the documentation for `newPackage()`. For any fields you are unsure about, it is safe to accept the default for now.
+Fill in the fields in the version of `newPackage` provided in the template. Details about the fields can be found in the [documentation](https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/Macaulay2Doc/html/_new__Package.html) for `newPackage()`. For any fields you are unsure about, it is safe to accept the default for now.
 
 You will add the functions that you want your user to be able to access to the export list. This is a list of strings separated by commas, e.g.:
 
@@ -30,7 +30,7 @@ export { "firstFunction", "secondFunction" }
 
 ### The main code of the package
 
-This is the core of your package! See the style guide for conventions when writing M2 code. Try to make your code easy to read by other people and self-documenting - for example, `spairCount` is a better name for the number of S-pairs in your Gröbner basis calculator than `s`! When you have written some code, type `installPackage "YourPackageName"` to install your package and try running the code.
+This is the core of your package! See the [style guide](https://github.com/Macaulay2/M2/wiki/Package-Writing-Style-Guide) for conventions when writing M2 code. Try to make your code easy to read by other people and self-documenting - for example, `spairCount` is a better name for the number of S-pairs in your Gröbner basis calculator than `s`! When you have written some code, type `installPackage "YourPackageName"` to install your package and try running the code.
 
 ### The documentation of the package
 
