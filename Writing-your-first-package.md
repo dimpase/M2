@@ -30,7 +30,7 @@ export { "firstFunction", "secondFunction" }
 
 ### The main code of the package
 
-This is the core of your package! See the style guide for conventions when writing M2 code. Try to make your code easy to read by other people and self-documenting — for example, `spairCount` is a better name for the number of S-pairs in your Gröbner basis calculator than `s!`. When you have written some code, type `installPackage "YourPackageName"` to install your package and try running the code.
+This is the core of your package! See the style guide for conventions when writing M2 code. Try to make your code easy to read by other people and self-documenting — for example, `spairCount` is a better name for the number of S-pairs in your Gröbner basis calculator than `s`! When you have written some code, type `installPackage "YourPackageName"` to install your package and try running the code.
 
 ### The documentation of the package
 
