@@ -24,31 +24,15 @@ If you search "Macaulay2", you will see various options:
 
 <img width="286" height="372" alt="image" src="https://github.com/user-attachments/assets/44ea3450-7c37-4eef-a4f8-ad2a90d7e25a" />
 
-These have all been developed to make VSCode recognize and run Macaulay2 code. To install, click on any of them and hit the install button. However, I recommend doing the following instead.
+Download the VSCode extension called Macaulay2 put out with publisher name Macaulay2.
 
-There is currently an effort to make a better VSCode extension that is not yet on the extensions marketplace. To install it, follow this link:
+<img width="326" height="418" alt="image" src="https://github.com/user-attachments/assets/13807050-803a-4343-ab1d-c77a44a8320d" />
 
-[https://github.com/Macaulay2/vscode-macaulay2/tree/master/releases](https://github.com/Macaulay2/vscode-macaulay2/tree/master/releases)
+After download, there is a short "Getting Started" page with the essential commands.
 
-This contains some number of vsix files (the file used to vscode extensions). Click on the one with the largest number (and therefore the most recent version) and hit download on the menu along the right hand side:
+## Getting Started
 
-<img width="899" height="110" alt="image" src="https://github.com/user-attachments/assets/eb3b6188-c644-4669-9f24-65585e9ee4ff" />
+You can start a REPL with `F12`. You can send lines or a selection of code to the REPL with `Shift+Enter` or `Control+Enter`. In the keybinding settings, you may also choose to send your M2 code to the terminal directly instead.
 
-This will save a vsix file. Now, to install it, go back to the extensions tab and click the 3 little dots in the upper right corner:
-
-<img width="522" height="373" alt="image" src="https://github.com/user-attachments/assets/304e7002-cebc-4544-b80f-3e5e2c1140fc" />
-
-Click "Install from VSIX..." to open your file browser and navigate to the file you downloaded. Click it and installation is done!
-
-
-## Using the Macaulay2 Extension 
-Here, I will explain how to use the VSCode extension that is under development. Open any macaulay2 file in vscode. Navigate to any line and hit Shift+Enter. This should open up a window with a Macaulay2 terminal:
-<img width="1195" height="631" alt="image" src="https://github.com/user-attachments/assets/d118021e-4259-4284-ac93-23a802ac41e5" />
-
-You can change the keybinding by navigating to your extension in the extension tab, hitting the settings button (gear icon) and clicking keyboard shortcuts:
-<img width="522" height="479" alt="image" src="https://github.com/user-attachments/assets/d1e43354-5eb1-4fa4-a92a-06fb5983dc8b" />
-
-Currently, the default behavior is to try and pretty print all output with LaTeX like the [Macaulay2Web](https://www.unimelb-macaulay2.cloud.edu.au). If you do not like this, run
-``` topLevelMode = Standard ```
-at any point to change the output style of Macaulay2 to the standard setting. If you encounter any problems, please feel free to submit an issue on our [github repository](https://github.com/Macaulay2/vscode-macaulay2).
+In the settings, you may change the visual theme and output mode, start up arguments, and set different Macaulay2 binaries.
 
