@@ -94,8 +94,8 @@ tests("SumsOfSquares")  -- gives each test, and where it is in the code base
 Here are common places people choose to put tests:
 
 - In the main package file `mypackage.m2`, either right after a function is defined, or all together at the end.
-- The most common choice is putting them all at the end of the top package file.
-- In a directory:
+- A common choice is putting them all at the end of the top package file.
+- The recommended choice (especially for new contributors) is in a directory:
 ```
   /packages/mypackage/tests.m2
 ```
