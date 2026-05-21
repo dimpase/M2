@@ -1,5 +1,3 @@
-# Policy on contributing and maintaining packages
-
 Macaulay2 packages are a community effort, written and maintained by the Macaulay2 mathematical community. As such, we ask that all contributors approach this work with collegiality and respect, remembering that you are communicating with other humans. Before opening a Pull Request (PR) on an existing package, we strongly recommend reaching out to the maintainer directly first. This helps avoid duplicated effort, ensures your contribution aligns with the maintainer's vision for the package, and fosters the kind of collaborative spirit that makes the Macaulay2 community thrive.
 
 ## 1. Contributing to existing packages
