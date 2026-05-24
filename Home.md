@@ -20,6 +20,8 @@ You can also find your way around using the table of contents on the sidebar.
   + [Codespaces](https://github.com/fragandi/M2-codespace) uses a stable VSCode extension
   + [highlight.js and reveal.js](https://github.com/d-torrance/highlightjs-macaulay2)
   + [[Jupyter|Using Macaulay2 with Jupyter]]
+  + [Vim](https://github.com/Macaulay2/M2/tree/stable/M2/Macaulay2/editors/vim)
+  + [Neovim](https://github.com/Macaulean/macaulay2.nvim)
 - Macaulay2 Contribution Guides
   <!-- + [[Projects looking for a volunteer|Projects]] (you can propose here, too) -->
   + [[Git for Macaulay2 Contributors]]
