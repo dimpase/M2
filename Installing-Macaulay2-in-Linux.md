@@ -7,6 +7,7 @@
    * [Installing .rpm files without root access](#installing-rpm-files-without-root-access)
 - [Arch Linux](#arch-linux)
 - [Homebrew on Linux](#homebrew-on-linux)
+- [Nix](#nix)
 - [Spack](#spack)
 
 # APT-based distributions
@@ -151,6 +152,18 @@ Macaulay2 bottles are available for x86_64 Linux systems through Homebrew. Follo
 ```
 brew install Macaulay2/tap/M2
 ```
+# Nix
+Macaulay2 is available on Nixpkgs.  To try it out, type
+```
+nix-shell -p macaulay2
+```
+On NixOS, you can install Macaulay2 by adding
+```nix
+environment.systemPackages = [
+  pkgs.macaulay2
+];
+```
+to your system configuration.
 
 # Spack
 
