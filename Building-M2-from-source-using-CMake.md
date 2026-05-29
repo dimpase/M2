@@ -15,7 +15,7 @@ This build system is tested on GCC 6+, Clang 6+, and Xcode 9+ compilers.
 There are various tools needed to compile Macaulay2 dependencies, plus about a dozen or so libraries that must be found on the system.
 - On Debian/Ubuntu
 ```
-sudo apt install autoconf build-essential bison libtool pkg-config yasm libopenblas-dev libgmp3-dev libxml2-dev libreadline-dev libgdbm-dev libboost-regex-dev libboost-stacktrace-dev libomp-dev libtbb-dev libffi-dev
+sudo apt install autoconf build-essential bison libtool pkg-config yasm libopenblas-dev libgmp3-dev libxml2-dev libreadline-dev libgdbm-dev libboost-regex-dev libboost-stacktrace-dev libomp-dev libtbb-dev libffi-dev libjansson-dev
 ```
 - On Fedora/CentOS
 ```
