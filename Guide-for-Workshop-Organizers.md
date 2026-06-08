@@ -1,4 +1,1 @@
-Steps:
-1. Get in touch with Anton.
-2. Seek funding (NSF, etc.)
-3. TODO.
+If you would like to organize a workshop please get in touch with the workshop council - [Thomas Brazelton](https://tbrazel.github.io/), [Anton Leykin](https://antonleykin.math.gatech.edu/), and [Kalina Mincheva](https://www.math.tulane.edu/~kmincheva/). They will provide information, guidance, and support.
