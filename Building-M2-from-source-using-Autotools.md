@@ -39,6 +39,10 @@ Here are some dependencies you may have to install on your system to build Macau
 | [GoogleTest](https://google.github.io/googletest/) | ✅ | ❌ | ✅ | Engine unit tests |
 | [Jansson](https://github.com/akheron/jansson) | ✅ | ✅ | ❌ | Used by the `JSON` package |
 | [GNU Libtool](https://www.gnu.org/software/libtool/) | ✅ | ❌ | ❌ | Required for building several dependencies |
+| [libxml2](https://gitlab.gnome.org/GNOME/libxml2) | ✅ | ✅ | ❌ | Used by the `XML` package |
+| [lrslib](https://cgm.cs.mcgill.ca/~avis/C/lrs.html) | ✅ | ✅ | ✅ | Used by the `Polyhedra` package |
+| [GNU make](https://www.gnu.org/software/make/) | ✅ | ❌ | ❌ | Required for building M2 and many of its dependencies |
+| [MPFI](https://gitlab.inria.fr/mpfi/mpfi) | ✅ | ✅ | ✅ | Interval arithmetic |
 
 ... *TODO:* add remaining dependencies ...
 
