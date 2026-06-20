@@ -16,9 +16,9 @@ cmake -GNinja -S ../.. -B . \
       -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=/usr
 
-ninja
+ninja M2-core
 ```
-Also see this [guide](https://github.com/Macaulay2/homebrew-tap/wiki/Building-M2).
+Also see the [[full CMake guide|Building M2 from source using CMake]] and this [guide](https://github.com/Macaulay2/homebrew-tap/wiki/Building-M2).
 
 ### [[Using Autotools|Building M2 from source using Autotools]]
 
