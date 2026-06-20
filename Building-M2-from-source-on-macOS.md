@@ -18,7 +18,7 @@ cmake -GNinja -S ../.. -B . \
 
 ninja
 ```
-Also see this [guide](https://github.com/Macaulay2/homebrew-tap/wiki/M2-on-M1).
+Also see this [guide](https://github.com/Macaulay2/homebrew-tap/wiki/Building-M2).
 
 ### [[Using Autotools|Building M2 from source using Autotools]]
 
