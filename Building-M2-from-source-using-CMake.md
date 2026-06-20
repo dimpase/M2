@@ -2,7 +2,7 @@
 CMake is a cross-platform system for generating build environments using native tools such as Makefiles and Ninja or IDEs such as Xcode and Visual Studio. See this article on [why the KDE project switched to CMake](https://lwn.net/Articles/188693/) and this list of [cool CMake features](https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/Really-Cool-CMake-Features).
 
 ### Quick Build
-**Note:** for recent arm64 macOS systems, follow [this guide](https://github.com/Macaulay2/homebrew-tap/wiki/Building-M2) instead.
+**Note:** if you use Homebrew on Linux or recent arm64 macOS systems, follow [this guide](https://github.com/Macaulay2/homebrew-tap/wiki/Building-M2) instead.
 
 ```bash
 git clone https://github.com/Macaulay2/M2.git
