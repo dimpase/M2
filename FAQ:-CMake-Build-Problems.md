@@ -72,7 +72,7 @@ The `llvm-config` executable is typically located at `/usr/local/opt/llvm/bin/ll
 
 <b>AppleClang</b>: After ensuring that you have followed the usual steps from the [INSTALL](INSTALL) manual (e.g. running `xcode-select --install`, consider setting the `CMAKE_OSX_SYSROOT` variable to match the current SDK:
 ```
-cmake -DCMAKE_OSX_SYSROOT=`xcrun --show-sdk-path` .
+cmake -DCMAKE_OSX_SYSROOT=`xcrun --sdk macosx --show-sdk-path` .
 ```
 This would, for instance, tell CMake to look in `/Applications/Xcode.app/Contents/Developer/SDKs/MacOSX.sdk/usr/include` for headers.
 
