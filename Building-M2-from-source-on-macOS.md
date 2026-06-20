@@ -4,8 +4,7 @@ You can reduce the compilation time by installing dependencies from Homebrew whe
 ```bash
 brew tap Macaulay2/tap
 brew trust Macaulay2/tap
-brew install ccache
-brew install $(brew deps --1 --include-build macaulay2/tap/M2)
+brew install ccache $(brew deps --1 --include-build macaulay2/tap/M2)
 
 OPT_PREFIX=$(brew deps --1 --include-build macaulay2/tap/M2 | \
 	cut -d'/' -f-1 | sed "s|^|$HOMEBREW_PREFIX/opt/|" | paste -sd';' -)
