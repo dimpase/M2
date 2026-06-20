@@ -20,7 +20,7 @@ cmake -GNinja -S ../.. -B . \
 
 ninja M2-core
 ```
-Also see the full [[CMake guide|Building M2 from source using CMake]] and this [wiki](https://github.com/Macaulay2/homebrew-tap/wiki/).
+Also see this [guide](https://github.com/Macaulay2/homebrew-tap/wiki/Building-M2).
 
 ### [[Using Autotools|Building M2 from source using Autotools]]
 
