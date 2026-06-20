@@ -1,51 +1,34 @@
 ## Why CMake?
 CMake is a cross-platform system for generating build environments using native tools such as Makefiles and Ninja or IDEs such as Xcode and Visual Studio. See this article on [why the KDE project switched to CMake](https://lwn.net/Articles/188693/) and this list of [cool CMake features](https://gitlab.kitware.com/cmake/community/-/wikis/doc/cmake/Really-Cool-CMake-Features).
 
-Also see [this guide](BUILD/docker/README.md) for building and packaging Macaulay2 in a Docker container.
+### Quick Build
+**Note:** for recent arm64 macOS systems, follow [this guide](https://github.com/Macaulay2/homebrew-tap/wiki/Building-M2) instead.
 
-## Getting started
-[Download](https://cmake.org/download/) the latest CMake for your platform.
-CMake is available through [Homebrew](https://brew.sh/) for both Mac OS X and Linux distributions.
-If using a packaged distribution, confirm using `cmake --version` that you have version at least 3.15.
-This build system is tested on GCC 6+, Clang 6+, and Xcode 9+ compilers.
-
-**TIP**: install `ccache` for caching compiler artifacts and `ninja-build` (`ninja` on Brew) for optimized parallel builds.
-
-#### Requirements
-There are various tools needed to compile Macaulay2 dependencies, plus about a dozen or so libraries that must be found on the system.
-- On Debian/Ubuntu
-```
-sudo apt install autoconf build-essential bison libtool pkg-config yasm libopenblas-dev libgmp3-dev libxml2-dev libreadline-dev libgdbm-dev libboost-regex-dev libboost-stacktrace-dev libomp-dev libtbb-dev libffi-dev libjansson-dev
-```
-- On Fedora/CentOS
-```
-sudo dnf install autoconf automake bison libtool pkg-config yasm openblas-devel gmp-devel libxml2-devel readline-devel gdbm-devel boost-devel libomp-devel tbb-devel libffi-devel
-```
-- On Mac OS X, using Homebrew
-```
-brew install autoconf automake bison libtool pkg-config yasm gmp libxml2 readline gdbm boost libomp tbb libffi
-```
-
-**TIP**: x86_64 and arm64 binary packages for all dependencies on Mac OS X 12+ and Linux distributions are available through the [Macaulay2 tap](https://github.com/Macaulay2/homebrew-tap/) for Homebrew. To download the dependencies this way run:
-```
-brew tap Macaulay2/tap
-brew install --only-dependencies macaulay2/tap/M2
-```
-and append `` -DCMAKE_PREFIX_PATH=`brew --prefix` `` to an invocation of CMake prior to starting the build so that CMake can find the dependencies installed through Homebrew. See [[this page|Building M2 from source on macOS]] for a more fine-grained method of providing the prefix paths.
-
-#### Quick build
-A quick build involves the following steps:
-```
+```bash
 git clone https://github.com/Macaulay2/M2.git
-cmake -GNinja -S M2/M2 -B M2/M2/BUILD/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
-cmake --build M2/M2/BUILD/build --target build-libraries build-programs
-cmake --build M2/M2/BUILD/build --target install-packages
-cmake --build M2/M2/BUILD/build --target M2-emacs
-cmake --install M2/M2/BUILD/build
+cd M2/M2/BUILD/build
+cmake -GNinja -S ../.. -B . -DCMAKE_BUILD_TYPE=Release
+cmake --build . --target build-libraries build-programs
+cmake --build . --target M2-core install-packages
+cmake --build . --target M2-emacs
+cmake --install .
 ```
-Each step is explained separately in the next section.
+Each step is explained separately in this guide.
 
 **NOTE**: the source directory must not contain any build artifacts from an in-source build. If you have built Macaulay2 in-source before, clean the build artifacts first by running `make clean distclean` in the source directory.
+
+## Getting started
+Download and install the latest [CMake](https://cmake.org/download/) binary for your platform.
+CMake is available through [Homebrew](https://brew.sh/) for both Mac OS X and Linux distributions.
+If using a packaged distribution, confirm using `cmake --version` that you have version at least 3.24.
+This build system is tested on GCC, Clang, and Xcode compilers.
+
+**TIP**: install `ccache` for caching compiler artifacts and `ninja-build` (`ninja` on Homebrew) for optimized parallel builds.
+
+### Installing Dependencies
+See the dependencies section on [[this page|Building M2 from source using Autotools]] for how to install the required software on your platform. These include various tools needed to compile Macaulay2 dependencies, plus about a dozen or so libraries that must be found on the system. The remaining dependencies are libraries and programs that will be built automatically, but installing them through your platform can speed up the build process.
+
+**Note**: in some cases, the distributed version of certain dependencies on your platform may be out of date.
 
 ### Building Macaulay2
 1. Clone Macaulay2:
@@ -56,11 +39,12 @@ git clone https://github.com/Macaulay2/M2.git
 2. Setup the build environment:
 ```
 cd M2/M2/BUILD/build
-cmake -GNinja -S../.. -B. \
+cmake -GNinja -S ../.. -B . \
       -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_INSTALL_PREFIX=/usr
 ```
-The `-S../..` argument indicates the location of the source and `-B.` indicates the build directory. After those, arguments of type `-DNAME=VALUE` set the `NAME` variable to `VALUE`. For instance, `CMAKE_BUILD_TYPE` determines various compiler flags to be used. Defined options are `Release`, `Debug`, `RelWithDebInfo`, and `RelMinSize`, with `RelWithDebInfo` being the default. The value of `CMAKE_INSTALL_PREFIX` determines the installation prefix.
+- `-S ../..` and `-B .` arguments indicate the location of the source and build directories
+- `-DNAME=VALUE` arguments set the `NAME` variable to `VALUE`. For instance, `CMAKE_BUILD_TYPE` determines various compiler flags to be used. Defined options are `Release`, `Debug`, `RelWithDebInfo`, and `RelMinSize`, with `RelWithDebInfo` being the default. The value of `CMAKE_INSTALL_PREFIX` determines the installation prefix.
 
 This command generates the `build.ninja` files used by the Ninja build system, which is much more efficient. To generate a `Makefile` instead, remove `-GNinja` and use `make` instead of `ninja` in subsequent commands.
 
@@ -70,7 +54,7 @@ ninja build-libraries
 ```
 Note that this target **must** be built separately, before proceeding to `M2-binary`.
 
-To enforce building certain libraries, for instance BDWGC and MPIR, run `cmake -DBUILD_LIBRARIES="BDWGC;MPIR"`, or `cmake -DBUILD_LIBRARIES=ALL` to build everything.
+To force building certain libraries, for instance BDWGC and Flint, run `cmake -DBUILD_LIBRARIES="BDWGC;FLINT" .`, or `cmake -DBUILD_LIBRARIES=ALL .` to build everything.
 
 *Tip:* if you have already built the libraries in another build directory, use `-DM2_HOST_PREFIX=[usr-host path]` to tell CMake where to look for the libraries and programs. Note that most options can be changed after the initial call to CMake with a subsequent call:
 ```
@@ -88,7 +72,7 @@ The `M2-binary` is a prerequisite of `M2-core`, which is currently the default t
 ninja build-programs
 ```
 
-Similar to the libraries, `cmake -DBUILD_PROGRAMS=...` can be used to enforce building specific programs.
+Similar to the libraries, `cmake -DBUILD_PROGRAMS=...` can be used to force building specific programs.
 
 6. Install packages and generate documentation:
 ```
@@ -126,10 +110,9 @@ cpack -G DEB	# requires dpkg
 cpack -G RPM	# requires rpmbuild
 ```
 
-**TIP**: see [this guide](BUILD/docker/README.md) for packaging Macaulay2 for other Linux distributions using Docker.
+**TIP**: see [this guide](https://github.com/Macaulay2/M2/blob/stable/M2/BUILD/docker/README.md) for packaging Macaulay2 for other Linux distributions using Docker.
 
-**NOTE**: Macaulay2 is packaged for Mac OS X as a Homebrew bottle available through the [Macaulay2 tap](https://github.com/Macaulay2/homebrew-tap).
-
+**NOTE**: Macaulay2 is packaged for arm64 macOS systems as a Homebrew bottle available through the [Macaulay2 tap](https://github.com/Macaulay2/homebrew-tap).
 
 ## Advanced cached flags
 Within the build environment, you can:
@@ -146,7 +129,6 @@ For a complete list, along with descriptions, try `cmake -LAH .` or see `cmake/c
 - `LINTING:BOOL=OFF`: enable linting C++ sources (see `cmake/prechecks.cmake`)
 - `MEMDEBUG:BOOL=OFF`: enable memory allocation debugging
 - `PROFILING:BOOL=OFF`: enable profiling build flags
-- `USING_MPIR:BOOL=OFF`: use MPIR instead of GMP
 - `WITH_OMP:BOOL=ON`: link with the OpenMP library
 - `WITH_TBB:BOOL=ON`: link with the TBB library
 - `WITH_FFI:BOOL=ON`: link with the FFI library
@@ -214,7 +196,6 @@ Macaulay2 uses several external libraries and programs, which can be built using
   - `build-memtailor`:	[Memtailor] library for special purpose memory allocators
   - `build-mpfr`:	[MPFR] GNU Multiple Precision Floating Point library
   - `build-mpfi`:	[MPFI] a multiple precision interval arithmetic library based on MPFR
-  - `build-mpir`:	[MPIR] Multiple Precision Integers & Rationals library (optional replacement for GMP)
   - `build-mpsolve`:	[MPSolve] library for solving multiprecision polynomials
   - `build-msolve`:	[MSolve] library for solving multivariate polynomials
   - `build-nauty`:	[nauty] library for computing automorphism groups of graphs and digraphs
@@ -236,7 +217,6 @@ Macaulay2 uses several external libraries and programs, which can be built using
 [Memtailor]: https://github.com/broune/memtailor
 [MPFR]: https://www.mpfr.org/
 [MPFI]: http://perso.ens-lyon.fr/nathalie.revol/software.html
-[MPIR]: http://mpir.org/
 [MPSolve]: https://github.com/robol/MPSolve
 [MSolve]: https://msolve.lip6.fr/
 [NTL]: https://www.shoup.net/ntl/
