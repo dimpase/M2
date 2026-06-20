@@ -7,10 +7,10 @@ brew trust Macaulay2/tap
 brew install ccache
 brew install $(brew deps --1 --include-build macaulay2/tap/M2)
 
-cd M2/BUILD/build
 OPT_PREFIX=$(brew deps --1 --include-build macaulay2/tap/M2 | \
 	cut -d'/' -f-1 | sed "s|^|$HOMEBREW_PREFIX/opt/|" | paste -sd';' -)
 
+cd M2/BUILD/build
 cmake -GNinja -S ../.. -B . \
       -DBUILD_NATIVE=OFF \
       -DCMAKE_PREFIX_PATH=$OPT_PREFIX \
