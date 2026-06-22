@@ -7,7 +7,7 @@ brew trust Macaulay2/tap
 brew install ccache $(brew deps --1 --include-build macaulay2/tap/M2)
 
 OPT_PREFIX=$(brew deps --1 --include-build macaulay2/tap/M2 | \
-	cut -d'/' -f-1 | sed "s|^|$HOMEBREW_PREFIX/opt/|" | paste -sd';' -)
+	cut -d'/' -f3 | sed "s|^|$HOMEBREW_PREFIX/opt/|" | paste -sd';' -)
 ```
 Then, from the top directory of the git repository, run:
 ```bash
