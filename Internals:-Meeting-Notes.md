@@ -27,6 +27,10 @@ This page contains notes from the **M2internals** meetings. Feel free to join th
 - Web servers
   - [[Internals: InteractiveShell]]
   - [[Internals: Macaulay2Web]]
+- Parsing
+  - [[Macaulay2 language grammar]]
+  - [[Lark Grammar for M2 language]]
+  - [Tree-sitter grammar for M2 language](https://github.com/AlexanderGolys/tree-sitter-macaulay2)
 - Other
   - [[Internals: Macaulay2 Distributions]]
   - [[Internals: Release Checklist]]
@@ -34,7 +38,6 @@ This page contains notes from the **M2internals** meetings. Feel free to join th
   - [[Internals: Miscellaneous Topics]] (put other bits here for now)
   - [M2 Syntax Highlighting](https://github.com/Macaulay2/language-macaulay2)
   - [M2 Profiler](https://math.umn.edu/~mahrud/journal/profiler/)
-  - [[Lark Grammar for M2 language]]
 - Misc. meeting minutes:
   - [[Internals: Meeting on 2024‐08‐29]]
   - [[Internals: Meeting on 2024‐09‐26]]
