@@ -29,6 +29,7 @@ This page contains notes from the **M2internals** meetings. Feel free to join th
   - [[Internals: Macaulay2Web]]
 - Parsing
   - [[Macaulay2 language grammar]]
+    - [[SimpleDoc language grammar]]
   - [[Lark Grammar for M2 language]]
   - [Tree-sitter grammar for M2 language](https://github.com/AlexanderGolys/tree-sitter-macaulay2)
 - Other
