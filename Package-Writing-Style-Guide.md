@@ -145,7 +145,7 @@
       so the English word and a hyperlink can be generated from the identifier.
     * **Mathematics:** set mathematical expressions in TeX rather than approximating them in plain
       text.  Inline formulas are delimited by ```$...$``` or ```\(...\)```, displayed formulas by
-      ```$$...$$``` or ```\[...\]```; both are rendered in the browser by KaTeX.  Write ```$R/I$```,
+      ```$$...$$``` or ```\[...\]```; both are rendered in the browser by [KaTeX](https://katex.org/).  Write ```$R/I$```,
       ```$x^2$``` and ```$\mathbb{Z}/p$``` rather than ```R/I```, ```x^2``` and ```ZZ/p``` when you
       mean the mathematical object.  The macros ```\OO```, ```\Hom```, ```\End```, ```\Ext``` and
       ```\Tor``` are predefined.
