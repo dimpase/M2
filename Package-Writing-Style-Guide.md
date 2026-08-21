@@ -143,6 +143,16 @@
       example code just below is relevant, use English words, not a colon.
     * Don't use _Macaulay2_ identifiers as English words.  Learn how to use "ofClass" in this connection,
       so the English word and a hyperlink can be generated from the identifier.
+    * **Mathematics:** set mathematical expressions in TeX rather than approximating them in plain
+      text.  Inline formulas are delimited by ```$...$``` or ```\(...\)```, displayed formulas by
+      ```$$...$$``` or ```\[...\]```; both are rendered in the browser by KaTeX.  Write ```$R/I$```,
+      ```$x^2$``` and ```$\mathbb{Z}/p$``` rather than ```R/I```, ```x^2``` and ```ZZ/p``` when you
+      mean the mathematical object.  The macros ```\OO```, ```\Hom```, ```\End```, ```\Ext``` and
+      ```\Tor``` are predefined.
+    * Distinguish _Macaulay2_ syntax from mathematics.  A symbol you would type at the prompt is
+      code; the same symbol in the surrounding mathematics is math, and should be set in TeX.
+      Mathematics is not rendered inside example blocks, so a formula written there will appear
+      literally.
     * Don't capitalize English words such as "list" or "tally", even though there are classes in
       _Macaulay2_ whose names are "List" and "Tally", unless you intend to refer to those classes.
       Examples of correct usage: "The function returns a list."  "The function returns an object
