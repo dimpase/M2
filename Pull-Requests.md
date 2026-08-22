@@ -77,10 +77,15 @@ to change to it. If you do not see a `development` branch, you can get one with
 * Add a title and some comments about the package(s) or changes.
 * Click on the `Create Pull Request` button. 
 
-## Go to `github.com/Macaulay2/M2/pulls`.
-* The system will check your spelling and run all the Documentation and the TESTs on various systems. If errors are found,
-fix them. Make the necessary changes to your files on your machine in `foo/M2/M2/Macaulay2/packages`.
-  * Do `git add`, `git commit`, and `git push` as above. The system will automatically restart the pull request and the tests.
+## Go to [`github.com/Macaulay2/M2/pulls`](https://github.com/Macaulay2/M2/pulls).
+* Upon creation, your pull request will be given a number and will be available at `https://github.com/Macaulay2/M2/pull/XXXX`, where `XXXX` is the number it was assigned.  Immediately after submitting, it should appear on the top of the *Pull requests*, but it will begin to move down as other people submit their own pull requests.  To find all of your outstanding pull requests, click the "Author" dropdown menu and select your GitHub username.
+* The system will check your spelling and build all the documentation and run all the tests on various systems.  After a few hours, you hopefully will see a ✅ and a message that all checks have passed.  If you see some ❌'s, then at least one of the tests have failed.  The build logs can be overwhelming, but you're encouraged to read through them to see if the failures are due to your changes.  There are a few flaky tests that can cause build failures every once in a while for reasons completely unrelated to your changes.  A Macaulay2 maintainer will restart the builds when that happens.
+* Macaulay2 maintainers will review your pull request and either approve it as is or request changes.  Be patient, as this process can take some time.
+* If the reviewers request changes, then you have several options:
+  * Occassionally, reviewers will provide a suggestion and a "Commit suggestion" button will appear.  If you click this, then a commit will be added to your branch applying the suggestion automatically.
+  * You can make changes to your pull request directly in the browser.  Under the "Files changed" tab, click the ⋯ button in the upper-right hand corner of the file you'd like to update and then "Edit file".  Make your changes and then click the "Commit changes..." button to add a commit.
+  * If the requested changes are substantial, then it is better to make the changes locally on your machine so that you can test the code before pushing.  Once you've commited any changes (using the same `git add` + `git commit` workflow described above), then `git push` to your fork using the same branch you used when you created the pull request.  The pull request will update automatically.  (A common mistake is to close the first PR and start a second one -- this is unnecessary.)
+* After your pull request is approved, then it will be merged into the `development` branch and your changes will appear in the next release of Macaulay2.  Congratulations! 🎉🎉🎉
 
 [fork]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#fork
 [pull request]: https://docs.github.com/en/get-started/learning-about-github/github-glossary#pull-request
