@@ -34,6 +34,13 @@ precision field, or an exponent; a bare `[0-9]+` is an `integer`. (The two
 productions above overlap on bare digit sequences; the presence of `.`, `p`,
 or `[eE]` is what distinguishes a float.)
 
+The trailing-dot form is real -- `1.` is an `RR` -- but it collides with the
+`..` range operator, and `float` as written wins: applied longest-match, `1..22`
+would lex as `1.` followed by `.22`. M2 reads it as the 22-element sequence
+`1 .. 22`, so a lexer needs the extra rule that a `.` immediately followed by
+another `.` does not begin a fractional part. `1.0..2.0` and `1 .. 22` are
+unaffected.
+
 ## Operator Tables
 
 Each table is ordered from **highest to lowest precedence** (top to bottom).
@@ -319,13 +326,23 @@ parentheses ::= "(" paren_contents? ")"
 paren_contents ::= expression
                  | semicolon_sequence
 
+(* A sequence element may be omitted; M2 fills the hole with `null`. Both
+   `(1,,3)` and the trailing form `(1,)` evaluate, each giving a Sequence
+   whose missing entry is null, so the comma's operands are optional on
+   either side. The idiom is common: `map(R,,f)`, `{a, b,}`. *)
+
 (* ; inside brackets is a sequence separator, not a statement terminator.
    The trailing expression after the last ; may be absent, corresponding to
    M2's "dummy" token: (foo;) evaluates foo and discards the result. *)
 semicolon_sequence ::= expression (";" expression?)+
 
-quote ::= ("symbol" | "global" | "local" | "threadLocal")
-          identifier
+quote ::= ("symbol" | "global" | "local" | "threadLocal" | "threadVariable")
+          (identifier | operator | keyword)
+
+(* The quoted name need not be an identifier: `symbol ==`, `symbol _` and
+   `symbol (*)` name operator methods and fill package documentation Keys,
+   and any keyword may be quoted too -- `symbol and`, `symbol if`, even
+   `symbol symbol`. *)
 ```
 
 ---
