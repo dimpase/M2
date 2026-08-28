@@ -44,20 +44,20 @@ The name in the first column is used as a reference label in the grammar rules b
 
 | Name                                 | Assoc | Operators                                                                                                                                                                                                                         |
 | ------------------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| element-access                       | left  | `#` `#?` `.` `.?` `^` `^**` `^<` `^<=` `^>` `^>=` `_` `_<` `_<=` `_>` `_>=` `\|_`                                                                                                                                                 |
+| subscript-access                     | left  | `#` `#?` `.` `.?` `^` `^**` `^<` `^<=` `^>` `^>=` `_` `_<` `_<=` `_>` `_>=` `\|_`                                                                                                                                                 |
 | composition                          | left  | `@@` `@@?`                                                                                                                                                                                                                        |
 | _(adjacent — no symbol, see Tier 2)_ | right |                                                                                                                                                                                                                                   |
-| direct-sum                           | right | `@`                                                                                                                                                                                                                               |
+| at                                   | right | `@`                                                                                                                                                                                                                               |
 | multiplicative                       | left  | `%` `*` `/` `//`                                                                                                                                                                                                                  |
-| quotient                             | right | `\` `\\`                                                                                                                                                                                                                          |
+| backslash                            | right | `\` `\\`                                                                                                                                                                                                                          |
 | tensor                               | left  | `**` `⊠` `⧢`                                                                                                                                                                                                                      |
 | cdot                                 | left  | `·`                                                                                                                                                                                                                               |
 | additive                             | left  | `+` `++` `-`                                                                                                                                                                                                                      |
 | range                                | left  | `..` `..<`                                                                                                                                                                                                                        |
-| intersection                         | left  | `&`                                                                                                                                                                                                                               |
-| exterior-power                       | left  | `^^`                                                                                                                                                                                                                              |
-| union                                | left  | `\|`                                                                                                                                                                                                                              |
-| coercion                             | right | `:`                                                                                                                                                                                                                               |
+| bitwise-and                          | left  | `&`                                                                                                                                                                                                                               |
+| exclusive-or                         | left  | `^^`                                                                                                                                                                                                                              |
+| horizontal-concatenation             | left  | `\|`                                                                                                                                                                                                                              |
+| repetition-quotient                  | right | `:`                                                                                                                                                                                                                               |
 | vertical-concatenation               | left  | `\|\|`                                                                                                                                                                                                                            |
 | comparison                           | right | `!=` `<` `<=` `=!=` `==` `===` `>` `>=` `?` `~`                                                                                                                                                                                   |
 | and                                  | right | `and`                                                                                                                                                                                                                             |
@@ -71,10 +71,22 @@ The name in the first column is used as a reference label in the grammar rules b
 | assignment                           | right | `=` `:=` `->` `=>` `<-` `>>` `+=` `-=` `*=` `/=` `//=` `%=` `**=` `++=` `..=` `..<=` `<<=` `>>=` `??=` `@=` `@@=` `@@?=` `\=` `\\=` `^=` `^**=` `^^=` `_=` `&=` `\|-=` `\|=` `\|_=` `\|\|=` `~=` `<==>=` `===>=` `==>=` `·=` `⊠=` `⧢=` |
 | sequence                             | left  | `,`                                                                                                                                                                                                                               |
 
+Note: most of these operators are **flexible** — users install methods for them,
+so a row's name records the documented or conventional use, not a fixed meaning.
+`|` is bitwise-or on `ZZ`, string and list concatenation, and horizontal
+concatenation of matrices; `<<` is both output and left shift on `ZZ`. Names
+follow the `Macaulay2Doc` headline where one exists (`^^` "logical
+exclusive-or", `|` "often used for horizontal concatenation", `||` "often used
+for vertical concatenation", `:` "uses include repetition; ideal quotients"),
+and the group names of the `"operators"` documentation node otherwise. The `at`
+and `backslash` rows are named for their symbols, because `@`, `\` and `\\`
+have no headline beyond "a binary operator". Note that `++`, in the additive
+row, is the operator documented as "usually used for direct sum" — not `@`.
+
 The adjacent row marks the boundary between **strong** operators (above, prec > adjacent)
 and **weak** operators (below, prec < adjacent).
 
-Note: in the interpreter, **multiplicative** and **quotient** are actually a
+Note: in the interpreter, **multiplicative** and **backslash** are actually a
 single precedence level with mixed associativity (`%` `*` `/` `//` left, `\` `\\`
 right). Splitting them into the two rows above is observationally equivalent —
 the right-associative operators bind their right operand one level lower — so a
@@ -99,7 +111,7 @@ context (whether a left operand is present) determines which role applies.
 
 | Name                  | Operators                                                                                                                                      |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| count                 | `#` _(also binary: element-access)_                                                                                                            |
+| count                                | `#` _(also binary: subscript-access)_                                                                                                            |
 | star                  | `*` _(also binary: multiplicative)_                                                                                                            |
 | sign                  | `+` `-` _(also binary: additive)_                                                                                                              |
 | comparison-test       | `<` `<=` `>` `>=` `?` `~` _(also binary: comparison)_                                                                                          |
@@ -113,7 +125,7 @@ context (whether a left operand is present) determines which role applies.
 | comma                 | `,` _(also binary: sequence)_                                                                                                                  |
 
 Note: `count` (`#`) sits at the same precedence level as adjacent.
-It is unary prefix when no left operand is present; binary element-access (at a
+It is unary prefix when no left operand is present; binary subscript-access (at a
 higher level) when preceded by an expression.
 
 ## Grammar
@@ -133,7 +145,7 @@ statement   ::= expression (newline+ | ";")
 The general expression type — a flat union of all forms. The **adjacent**
 rule is what distinguishes M2's grammar from most other languages: function
 application is written by juxtaposition, and it sits at a _middle_ precedence
-level (between the high-precedence element-access/composition operators and
+level (between the high-precedence subscript-access/composition operators and
 the low-precedence arithmetic/logical operators). Macaulay2's own parser
 handles this with a Pratt parser; see the Adjacent section below for the
 disambiguation rule.
@@ -196,14 +208,14 @@ installed at `precBracket`, the latter at `precSpace`. This is observable:
 
 ### Strong Binary
 
-High-precedence binary operators (**element-access** and **composition**
+High-precedence binary operators (**subscript-access** and **composition**
 from the Binary Operators table). These bind more tightly than adjacent.
 
 ```ebnf
-strong_binary ::= expression strong_binary_op expression   (* element-access: left *)
+strong_binary ::= expression strong_binary_op expression   (* subscript-access: left *)
                                                            (* composition:    left *)
 
-strong_binary_op ::= (* element-access *)
+strong_binary_op ::= (* subscript-access *)
                      "#" | "#?" | "." | ".?" | "^" | "^**"
                    | "^<" | "^<=" | "^>" | "^>="
                    | "_" | "_<" | "_<=" | "_>" | "_>=" | "|_"
@@ -221,17 +233,17 @@ All binary operators with lower precedence than adjacent (the rows below
 ```ebnf
 binary ::= expression weak_binary_op expression   (* see Binary Operators table *)
 
-weak_binary_op ::= (* direct-sum *)             "@"
+weak_binary_op ::= (* at *)             "@"
                  | (* multiplicative *)         "%" | "*" | "/" | "//"
-                 | (* quotient *)               "\" | "\\"
+                 | (* backslash *)               "\" | "\\"
                  | (* tensor *)                 "**" | "⊠" | "⧢"
                  | (* cdot *)                   "·"
                  | (* additive *)               "+" | "++" | "-"
                  | (* range *)                  ".." | "..<"
-                 | (* intersection *)           "&"
-                 | (* exterior-power *)         "^^"
-                 | (* union *)                  "|"
-                 | (* coercion *)               ":"
+                 | (* bitwise-and *)           "&"
+                 | (* exclusive-or *)         "^^"
+                 | (* horizontal-concatenation *)                  "|"
+                 | (* repetition-quotient *)               ":"
                  | (* vertical-concatenation *) "||"
                  | (* comparison *)             "!=" | "<" | "<=" | "=!=" | "==" | "===" | ">" | ">=" | "?" | "~"
                  | (* and *)                    "and"
@@ -355,7 +367,7 @@ are all adjacent expressions.
 **`count` (`#`) sits at the adjacent level**: Unary `#` has the same precedence
 as adjacent. It is always unary when no left operand precedes it; when preceded
 by an expression, the `#` symbol triggers the higher-precedence
-**element-access** binary form instead.
+**subscript-access** binary form instead.
 
 **Dual-use operators**: Many symbols appear in both the binary and unary prefix
 tables (e.g., `+`, `-`, `*`, `<<`, `??`). The parser disambiguates by position:
@@ -366,9 +378,9 @@ when it appears at the start of an expression (no left operand present).
 operator symbols, so dual-use operators like `+`, `-`, `*`, `<<` in infix
 position are always parsed as binary, never as the start of adjacent's RHS.
 
-**Strong binary RHS is `expression`**: The right-hand side of element-access
+**Strong binary RHS is `expression`**: The right-hand side of subscript-access
 and composition operators is the full `expression` type. This allows constructs
 like `x . if y then z` and `x # not y`. Operator precedence prevents
 lower-precedence constructs from being incorrectly absorbed: in `x # f y`,
-element-access (higher precedence) reduces before adjacent (lower precedence)
+subscript-access (higher precedence) reduces before adjacent (lower precedence)
 can form, giving `adjacent(strong_binary(#, x, f), y)`.
