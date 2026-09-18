@@ -42,7 +42,9 @@ jobs:
           cat > "$RUNNER_TEMP/audit.py" <<'PY'
           import json, pathlib, sys
           root = pathlib.Path('/opt/m2/build')
-          paths = [p for p in root.rglob('*') if p.is_file() and
+          # CPack staging contains copies of stamps and binaries, not build outputs.
+          paths = [p for p in root.rglob('*') if
+                   '_CPack_Packages' not in p.relative_to(root).parts and p.is_file() and
                    (p.suffix in ('.o', '.a', '.so') or
                     p.name in ('M2-binary', '.cmake-installed'))]
           assert any(p.suffix == '.o' for p in paths), 'no cached objects'
@@ -55,7 +57,8 @@ jobs:
               old = json.loads(marker.read_text())
               changed = sorted(k for k in old.keys() | state.keys() if old.get(k) != state.get(k))
               expected = [k for k in old if k.endswith('/Tableaux/.cmake-installed')]
-              assert len(expected) == 1, 'missing cached Tableaux installation'
+              assert len(expected) == 1, 'Expected one cached Tableaux stamp; found: ' + repr(expected)
+              print('Changed outputs:', changed)
               assert changed == expected, 'Unexpected rebuilt outputs: ' + repr(changed[:50])
               print('PASS: only Tableaux reinstalled;', len(state)-1,
                     'compiled outputs and other package stamps preserved')
