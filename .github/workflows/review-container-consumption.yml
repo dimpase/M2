@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     env:
-      REVIEW_REVISION: ${{ github.event.pull_request.base.sha }}
+      # Keep testing the published baseline after workflow-only changes to the base.
+      REVIEW_REVISION: 7f534091ea86bedd45d6a36d62603a800344aafe
     steps:
       - uses: actions/checkout@v6
         with:
@@ -24,7 +25,7 @@ jobs:
       - name: Export the PR merge revision
         id: snapshot
         run: python3 .github/ci/source_snapshot.py . "$RUNNER_TEMP/m2-review-source" >> "$GITHUB_OUTPUT"
-      - uses: docker/login-action@v3
+      - uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
