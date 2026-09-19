@@ -133,3 +133,6 @@ extern "C" const Matrix *rawGbBoolean(const Matrix *m)
 // compile-command: "make -C $M2BUILDDIR/Macaulay2/e "
 // indent-tabs-mode: nil
 // End:
+
+// Fork-only probe for the published container incremental core rebuild test.
+extern "C" int m2_ci_published_core_probe() { return 4721; }
