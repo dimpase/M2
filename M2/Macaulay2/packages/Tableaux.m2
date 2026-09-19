@@ -1,3 +1,4 @@
+-- Review-only change: exercise incremental package installation from the CI image.
 newPackage(
     "Tableaux",
     Version => "0.6",
