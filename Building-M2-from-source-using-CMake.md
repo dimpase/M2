@@ -79,6 +79,40 @@ Similar to the libraries, `cmake -DBUILD_PROGRAMS=...` can be used to force buil
 ninja install-packages
 ```
 
+### Dependency submodules and offline builds
+
+The selective checkout behavior described here is introduced by
+[PR #4725](https://github.com/Macaulay2/M2/pull/4725), which is pending merge.
+
+CMake initializes only the submodules it needs: the bundled engine libraries
+(memtailor, mathic, and mathicgb), the Emacs package, and fallback libraries that
+were not found on the system. System FLINT, for example, avoids both its checkout
+and its fallback build rules. Previously built fallback libraries keep their
+sources and build/test targets across reconfiguration.
+
+To explicitly build a fallback even when the system library is available, run
+these commands from the build directory used above:
+
+```sh
+cmake -DBUILD_LIBRARIES=FLINT ../..
+cmake --build . --target build-libraries
+```
+
+Multiple library names use a quoted semicolon-separated list, for example
+`-DBUILD_LIBRARIES="BDWGC;FLINT"`. Unneeded submodule-backed `build-<library>`
+targets are not created until that fallback is selected.
+
+For offline builds, initialize the required submodules first and configure with
+`-DGIT_SUBMODULE=OFF`; configuration reports any missing required library sources.
+This option disables Git updates, not the source requirements. Source archives
+must likewise contain the required submodule contents at their original paths
+under `M2/submodules/` and `M2/Macaulay2/editors/emacs/`. Any other dependency
+archives needed by fallback builds must also be available locally: disabling Git
+updates alone does not make the whole build offline.
+
+CI checkouts should avoid initializing all submodules recursively in advance to
+benefit from this selection.
+
 ### Testing Macaulay2
 There are unit-tests available within the `Macaulay2/e/unit-tests` and `Macaulay2/tests` directories which can be tested using the CTest utility. Here are various ways of using `ctest`:
 - `ctest --build-and-test`: build and run all tests.

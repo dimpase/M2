@@ -44,12 +44,21 @@ Currently, when CMake is set to use the MPIR library, it compiles MPIR and a num
 <details>
 <summary><code>No download info given for 'build-flint' and its source directory</code></summary>
 
-When building from a downloaded archive (i.e., not a git repository), it is necessary to also download and extract archives of the required submodules in the `M2/submodules` directory.
+When building from a downloaded archive (i.e., not a Git repository), include
+the required submodule sources at their original paths. See
+[Dependency submodules and offline builds](Building-M2-from-source-using-CMake#dependency-submodules-and-offline-builds)
+for source requirements and the `GIT_SUBMODULE` option.
 
-If a given library is not required on a particular system, CMake might still complain that the submodule directory is empty. One way to prevent this is to create a dummy file in the submodule directory for the libraries that are not required; for instance:
-```
-touch M2/submodules/flint2/empty
-```
+[PR #4725](https://github.com/Macaulay2/M2/pull/4725), pending merge, removes
+fallback build rules for unused submodule libraries, so empty unused directories
+no longer cause this error. Missing required library sources instead produce an
+error identifying the submodule to initialize.
+
+For older checkouts, CMake may still complain about an empty submodule directory
+even when the corresponding system library is used. The historical workaround
+is to add a dummy file in that unused directory; it is unnecessary with #4725
+and cannot replace sources for a library that actually needs to be built.
+
 </details>
 
 <details>
