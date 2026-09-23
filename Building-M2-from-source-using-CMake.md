@@ -25,6 +25,30 @@ This build system is tested on GCC, Clang, and Xcode compilers.
 
 **TIP**: install `ccache` for caching compiler artifacts and `ninja-build` (`ninja` on Homebrew) for optimized parallel builds.
 
+### Using Ninja as the default generator
+
+Install Ninja along with the build requirements below. To make Ninja the default
+CMake generator in your shell, run:
+
+```sh
+export CMAKE_GENERATOR=Ninja
+```
+
+Add this line to your shell startup file (for example, `~/.bashrc` for Bash)
+to use it in future shell sessions. It applies to all CMake projects configured
+from that environment. You can then omit `-GNinja` from the commands in this
+guide. For example, from the source directory containing `CMakeLists.txt`
+(`M2/M2` after cloning):
+
+```sh
+cmake -S . -B BUILD/cmake
+```
+
+An explicit `-G` option overrides this default. Existing build directories
+retain their generator; use a fresh build directory when switching generators.
+See the [CMake documentation](https://cmake.org/cmake/help/latest/envvar/CMAKE_GENERATOR.html)
+for details.
+
 ### Installing Dependencies
 See the dependencies section on [[this page|Building M2 from source using Autotools]] for how to install the required software on your platform. These include various tools needed to compile Macaulay2 dependencies, plus about a dozen or so libraries that must be found on the system. The remaining dependencies are libraries and programs that will be built automatically, but installing them through your platform can speed up the build process.
 
@@ -46,7 +70,7 @@ cmake -GNinja -S ../.. -B . \
 - `-S ../..` and `-B .` arguments indicate the location of the source and build directories
 - `-DNAME=VALUE` arguments set the `NAME` variable to `VALUE`. For instance, `CMAKE_BUILD_TYPE` determines various compiler flags to be used. Defined options are `Release`, `Debug`, `RelWithDebInfo`, and `RelMinSize`, with `RelWithDebInfo` being the default. The value of `CMAKE_INSTALL_PREFIX` determines the installation prefix.
 
-This command generates the `build.ninja` files used by the Ninja build system, which is much more efficient. To generate a `Makefile` instead, remove `-GNinja` and use `make` instead of `ninja` in subsequent commands.
+This command generates the `build.ninja` files used by the Ninja build system, which is much more efficient. To generate a `Makefile` instead, use `-G "Unix Makefiles"` in a fresh build directory and use `make` instead of `ninja` in subsequent commands. This explicitly overrides `CMAKE_GENERATOR` if you have set it to Ninja.
 
 3. Build the libraries that will be linked with the Macaulay2 executable:
 ```
