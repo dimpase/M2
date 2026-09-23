@@ -62,14 +62,16 @@ def agreement(a,b):
     return float(-mp.log(worst,2)) if worst else 9999
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--binary',default='/tmp/flint-roots-prototype');ap.add_argument('--output',type=Path,required=True);ap.add_argument('--timeout',type=int,default=90);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--binary',default='/tmp/flint-roots-prototype');ap.add_argument('--output',type=Path,required=True);ap.add_argument('--timeout',type=int,default=90);ap.add_argument('--compare-starts',action='store_true');args=ap.parse_args()
     args.output.mkdir(parents=True,exist_ok=True)
     results=[]
     for name,a,kind,bits in cases():
         mp.mp.prec=bits+200
         inp=args.output/(name+'.txt');inp.write_text(f'{len(a)-1} {bits} {kind} {bits}\n'+''.join(f'{r} {i}\n' for r,i in a))
         row=dict(case=name,degree=len(a)-1,bits=bits,kind=kind);rootsets={}
-        for backend,threads in [('flint',1),('mps',1),('mps',8)]:
+        backends=[('flint',1),('mps',1),('mps',8)]
+        if args.compare_starts: backends.insert(1,('flint-target',1))
+        for backend,threads in backends:
             label=f'{backend}-{threads}'
             try:
                 r=subprocess.run([args.binary,backend,str(inp),str(threads)],capture_output=True,text=True,timeout=args.timeout,env=dict(os.environ,OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1'))
@@ -82,7 +84,7 @@ def main():
             except subprocess.TimeoutExpired:row[label]=dict(error=f'timeout {args.timeout}s (4 solves)')
             print(name,label,row[label],flush=True)
         if 'flint-1' in rootsets:
-            for label in ['mps-1','mps-8']:
+            for label in ['flint-target-1','mps-1','mps-8']:
                 if label in rootsets and len(rootsets[label])==len(rootsets['flint-1']):row[label]['agreement_bits']=agreement(rootsets['flint-1'],rootsets[label])
         results.append(row);(args.output/'results.json').write_text(json.dumps(results,indent=2))
 if __name__=='__main__':main()

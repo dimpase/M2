@@ -1,0 +1,771 @@
+[
+  {
+    "case": "constant",
+    "degree": 0,
+    "bits": 53,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 2.55997292697e-07,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 0,
+      "count_ok": true,
+      "max_scaled_residual": 0.0
+    },
+    "flint-target-1": {
+      "seconds": 3.33995558321e-07,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 0,
+      "count_ok": true,
+      "max_scaled_residual": 0.0,
+      "agreement_bits": 9999
+    },
+    "mps-1": {
+      "seconds": 4.00468707085e-08,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 0,
+      "count_ok": true,
+      "max_scaled_residual": 0.0,
+      "agreement_bits": 9999
+    },
+    "mps-8": {
+      "seconds": 4.00468707085e-08,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 0,
+      "count_ok": true,
+      "max_scaled_residual": 0.0,
+      "agreement_bits": 9999
+    }
+  },
+  {
+    "case": "zero-root-12",
+    "degree": 12,
+    "bits": 53,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 3.35392542183e-06,
+      "preprocess": 2.30805017054e-06,
+      "workprec": 53,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 0.0
+    },
+    "flint-target-1": {
+      "seconds": 3.18803358823e-06,
+      "preprocess": 2.15403269976e-06,
+      "workprec": 85,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 0.0,
+      "agreement_bits": 9999
+    },
+    "mps-1": {
+      "seconds": 0.000455552944914,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 1.0,
+      "agreement_bits": 1039.584111538911
+    },
+    "mps-8": {
+      "seconds": 0.000646500033326,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 1.0,
+      "agreement_bits": 1039.5706054275258
+    }
+  },
+  {
+    "case": "doc-13",
+    "degree": 13,
+    "bits": 53,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.000250201090239,
+      "preprocess": 6.31099101156e-06,
+      "workprec": 85,
+      "count": 13,
+      "count_ok": true,
+      "max_scaled_residual": 1.2761329206092748e-16
+    },
+    "flint-target-1": {
+      "seconds": 0.000290639000013,
+      "preprocess": 3.18000093102e-06,
+      "workprec": 85,
+      "count": 13,
+      "count_ok": true,
+      "max_scaled_residual": 1.2761329206092748e-16,
+      "agreement_bits": 212.1008829946791
+    },
+    "mps-1": {
+      "seconds": 0.00148488709237,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 13,
+      "count_ok": true,
+      "max_scaled_residual": 2.901174089252164e-16,
+      "agreement_bits": 52.276018579452874
+    },
+    "mps-8": {
+      "seconds": 0.00114954891615,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 13,
+      "count_ok": true,
+      "max_scaled_residual": 2.901174089252164e-16,
+      "agreement_bits": 52.276018579452874
+    }
+  },
+  {
+    "case": "doc-square-26",
+    "degree": 26,
+    "bits": 150,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.000541068031453,
+      "preprocess": 1.55350426212e-05,
+      "workprec": 182,
+      "count": 26,
+      "count_ok": true,
+      "max_scaled_residual": 1.38438241887114e-90
+    },
+    "flint-target-1": {
+      "seconds": 0.000490392907523,
+      "preprocess": 7.6110009104e-06,
+      "workprec": 182,
+      "count": 26,
+      "count_ok": true,
+      "max_scaled_residual": 1.38438241887114e-90,
+      "agreement_bits": 381.48087933682245
+    },
+    "mps-1": {
+      "seconds": 0.0131762250094,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 26,
+      "count_ok": true,
+      "max_scaled_residual": 1.38438241887114e-90,
+      "agreement_bits": 306.85848379720903
+    },
+    "mps-8": {
+      "seconds": 0.0107295740163,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 26,
+      "count_ok": true,
+      "max_scaled_residual": 1.38438241887114e-90,
+      "agreement_bits": 306.85848379720903
+    }
+  },
+  {
+    "case": "wilkinson-20",
+    "degree": 20,
+    "bits": 53,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.00186602701433,
+      "preprocess": 3.32749914378e-05,
+      "workprec": 170,
+      "count": 20,
+      "count_ok": true,
+      "max_scaled_residual": 8.8049410813e-314
+    },
+    "flint-target-1": {
+      "seconds": 0.00227809406351,
+      "preprocess": 1.74910528585e-05,
+      "workprec": 170,
+      "count": 20,
+      "count_ok": true,
+      "max_scaled_residual": 2.143204897641823e-182,
+      "agreement_bits": 558.1544836374648
+    },
+    "mps-1": {
+      "seconds": 0.00262655806728,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 20,
+      "count_ok": true,
+      "max_scaled_residual": 2.185188616740648e-25,
+      "agreement_bits": 52.07684893675402
+    },
+    "mps-8": {
+      "seconds": 0.00287429301534,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 20,
+      "count_ok": true,
+      "max_scaled_residual": 2.185188616740648e-25,
+      "agreement_bits": 52.07684893675402
+    }
+  },
+  {
+    "case": "cluster-12",
+    "degree": 12,
+    "bits": 150,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.0135082390625,
+      "preprocess": 3.32249328494e-05,
+      "workprec": 728,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 0.0
+    },
+    "flint-target-1": {
+      "seconds": 0.0110004420858,
+      "preprocess": 1.85429817066e-05,
+      "workprec": 728,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 0.0,
+      "agreement_bits": 1622.6835117023138
+    },
+    "mps-1": {
+      "seconds": 0.00459365407005,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 7.619961769616498e-195,
+      "agreement_bits": 324.6372557467063
+    },
+    "mps-8": {
+      "seconds": 0.00486283004284,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 6.650081286970585e-196,
+      "agreement_bits": 324.2487050780668
+    }
+  },
+  {
+    "case": "complex-repeat-12",
+    "degree": 12,
+    "bits": 150,
+    "kind": "mpfr",
+    "flint-1": {
+      "seconds": 0.0222038520733,
+      "preprocess": 0.0109463110566,
+      "workprec": 364,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 0.0
+    },
+    "flint-target-1": {
+      "seconds": 0.0107316339854,
+      "preprocess": 0.0109188449569,
+      "workprec": 364,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 0.0,
+      "agreement_bits": 9999
+    },
+    "mps-1": {
+      "seconds": 0.00538580305874,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 7.008085453157587e-107,
+      "agreement_bits": 254.0
+    },
+    "mps-8": {
+      "seconds": 0.00522487494163,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 12,
+      "count_ok": true,
+      "max_scaled_residual": 7.008085453157587e-107,
+      "agreement_bits": 254.0
+    }
+  },
+  {
+    "case": "wide-scale-10",
+    "degree": 10,
+    "bits": 150,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.000170591054484,
+      "preprocess": 9.51904803514e-06,
+      "workprec": 182,
+      "count": 10,
+      "count_ok": true,
+      "max_scaled_residual": 5.681018038390409e-211
+    },
+    "flint-target-1": {
+      "seconds": 0.00283134100027,
+      "preprocess": 1.22589990497e-05,
+      "workprec": 5824,
+      "count": 10,
+      "count_ok": true,
+      "max_scaled_residual": 0.0,
+      "agreement_bits": 698.0
+    },
+    "mps-1": {
+      "error": "",
+      "returncode": -11
+    },
+    "mps-8": {
+      "error": "",
+      "returncode": -11
+    }
+  },
+  {
+    "case": "integer-32",
+    "degree": 32,
+    "bits": 53,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.000904470914975,
+      "preprocess": 9.28097870201e-06,
+      "workprec": 85,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.9957278510985317e-16
+    },
+    "flint-target-1": {
+      "seconds": 0.00411504798103,
+      "preprocess": 2.07850243896e-05,
+      "workprec": 85,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.9957278510985317e-16,
+      "agreement_bits": 204.08699844124854
+    },
+    "mps-1": {
+      "seconds": 0.00158960500266,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 3.355113098628006e-16,
+      "agreement_bits": 52.33623264582007
+    },
+    "mps-8": {
+      "seconds": 0.0016924609663,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 3.355113098628006e-16,
+      "agreement_bits": 52.33623264582007
+    }
+  },
+  {
+    "case": "integer-32-256",
+    "degree": 32,
+    "bits": 256,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.00332757399883,
+      "preprocess": 9.31194517761e-06,
+      "workprec": 288,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.2048921812950506e-77
+    },
+    "flint-target-1": {
+      "seconds": 0.00872193102259,
+      "preprocess": 2.12769955397e-05,
+      "workprec": 288,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.2048921812950506e-77,
+      "agreement_bits": 638.7690141856198
+    },
+    "mps-1": {
+      "seconds": 0.00240155996289,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.2048921812950506e-77,
+      "agreement_bits": 641.6249446043997
+    },
+    "mps-8": {
+      "seconds": 0.0023279649904,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.2048921812950506e-77,
+      "agreement_bits": 641.6249446043997
+    }
+  },
+  {
+    "case": "integer-100",
+    "degree": 100,
+    "bits": 53,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.0077145290561,
+      "preprocess": 2.89230374619e-05,
+      "workprec": 85,
+      "count": 100,
+      "count_ok": true,
+      "max_scaled_residual": 4.2847260571208774e-16
+    },
+    "flint-target-1": {
+      "seconds": 0.0418200149434,
+      "preprocess": 5.78180188313e-05,
+      "workprec": 85,
+      "count": 100,
+      "count_ok": true,
+      "max_scaled_residual": 4.2847260571208774e-16,
+      "agreement_bits": 196.256330224656
+    },
+    "mps-1": {
+      "seconds": 0.00502482196316,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 100,
+      "count_ok": true,
+      "max_scaled_residual": 1.0764669344085323e-15,
+      "agreement_bits": 52.16337351714191
+    },
+    "mps-8": {
+      "seconds": 0.00467314699199,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 100,
+      "count_ok": true,
+      "max_scaled_residual": 1.0764669344085323e-15,
+      "agreement_bits": 52.16337351714191
+    }
+  },
+  {
+    "case": "integer-100-256",
+    "degree": 100,
+    "bits": 256,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.0305106729502,
+      "preprocess": 2.77189537883e-05,
+      "workprec": 288,
+      "count": 100,
+      "count_ok": true,
+      "max_scaled_residual": 4.890607845924449e-77
+    },
+    "flint-target-1": {
+      "seconds": 0.110780900926,
+      "preprocess": 4.2287982069e-05,
+      "workprec": 288,
+      "count": 100,
+      "count_ok": true,
+      "max_scaled_residual": 4.890607845924449e-77,
+      "agreement_bits": 635.0479119773363
+    },
+    "mps-1": {
+      "seconds": 0.00917080405634,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 100,
+      "count_ok": true,
+      "max_scaled_residual": 4.890607845924449e-77,
+      "agreement_bits": 635.9309908497505
+    },
+    "mps-8": {
+      "seconds": 0.0094693970168,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 100,
+      "count_ok": true,
+      "max_scaled_residual": 4.890607845924449e-77,
+      "agreement_bits": 635.9309908497505
+    }
+  },
+  {
+    "case": "integer-256",
+    "degree": 256,
+    "bits": 53,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.0502769990126,
+      "preprocess": 7.47969606891e-05,
+      "workprec": 85,
+      "count": 256,
+      "count_ok": true,
+      "max_scaled_residual": 7.01261289662078e-16
+    },
+    "flint-target-1": {
+      "seconds": 0.322412229027,
+      "preprocess": 0.000116415088996,
+      "workprec": 85,
+      "count": 256,
+      "count_ok": true,
+      "max_scaled_residual": 7.01261289662078e-16,
+      "agreement_bits": 191.80899788969958
+    },
+    "mps-1": {
+      "seconds": 0.0396944010863,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 256,
+      "count_ok": true,
+      "max_scaled_residual": 1.250313020080067e-15,
+      "agreement_bits": 51.570688259081265
+    },
+    "mps-8": {
+      "seconds": 0.0387536230264,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 256,
+      "count_ok": true,
+      "max_scaled_residual": 1.250313020080067e-15,
+      "agreement_bits": 51.570688259081265
+    }
+  },
+  {
+    "case": "rational-32",
+    "degree": 32,
+    "bits": 150,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.00188380200416,
+      "preprocess": 1.41100026667e-05,
+      "workprec": 182,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.930255299945333e-45
+    },
+    "flint-target-1": {
+      "seconds": 0.00333649595268,
+      "preprocess": 1.34450383484e-05,
+      "workprec": 182,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.930255299945333e-45,
+      "agreement_bits": 386.85616294237354
+    },
+    "mps-1": {
+      "seconds": 0.00246922299266,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.930255299945333e-45,
+      "agreement_bits": 385.1572779746963
+    },
+    "mps-8": {
+      "seconds": 0.00253654003609,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.930255299945333e-45,
+      "agreement_bits": 385.1572779746963
+    }
+  },
+  {
+    "case": "complex-double",
+    "degree": 32,
+    "bits": 53,
+    "kind": "double",
+    "flint-1": {
+      "seconds": 0.0009234220488,
+      "preprocess": 0.0,
+      "workprec": 85,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 2.2646907530276553e-16
+    },
+    "flint-target-1": {
+      "seconds": 0.00348050193861,
+      "preprocess": 0.0,
+      "workprec": 85,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 2.2646907530276553e-16,
+      "agreement_bits": 9999
+    },
+    "mps-1": {
+      "seconds": 0.00189193408005,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 3.377276171682737e-16,
+      "agreement_bits": 51.61391471213153
+    },
+    "mps-8": {
+      "seconds": 0.00182000594214,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 3.377276171682737e-16,
+      "agreement_bits": 51.61391471213153
+    }
+  },
+  {
+    "case": "real-double",
+    "degree": 32,
+    "bits": 53,
+    "kind": "double",
+    "flint-1": {
+      "seconds": 0.00162710796576,
+      "preprocess": 2.84420093521e-05,
+      "workprec": 85,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.6298903241012815e-16
+    },
+    "flint-target-1": {
+      "seconds": 0.00230189203285,
+      "preprocess": 1.73740554601e-05,
+      "workprec": 85,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.6298903241012815e-16,
+      "agreement_bits": 9999
+    },
+    "mps-1": {
+      "seconds": 0.00200529303402,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 4.2309045332827723e-16,
+      "agreement_bits": 52.772337894944066
+    },
+    "mps-8": {
+      "seconds": 0.00147939601447,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 4.2309045332827723e-16,
+      "agreement_bits": 52.772337894944066
+    }
+  },
+  {
+    "case": "complex-mpfr",
+    "degree": 32,
+    "bits": 150,
+    "kind": "mpfr",
+    "flint-1": {
+      "seconds": 0.00220515101682,
+      "preprocess": 0.0,
+      "workprec": 182,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.189515785042522e-45
+    },
+    "flint-target-1": {
+      "seconds": 0.00549887900706,
+      "preprocess": 0.0,
+      "workprec": 182,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.189515785042522e-45,
+      "agreement_bits": 9999
+    },
+    "mps-1": {
+      "seconds": 0.0018163000932,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.189515785042522e-45,
+      "agreement_bits": 9999
+    },
+    "mps-8": {
+      "seconds": 0.00198777392507,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 1.189515785042522e-45,
+      "agreement_bits": 9999
+    }
+  },
+  {
+    "case": "real-mpfr",
+    "degree": 32,
+    "bits": 150,
+    "kind": "mpfr",
+    "flint-1": {
+      "seconds": 0.00175978499465,
+      "preprocess": 1.07099767774e-05,
+      "workprec": 182,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 9.338584677768417e-46
+    },
+    "flint-target-1": {
+      "seconds": 0.00314280309249,
+      "preprocess": 1.25060323626e-05,
+      "workprec": 182,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 9.338584677768417e-46,
+      "agreement_bits": 385.1347829948608
+    },
+    "mps-1": {
+      "seconds": 0.0017525809817,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 9.338584677768417e-46,
+      "agreement_bits": 384.52984058134206
+    },
+    "mps-8": {
+      "seconds": 0.00169840105809,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 32,
+      "count_ok": true,
+      "max_scaled_residual": 9.338584677768417e-46,
+      "agreement_bits": 384.52984058134206
+    }
+  },
+  {
+    "case": "roots-of-unity-256",
+    "degree": 256,
+    "bits": 53,
+    "kind": "exact",
+    "flint-1": {
+      "seconds": 0.0359369519865,
+      "preprocess": 0.000121235963888,
+      "workprec": 85,
+      "count": 256,
+      "count_ok": true,
+      "max_scaled_residual": 8.699104189646359e-15
+    },
+    "flint-target-1": {
+      "seconds": 0.180209365906,
+      "preprocess": 0.000142942997627,
+      "workprec": 85,
+      "count": 256,
+      "count_ok": true,
+      "max_scaled_residual": 8.699104189646359e-15,
+      "agreement_bits": 273.83024841048706
+    },
+    "mps-1": {
+      "seconds": 0.0250178690767,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 256,
+      "count_ok": true,
+      "max_scaled_residual": 1.5793586593698134e-14,
+      "agreement_bits": 52.44785333835988
+    },
+    "mps-8": {
+      "seconds": 0.0239948009839,
+      "preprocess": 0.0,
+      "workprec": 0,
+      "count": 256,
+      "count_ok": true,
+      "max_scaled_residual": 1.5793586593698134e-14,
+      "agreement_bits": 52.44785333835988
+    }
+  }
+]

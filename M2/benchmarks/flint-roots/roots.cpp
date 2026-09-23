@@ -40,8 +40,12 @@ static void roundq(mpq_class& q, long bits) {
     mpfr_t x; mpfr_init2(x,bits); mpfr_set_q(x,q.get_mpq_t(),MPFR_RNDN);
     mpfr_get_q(q.get_mpq_t(),x); mpfr_clear(x);
 }
+static slong next_precision(slong wp, long bits, bool machine_start) {
+    const slong target=std::max(64L,bits+32);
+    return machine_start && wp<target ? std::min(2*wp,target) : 2*wp;
+}
 static std::vector<Ball> flint_roots(const std::vector<Coeff>& a, long bits,
-                                    double& preprocessing, long& workprec) {
+                                    double& preprocessing, long& workprec, bool machine_start) {
     bool real=true; for (const auto& c:a) real &= c.im==0;
     // Isolating all n roots itself certifies squarefreeness. Try this first for
     // complex input, avoiding an expensive exact Q(i) gcd in the common case.
@@ -49,8 +53,8 @@ static std::vector<Ball> flint_roots(const std::vector<Coeff>& a, long bits,
         slong n=a.size()-1; acb_ptr r=_acb_vec_init(n);
         acb_poly_t b; acb_poly_init(b); fmpq_t q; fmpq_init(q);
         bool success=false, have_initial=false;
-        slong wp=std::max(64L,bits+32);
-        for(int attempt=0;attempt<2;++attempt,wp*=2) {
+        slong wp=machine_start?53:std::max(64L,bits+32);
+        for(;wp<=2*std::max(64L,bits+32);wp=next_precision(wp,bits,machine_start)) {
             workprec=std::max(workprec,wp);
             acb_poly_fit_length(b,n+1); _acb_poly_set_length(b,n+1);
             for(slong j=0;j<=n;++j) {
@@ -117,7 +121,7 @@ static std::vector<Ball> flint_roots(const std::vector<Coeff>& a, long bits,
         acb_poly_t b; acb_poly_init(b);
         bool success=false, have_initial=false;
         // Reconvert exact coefficients at each precision. Never freeze input balls.
-        for (slong wp=std::max(64L,bits+32);wp<=32768;wp*=2) {
+        for (slong wp=machine_start?53:std::max(64L,bits+32);wp<=32768;wp=next_precision(wp,bits,machine_start)) {
             workprec=std::max(workprec,wp);
             gr_ctx_init_complex_acb(A,wp);
             acb_poly_fit_length(b,f->length);
@@ -192,7 +196,9 @@ static std::vector<Ball> mps_roots(const std::vector<Coeff>& a,long bits,const s
 }
 int main(int argc,char** argv) {
  try {
-    if(argc!=4) throw std::runtime_error("usage: roots {flint|mps} INPUT THREADS");
+    if(argc!=4) throw std::runtime_error("usage: roots {flint|flint-target|mps} INPUT THREADS");
+    const std::string backend=argv[1];
+    if(backend!="flint" && backend!="flint-target" && backend!="mps") throw std::runtime_error("unknown backend");
     std::ifstream in(argv[2]); long n,bits,inbits; std::string kind;
     if(!(in>>n>>bits>>kind>>inbits)||n<0||bits<2) throw std::runtime_error("invalid input header");
     std::vector<Coeff> a(n+1);
@@ -217,7 +223,7 @@ int main(int argc,char** argv) {
     if(trials<1) throw std::runtime_error("invalid trial count");
     for (int trial=0;trial<trials;++trial) {
         double start=seconds(); prep=start;
-        roots=std::string(argv[1])=="flint"?flint_roots(a,bits,prep,wp):mps_roots(a,bits,kind,inbits,std::stoi(argv[3]));
+        roots=backend!="mps"?flint_roots(a,bits,prep,wp,backend=="flint"):mps_roots(a,bits,kind,inbits,std::stoi(argv[3]));
         if(trial || trials==1) times.push_back(seconds()-start);
     }
     std::sort(times.begin(),times.end()); double elapsed=times[times.size()/2];

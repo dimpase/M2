@@ -1,4 +1,7 @@
-# Measured results
+# Original measurements
+
+These precede machine-precision initialization. See [MACHINE-START.md](MACHINE-START.md)
+for the improved version and direct before/after measurements.
 
 2026-09-22, Intel Core Ultra 7 165U, Gentoo Linux 7.0.3, GCC 16.2.0,
 FLINT 3.5.0, MPSolve 3.2.3. Median of three warmed solves, milliseconds.

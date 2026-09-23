@@ -19,13 +19,15 @@ these behaviors, but is not a production replacement or a patch removing MPSolve
   repeat roots according to multiplicity.
 * Complex coefficients: first attempt certified isolation of the original
   polynomial. Isolating every root certifies squarefreeness and avoids exact
-  preprocessing. If two precision levels do not suffice, perform exact
+  preprocessing. If refinement through twice the target working precision does not suffice, perform exact
   squarefree decomposition over Q(i), using FLINT's number-field/generic ring
   interface, then isolate the factors.
 * Convert floating-point coefficients to **exact dyadic rationals**, representing
   their stored bits, not an uncertainty interval. At each working precision,
-  recreate coefficient balls from exact data. Reuse finite root approximations
-  while doubling precision until every root is isolated with at least the
+  recreate coefficient balls from exact data. Start every numerical solve at **53 bits**, activating FLINT's hardware-double
+  path for degree at least two. Reuse finite root approximations while doubling
+  precision (with an intermediate step at the requested precision plus 32 guard
+  bits) until every root is isolated with at least the
   requested relative accuracy. Round returned midpoints to the requested bits.
 * Zero roots and multiplicities are retained. Nonzero constants return no roots;
   the zero polynomial is rejected. Root ordering is unspecified.
@@ -72,7 +74,8 @@ were engine timings. Neither the installed M2 nor its build is modified.
 ## Reproduce the measurements
 
 ```sh
-nice -n 19 ionice -c 3 python3 benchmark.py --binary ./roots --output results
+nice -n 19 ionice -c 3 python3 benchmark.py --binary ./roots --compare-starts --output results
+nice -n 19 ionice -c 3 python3 test_machine_start.py ./roots
 ```
 
 Each backend invocation performs one warm-up and three timed solves; report the
@@ -92,7 +95,9 @@ with MPSolve at higher comparison precision. The FLINT implementation additional
 requires certified isolation and requested accuracy before returning. Counts
 alone or small residuals would not establish correct root multiplicities.
 
-See `RESULTS.md` and `measurements/gentoo-flint-3.5.0.json`. Raw inputs and logs
+See `MACHINE-START.md` for the improved initialization and a direct comparison
+with the previous strategy. The original results remain in `RESULTS.md` and
+`measurements/gentoo-flint-3.5.0.json`. Raw inputs and logs
 for the measured run are in `/home/dima/tmp/flint-roots-benchmark-v4/`.
 
 ## Limits and migration work
