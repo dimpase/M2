@@ -1,5 +1,8 @@
 # FLINT root backend experiment
 
+See [MPSolve-removal.md](../../../MPSolve-removal.md) for the consolidated
+source audit, algorithms, references, measurements and migration assessment.
+
 All numerical MPSolve integration in M2 is concentrated in
 `Macaulay2/e/interface/polyroots.cpp::rawRoots`. `m2/factor.m2` routes `roots`
 through it, including package callers. The other direct MPSolve header use is
