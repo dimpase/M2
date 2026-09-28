@@ -12,6 +12,7 @@ on:
   workflow_dispatch:
   pull_request:
     branches:
+      - master
       - stable
       - development
   schedule:
@@ -28,7 +29,7 @@ defaults:
 
 jobs:
   build:
-    if: github.repository == 'Macaulay2/M2' || contains(github.ref, 'global')
+    if: github.repository == 'Macaulay2/M2' || github.repository == 'dimpase/M2' || contains(github.ref, 'global')
     name: ${{ matrix.build-system }}-${{ matrix.os }}-${{ matrix.compiler }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -40,6 +41,7 @@ jobs:
         os:
           - ubuntu-24.04
           - macos-15
+          - darwin-27
         compiler:
           - default
         include:
@@ -47,9 +49,15 @@ jobs:
           - build-system: cmake
             os: macos-15
             compiler: brew-clang
+          - build-system: cmake
+            os: darwin-27
+            compiler: brew-clang
         exclude:
           - build-system: cmake
             os: macos-15
+            compiler: default
+          - build-system: cmake
+            os: darwin-27
             compiler: default
     steps:
       - uses: actions/checkout@v6
@@ -65,10 +73,9 @@ jobs:
           brew update
           brew trust macaulay2/tap
           brew tap macaulay2/tap
-          brew install automake bison boost libtool tbb ccache ctags llvm make yasm libffi msolve googletest fplll eigen jansson r palp
+          brew install automake bison boost libtool tbb ccache ctags llvm make gnu-tar yasm libffi msolve googletest fplll eigen jansson r palp
           brew install texinfo || true # sometimes post-install step fails
           brew install --only-dependencies macaulay2/tap/M2
-          brew link factory --force
 
 # ----------------------
 #   Install missing tools and libraries for Linux
@@ -115,12 +122,15 @@ jobs:
           if [[ "${{ runner.os }}" == "Linux" ]]
           then echo "/usr/lib/ccache"                     >> $GITHUB_PATH
                echo "/home/linuxbrew/.linuxbrew/bin"      >> $GITHUB_PATH
-          else echo `brew --prefix ccache`/libexec        >> $GITHUB_PATH
+          else factory_prefix=$(brew --prefix macaulay2/tap/factory)
+               echo "FACTORYDIR=$factory_prefix"          >> $GITHUB_ENV
+               echo "PKG_CONFIG_PATH=$factory_prefix/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}" >> $GITHUB_ENV
+               echo `brew --prefix ccache`/libexec        >> $GITHUB_PATH
                echo `brew --prefix make  `/libexec/gnubin >> $GITHUB_PATH
                echo `brew --prefix libtool`/libexec/gnubin >> $GITHUB_PATH
                echo `brew --prefix bison`/bin             >> $GITHUB_PATH
-               echo "CPPFLAGS=-I$(brew --prefix)/include -I$(brew --prefix libomp)/include -I$(brew --prefix readline)/include" >> $GITHUB_ENV
-               echo "LDFLAGS= -L$(brew --prefix)/lib     -L$(brew --prefix libomp)/lib     -L$(brew --prefix readline)/lib"     >> $GITHUB_ENV
+               echo "CPPFLAGS=-I$factory_prefix/include -I$(brew --prefix)/include -I$(brew --prefix libomp)/include -I$(brew --prefix readline)/include" >> $GITHUB_ENV
+               echo "LDFLAGS=-L$factory_prefix/lib -L$(brew --prefix)/lib -L$(brew --prefix libomp)/lib -L$(brew --prefix readline)/lib" >> $GITHUB_ENV
           fi
 
       - uses: actions/cache@v5
@@ -129,8 +139,8 @@ jobs:
         with:
           path: |
             ~/.ccache
-            ~/work/M2/M2/M2/BUILD/build/usr-host
-          key: build-cache-${{ runner.os }}-${{ matrix.compiler }}-${{ matrix.build-system }}-${{ hashFiles('**/cmake/*-libraries.cmake', '.github/workflows/test_build.yml') }}
+            ${{ github.workspace }}/M2/BUILD/build/usr-host
+          key: build-cache-${{ matrix.os }}-${{ matrix.compiler }}-${{ matrix.build-system }}-${{ hashFiles('**/cmake/*-libraries.cmake', '.github/workflows/test_build.yml') }}
 
 
 # ----------------------
@@ -142,7 +152,7 @@ jobs:
         run: |
           cmake -S../.. -B. -GNinja \
             -DCMAKE_BUILD_TYPE=Release -DBUILD_NATIVE=OFF \
-            -DCMAKE_PREFIX_PATH="`brew --prefix`;`brew --prefix libffi`" \
+            -DCMAKE_PREFIX_PATH="$(brew --prefix macaulay2/tap/factory);$(brew --prefix);$(brew --prefix libffi)" \
             -DCMAKE_INSTALL_PREFIX=/usr \
             --debug-trycompile
 
