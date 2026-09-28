@@ -12,6 +12,7 @@ on:
   workflow_dispatch:
   pull_request:
     branches:
+      - master
       - stable
       - development
   schedule:
@@ -28,7 +29,7 @@ defaults:
 
 jobs:
   build:
-    if: github.repository == 'Macaulay2/M2' || contains(github.ref, 'global')
+    if: github.repository == 'Macaulay2/M2' || github.repository == 'dimpase/M2' || contains(github.ref, 'global')
     name: ${{ matrix.build-system }}-${{ matrix.os }}-${{ matrix.compiler }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -40,6 +41,7 @@ jobs:
         os:
           - ubuntu-24.04
           - macos-15
+          - darwin-27
         compiler:
           - default
         include:
@@ -47,9 +49,15 @@ jobs:
           - build-system: cmake
             os: macos-15
             compiler: brew-clang
+          - build-system: cmake
+            os: darwin-27
+            compiler: brew-clang
         exclude:
           - build-system: cmake
             os: macos-15
+            compiler: default
+          - build-system: cmake
+            os: darwin-27
             compiler: default
     steps:
       - uses: actions/checkout@v6
@@ -129,8 +137,8 @@ jobs:
         with:
           path: |
             ~/.ccache
-            ~/work/M2/M2/M2/BUILD/build/usr-host
-          key: build-cache-${{ runner.os }}-${{ matrix.compiler }}-${{ matrix.build-system }}-${{ hashFiles('**/cmake/*-libraries.cmake', '.github/workflows/test_build.yml') }}
+            ${{ github.workspace }}/M2/BUILD/build/usr-host
+          key: build-cache-${{ matrix.os }}-${{ matrix.compiler }}-${{ matrix.build-system }}-${{ hashFiles('**/cmake/*-libraries.cmake', '.github/workflows/test_build.yml') }}
 
 
 # ----------------------
