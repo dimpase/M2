@@ -76,7 +76,6 @@ jobs:
           brew install automake bison boost libtool tbb ccache ctags llvm make yasm libffi msolve googletest fplll eigen jansson r palp
           brew install texinfo || true # sometimes post-install step fails
           brew install --only-dependencies macaulay2/tap/M2
-          brew link factory --force
 
 # ----------------------
 #   Install missing tools and libraries for Linux
@@ -123,12 +122,15 @@ jobs:
           if [[ "${{ runner.os }}" == "Linux" ]]
           then echo "/usr/lib/ccache"                     >> $GITHUB_PATH
                echo "/home/linuxbrew/.linuxbrew/bin"      >> $GITHUB_PATH
-          else echo `brew --prefix ccache`/libexec        >> $GITHUB_PATH
+          else factory_prefix=$(brew --prefix macaulay2/tap/factory)
+               echo "FACTORYDIR=$factory_prefix"          >> $GITHUB_ENV
+               echo "PKG_CONFIG_PATH=$factory_prefix/lib/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}" >> $GITHUB_ENV
+               echo `brew --prefix ccache`/libexec        >> $GITHUB_PATH
                echo `brew --prefix make  `/libexec/gnubin >> $GITHUB_PATH
                echo `brew --prefix libtool`/libexec/gnubin >> $GITHUB_PATH
                echo `brew --prefix bison`/bin             >> $GITHUB_PATH
-               echo "CPPFLAGS=-I$(brew --prefix)/include -I$(brew --prefix libomp)/include -I$(brew --prefix readline)/include" >> $GITHUB_ENV
-               echo "LDFLAGS= -L$(brew --prefix)/lib     -L$(brew --prefix libomp)/lib     -L$(brew --prefix readline)/lib"     >> $GITHUB_ENV
+               echo "CPPFLAGS=-I$factory_prefix/include -I$(brew --prefix)/include -I$(brew --prefix libomp)/include -I$(brew --prefix readline)/include" >> $GITHUB_ENV
+               echo "LDFLAGS=-L$factory_prefix/lib -L$(brew --prefix)/lib -L$(brew --prefix libomp)/lib -L$(brew --prefix readline)/lib" >> $GITHUB_ENV
           fi
 
       - uses: actions/cache@v5
@@ -150,7 +152,7 @@ jobs:
         run: |
           cmake -S../.. -B. -GNinja \
             -DCMAKE_BUILD_TYPE=Release -DBUILD_NATIVE=OFF \
-            -DCMAKE_PREFIX_PATH="`brew --prefix`;`brew --prefix libffi`" \
+            -DCMAKE_PREFIX_PATH="$(brew --prefix macaulay2/tap/factory);$(brew --prefix);$(brew --prefix libffi)" \
             -DCMAKE_INSTALL_PREFIX=/usr \
             --debug-trycompile
 
