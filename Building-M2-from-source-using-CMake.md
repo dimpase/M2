@@ -33,11 +33,13 @@ See the dependencies section on [[this page|Building M2 from source using Autoto
 ### Selecting installed memtailor, mathic, and mathicgb
 
 For CMake, `MEMTAILOR_PROVIDER`, `MATHIC_PROVIDER` and `MATHICGB_PROVIDER`
-each accept `AUTO` (the default), `SYSTEM`, or `BUNDLED`. `AUTO` prefers a
-compatible installed package and otherwise builds the bundled source. `SYSTEM`
-requires a compatible installation and fails configuration if it cannot be used.
-`BUNDLED` always builds that library from the pinned source. Minimum versions are
-memtailor 1.4, mathic 1.5 and mathicgb 1.4.
+each default to `BUNDLED`, which builds that library from the pinned source
+without searching for an installed package. `SYSTEM` requires a compatible
+installation and fails configuration if it cannot be used. `AUTO` is an explicit
+opt-in that prefers a compatible installed package and otherwise builds the
+bundled source. Minimum versions are memtailor 1.4, mathic 1.5 and mathicgb 1.4.
+These are CMake cache settings; existing build directories retain their previously
+selected providers until the settings are changed.
 
 CMake config packages are preferred (`memtailor::memtailor`, `mathic::mathic`,
 `mathicgb::mathicgb`), with pkg-config as a fallback. Metadata must describe the
@@ -50,7 +52,8 @@ compiles and links probes and reports `MEMT_DEBUG`, `MATHIC_DEBUG` and
 System mathic requires system memtailor; system mathicgb requires both system
 mathic and memtailor. This prevents mixing an installed library with a second
 bundled copy of its dependencies. `AUTO` propagates necessary fallbacks;
-conflicting explicit `SYSTEM` requests fail with an explanation.
+conflicting explicit `SYSTEM` requests fail with an explanation. To use the
+complete system stack, set all three providers to `SYSTEM`, as shown below.
 
 A Debug M2 can use a complete set of Release system libraries: consumers inherit
 the installed libraries' actual ABI flags. However, the pinned bundled Debug
@@ -64,15 +67,18 @@ For example, from `M2/BUILD/build`:
 ```sh
 cmake -GNinja -DMEMTAILOR_PROVIDER=SYSTEM -DMATHIC_PROVIDER=SYSTEM \
   -DMATHICGB_PROVIDER=SYSTEM ../..
-cmake --build . --target memtailor-unit-tests mathic-unit-tests mathicgb-unit-tests
-ctest --test-dir . --output-on-failure -R '^unit-tests:'
+cmake --build . --target build-libraries build-programs
+cmake --build . --target M2-unit-tests
+./Macaulay2/e/M2-unit-tests
 ```
 
-Those test targets remain available with either provider when `BUILD_TESTING`
-is enabled. With installed libraries, the pinned library tests use the installed
-headers and libraries. M2's core build and checks provide additional integration
-coverage. Only bundled libraries are included in M2's library installation/export
-rules; external libraries remain managed by their package manager.
+With `BUILD_TESTING` enabled, M2's engine tests validate integration with the
+selected libraries. The `memtailor-unit-tests`, `mathic-unit-tests` and
+`mathicgb-unit-tests` targets are available only for the corresponding bundled
+libraries; tests from the pinned sources are not compiled against system
+installations. Only bundled libraries are included in M2's library
+installation/export rules; external libraries remain managed by their package
+manager.
 
 `CMAKE_PREFIX_PATH` is a shared list of installation prefixes for all dependencies.
 Standard system prefixes usually need no extra setting. For nonstandard prefixes,
