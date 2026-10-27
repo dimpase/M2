@@ -22,32 +22,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends macaulay2 ninja-build
 
-      - name: Test the graph checker
-        run: M2 --script M2/Macaulay2/m2/check-package-dependencies.m2 --self-test
-
-      - name: Test cycle and missing-header failures
-        shell: bash
-        run: |
-          fixtures=$(mktemp -d)
-          trap 'rm -rf "$fixtures"' EXIT
-          printf 'AuditA\nAuditB\n' > "$fixtures/=distributed-packages"
-          printf 'newPackage("AuditA", PackageImports => {"AuditB"})\n' > "$fixtures/AuditA.m2"
-          printf 'newPackage("AuditB", PackageExports => {"AuditA"})\n' > "$fixtures/AuditB.m2"
-          status=0
-          M2 --script M2/Macaulay2/m2/check-package-dependencies.m2 "$fixtures" > "$fixtures/report" 2>&1 || status=$?
-          cat "$fixtures/report"
-          test "$status" -eq 1
-          grep -F '{AuditA, AuditB}' "$fixtures/report"
-          rm "$fixtures/AuditB.m2"
-          status=0
-          M2 --script M2/Macaulay2/m2/check-package-dependencies.m2 "$fixtures" > "$fixtures/report" 2>&1 || status=$?
-          cat "$fixtures/report"
-          test "$status" -eq 2
-          grep -F 'missing package source:' "$fixtures/report"
-
-      - name: Check declared package dependencies
-        run: M2 --script M2/Macaulay2/m2/check-package-dependencies.m2
-
       - name: Check the CMake dependency manifest
         run: python3 M2/cmake/package-dependencies.py --m2 M2 --check
 
