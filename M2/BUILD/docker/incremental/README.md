@@ -104,14 +104,13 @@ the cached build directory, since configure-time staging copies and external
 build stamps may otherwise retain removed inputs. This is a conservative fallback
 until those deletion cases can be handled incrementally.
 
-The container configures with `WITH_MAPLE=OFF` (from #4722) and
-`RespectCachedExampleOutput=ON`. The latter inspects each loaded package's
-resolved `UseCachedExampleOutput` option before installing it. Packages that
-request shipped examples (for example NCAlgebra when Bergman is absent) receive
-`RerunExamples=false`. Other packages retain `RerunExamples=true`; Maple's
-per-package exceptions also remain in effect. All packages stay selected,
-including their independent checks. Missing or stale shipped example caches
-still cause errors rather than silently passing.
+The container configures with `RespectCachedExampleOutput=ON` to inspect each
+loaded package's resolved `UseCachedExampleOutput` option before installation.
+Packages requesting cached output, including the Maple-related packages and
+NCAlgebra when Bergman is absent, receive `RerunExamples=false`. Other packages
+retain `RerunExamples=true`. All packages stay selected, and checks follow their
+existing runtime optional-component policy. Missing or stale shipped example
+caches can still require execution and fail if optional software is unavailable.
 
 The build job uses `install-packages` to install only packages whose inputs
 changed. A core source change rebuilds the affected compiled objects and relinks

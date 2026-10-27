@@ -98,7 +98,7 @@ set(M2 ${M2_DIST_PREFIX}/${M2_INSTALL_BINDIR}/M2)
 set(M2_ARGS -q --stop --silent --no-preload --no-threads -e errorDepth=${errorDepth} -e debugLevel=${debugLevel})
 set(M2_INSTALL_TEMPLATE [[installPackage("@package@",
   Verbose                => $<IF:$<BOOL:${VERBOSE}>,true,false>,
-  RerunExamples          => ${_package_rerun_examples},
+  RerunExamples          => ${RerunExamples},
   CacheExampleOutput     => ${CacheExampleOutput},
   CheckDocumentation     => ${CheckDocumentation},
   IgnoreExampleErrors    => ${IgnoreExampleErrors},
@@ -112,8 +112,8 @@ set(M2_INSTALL_TEMPLATE [[installPackage("@package@",
 if(RespectCachedExampleOutput)
   string(REPLACE "installPackage(\"@package@\"," "(pkg -> installPackage(pkg,"
     M2_INSTALL_TEMPLATE "${M2_INSTALL_TEMPLATE}")
-  string(REPLACE "\${_package_rerun_examples},"
-    "(\${_package_rerun_examples} and not (options pkg).UseCachedExampleOutput),"
+  string(REPLACE "\${RerunExamples},"
+    "(\${RerunExamples} and not (options pkg).UseCachedExampleOutput),"
     M2_INSTALL_TEMPLATE "${M2_INSTALL_TEMPLATE}")
   string(APPEND M2_INSTALL_TEMPLATE
     ") loadPackage(\"@package@\", DebuggingMode => true, LoadDocumentation => true, Reload => true)")
@@ -240,17 +240,6 @@ foreach(package IN LISTS PACKAGES)
     file(COPY ${package}  DESTINATION ${M2_DIST_PREFIX}/${M2_INSTALL_DATADIR})
   endif()
 
-
-  # These packages ship cached examples requiring optional Maple software.
-  # Preserve those examples when the software is unavailable or disabled,
-  # without suppressing package installation or independent package checks.
-  set(_package_rerun_examples "${RerunExamples}")
-  if((package MATCHES "^(MapleInterface|AdjointIdeal|Parametrization)$" AND
-      (NOT WITH_MAPLE OR NOT Maple_FOUND)) OR
-     (package STREQUAL "ConvexInterface" AND
-      (NOT WITH_MAPLE OR NOT Maple_FOUND OR NOT Maple_Convex_FOUND)))
-    set(_package_rerun_examples false)
-  endif()
 
   ## Configuring the command strings
   _M2_STRING_CONFIGURE(M2_INSTALL_TEMPLATE M2_INSTALL_STRING TRUE)

@@ -24,7 +24,7 @@ with tempfile.TemporaryDirectory(prefix='m2-example-policy-') as tmp:
         script.write_text('''cmake_minimum_required(VERSION 3.30)
 set(RespectCachedExampleOutput ON)
 set(CacheExampleOutput false)
-set(_package_rerun_examples true)
+set(RerunExamples true)
 set(CheckDocumentation true)
 set(IgnoreExampleErrors false)
 set(RemakeAllDocumentation false)

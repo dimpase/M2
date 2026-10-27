@@ -34,7 +34,7 @@ if [[ "$stage" != test ]]; then
     revision=$(python3 -c 'import json; print(json.load(open("/input/.ci-snapshot.json"))["revision"])')
     source /input/.github/ci/container-environment.sh
     cmake -S "$source_dir/M2" -B "$build_dir" -G Ninja \
-        "${cmake_environment_args[@]}" -DWITH_MAPLE=OFF \
+        "${cmake_environment_args[@]}" \
         -DRerunExamples=true -DRespectCachedExampleOutput=ON -DCacheExampleOutput=false \
         -DPARALLEL_JOBS="$CMAKE_BUILD_PARALLEL_LEVEL" -DCOMMIT_COUNT=0 -DGIT_COMMIT="$revision"
     cmake --build "$build_dir" --target build-libraries build-programs
