@@ -5,7 +5,8 @@ Find a usable command-line Maple, optionally with the Convex component.
 
 Inputs: MAPLE_EXECUTABLE, MAPLE_CONVEX_DIR (extra Maple library directory),
 MAPLE_PROBE_TIMEOUT (seconds). Results: Maple_FOUND, MAPLE_WORKS,
-Maple_Convex_FOUND. No Maple installation is required or downloaded.
+Maple_Convex_FOUND, with failure details in Maple_NOT_FOUND_MESSAGE and
+Maple_Convex_NOT_FOUND_MESSAGE. No Maple installation is required or downloaded.
 #]=======================================================================]
 
 find_program(MAPLE_EXECUTABLE NAMES maple cmaple)
@@ -16,7 +17,13 @@ mark_as_advanced(MAPLE_EXECUTABLE MAPLE_CONVEX_DIR MAPLE_PROBE_TIMEOUT)
 # Recheck at every configure: a cached executable may have lost its license.
 set(MAPLE_WORKS FALSE)
 set(Maple_Convex_FOUND FALSE)
-if(MAPLE_EXECUTABLE AND NOT CMAKE_CROSSCOMPILING)
+set(Maple_NOT_FOUND_MESSAGE "")
+set(Maple_Convex_NOT_FOUND_MESSAGE "")
+if(CMAKE_CROSSCOMPILING)
+  set(Maple_NOT_FOUND_MESSAGE "Maple probe skipped while cross-compiling")
+elseif(NOT MAPLE_EXECUTABLE OR NOT EXISTS "${MAPLE_EXECUTABLE}")
+  set(Maple_NOT_FOUND_MESSAGE "Maple executable not found: ${MAPLE_EXECUTABLE}")
+else()
   set(_maple_probe_dir "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/Maple")
   file(MAKE_DIRECTORY "${_maple_probe_dir}")
   file(WRITE "${_maple_probe_dir}/probe.mpl"
@@ -33,6 +40,10 @@ if(MAPLE_EXECUTABLE AND NOT CMAKE_CROSSCOMPILING)
   endif()
   file(WRITE "${_maple_probe_dir}/probe.log"
     "Status: ${_maple_status}\n${_maple_output}\n${_maple_error}")
+  if(NOT MAPLE_WORKS)
+    set(Maple_NOT_FOUND_MESSAGE
+      "${MAPLE_EXECUTABLE} failed the usability probe. See ${_maple_probe_dir}/probe.log")
+  endif()
 
   if(MAPLE_WORKS AND "Convex" IN_LIST Maple_FIND_COMPONENTS)
     # Quote the directory as a Maple string, not a shell argument.
@@ -42,8 +53,9 @@ if(MAPLE_EXECUTABLE AND NOT CMAKE_CROSSCOMPILING)
     if(MAPLE_CONVEX_DIR)
       set(_maple_library_path "libname := libname, \"${_maple_convex_dir}\":\n")
     endif()
+    # Re-raise errors so the captured output contains Maple's explanation.
     file(WRITE "${_maple_probe_dir}/convex.mpl"
-      "${_maple_library_path}try\nwith(convex):\nprintf(\"M2_CONVEX_%d\\n\", 6*7):\ncatch:\nend try:\nquit;\n")
+      "${_maple_library_path}try\nwith(convex):\nprintf(\"M2_CONVEX_%d\\n\", 6*7):\ncatch:\nerror;\nend try:\nquit;\n")
     execute_process(COMMAND "${MAPLE_EXECUTABLE}" -q
       INPUT_FILE "${_maple_probe_dir}/convex.mpl"
       OUTPUT_VARIABLE _maple_output ERROR_VARIABLE _maple_error
@@ -54,9 +66,14 @@ if(MAPLE_EXECUTABLE AND NOT CMAKE_CROSSCOMPILING)
     endif()
     file(WRITE "${_maple_probe_dir}/convex.log"
       "Status: ${_maple_status}\n${_maple_output}\n${_maple_error}")
+    if(NOT Maple_Convex_FOUND)
+      set(Maple_Convex_NOT_FOUND_MESSAGE
+        "convex probe failed in ${MAPLE_EXECUTABLE}. See ${_maple_probe_dir}/convex.log")
+    endif()
   endif()
 endif()
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(Maple
-  REQUIRED_VARS MAPLE_EXECUTABLE MAPLE_WORKS HANDLE_COMPONENTS)
+  REQUIRED_VARS MAPLE_EXECUTABLE MAPLE_WORKS HANDLE_COMPONENTS
+  REASON_FAILURE_MESSAGE "${Maple_NOT_FOUND_MESSAGE}")

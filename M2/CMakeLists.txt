@@ -2,8 +2,7 @@
 ## CMake is a cross-platform system for generating build environments using
 ## native tools such as Make and Ninja or IDEs such as Xcode and Visual Studio.
 ##
-## See https://github.com/Macaulay2/M2/wiki for the current CMake build guide.
-## See BUILD/README.md for WITH_MAPLE and optional Maple/convex detection.
+## See BUILD/README.md and the Macaulay2 wiki for CMake build instructions.
 ## Take a look at cmake/configure.cmake for a list of options
 ## and read cmake/check-libraries.cmake for a list of requirements.
 ##
