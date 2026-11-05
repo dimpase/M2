@@ -37,9 +37,20 @@ each default to `BUNDLED`, which builds that library from the pinned source
 without searching for an installed package. `SYSTEM` requires a compatible
 installation and fails configuration if it cannot be used. `AUTO` is an explicit
 opt-in that prefers a compatible installed package and otherwise builds the
-bundled source. Minimum versions are memtailor 1.4, mathic 1.5 and mathicgb 1.4.
+bundled source.
 These are CMake cache settings; existing build directories retain their previously
 selected providers until the settings are changed.
+
+The release tarballs for memtailor 1.4, mathic 1.5 and mathicgb 1.4 do not contain
+all the required installed ABI metadata. Until releases include
+[memtailor#23](https://github.com/Macaulay2/memtailor/pull/23),
+[mathic#29](https://github.com/Macaulay2/mathic/pull/29) and
+[mathicgb#84](https://github.com/Macaulay2/mathicgb/pull/84), use post-release
+source builds or packages with those changes backported. The current version
+floors match the snapshots tested by [#4758's external-library
+CI](https://github.com/Macaulay2/M2/pull/4758); meeting those version numbers
+alone is insufficient. The floors will be updated to the first releases
+containing the metadata once those versions are available.
 
 CMake config packages are preferred (`memtailor::memtailor`, `mathic::mathic`,
 `mathicgb::mathicgb`), with pkg-config as a fallback. Metadata must describe the
@@ -94,12 +105,6 @@ Alternatively, `memtailor_DIR`, `mathic_DIR` and `mathicgb_DIR` can point direct
 to the corresponding config directories. For nonstandard pkg-config locations,
 set `PKG_CONFIG_PATH` to their `lib/pkgconfig` or `lib64/pkgconfig` directories
 (colon-separated on Unix).
-
-Provider regression tests require CMake, a C++ compiler, Python and pkg-config:
-
-```sh
-python3 M2/cmake/tests/test_mathic_providers.py
-```
 
 ### Building Macaulay2
 1. Clone Macaulay2:
